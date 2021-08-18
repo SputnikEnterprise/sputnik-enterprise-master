@@ -1,0 +1,2 @@
+﻿The only purpose for this dummy file is to allow the creation the Temp folder in the testing environment.
+The Temp folder is used as a working directory (splitted pdfs, images, etc.) for the PDFConverter during unit tests. 

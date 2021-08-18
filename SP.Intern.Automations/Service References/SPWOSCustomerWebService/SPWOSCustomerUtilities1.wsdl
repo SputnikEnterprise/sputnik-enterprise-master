@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/">
+      <s:element name="AddAssignedCustomerWOSDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosData" type="tns:CustomerWOSData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CustomerWOSData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerWOSID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CresponsibleNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmploymentNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmploymentLineNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProposeNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="KDTransferedGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHDTransferedGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESDoc_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RPDoc_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REDoc_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="customername" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerStrasse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerOrt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerPLZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerTelefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerHomepage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserAnrede" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserVorname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserTelefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserInitial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFiliale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSign" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserPicture" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="LogedUserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MDTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MD_DTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MDTelefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MDMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Postfach" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Strasse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_PLZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Ort" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Land" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Filiale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Berater" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_AGB_Wos" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Beruf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Branche" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Language" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DoNotShowContractInWOS" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHD_Vorname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHD_Nachname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHD_EMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHDSex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zhd_BriefAnrede" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zhd_Berater" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zhd_Beruf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zhd_Branche" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHD_AGB_Wos" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZHD_GebDat" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssignedDocumentGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssignedDocumentArtName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssignedDocumentInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanDoc" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanDocName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SignTransferedDocument" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddAssignedCustomerWOSDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddAssignedCustomerWOSDocumentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedCustomerWOSModul">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerWOSID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="modulGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="modulNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedCustomerWOSModulResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedCustomerWOSModulResult" type="tns:ArrayOfCustomerWOSDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomerWOSDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomerWOSDataDTO" nillable="true" type="tns:CustomerWOSDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomerWOSDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WOS_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHDGuid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmploymentNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CRepesponsibleNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProposeNr" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerGuid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentArt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransferedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransferedUser" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="GetResult" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GetOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastNotification" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanContent" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="FK_StateID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Get_On" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Viewed_On" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ViewedResult" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerFeedback_On" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerFeedback" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NotifyAdvisor" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadAssignedCustomerWOSModulByDocArt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerWOSID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="modulGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="modulNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="modulDocArt" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedCustomerWOSModulByDocArtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedCustomerWOSModulByDocArtResult" type="tns:ArrayOfCustomerWOSDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedDocNotificationAsDone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerWOSID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="modulGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedDocNotificationAsDoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedDocNotificationAsDoneResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTransferedVacancyDataFromWOS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="kdNumber" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="vakNumber" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTransferedVacancyDataFromWOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTransferedVacancyDataFromWOSResult" type="tns:ArrayOfKDVakanzenDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfKDVakanzenDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KDVakanzenDTO" nillable="true" type="tns:KDVakanzenDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KDVakanzenDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RecID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VakNr" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="KDNr" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="KDZHDNr" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Strasse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Ort" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Telefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_eMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Berater" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Filiale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VakKontakt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VakState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bezeichnung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TitelForSearch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Slogan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gruppe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubGroup" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExistLink" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="VakLink" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Beginn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobProzent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Anstellung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dauer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MAAge" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MASex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MAZivil" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MALohn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Jobtime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobOrt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MAFSchein" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MAAuto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MANationality" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IEExport" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="KDBeschreibung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KDBietet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SBeschreibung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Taetigkeit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Anforderung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ausbildung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Weiterbildung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SKennt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EDVKennt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_KDBeschreibung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_KDBietet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_SBeschreibung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_Reserve1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_Taetigkeit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_Anforderung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_Reserve2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_Reserve3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_Ausbildung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_Weiterbildung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_SKennt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="html_EDVKennt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Branchen" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChangedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangedFrom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transfered_User" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Transfered_On" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transfered_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vak_Region" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vak_Kanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Nachname_OLD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Vorname_OLD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Telefon_OLD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Telefax_OLD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_eMail_OLD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSprachen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSprachen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Qualifikation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SQualifikation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobPLZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Job_Categories" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Job_Disciplines" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Job_Position" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Job_Disciplines_Match" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vak_Region_Match" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_salutation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Firstname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Lastname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_EMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Telefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Picture" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsJobsCHOnline" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsOstJobOnline" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteVacancyDataFromWOS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vakNumbers" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteVacancyDataFromWOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteVacancyDataFromWOSResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAssignedVacancyDataFromWOS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="vakNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAssignedVacancyDataFromWOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteAssignedVacancyDataFromWOSResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCustomerDocumentToWOS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosData" type="tns:CustomerWOSData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCustomerDocumentToWOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCustomerDocumentToWOSResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListCustomerDocuments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="month" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListCustomerDocumentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListCustomerDocumentsResult" type="tns:ArrayOfCustomerWOSDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignedCustomerDocumentsData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignedCustomerDocumentsDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssignedCustomerDocumentsDataResult" type="tns:CustomerWOSDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAssignedCustomerDocumentWithGuid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosData" type="tns:CustomerWOSData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAssignedCustomerDocumentWithGuidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteAssignedCustomerDocumentWithGuidResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedKDDocWithArt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKD_Guid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iKDNr" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDoc_Art" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDoc_Info" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedKDDocWithArtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteSelectedKDDocWithArtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedKDESDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKD_Guid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iKDNr" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iESNr" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedKDESDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteSelectedKDESDocResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedKDRPDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKD_Guid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iKDNr" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRPNr" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedKDRPDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteSelectedKDRPDocResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedKDREDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKD_Guid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iKDNr" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRENr" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedKDREDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteSelectedKDREDocResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedAllKDDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKD_Guid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iKDNr" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedAllKDDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteSelectedAllKDDocResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedKundenRec">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKD_Guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strZHD_Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedKundenRecResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteSelectedKundenRecResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedZHDRec">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKD_Guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strZHD_Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSelectedZHDRecResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteSelectedZHDRecResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeKDGuidWithNewGuid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strOldKD_Guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNewKD_Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeKDGuidWithNewGuidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeKDGuidWithNewGuidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeKDZHDGuidWithNewGuid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKD_Guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strOldKDZHD_Guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNewKDZHD_Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeKDZHDGuidWithNewGuidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeKDZHDGuidWithNewGuidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddAssignedCustomerWOSDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAssignedCustomerWOSDocument" />
+  </wsdl:message>
+  <wsdl:message name="AddAssignedCustomerWOSDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAssignedCustomerWOSDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCustomerWOSModulSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCustomerWOSModul" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCustomerWOSModulSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCustomerWOSModulResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCustomerWOSModulByDocArtSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCustomerWOSModulByDocArt" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCustomerWOSModulByDocArtSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCustomerWOSModulByDocArtResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedDocNotificationAsDoneSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedDocNotificationAsDone" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedDocNotificationAsDoneSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedDocNotificationAsDoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTransferedVacancyDataFromWOSSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTransferedVacancyDataFromWOS" />
+  </wsdl:message>
+  <wsdl:message name="LoadTransferedVacancyDataFromWOSSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTransferedVacancyDataFromWOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVacancyDataFromWOSSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteVacancyDataFromWOS" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVacancyDataFromWOSSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteVacancyDataFromWOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAssignedVacancyDataFromWOSSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAssignedVacancyDataFromWOS" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAssignedVacancyDataFromWOSSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAssignedVacancyDataFromWOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCustomerDocumentToWOSSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCustomerDocumentToWOS" />
+  </wsdl:message>
+  <wsdl:message name="AddCustomerDocumentToWOSSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCustomerDocumentToWOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListCustomerDocumentsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListCustomerDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ListCustomerDocumentsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListCustomerDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedCustomerDocumentsDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssignedCustomerDocumentsData" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedCustomerDocumentsDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssignedCustomerDocumentsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAssignedCustomerDocumentWithGuidSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAssignedCustomerDocumentWithGuid" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAssignedCustomerDocumentWithGuidSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAssignedCustomerDocumentWithGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedKDDocWithArtSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedKDDocWithArt" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedKDDocWithArtSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedKDDocWithArtResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedKDESDocSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedKDESDoc" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedKDESDocSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedKDESDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedKDRPDocSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedKDRPDoc" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedKDRPDocSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedKDRPDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedKDREDocSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedKDREDoc" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedKDREDocSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedKDREDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedAllKDDocSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedAllKDDoc" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedAllKDDocSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedAllKDDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedKundenRecSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedKundenRec" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedKundenRecSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedKundenRecResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedZHDRecSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedZHDRec" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSelectedZHDRecSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSelectedZHDRecResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeKDGuidWithNewGuidSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeKDGuidWithNewGuid" />
+  </wsdl:message>
+  <wsdl:message name="ChangeKDGuidWithNewGuidSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeKDGuidWithNewGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeKDZHDGuidWithNewGuidSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeKDZHDGuidWithNewGuid" />
+  </wsdl:message>
+  <wsdl:message name="ChangeKDZHDGuidWithNewGuidSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeKDZHDGuidWithNewGuidResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPWOSCustomerUtilitiesSoap">
+    <wsdl:operation name="AddAssignedCustomerWOSDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Sicherung eines Kundendokuments aus der lokalen Datenbank.</wsdl:documentation>
+      <wsdl:input message="tns:AddAssignedCustomerWOSDocumentSoapIn" />
+      <wsdl:output message="tns:AddAssignedCustomerWOSDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCustomerWOSModul">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Kontrolle eines Kunden Moduls.</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedCustomerWOSModulSoapIn" />
+      <wsdl:output message="tns:LoadAssignedCustomerWOSModulSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCustomerWOSModulByDocArt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Kontrolle eines Kunden Moduls.</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedCustomerWOSModulByDocArtSoapIn" />
+      <wsdl:output message="tns:LoadAssignedCustomerWOSModulByDocArtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedDocNotificationAsDone">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">set notification field to done</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedDocNotificationAsDoneSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedDocNotificationAsDoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTransferedVacancyDataFromWOS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">loads all vacancies for customerwosid.</wsdl:documentation>
+      <wsdl:input message="tns:LoadTransferedVacancyDataFromWOSSoapIn" />
+      <wsdl:output message="tns:LoadTransferedVacancyDataFromWOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVacancyDataFromWOS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">delete vacancy for customerwosid.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteVacancyDataFromWOSSoapIn" />
+      <wsdl:output message="tns:DeleteVacancyDataFromWOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedVacancyDataFromWOS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">delete vacancy for customerwosid.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteAssignedVacancyDataFromWOSSoapIn" />
+      <wsdl:output message="tns:DeleteAssignedVacancyDataFromWOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerDocumentToWOS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Sicherung eines Kundendokuments aus der lokalen Datenbank.</wsdl:documentation>
+      <wsdl:input message="tns:AddCustomerDocumentToWOSSoapIn" />
+      <wsdl:output message="tns:AddCustomerDocumentToWOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListCustomerDocuments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists all customer documents which are transfered.</wsdl:documentation>
+      <wsdl:input message="tns:ListCustomerDocumentsSoapIn" />
+      <wsdl:output message="tns:ListCustomerDocumentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedCustomerDocumentsData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get assigned scan data</wsdl:documentation>
+      <wsdl:input message="tns:GetAssignedCustomerDocumentsDataSoapIn" />
+      <wsdl:output message="tns:GetAssignedCustomerDocumentsDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedCustomerDocumentWithGuid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Löscht das ausgewählte Kunden-Document.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteAssignedCustomerDocumentWithGuidSoapIn" />
+      <wsdl:output message="tns:DeleteAssignedCustomerDocumentWithGuidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDDocWithArt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Löscht das ausgewählte Kunden-Document.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteSelectedKDDocWithArtSoapIn" />
+      <wsdl:output message="tns:DeleteSelectedKDDocWithArtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDESDoc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Löscht das ausgewählte Modul-Document (KD-Einsatz).</wsdl:documentation>
+      <wsdl:input message="tns:DeleteSelectedKDESDocSoapIn" />
+      <wsdl:output message="tns:DeleteSelectedKDESDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDRPDoc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Löscht das ausgewählte Modul-Document (KD-RP).</wsdl:documentation>
+      <wsdl:input message="tns:DeleteSelectedKDRPDocSoapIn" />
+      <wsdl:output message="tns:DeleteSelectedKDRPDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDREDoc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Löscht das ausgewählte Modul-Document (KD-RE).</wsdl:documentation>
+      <wsdl:input message="tns:DeleteSelectedKDREDocSoapIn" />
+      <wsdl:output message="tns:DeleteSelectedKDREDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedAllKDDoc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Löscht das ausgewählte Modul-Document (KD-Alle).</wsdl:documentation>
+      <wsdl:input message="tns:DeleteSelectedAllKDDocSoapIn" />
+      <wsdl:output message="tns:DeleteSelectedAllKDDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKundenRec">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Löscht den ausgewählten Kunden (Kunden).</wsdl:documentation>
+      <wsdl:input message="tns:DeleteSelectedKundenRecSoapIn" />
+      <wsdl:output message="tns:DeleteSelectedKundenRecSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedZHDRec">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Löscht den ausgewählten Kunden_ZHD (Kunden_ZHD).</wsdl:documentation>
+      <wsdl:input message="tns:DeleteSelectedZHDRecSoapIn" />
+      <wsdl:output message="tns:DeleteSelectedZHDRecSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeKDGuidWithNewGuid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ändert das ALTE KD_Guid durch NEUEN KD_Guid in allen Tabellen.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeKDGuidWithNewGuidSoapIn" />
+      <wsdl:output message="tns:ChangeKDGuidWithNewGuidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeKDZHDGuidWithNewGuid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ändert das ALTE KDZHD_Guid durch NEUEN KDZHD_Guid in allen Tabellen.</wsdl:documentation>
+      <wsdl:input message="tns:ChangeKDZHDGuidWithNewGuidSoapIn" />
+      <wsdl:output message="tns:ChangeKDZHDGuidWithNewGuidSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPWOSCustomerUtilitiesSoap" type="tns:SPWOSCustomerUtilitiesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddAssignedCustomerWOSDocument">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/AddAssignedCustomerWOSDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCustomerWOSModul">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/LoadAssignedCustomerWOSModul" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCustomerWOSModulByDocArt">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/LoadAssignedCustomerWOSModulByDocArt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedDocNotificationAsDone">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/UpdateAssignedDocNotificationAsDone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTransferedVacancyDataFromWOS">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/LoadTransferedVacancyDataFromWOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVacancyDataFromWOS">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteVacancyDataFromWOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedVacancyDataFromWOS">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteAssignedVacancyDataFromWOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerDocumentToWOS">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/AddCustomerDocumentToWOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListCustomerDocuments">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/ListCustomerDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedCustomerDocumentsData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/GetAssignedCustomerDocumentsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedCustomerDocumentWithGuid">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteAssignedCustomerDocumentWithGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDDocWithArt">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedKDDocWithArt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDESDoc">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedKDESDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDRPDoc">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedKDRPDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDREDoc">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedKDREDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedAllKDDoc">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedAllKDDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKundenRec">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedKundenRec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedZHDRec">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedZHDRec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeKDGuidWithNewGuid">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/ChangeKDGuidWithNewGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeKDZHDGuidWithNewGuid">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/ChangeKDZHDGuidWithNewGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPWOSCustomerUtilitiesSoap12" type="tns:SPWOSCustomerUtilitiesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddAssignedCustomerWOSDocument">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/AddAssignedCustomerWOSDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCustomerWOSModul">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/LoadAssignedCustomerWOSModul" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCustomerWOSModulByDocArt">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/LoadAssignedCustomerWOSModulByDocArt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedDocNotificationAsDone">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/UpdateAssignedDocNotificationAsDone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTransferedVacancyDataFromWOS">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/LoadTransferedVacancyDataFromWOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVacancyDataFromWOS">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteVacancyDataFromWOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedVacancyDataFromWOS">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteAssignedVacancyDataFromWOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerDocumentToWOS">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/AddCustomerDocumentToWOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListCustomerDocuments">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/ListCustomerDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedCustomerDocumentsData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/GetAssignedCustomerDocumentsData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedCustomerDocumentWithGuid">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteAssignedCustomerDocumentWithGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDDocWithArt">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedKDDocWithArt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDESDoc">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedKDESDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDRPDoc">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedKDRPDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKDREDoc">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedKDREDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedAllKDDoc">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedAllKDDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedKundenRec">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedKundenRec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSelectedZHDRec">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/DeleteSelectedZHDRec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeKDGuidWithNewGuid">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/ChangeKDGuidWithNewGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeKDZHDGuidWithNewGuid">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSCustomerUtilities.asmx/ChangeKDZHDGuidWithNewGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPWOSCustomerUtilities">
+    <wsdl:port name="SPWOSCustomerUtilitiesSoap" binding="tns:SPWOSCustomerUtilitiesSoap">
+      <soap:address location="http://localhost/wsSPS_services/SPWOSCustomerUtilities.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPWOSCustomerUtilitiesSoap12" binding="tns:SPWOSCustomerUtilitiesSoap12">
+      <soap12:address location="http://localhost/wsSPS_services/SPWOSCustomerUtilities.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

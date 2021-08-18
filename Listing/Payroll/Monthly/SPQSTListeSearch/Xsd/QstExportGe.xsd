@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Schéma xds version 2.0 / Sept. 2013 -->
+<xs:schema xmlns:ISEL_LR_2_0="http://etat.geneve.ch/financeisel/schema/2_0" xmlns:ISEL_LR_1_03="http://etat.geneve.ch/financeisel/schema/1_0" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://etat.geneve.ch/financeisel/schema/2_0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+	<xs:import namespace="http://etat.geneve.ch/financeisel/schema/1_0" schemaLocation="ISEL_ListeRecapitulative_1_03.xsd"/>
+	<xs:annotation>
+		<xs:documentation xml:lang="fr">Schéma xds version 2.0 / Sept. 2013</xs:documentation>
+	</xs:annotation>
+	<xs:element name="declarationListeRecapitulative" type="ISEL_LR_2_0:DeclarationListeRecapitulative_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">
+			Déclaration de la liste récapitulative (LR) par l'employeur appelé Débiteur de Prestations Imposables (DPI). Il s'agit de définir les données (informations) requises par la liste recapitulative. Elle contient les informations propres au DPI et, par employé, les informations détaillées concernant son identification, le détail des prestations versées par l'employeur et l'impôt retenu. L'employeur peut posséder plusieurs n° de DPI selon son activité mais il doit fournir une seule LR par numéro de DPI. Les types de LR (une au choix) sont : 
+Type 1 : les salariés, les activités accessoires, les permis 120j, les administrateurs et les effeuilleurs
+Type 2 : les autres cantons
+Type 3 : les bénéficiaires de rente
+Type 4 : les revenus acquis en compensation et le travail au noir
+Type 5 : les artistes, les sportifs et les conférenciers
+Type 6 : les prestations en capital 
+Exemple : un employeur pour fournir 2 fichier LR de type 1 et 3 doit posséder 2 numéros de DPI
+			</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="DeclarationListeRecapitulative_Type2014">
+		<xs:sequence>
+			<xs:element name="DPI" type="ISEL_LR_1_03:IdentifiantDPI_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Informations concernant le  DPI (Débiteur de Prestations Imposables)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Informations concernant les employés pour le type de LR  choisi. De 1 à N déclarations contribuables. Pour chaque employé sont renseignés les informations détaillées concernant son identification, le détail des prestations versées par l'employeur et l'impôt retenu.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="ListeRecapitulativeT1" type="ISEL_LR_2_0:ListeRecapitulativeType1_Type2014">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">liste recapitulative pour les salariés, activités accessoires, permis 120j, administrateurs et effeuilleurs (Type 1) </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ListeRecapitulativeT2" type="ISEL_LR_2_0:ListeRecapitulativeType2_Type2014">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">liste recapitulative pour les autres cantons (Type 2)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ListeRecapitulativeT3" type="ISEL_LR_2_0:ListeRecapitulativeType3_Type2014">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">Liste recapitulative pour les bénéficiaires de rente (Type 3) </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ListeRecapitulativeT4" type="ISEL_LR_2_0:ListeRecapitulativeType4_Type2014">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">Liste recapitulative pour les revenus acquis en compensation et le travail au noir (type 4)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ListeRecapitulativeT5" type="ISEL_LR_2_0:ListeRecapitulativeType5_Type2014">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">liste recapitulative pour les artistes, sportifs et conférenciers (Type 5)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ListeRecapitulativeT6" type="ISEL_LR_2_0:ListeRecapitulativeType6_Type2014">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">liste recapitulative pour les prestations en capital (Type 6)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType1_Type2014">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_2_0:DeclarationContribuableType1_Type2014" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType2_Type2014">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_2_0:DeclarationContribuableType2_Type2014" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType3_Type2014">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_2_0:DeclarationContribuableType3_Type2014" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType4_Type2014">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_2_0:DeclarationContribuableType4_Type2014" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType5_Type2014">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_2_0:DeclarationContribuableType5_Type2014" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType6_Type2014">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_2_0:DeclarationContribuableType6_Type2014" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType1_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les contribuables de type 1 (salariés, activités accessoires, permis 120j, administrateurs, effeuilleurs) 
+Pour chaque contribuable de ce type : 
+	type de contribuable au choix : 1 - salariés, 2 - activités accessoires, 3 - permis 120j, 4 - administrateurs, 5 - effeuilleurs 
+	confession
+	info du contribuable
+	info de la famille
+	adresse domicile
+	info assujettissement(s) du contribuable
+	retenues, prestations et impots
+	adresse d'expédition (facultative)		</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR1_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">type de contribuable au choix : 1 - salariés, 2 - activités accessoires, 3 - permis 120j, 4 - administrateurs, 5 - effeuilleurs
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="confession" type="ISEL_LR_1_03:EnumConfession_Type" minOccurs="0"/>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="famille" type="ISEL_LR_2_0:FamillePersonne_Type2014" minOccurs="0"/>
+			<xs:element name="adresseDomicile" type="ISEL_LR_1_03:AdresseDomicile_Type"/>
+			<xs:element name="baremepreferentiel" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Vrai si un (ou plusieurs) barème(s) spécifique(s) est (sont) appliqué(s) sur les assujettissements du contribuable</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assujettissementContribuable" type="ISEL_LR_2_0:Assujettissement_Type2014" maxOccurs="unbounded"/>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_2_0:RetenueType1_2_Type2014"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType2_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les contribuables de type 2 (autres cantons)
+Pour chaque contribuable de ce type : 
+	type de contribuable : 6 - autres cantons
+	info du contribuable
+	info de la famille
+	adresse domicile
+	info assujettissement(s) du contribuable
+	retenues, prestations et impots
+	informations liés à la retenue autres cantons
+	adresse d'expédition (facultative)		</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR2_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">type de contribuable 6 - autres cantons
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="famille" type="ISEL_LR_2_0:FamillePersonne_Type2014" minOccurs="0"/>
+			<xs:element name="adresseDomicile" type="ISEL_LR_1_03:AdresseDomicile_Type"/>
+			<xs:element name="assujettissementContribuable" type="ISEL_LR_2_0:Assujettissement_Type2014" maxOccurs="unbounded"/>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_2_0:RetenueType1_2_Type2014"/>
+			<xs:element name="retenueAutresCantons" type="ISEL_LR_1_03:RetenueAutreCanton_Type"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType3_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les contribuables de type 3 ( bénéficiaires de rente)
+	Pour chaque contribuable de ce type : 
+	type contribuable : 7 - bénéficiaire de rente
+	info du contribuable
+	adresse domicile
+	périodes d'impositions
+	retenues, prestations et impots
+	adresse d'expédition (facultative)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR3_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">type contribuable  : 7 - bénéficiaire de rente 
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="adresseDomicile" type="ISEL_LR_1_03:AdresseDomicile_Type"/>
+			<xs:element name="periodeImposition" type="ISEL_LR_1_03:PeriodeImposition_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">période d'imposition</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_2_0:RetenueType3_4_Type2014"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType4_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les contribuables de type 4 (bénéficiaires de revenus acquis en compensation et travail au noir)
+	Pour chaque contribuable de ce type : 
+	type contribuable au choix : 8 - revenus acquis en compensation, 9 - travail au noir
+	info du contribuable
+	adresse domicile
+	périodes d'impositions
+	retenues, prestations et impots
+	adresse d'expédition (facultative)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR4_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">type contribuable au choix : 8 - revenus acquis en compensation, 9 - travail au noir
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="adresseDomicile" type="ISEL_LR_1_03:AdresseDomicile_Type"/>
+			<xs:element name="periodeImposition" type="ISEL_LR_1_03:PeriodeImposition_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">liste des périodes d'impositions (minimum : une)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_2_0:RetenueType3_4_Type2014"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType5_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les contribuables de type 5 (artistes, sportifs et conférenciers)
+Pour chaque contribuable de ce type : 
+	type contribuable 10 - artistes, sportifs et conférenciers
+	info du contribuable
+	info de l'artiste
+	pays artiste
+	assujettissement de l'artiste
+	retenues, prestations et impots
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR5_Type">
+				<xs:annotation>
+					<xs:documentation>type contribuable 10 - artistes, sportifs et conférenciers</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="infoArtiste" type="ISEL_LR_1_03:InfoArtiste_Type"/>
+			<xs:element name="paysArtiste" type="ISEL_LR_1_03:EnumPays_Type">
+				<xs:annotation>
+					<xs:documentation>Pays de domicile : etranger</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assujettissementContribuable" type="ISEL_LR_2_0:Assujettissement_Type2014"/>
+			<xs:element name="assujettissementArtiste" type="ISEL_LR_1_03:AssujettissementArtiste_Type"/>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_2_0:RetenueType5_Type2014"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType6_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les sontribuables de type 6 (prestations en capital)
+	Pour chaque contribuable de ce type : 
+	type contribuable 11 - prestations en capital
+	info du contribuable
+	adresse domicile
+	retenues, prestations et impots
+	adresse d'expédition (facultative)		</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR6_Type">
+				<xs:annotation>
+					<xs:documentation>type contribuable 11 - prestations en capital</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="adresseDomicile" type="ISEL_LR_1_03:AdresseDomicile_Type"/>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_2_0:RetenueType6_Type2014"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Assujettissement_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations de l'assujettissement du contribuable à l'IS
+la periode d'impostion
+la raison sociale employeur (autres cantons)
+l'adresse de travail
+le barème d'imposition
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="periodeImposition" type="ISEL_LR_1_03:PeriodeImposition_Type"/>
+			<xs:element name="adresseTravail" type="ISEL_LR_1_03:AdresseTravail_Type"/>
+			<xs:element name="baremeImposition" type="ISEL_LR_2_0:EnumBareme_Type2014" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">le barème d'imposition est obligatoire pour les salariés et les permis 120 jours.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueType1_2_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Retenue pour les contribuables à l'IS de types : salariés, permis 120 j, administrateurs, effeuilleurs, activités accessoires, autres cantons
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tauxImposition" type="ISEL_LR_1_03:TauxImposition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Taux d'imposition : Obligatoire pour les 
+salariés, permis 120 jours, autres cantons : entre 0.00 % et 36.00 %
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="prestationsSoumisesImpot" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Prestations soumises à l'impôt
+Revenu brut : salaire, bonus, alloc familliales,...
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="retenueSalarie" type="ISEL_LR_2_0:RetenueSalaries_Type2014" minOccurs="0"/>
+			<xs:element name="impotsRetenus" type="ISEL_LR_2_0:DecimalSignedArrondi5Cts_Type2014">
+				<xs:annotation>
+					<xs:documentation>Impôt prélevé par le DPI</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contributionEcclesiastique" type="ISEL_LR_1_03:DecimalArrondi5Cts_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Montant retenu au titre de la contribution ecclésiastique</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueSalaries_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations spécifiques de la retenue liée aux salariés</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nbrJoursAbsence" type="ISEL_LR_1_03:NbrJours_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A renseigner si l'employeur ne verse pas les indemnités de maladie, chômage
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nbrJourstravailEffectif" type="ISEL_LR_1_03:NbrJoursPermis120_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Obligatoire pour les permis 120 jours
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="indemnitesDepart" type="xs:integer" minOccurs="0"/>
+			<xs:element name="prestationsNonPeriodiques" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Bonus, prime unique,... compris dans  les prestations soumises à l'impôt
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="allocationsFamiliales" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Comprises dans prestations soumises à l'impôt</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fraisEffectifsNonInclus" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Frais effectifs non compris dans les prestations soumises à l'impôt</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fraisForfaitairesNonInclus" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Frais forfaitaires non compris dans les prestations soumises à l'impôt</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tauxActivite" type="ISEL_LR_1_03:TauxActivite_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Dernier taux d'activité de l'employé</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="participationsEmployes" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Participations de collaborateurs résidant à l'étranger imposées à 31.5%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueType3_4_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Retenue pour les contribuables à l'IS de types : bénéficaires de rente, acquis en compensation, travail au noir
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="prestationsSoumisesImpot" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Rentes, chômage, maladie, travail au noir,....</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="impotsRetenus" type="ISEL_LR_2_0:DecimalSignedArrondi5Cts_Type2014"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueType5_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Retenue pour les contribuables à l'IS de types : artistes, sportifs, conférenciers
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="retenueArtiste" type="ISEL_LR_1_03:RetenueArtistes_Type"/>
+			<xs:element name="impotsRetenus" type="ISEL_LR_2_0:DecimalSignedArrondi5Cts_Type2014">
+				<xs:annotation>
+					<xs:documentation>Impôt prélevé par l'employeur</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueType6_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Retenue pour les contribuables à l'IS de type : prestations en capital
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tauxImpositionICC" type="ISEL_LR_1_03:TauxImposition5Dec_Type">
+				<xs:annotation>
+					<xs:documentation>Taux d'imposition (à 5 décimales) pour la part de l'impôt cantonal et communal</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="prestationsSoumisesImpot" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Montant de la prestation en capital versé par le DPI</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="retenuePrestation" type="ISEL_LR_1_03:RetenuePrestationsCapital_Type"/>
+			<xs:element name="impotICCRetenu" type="ISEL_LR_2_0:DecimalSignedArrondi5Cts_Type2014">
+				<xs:annotation>
+					<xs:documentation>Montant de l'impôt retenu pour l'ICC</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="impotIFDRetenu" type="ISEL_LR_2_0:DecimalSignedArrondi5Cts_Type2014">
+				<xs:annotation>
+					<xs:documentation>Montant de l'impôt retenu pour l'IFD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FamillePersonne_Type2014">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations concernant la famille de la personne
+Nom et prénom du conjoint (facultatifs)
+conjoint travaillant (oui/non)
+Années de naissance des enfants de moins de 25 ans (de 0 à N)
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nomConjoint" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="prenomConjoint" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="conjointAvecRevenu" type="ISEL_LR_1_03:EnumBooleen3Etats_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Si le conjoint travaille (0 : non, 1 : oui, 2 : non renseigné)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dateNaissanceEnfantInf25" type="ISEL_LR_1_03:AnneeNaissance_Type" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Dates de naissance correspondantes.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unionLibre" type="ISEL_LR_1_03:EnumBooleen3Etats_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Couple vivant en union libre (0 : non, 1 : oui, 2 : non renseigné)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="EnumBareme_Type2014">
+		<xs:annotation>
+			<xs:documentation>Barèmes IS
+1: A0
+2: B0
+3: B1
+4: B2
+5: B3
+6: B4
+7: B5
+50: A1
+51: A2
+52: A3
+53: A4
+54: A5
+55: C0
+56: C1
+57: C2
+58: C3
+59: C4
+60: C5
+61: H1
+62: H2
+63: H3
+64: H4
+65: H5
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème A0</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B0</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B4</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B5</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="50">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème A1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="51">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème A2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="52">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème A3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="53">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème A4</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="54">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème A5</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="55">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème C0</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="56">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème C1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="57">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème C2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="58">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème C3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="59">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème C4</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="60">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème C5</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="61">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème H1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="62">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème H2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="63">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème H3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="64">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème H4</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="65">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème H5</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DecimalSignedArrondi5Cts_Type2014">
+		<xs:annotation>
+			<xs:documentation>Montant signé en CHF décimal à deux décimales, arrondi à 5 centimes de CHF</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:pattern value="-?([0-9]|[1-9][0-9]+)\.[0-9](0|5)"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

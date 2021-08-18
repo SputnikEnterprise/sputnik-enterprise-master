@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7D1A8D6-FA42-4D2F-8E2A-A5C9325277A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>SPS.SYS.TableSettingMng</RootNamespace>
+    <AssemblyName>SPS.SYS.TableSettingMng</AssemblyName>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DocumentationFile>SPS.SYS.TableSettingMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Components.net\</OutputPath>
+    <DocumentationFile>SPS.SYS.TableSettingMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SPS.SYS.TableSettingMng.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components.net\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="SP.Infrastructure">
+      <HintPath>..\..\..\Components.net\SP.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SP.TinyMessengerWrapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f3f8b45347b30df7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components.net\SP.TinyMessengerWrapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SPProgUtility">
+      <HintPath>..\..\..\Components.net\SPProgUtility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClsDataDetail.vb" />
+    <Compile Include="Forms\LAStamm\frmLATranslation.Designer.vb">
+      <DependentUpon>frmLATranslation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LAStamm\frmLATranslation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucFieldInfo.Designer.vb">
+      <DependentUpon>ucFieldInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucFieldInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucFieldlables.Designer.vb">
+      <DependentUpon>ucFieldlables.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucFieldlables.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucJobPlattforms.Designer.vb">
+      <DependentUpon>ucJobPlattforms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucJobPlattforms.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDFibuKonten.Designer.vb">
+      <DependentUpon>ucMDFibuKonten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDFibuKonten.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDMarginFees.Designer.vb">
+      <DependentUpon>ucMDMarginFees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDMarginFees.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDName.Designer.vb">
+      <DependentUpon>ucMDName.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDName.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDProgramm.Designer.vb">
+      <DependentUpon>ucMDProgramm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDProgramm.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDPublicAuthorities.Designer.vb">
+      <DependentUpon>ucMDPublicAuthorities.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDPublicAuthorities.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCloseMonth.Designer.vb">
+      <DependentUpon>frmCloseMonth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCloseMonth.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeletedrecs.Designer.vb">
+      <DependentUpon>frmDeletedrecs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeletedrecs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInvalidRecordNumbers.designer.vb">
+      <DependentUpon>frmInvalidRecordNumbers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInvalidRecordNumbers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDStartNumbers.Designer.vb">
+      <DependentUpon>ucMDStartNumbers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucMDStartNumbers.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucRequiredFields.Designer.vb">
+      <DependentUpon>ucRequiredFields.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucRequiredFields.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucStandardvalues.Designer.vb">
+      <DependentUpon>ucStandardvalues.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucStandardvalues.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucWebServices.Designer.vb">
+      <DependentUpon>ucWebServices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\Controls\ucWebServices.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\frmMandant.Designer.vb">
+      <DependentUpon>frmMandant.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\frmMandant.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\frmMDFak.Designer.vb">
+      <DependentUpon>frmMDFak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\frmMDFak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\frmMDLmvKtg.Designer.vb">
+      <DependentUpon>frmMDLmvKtg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\frmMDLmvKtg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Mandanten\frmMDLmvTSpesen.Designer.vb">
+      <DependentUpon>frmMDLmvTSpesen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mandanten\frmMDLmvTSpesen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablesetting\Controls\Employee\ucEmployeeTables.Designer.vb">
+      <DependentUpon>ucEmployeeTables.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablesetting\Controls\Employee\ucEmployeeTables.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablesetting\frmTables.Designer.vb">
+      <DependentUpon>frmTables.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablesetting\frmTables.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LAStamm\frmLAStamm.Designer.vb">
+      <DependentUpon>frmLAStamm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LAStamm\frmLAStamm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Usersetting\Controls\ucUserDocument.Designer.vb">
+      <DependentUpon>ucUserDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Usersetting\Controls\ucUserDocument.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Usersetting\frmUserRights.Designer.vb">
+      <DependentUpon>frmUserRights.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Usersetting\frmUserRights.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Usersetting\frmUsers.Designer.vb">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Usersetting\frmUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Person.vb" />
+    <Compile Include="Forms\WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service References\EmployeeTaxInfoWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPPVLGAVUtilWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\LAStamm\frmLATranslation.resx">
+      <DependentUpon>frmLATranslation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\Controls\ucFieldInfo.resx">
+      <DependentUpon>ucFieldInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\Controls\ucFieldlables.resx">
+      <DependentUpon>ucFieldlables.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\Controls\ucMDFibuKonten.resx">
+      <DependentUpon>ucMDFibuKonten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\Controls\ucMDMarginFees.resx">
+      <DependentUpon>ucMDMarginFees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\Controls\ucMDName.resx">
+      <DependentUpon>ucMDName.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\Controls\ucMDProgramm.resx">
+      <DependentUpon>ucMDProgramm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\Controls\ucMDPublicAuthorities.resx">
+      <DependentUpon>ucMDPublicAuthorities.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCloseMonth.resx">
+      <DependentUpon>frmCloseMonth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeletedrecs.resx">
+      <DependentUpon>frmDeletedrecs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInvalidRecordNumbers.resx">
+      <DependentUpon>frmInvalidRecordNumbers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\Controls\ucMDStartNumbers.resx">
+      <DependentUpon>ucMDStartNumbers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\Controls\ucRequiredFields.resx">
+      <DependentUpon>ucRequiredFields.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\Controls\ucStandardvalues.resx">
+      <DependentUpon>ucStandardvalues.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\Controls\ucWebServices.resx">
+      <DependentUpon>ucWebServices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\frmMandant.resx">
+      <DependentUpon>frmMandant.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\frmMDFak.resx">
+      <DependentUpon>frmMDFak.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\frmMDLmvKtg.resx">
+      <DependentUpon>frmMDLmvKtg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mandanten\frmMDLmvTSpesen.resx">
+      <DependentUpon>frmMDLmvTSpesen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablesetting\Controls\Employee\ucEmployeeTables.resx">
+      <DependentUpon>ucEmployeeTables.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablesetting\frmTables.resx">
+      <DependentUpon>frmTables.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LAStamm\frmLAStamm.resx">
+      <DependentUpon>frmLAStamm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Usersetting\Controls\ucUserDocument.resx">
+      <DependentUpon>ucUserDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Usersetting\frmUserRights.resx">
+      <DependentUpon>frmUserRights.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Usersetting\frmUsers.resx">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SPEmployeeTaxInfoService.wsdl" />
+    <None Include="Service References\EmployeeTaxInfoWebService\SPS.SYS.TableSettingMng.EmployeeTaxInfoWebService.ChildEducationDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SPS.SYS.TableSettingMng.EmployeeTaxInfoWebService.QstDataAllowedDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SPS.SYS.TableSettingMng.EmployeeTaxInfoWebService.QstDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SPS.SYS.TableSettingMng.EmployeeTaxInfoWebService.TaxDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPPVLGAVUtilWebService\SPPVLGAVUtil.wsdl" />
+    <None Include="Service References\SPPVLGAVUtilWebService\SPS.SYS.TableSettingMng.SPPVLGAVUtilWebService.GAVNameResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="SPS.SYS.TableSettingMng.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Listing\Payroll\Yearly\SPS.Fill.NLAFields\SPS.Fill.NLAFields.vbproj">
+      <Project>{f155980d-2b36-4397-98a1-72cbb3a048fb}</Project>
+      <Name>SPS.Fill.NLAFields</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.DatabaseAccess\SP.DatabaseAccess.vbproj">
+      <Project>{eedcd73d-17b9-4604-a7c5-10667af63e85}</Project>
+      <Name>SP.DatabaseAccess</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Intern.Automations\SP.Internal.Automations.vbproj">
+      <Project>{1bbfd14a-03ac-4a44-8040-fc21ca57cc2e}</Project>
+      <Name>SP.Internal.Automations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.RPContent.PrintUtility\SP.RPContent.PrintUtility.vbproj">
+      <Project>{933377cf-a3bc-4608-aed2-ac3648b79bef}</Project>
+      <Name>SP.RPContent.PrintUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Export.Listing.Utility\SPS.Export.Listing.Utility.vbproj">
+      <Project>{abc11771-1bbb-4e11-a9c1-841620412f84}</Project>
+      <Name>SPS.Export.Listing.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Listing.Print.Utility\SPS.Listing.Print.Utility.vbproj">
+      <Project>{CA4FFD19-3751-41BE-97C8-B969B76836A5}</Project>
+      <Name>SPS.Listing.Print.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MA.Guthaben\SPS.MA.Guthaben.vbproj">
+      <Project>{f74e93d6-5b73-46b3-ae98-21b25ffd34d4}</Project>
+      <Name>SPS.MA.Guthaben</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MD.CreateNewUtility\SPS.MD.CreateNewUtility.vbproj">
+      <Project>{7d3ed265-a2d2-4fba-ae99-4cb433822bcd}</Project>
+      <Name>SPS.MD.CreateNewUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MD.ESRDTAUtility\SPS.MD.ESRDTAUtility.vbproj">
+      <Project>{b4ce72b5-6aba-46d2-8a5a-188c7b0c5012}</Project>
+      <Name>SPS.MD.ESRDTAUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MD.GAVAddressUtility\SPS.MD.GAVAddressUtility.vbproj">
+      <Project>{9a3c13d9-d754-4649-904e-4ff9bf8c37f8}</Project>
+      <Name>SPS.MD.GAVAddressUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MD.QstAddressUtility\SPS.MD.QstAddressUtility.vbproj">
+      <Project>{cbcd0073-7c7c-442a-9fd9-d571981c8d36}</Project>
+      <Name>SPS.MD.QstAddressUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EmployeeTaxInfoWebService\" />
+    <WCFMetadataStorage Include="Service References\SPPVLGAVUtilWebService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPPVLGAVUtilWebService\SPPVLGAVUtil.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPPVLGAVUtilWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPPVLGAVUtilWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPPVLGAVUtilWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmployeeTaxInfoWebService\SPEmployeeTaxInfoService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmployeeTaxInfoWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmployeeTaxInfoWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmployeeTaxInfoWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quickfilter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exportfile.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Supportedcode\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{ABC11771-1BBB-4E11-A9C1-841620412F84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SPS.Export.Listing.Utility</RootNamespace>
+    <AssemblyName>SPS.Export.Listing.Utility</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DocumentationFile>SPS.Export.Listing.Utility.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Components.net\</OutputPath>
+    <DocumentationFile>SPS.Export.Listing.Utility.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>sps.export.listing.utility.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\Libraries\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="O2S.Components.PDFView4NET">
+      <HintPath>..\Libraries\O2S.Components.PDFView4NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abacus\ClsExportLOInAba.vb" />
+    <Compile Include="Abacus\frmAbacus.Designer.vb">
+      <DependentUpon>frmAbacus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Abacus\frmAbacus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cresus\ClsExportLOlnCresus.vb" />
+    <Compile Include="Cresus\frmCresus.Designer.vb">
+      <DependentUpon>frmCresus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cresus\frmCresus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSV\WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CSV\WaitForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportData\frmImportData.Designer.vb">
+      <DependentUpon>frmImportData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportData\frmImportData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportData\frmImportTwixData.Designer.vb">
+      <DependentUpon>frmImportTwixData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportData\frmImportTwixData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportData\ImportData_Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportData\ImportData_CustomerTwix.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportData\ImportData_Customer_Berufe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportData\ImportData_Employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupportCode\ClsExportStart.vb" />
+    <Compile Include="ClsParifondStart.vb" />
+    <Compile Include="eCall\frmDoc2eCall.Designer.vb">
+      <DependentUpon>frmDoc2eCall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="eCall\frmDoc2eCall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eCall\frmDoc2eCallWait.Designer.vb">
+      <DependentUpon>frmDoc2eCallWait.vb</DependentUpon>
+    </Compile>
+    <Compile Include="eCall\frmDoc2eCallWait.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eCall\frmSMS2eCall.Designer.vb">
+      <DependentUpon>frmSMS2eCall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="eCall\frmSMS2eCall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eCall\frmSMS2eCallWait.Designer.vb">
+      <DependentUpon>frmSMS2eCallWait.vb</DependentUpon>
+    </Compile>
+    <Compile Include="eCall\frmSMS2eCallWait.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MA_NLA\frmMANLAData.Designer.vb">
+      <DependentUpon>frmMANLAData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MA_NLA\frmMANLAData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModulConstants.vb" />
+    <Compile Include="Parifond\ClsESListUtility.vb" />
+    <Compile Include="Parifond\ClsESVerleihUtility.vb" />
+    <Compile Include="Parifond\ClsESVertragUtility.vb" />
+    <Compile Include="Parifond\ClsKDUtility.vb" />
+    <Compile Include="Parifond\ClsLoUtility.vb" />
+    <Compile Include="Parifond\ClsMAUtility.vb" />
+    <Compile Include="Parifond\ClsParifondSetting.vb" />
+    <Compile Include="Parifond\ClsPVLGAVUtility.vb" />
+    <Compile Include="Parifond\ClsRPContentUtility.vb" />
+    <Compile Include="Parifond\frmParifondResult.Designer.vb">
+      <DependentUpon>frmParifondResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parifond\frmParifondResult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parifond\frmPControl.Designer.vb">
+      <DependentUpon>frmPControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parifond\frmPControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service References\SPCustomerPaymentServicesWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPPVLGAVUtilWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Sesam\ClsExportLOInSesam.vb" />
+    <Compile Include="Sesam\frmSesam.designer.vb">
+      <DependentUpon>frmSesam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sesam\frmSesam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\ClsMainSetting.vb" />
+    <Compile Include="ClsXML.vb" />
+    <Compile Include="CSV\frmCSV.designer.vb">
+      <DependentUpon>frmCSV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CSV\frmCSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings\ClsCSVSettings.vb" />
+    <Compile Include="Settings\SettingKeys.vb" />
+    <Compile Include="Settings\SettingsManager.vb" />
+    <Compile Include="SupportCode\ExportStart_AnnualPayrollListing.vb" />
+    <Compile Include="SupportCode\ExportStart_MontlyPayrollListing.vb" />
+    <Compile Include="SupportCode\ExportStart_PVLPayrollListing.vb" />
+    <Compile Include="Utilities.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Abacus\frmAbacus.resx">
+      <DependentUpon>frmAbacus.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cresus\frmCresus.resx">
+      <DependentUpon>frmCresus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSV\frmCSV.resx">
+      <DependentUpon>frmCSV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSV\WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportData\frmImportData.resx">
+      <DependentUpon>frmImportData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eCall\frmDoc2eCall.resx">
+      <DependentUpon>frmDoc2eCall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eCall\frmDoc2eCallWait.resx">
+      <DependentUpon>frmDoc2eCallWait.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eCall\frmSMS2eCall.resx">
+      <DependentUpon>frmSMS2eCall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eCall\frmSMS2eCallWait.resx">
+      <DependentUpon>frmSMS2eCallWait.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportData\frmImportTwixData.resx">
+      <DependentUpon>frmImportTwixData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MA_NLA\frmMANLAData.resx">
+      <DependentUpon>frmMANLAData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="Parifond\frmParifondResult.resx">
+      <DependentUpon>frmParifondResult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parifond\frmPControl.resx">
+      <DependentUpon>frmPControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sesam\frmSesam.resx">
+      <DependentUpon>frmSesam.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\SPCustomerPaymentServices1.wsdl" />
+    <None Include="Service References\SPCustomerPaymentServicesWebService\SPS.Export.Listing.Utility.SPCustomerPaymentServicesWebService.PaymentSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPPVLGAVUtilWebService\SPPVLGAVUtil.wsdl" />
+    <None Include="Service References\SPPVLGAVUtilWebService\SPS.Export.Listing.Utility.SPPVLGAVUtilWebService.GAVNameResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="sps.export.listing.utility.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SPCustomerPaymentServicesWebService\" />
+    <WCFMetadataStorage Include="Service References\SPPVLGAVUtilWebService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\SPCustomerPaymentServices1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PDF O2S\SP.PDFO2S.vbproj">
+      <Project>{fa1d45d1-49f1-4eed-a92d-877065fcdac5}</Project>
+      <Name>SP.PDFO2S</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Infrastructure\SP.Infrastructure.vbproj">
+      <Project>{4b0bb9d6-0fd0-48cf-9256-6b42582d5f9f}</Project>
+      <Name>SP.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Intern.Automations\SP.Internal.Automations.vbproj">
+      <Project>{1bbfd14a-03ac-4a44-8040-fc21ca57cc2e}</Project>
+      <Name>SP.Internal.Automations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.RPContent.PrintUtility\SP.RPContent.PrintUtility.vbproj">
+      <Project>{933377cf-a3bc-4608-aed2-ac3648b79bef}</Project>
+      <Name>SP.RPContent.PrintUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPProgUtility\SPProgUtility.vbproj">
+      <Project>{78bb37a6-7753-4586-a42f-39e591e1e229}</Project>
+      <Name>SPProgUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Listing.Print.Utility\SPS.Listing.Print.Utility.vbproj">
+      <Project>{ca4ffd19-3751-41be-97c8-b969b76836a5}</Project>
+      <Name>SPS.Listing.Print.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.DatabaseAccess\SP.DatabaseAccess.vbproj">
+      <Project>{eedcd73d-17b9-4604-a7c5-10667af63e85}</Project>
+      <Name>SP.DatabaseAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPSSendMail\SPSSendMail.vbproj">
+      <Project>{afda057f-94d1-4d68-85fb-31ca8ee131f7}</Project>
+      <Name>SPSSendMail</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPPVLGAVUtilWebService\SPPVLGAVUtil.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPPVLGAVUtilWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPPVLGAVUtilWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPPVLGAVUtilWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_businesswoman.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editcontact_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newcontact_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refreshpivottable_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addnewdatasource_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_position.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

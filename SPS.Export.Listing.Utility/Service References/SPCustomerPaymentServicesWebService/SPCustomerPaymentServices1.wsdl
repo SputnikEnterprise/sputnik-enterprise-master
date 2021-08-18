@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/">
+      <s:element name="GetPaymentServices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentServicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPaymentServicesResult" type="tns:ArrayOfPaymentSearchResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPaymentSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PaymentSearchResultDTO" nillable="true" type="tns:PaymentSearchResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RecID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ServiceDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizedCreditCount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizedCredit" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LogSolvencyCheckUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="solvencyCheckType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogSolvencyCheckUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogSolvencyCheckUsageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogeCallUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JobID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsedPoints" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogeCallUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogeCallUsageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPaymentServicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPaymentServices" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentServicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPaymentServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogSolvencyCheckUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:LogSolvencyCheckUsage" />
+  </wsdl:message>
+  <wsdl:message name="LogSolvencyCheckUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:LogSolvencyCheckUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogeCallUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:LogeCallUsage" />
+  </wsdl:message>
+  <wsdl:message name="LogeCallUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:LogeCallUsageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPCustomerPaymentServicesSoap">
+    <wsdl:operation name="GetPaymentServices">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der PaymentData auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetPaymentServicesSoapIn" />
+      <wsdl:output message="tns:GetPaymentServicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogSolvencyCheckUsage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logt die Verwendung von Solvenzprüfungen.</wsdl:documentation>
+      <wsdl:input message="tns:LogSolvencyCheckUsageSoapIn" />
+      <wsdl:output message="tns:LogSolvencyCheckUsageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogeCallUsage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logt die Verwendung von eCall SMS-Nachrichten.</wsdl:documentation>
+      <wsdl:input message="tns:LogeCallUsageSoapIn" />
+      <wsdl:output message="tns:LogeCallUsageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPCustomerPaymentServicesSoap" type="tns:SPCustomerPaymentServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPaymentServices">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetPaymentServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogSolvencyCheckUsage">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/LogSolvencyCheckUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogeCallUsage">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/LogeCallUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPCustomerPaymentServicesSoap12" type="tns:SPCustomerPaymentServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPaymentServices">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetPaymentServices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogSolvencyCheckUsage">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/LogSolvencyCheckUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogeCallUsage">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/LogeCallUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPCustomerPaymentServices">
+    <wsdl:port name="SPCustomerPaymentServicesSoap" binding="tns:SPCustomerPaymentServicesSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPCustomerPaymentServicesSoap12" binding="tns:SPCustomerPaymentServicesSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

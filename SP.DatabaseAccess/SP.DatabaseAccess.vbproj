@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{EEDCD73D-17B9-4604-A7C5-10667AF63E85}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SP.DatabaseAccess</RootNamespace>
+    <AssemblyName>SP.DatabaseAccess</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DocumentationFile>SP.DatabaseAccess.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Components.net\</OutputPath>
+    <DocumentationFile>SP.DatabaseAccess.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SP.DatabaseAccess.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\Libraries\System.Net.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancePayment\DataObjects\BalanceValues.vb" />
+    <Compile Include="AdvancePayment\DataObjects\EmployeeData.vb" />
+    <Compile Include="AdvancePayment\DataObjects\LAData.vb" />
+    <Compile Include="AdvancePayment\DataObjects\MandantValuesForAdvancePayment.vb" />
+    <Compile Include="AdvancePayment\DataObjects\NegativeLMData.vb" />
+    <Compile Include="AdvancePayment\DataObjects\PaymentReasonData.vb" />
+    <Compile Include="AdvancePayment\DataObjects\ZGMasterData.vb" />
+    <Compile Include="AdvancePayment\IAdvancePaymentDatabaseAccess.vb" />
+    <Compile Include="AdvancePayment\AdvancePaymentDatabaseAccess.vb" />
+    <Compile Include="Applications\AppCvDatabaseAccess.vb" />
+    <Compile Include="Applications\AppCvDatabaseAccess_Loading.vb" />
+    <Compile Include="Applications\AppDatabaseAccess.vb" />
+    <Compile Include="Applications\AppDatabaseAccess_Applicant.vb" />
+    <Compile Include="Applications\AppDatabaseAccess_Application.vb" />
+    <Compile Include="Applications\AppDatabaseAccess_Document.vb" />
+    <Compile Include="Applications\AppDatabaseAccess_Notification.vb" />
+    <Compile Include="Applications\CVLizer\CVLizerDatabaseAccess.vb" />
+    <Compile Include="Applications\CVLizer\CVLizerDatabaseAccess_AdditionalInformation.vb" />
+    <Compile Include="Applications\CVLizer\CVLizerDatabaseAccess_Applicant.vb" />
+    <Compile Include="Applications\CVLizer\CVLizerDatabaseAccess_Document.vb" />
+    <Compile Include="Applications\CVLizer\CVLizerDatabaseAccess_Education.vb" />
+    <Compile Include="Applications\CVLizer\CVLizerDatabaseAccess_Objective.vb" />
+    <Compile Include="Applications\CVLizer\CVLizerDatabaseAccess_Phases.vb" />
+    <Compile Include="Applications\CVLizer\CVLizerDatabaseAccess_Publication.vb" />
+    <Compile Include="Applications\CVLizer\CVLizerDatabaseAccess_Statistic.vb" />
+    <Compile Include="Applications\CVLizer\CVLizerDatabaseAccess_Work.vb" />
+    <Compile Include="Applications\CVLizer\DataObjects\CVLizerData.vb" />
+    <Compile Include="Applications\CVLizer\DataObjects\CVLizerViewData.vb" />
+    <Compile Include="Applications\CVLizer\ICVLizerDatabaseAccess.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvAvailabilityData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvApprovalData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvTransportationData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvSalaryData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvProfileStatusData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvHighestEducationLevelData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvExtraInfoData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvCustomAreaData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvReferenceData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvLanguageProficiencyData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvHobbyData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvOtherData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvSoftSkillTypeData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvLanguageSkillTypeData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvComputerSkillTypeData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvLanguageSkillData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvSoftSkillData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvComputerSkillData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvSkillData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvEmploymentHistoryData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvEducationHistoryData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvJobTitleData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvInstituteTypeData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvDiplomaData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvDocumentTextData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvDocumentHtmlData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvDegreeDirectionData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvEducationLevelData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvEducationDetailData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvEducationData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvPictureData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvPhoneNumberTypeData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvEmailTypeData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvSocialMediaTypeData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvSocialMediaData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvEmailData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvPhoneNumberData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvRegionData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvDriversLicenceData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvCountryData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvMaritalStatusData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvNationalityData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvGenderData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvAddressData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvPersonalData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantCvProfileData.vb" />
+    <Compile Include="Applications\DataObjects\ApplicantData.vb" />
+    <Compile Include="Applications\EMailJobs\DataObjects\EMailJobData.vb" />
+    <Compile Include="Applications\EMailJobs\EMailJobDatabaseAccess.vb" />
+    <Compile Include="Applications\EMailJobs\EMailJobDatabaseAccess_Report.vb" />
+    <Compile Include="Applications\EMailJobs\EMailJobDatabaseAccess_Setting.vb" />
+    <Compile Include="Applications\EMailJobs\IEMailJobDatabaseAccess.vb" />
+    <Compile Include="Applications\IAppCvDatabaseAccess.vb" />
+    <Compile Include="Applications\IAppDatabaseAccess.vb" />
+    <Compile Include="Applications\ScanJobs\DataObjects\ScanJobData.vb" />
+    <Compile Include="Applications\ScanJobs\ScanJobDatabaseAccess_Employee.vb" />
+    <Compile Include="Applications\ScanJobs\ScanJobDatabaseAccess.vb" />
+    <Compile Include="Applications\ScanJobs\IScanJobDatabaseAccess.vb" />
+    <Compile Include="Applications\SPPublicData\DataObjects\spPublicData.vb" />
+    <Compile Include="Applications\SPPublicData\ISPPublicDatabaseAccess.vb" />
+    <Compile Include="Applications\SPPublicData\SPPublicJobDatabaseAccess.vb" />
+    <Compile Include="Applications\SPPublicData\SPPublicJobDatabaseAccess_Community.vb" />
+    <Compile Include="Common\CommonDatabaseAccess.vb" />
+    <Compile Include="Common\CommonDatabaseAccess_Advisor.vb" />
+    <Compile Include="Common\CommonDatabaseAccess_Commons.vb" />
+    <Compile Include="Common\CommonDatabaseAccess_Customer.vb" />
+    <Compile Include="Common\CommonDatabaseAccess_Mandant.vb" />
+    <Compile Include="Common\DataObjects\AbsenceData.vb" />
+    <Compile Include="Common\DataObjects\AdvisorData.vb" />
+    <Compile Include="Common\DataObjects\AvailableBusinessBranchData.vb" />
+    <Compile Include="Common\DataObjects\BranchData.vb" />
+    <Compile Include="Common\DataObjects\CantonData.vb" />
+    <Compile Include="Common\DataObjects\CivilStateData.vb" />
+    <Compile Include="Common\DataObjects\ContactType1Data.vb" />
+    <Compile Include="Common\DataObjects\CostCenter.vb" />
+    <Compile Include="Common\DataObjects\CountryData.vb" />
+    <Compile Include="Common\DataObjects\CurrencyData.vb" />
+    <Compile Include="Customer\CustomerDatabaseAccess_GAVData.vb" />
+    <Compile Include="Customer\CustomerDatabaseAccess_Notices.vb" />
+    <Compile Include="Customer\CustomerDatabaseAccess_Tapi.vb" />
+    <Compile Include="Customer\CustomerDatabaseAccess_TwixData.vb" />
+    <Compile Include="Customer\CustomerDatabaseAccess_WorkingHours.vb" />
+    <Compile Include="Customer\DataObjects\CustomerDependentContactData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerWOSData.vb" />
+    <Compile Include="DatabaseAccessBase.vb" />
+    <Compile Include="DeletedRecs\DeletedDatabaseAccess.vb" />
+    <Compile Include="DeletedRecs\DataObjects\DeletedData.vb" />
+    <Compile Include="DeletedRecs\IDeletedDatabaseAccess.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_Application.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_KiAu.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_NLAAdress.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_Notices.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_Partnership.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_QuickSearch.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_RP.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_SAddress.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_WOS.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_ZV.vb" />
+    <Compile Include="ESRUtility\DataObjects\ReData.vb" />
+    <Compile Include="DTAUtility\DataObjects\BankData.vb" />
+    <Compile Include="DTAUtility\DataObjects\ZgData.vb" />
+    <Compile Include="DTAUtility\DataObjects\JobNumberData.vb" />
+    <Compile Include="DTAUtility\DataObjects\MandantAndBankDataForDTAFileCreation.vb" />
+    <Compile Include="DTAUtility\DataObjects\LolDataForDtaFileCreation.vb" />
+    <Compile Include="DTAUtility\DTAUtilityDatabaseAccess.vb" />
+    <Compile Include="DTAUtility\IDTAUtilityDatabaseAccess.vb" />
+    <Compile Include="Employee\DataObjects\AdvancedPayment\EmployeeAdvancedPaymentData.vb" />
+    <Compile Include="Employee\DataObjects\ContactMng\CustomerDataForContactMng.vb" />
+    <Compile Include="Employee\DataObjects\ContactMng\EmployeeDependentCustomerContactData.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_AdvancedPaymentMng.vb" />
+    <Compile Include="ESRUtility\DataObjects\MandantYearData.vb" />
+    <Compile Include="ESRUtility\DataObjects\BankData.vb" />
+    <Compile Include="ESRUtility\ESRUtilityDatabaseAccess.vb" />
+    <Compile Include="ESRUtility\IESRUtilityDatabaseAccess.vb" />
+    <Compile Include="ES\DataObjects\ConflictedLOData.vb" />
+    <Compile Include="ES\DataObjects\ContextMenuForPrint.vb" />
+    <Compile Include="ES\DataObjects\ESCategorizationData.vb" />
+    <Compile Include="Common\DataObjects\GenderData.vb" />
+    <Compile Include="Common\DataObjects\LanguageData.vb" />
+    <Compile Include="Common\DataObjects\MandantData.vb" />
+    <Compile Include="Common\DataObjects\PermissionData.vb" />
+    <Compile Include="Common\DataObjects\PostCodeData.vb" />
+    <Compile Include="Common\DataObjects\SalutationData.vb" />
+    <Compile Include="Common\ICommonDatabaseAccess.vb" />
+    <Compile Include="Customer\CustomerDatabaseAccess.vb" />
+    <Compile Include="Employee\DataObjects\ContextMenuForPrint.vb" />
+    <Compile Include="Employee\DataObjects\LanguagesAndProfessionsMng\EmployeeAssignedVerbalLanguageData.vb" />
+    <Compile Include="Employee\DataObjects\LanguagesAndProfessionsMng\EmployeeAssignedProfessionData.vb" />
+    <Compile Include="Employee\DataObjects\LanguagesAndProfessionsMng\EmployeeAssignedSectorData.vb" />
+    <Compile Include="Employee\DataObjects\LanguagesAndProfessionsMng\EmployeeAssignedWrittenLanguageData.vb" />
+    <Compile Include="Employee\DataObjects\LanguagesAndProfessionsMng\JobCandidateLanguageData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\ChurchTaxCodeData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\EmployeeOtherData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\EmployeeContactComm.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\EmployeeContactInfoData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\EmployeeBusinessBranchData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\EmployeeESStateData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\EmployeeProposeStateData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\EmployeeQSTCommunityData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\EmployeeStateData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\ExistingEmployeeSearchData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\NewEmployeeInitData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\QSTData.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\AssessmentData.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\DeadlineData.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\EmployeeAssignedAssessmentData.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\EmployeeAssignedCommunicationData.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\EmployeeAssignedEmploymentTypeData.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\CarReserveData.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\ContactReserve5Data.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\ContactReserveData.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\DrivingLicenceData.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\EmployeeCommunicationData.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\EmployeeEmployementType.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\VehicleData.vb" />
+    <Compile Include="Employee\DataObjects\MediationMng\WorkPensumData.vb" />
+    <Compile Include="Employee\DataObjects\MonthlySalary\LMDocData.vb" />
+    <Compile Include="Employee\DataObjects\Salary\AHVData.vb" />
+    <Compile Include="Employee\DataObjects\Salary\ALVData.vb" />
+    <Compile Include="Employee\DataObjects\Salary\BVGData.vb" />
+    <Compile Include="Employee\DataObjects\Salary\CurrencyData.vb" />
+    <Compile Include="Employee\DataObjects\Salary\EmployeeLOSettingsData.vb" />
+    <Compile Include="Employee\DataObjects\Salary\PaymentMethodData.vb" />
+    <Compile Include="Employee\DataObjects\Salary\Suva2Data.vb" />
+    <Compile Include="Employee\DataObjects\TodoMng\CustomerNameData.vb" />
+    <Compile Include="Customer\DataObjects\ContactDoc.vb" />
+    <Compile Include="Customer\DataObjects\CustomerCommunicationData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerCommunicationTypeData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerContactInfoData.vb" />
+    <Compile Include="Customer\DataObjects\ContextMenuForPrint.vb" />
+    <Compile Include="Customer\DataObjects\CustomerAssignedInvoiceAddressData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerAssignedBusinessBranchData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerContactOverviewData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerAssignedCreditInfo.vb" />
+    <Compile Include="Customer\DataObjects\CustomerDocumentCategoryData.vb" />
+    <Compile Include="Customer\DataObjects\EmployeeData.vb" />
+    <Compile Include="Customer\DataObjects\ESData.vb" />
+    <Compile Include="Customer\DataObjects\ProposeData.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonAssignedContactData.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonAssignedDocumentData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerAssignedEmailData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerAssignedEmploymenTypetData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerAssignedGAVGroupData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerAssignedInvoiceData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerAssignedKeywordData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerAssignedKSTData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerMasterData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerAssignedProfessionData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerAssignedSectorData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerStateData.vb" />
+    <Compile Include="Customer\DataObjects\DepartmentData.vb" />
+    <Compile Include="Customer\DataObjects\EmploymentTypeData.vb" />
+    <Compile Include="Customer\DataObjects\ExistingCustomerSearchData.vb" />
+    <Compile Include="Customer\DataObjects\FirstPropertyData.vb" />
+    <Compile Include="Customer\DataObjects\GAVGroupData.vb" />
+    <Compile Include="Customer\DataObjects\InvoiceOptionData.vb" />
+    <Compile Include="Customer\DataObjects\InvoiceTypeData.vb" />
+    <Compile Include="Customer\DataObjects\KeywordData.vb" />
+    <Compile Include="Customer\DataObjects\NumberOfEmployeesData.vb" />
+    <Compile Include="Customer\DataObjects\OPShipmentData.vb" />
+    <Compile Include="Customer\DataObjects\PaymentConditionData.vb" />
+    <Compile Include="Customer\DataObjects\PaymentReminderCodeData.vb" />
+    <Compile Include="Customer\DataObjects\PositionData.vb" />
+    <Compile Include="Customer\DataObjects\CustomerReserveData.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonAssignedCommuncationData.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonAssignedProfessionData.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonAssignedSectorData.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonContactInfo.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonAssignedContactTypeData.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonData.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonMasterData.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonOverviewDataForPersonManagement.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonAssignedReserveData.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonReserveData.vb" />
+    <Compile Include="Customer\DataObjects\ResponsiblePersonStateData.vb" />
+    <Compile Include="Customer\DataObjects\SalesVolumeData.vb" />
+    <Compile Include="Customer\DataObjects\SecondPropertyData.vb" />
+    <Compile Include="Common\DataObjects\TermsAndConditionsData.vb" />
+    <Compile Include="Customer\DataObjects\UserData.vb" />
+    <Compile Include="Customer\DataObjects\VacancyData.vb" />
+    <Compile Include="Customer\ICustomerDatabaseAccess.vb" />
+    <Compile Include="Employee\DataObjects\BankMng\EmployeeBankData.vb" />
+    <Compile Include="Employee\DataObjects\BankMng\SearchBankDataResult.vb" />
+    <Compile Include="Employee\DataObjects\ContactMng\ContactDoc.vb" />
+    <Compile Include="Employee\DataObjects\ContactMng\EmployeeContactOverviewData.vb" />
+    <Compile Include="Employee\DataObjects\DocumentMng\EmployeeDocumentCategoryData.vb" />
+    <Compile Include="Employee\DataObjects\ContactMng\ESDataForContactMng.vb" />
+    <Compile Include="Employee\DataObjects\ContactMng\ProposeDataForContactMng.vb" />
+    <Compile Include="Employee\DataObjects\ContactMng\EmployeeContactData.vb" />
+    <Compile Include="Employee\DataObjects\ContactMng\VacancyDataForContactMng.vb" />
+    <Compile Include="Employee\DataObjects\JobInterviewMng\CustomerData.vb" />
+    <Compile Include="Employee\DataObjects\JobInterviewMng\EmployeeJobAppointmentData.vb" />
+    <Compile Include="Employee\DataObjects\JobInterviewMng\JobAppointmentStateData.vb" />
+    <Compile Include="Employee\DataObjects\JobInterviewMng\ProposeData.vb" />
+    <Compile Include="Employee\DataObjects\JobInterviewMng\ResponsiblePersonData.vb" />
+    <Compile Include="Employee\DataObjects\JobInterviewMng\VacancyData.vb" />
+    <Compile Include="Employee\DataObjects\MasterdataMng\EmployeeMasterData.vb" />
+    <Compile Include="Employee\DataObjects\MonthlySalary\BankData.vb" />
+    <Compile Include="Employee\DataObjects\MonthlySalary\CantonData.vb" />
+    <Compile Include="Employee\DataObjects\MonthlySalary\ConflictedLOLData.vb" />
+    <Compile Include="Employee\DataObjects\MonthlySalary\EmployeeLOSettingData.vb" />
+    <Compile Include="Employee\DataObjects\MonthlySalary\EmployeeOverviewData.vb" />
+    <Compile Include="Employee\DataObjects\MonthlySalary\ESData.vb" />
+    <Compile Include="Employee\DataObjects\MonthlySalary\LAData.vb" />
+    <Compile Include="Employee\DataObjects\MonthlySalary\LMData.vb" />
+    <Compile Include="Employee\DataObjects\MonthlySalary\MonthlySalaryOverviewData.vb" />
+    <Compile Include="Employee\DataObjects\TodoMng\TodoUserData.vb" />
+    <Compile Include="Employee\DataObjects\TodoMng\UserImageData.vb" />
+    <Compile Include="Employee\DataObjects\TodoMng\ZHDNameData.vb" />
+    <Compile Include="Employee\DataObjects\TodoMng\TodoListData.vb" />
+    <Compile Include="Employee\DataObjects\TodoMng\TodoData.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_LangugesAndProfessionsMng.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_MasterdataMng.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_ContactMng.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_DocumentMng.vb" />
+    <Compile Include="Employee\DataObjects\DocumentMng\EmployeeDocumentData.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_MediationMng.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_SalaryMng.vb" />
+    <Compile Include="Employee\IEmployeeDatabaseAccess.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_MonthlySalaryMng.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_BankMng.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_JobInterviewMng.vb" />
+    <Compile Include="Employee\EmployeeDatabaseAccess_TodoMng.vb" />
+    <Compile Include="ES\DataObjects\CustomerData.vb" />
+    <Compile Include="ES\DataObjects\EmployeeData.vb" />
+    <Compile Include="ES\DataObjects\ESEmployeeAndCustomerLAData.vb" />
+    <Compile Include="ES\DataObjects\ESMasterData.vb" />
+    <Compile Include="ES\DataObjects\ESSalaryData.vb" />
+    <Compile Include="ES\DataObjects\ESSalaryGAVData.vb" />
+    <Compile Include="ES\DataObjects\ConflictedRPLData.vb" />
+    <Compile Include="ES\DataObjects\ConflictedMonthCloseData.vb" />
+    <Compile Include="ES\DataObjects\FoundedReports.vb" />
+    <Compile Include="ES\DataObjects\LAData.vb" />
+    <Compile Include="ES\DataObjects\MandantMargeBoundaryValues.vb" />
+    <Compile Include="ES\DataObjects\RPData.vb" />
+    <Compile Include="ES\DataObjects\SuvaData.vb" />
+    <Compile Include="ES\DataObjects\SalaryCalculationPercentageValues.vb" />
+    <Compile Include="ES\ESDatabaseAccess.vb" />
+    <Compile Include="ES\IESDatabaseAccess.vb" />
+    <Compile Include="Invoice\DataObjects\BankData.vb" />
+    <Compile Include="Invoice\DataObjects\Customer.vb" />
+    <Compile Include="Invoice\DataObjects\Invoice.vb" />
+    <Compile Include="Invoice\InvoiceAtomatedDatabaseAccess.vb" />
+    <Compile Include="Invoice\InvoiceDatabaseAccess.vb" />
+    <Compile Include="Invoice\IInvoiceDatabaseAccess.vb" />
+    <Compile Include="Invoice\InvoiceDunningDatabaseAccess.vb" />
+    <Compile Include="Invoice\InvoicePaymentDatabaseAccess.vb" />
+    <Compile Include="Listing\Annual\ListingDatabaseAccess_Lohnkonti.vb" />
+    <Compile Include="Listing\DataObjects\Invoice\ListingDunningPrintData.vb" />
+    <Compile Include="Listing\DataObjects\Invoice\ListingInvoicePrintData.vb" />
+    <Compile Include="Listing\DataObjects\ListingEmployeeData.vb" />
+    <Compile Include="Listing\DataObjects\ListingEmploymentData.vb" />
+    <Compile Include="Listing\DataObjects\ListingPayrollData.vb" />
+    <Compile Include="Listing\DataObjects\ListingSettingData.vb" />
+    <Compile Include="Listing\ExportData\ListingDatabaseAccess_Export_Employee.vb" />
+    <Compile Include="Listing\ExportData\ListingDatabaseAccess_Export_Customer.vb" />
+    <Compile Include="Listing\Guthaben\ListingDatabaseAccess_Guthaben.vb" />
+    <Compile Include="Listing\IListingDatabaseAccess.vb" />
+    <Compile Include="Listing\ImportFromAnotherDatabase\ListingDatabaseAccess_Customer_Import.vb" />
+    <Compile Include="Listing\ImportFromAnotherDatabase\ListingDatabaseAccess_Employee_Import.vb" />
+    <Compile Include="Listing\Invoice\ListingDatabaseAccess_ESRPrint.vb" />
+    <Compile Include="Listing\Invoice\ListingDatabaseAccess_InvoiceSearch.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_Customer.vb" />
+    <Compile Include="Listing\Invoice\ListingDatabaseAccess_DunningPrint.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_Db1.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_eMail.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_Employee.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_Employee_Search.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_Employment.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_HourSearch.vb" />
+    <Compile Include="Listing\Invoice\ListingDatabaseAccess_InvoicePrint.vb" />
+    <Compile Include="Listing\Annual\ListingDatabaseAccess_ParifondControll.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_InvoiceSearch.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_Offer.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_OutgoingEMail.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_PayrollDowntime.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_PayrollPrint.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess.vb" />
+    <Compile Include="Listing\Annual\ListingDatabaseAccess_PVLListing.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_Payroll_QST.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_ReportPrint.vb" />
+    <Compile Include="Listing\ListingDatabaseAccess_SendEMail.vb" />
+    <Compile Include="Listing\WOS\DataObjects\WOSSettingData.vb" />
+    <Compile Include="Listing\WOS\IWOSDatabaseAccess.vb" />
+    <Compile Include="Listing\WOS\WOSDatabaseAccess.vb" />
+    <Compile Include="ModulView\DataObjects\ModulViewCustomer.vb" />
+    <Compile Include="ModulView\DataObjects\ModulViewEmployee.vb" />
+    <Compile Include="ModulView\DataObjects\ModulViewPropose.vb" />
+    <Compile Include="ModulView\IModulViewDatabaseAccess.vb" />
+    <Compile Include="ModulView\ModulViewDatabaseAccess.vb" />
+    <Compile Include="ModulView\ModulViewDatabaseAccess_Customer.vb" />
+    <Compile Include="ModulView\ModulViewDatabaseAccess_Employee.vb" />
+    <Compile Include="ModulView\ModulViewDatabaseAccess_Propose.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Payroll\DataObjects\AHVFreibetragData.vb" />
+    <Compile Include="Payroll\DataObjects\AktivMABankDataForPayroll.vb" />
+    <Compile Include="Payroll\DataObjects\EmployeeBnkDataForPayroll.vb" />
+    <Compile Include="Payroll\DataObjects\EmployeeDataForZV.vb" />
+    <Compile Include="Payroll\DataObjects\EmployeeLMDataForLOCreation.vb" />
+    <Compile Include="Payroll\DataObjects\EmployeeRPLDataForLOCreation.vb" />
+    <Compile Include="Payroll\DataObjects\EmployeeZGDataForPayroll.vb" />
+    <Compile Include="Payroll\DataObjects\EndDataForLO.vb" />
+    <Compile Include="Payroll\DataObjects\ESData1ForQSTDataForm.vb" />
+    <Compile Include="Payroll\DataObjects\ESData2ForQSTDataForm.vb" />
+    <Compile Include="Payroll\DataObjects\ESDataForBVGDaysInMonthCalculation.vb" />
+    <Compile Include="Payroll\DataObjects\ESDataForESDayInYearCalculation.vb" />
+    <Compile Include="Payroll\DataObjects\ESDataForESStdTotalCalculation.vb" />
+    <Compile Include="Payroll\DataObjects\FeiertagGuthabenData.vb" />
+    <Compile Include="Payroll\DataObjects\LA_BezData.vb" />
+    <Compile Include="Payroll\DataObjects\LMDataForSaveFinalData.vb" />
+    <Compile Include="Payroll\DataObjects\LOLDataForGetLMDTAStatus.vb" />
+    <Compile Include="Payroll\DataObjects\LOLDataForQSTCantonUR.vb" />
+    <Compile Include="Payroll\DataObjects\LOLDataForRepeatLA4LOBack.vb" />
+    <Compile Include="Payroll\DataObjects\LOProtocolData.vb" />
+    <Compile Include="Payroll\DataObjects\MandantAnsatzData.vb" />
+    <Compile Include="Payroll\DataObjects\MonthCumulativeData.vb" />
+    <Compile Include="Payroll\DataObjects\RPDataForESStd4NewKTG1Calculation.vb" />
+    <Compile Include="Payroll\DataObjects\LAData.vb" />
+    <Compile Include="Payroll\DataObjects\LOLDataForESStdTotalCalculation.vb" />
+    <Compile Include="Payroll\DataObjects\LOLMasterData.vb" />
+    <Compile Include="Payroll\DataObjects\LOMasterData.vb" />
+    <Compile Include="Payroll\DataObjects\MandantData.vb" />
+    <Compile Include="Payroll\DataObjects\MD_KiAuData.vb" />
+    <Compile Include="Payroll\DataObjects\MD_KK_LMV_Data.vb" />
+    <Compile Include="Payroll\DataObjects\ModuleRecordNumber.vb" />
+    <Compile Include="Payroll\DataObjects\EmployeeDetailDataForPayroll.vb" />
+    <Compile Include="Payroll\DataObjects\RPDataForESStd4NewKTG0Calculation.vb" />
+    <Compile Include="Payroll\DataObjects\RPDataForESStdTotalNew1Calculation.vb" />
+    <Compile Include="Payroll\DataObjects\RPDataForESStdTotalNew0Calculation.vb" />
+    <Compile Include="Payroll\DataObjects\SuvaData1ForPayroll.vb" />
+    <Compile Include="Payroll\DataObjects\SuvaData2ForPayroll.vb" />
+    <Compile Include="Payroll\DataObjects\TabQSTInfoData.vb" />
+    <Compile Include="Payroll\DataObjects\TagGeldBetragForMonth.vb" />
+    <Compile Include="Payroll\DataObjects\WorkedDaysInLP.vb" />
+    <Compile Include="Payroll\DataObjects\YearCumulativeData.vb" />
+    <Compile Include="Payroll\PayrollDatabaseAccess.vb" />
+    <Compile Include="Payroll\DataObjects\EmployeeDataForPayroll.vb" />
+    <Compile Include="Payroll\IPayrollDatabaseAccess.vb" />
+    <Compile Include="Payroll\PayrollDatabaseAccess_Fremdguthaben.vb" />
+    <Compile Include="Payroll\PayrollDatabaseAccess_NettoAmount.vb" />
+    <Compile Include="Payroll\PayrollDatabaseAccess_Protocol.vb" />
+    <Compile Include="Propose\DataObjects\ProposeData.vb" />
+    <Compile Include="Propose\IProposeDatabaseAccess.vb" />
+    <Compile Include="Propose\ProposeDatabaseAccess.vb" />
+    <Compile Include="Propose\ProposeDatabaseAccess_MasterData.vb" />
+    <Compile Include="Propose\ProposeDatabaseAccess_Offer.vb" />
+    <Compile Include="Report\DataObjects\MonthCloseData.vb" />
+    <Compile Include="Report\DataObjects\NewRPForExistingESData.vb" />
+    <Compile Include="Report\DataObjects\RPLAdditionalTextData.vb" />
+    <Compile Include="Report\DataObjects\RPLDayHoursTotal.vb" />
+    <Compile Include="Report\DataObjects\UpdateCustomerRPLData.vb" />
+    <Compile Include="Report\DataObjects\NewCustomerRPLInitData.vb" />
+    <Compile Include="Report\DataObjects\NewEmployeeRPLInitData.vb" />
+    <Compile Include="Report\DataObjects\DayEnum.vb" />
+    <Compile Include="Report\DataObjects\RPAbsenceDaysData.vb" />
+    <Compile Include="Report\DataObjects\ESSalaryData.vb" />
+    <Compile Include="Report\DataObjects\LAData.vb" />
+    <Compile Include="Report\DataObjects\RPDetailData.vb" />
+    <Compile Include="Report\DataObjects\RPLAdditionalFee.vb" />
+    <Compile Include="Report\DataObjects\RPLDayData.vb" />
+    <Compile Include="Report\DataObjects\RPLFlexibleTimeData.vb" />
+    <Compile Include="Report\DataObjects\RPLListData.vb" />
+    <Compile Include="Report\DataObjects\RPMasterData.vb" />
+    <Compile Include="Report\DataObjects\RPOverviewData.vb" />
+    <Compile Include="Report\DataObjects\UpdateEmployeeRPLData.vb" />
+    <Compile Include="Report\ReportDatabaseAccess.vb" />
+    <Compile Include="Report\IReportDatabaseAccess.vb" />
+    <Compile Include="SalaryValueCalculation\DataObjects\EmployeeData.vb" />
+    <Compile Include="SalaryValueCalculation\DataObjects\LAData.vb" />
+    <Compile Include="SalaryValueCalculation\DataObjects\MDKiAuData.vb" />
+    <Compile Include="SalaryValueCalculation\ISalaryValueCalculationDatabaseAccess.vb" />
+    <Compile Include="SalaryValueCalculation\SalaryValueCalculationDatabaseAccess.vb" />
+    <Compile Include="Tablesetting\DataObjects\TablesettingData.vb" />
+    <Compile Include="Tablesetting\ITablesDatabaseAccess.vb" />
+    <Compile Include="Tablesetting\SystemDatabaseAccess_Document.vb" />
+    <Compile Include="Tablesetting\SystemDatabaseAccess_DocumentMng.vb" />
+    <Compile Include="Tablesetting\SystemDatabaseAccess_ESRDTA.vb" />
+    <Compile Include="Tablesetting\SystemDatabaseAccess_User.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess_Customer.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess_Customer_CResponsible.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess_Customer_Payment.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess_Print.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess_Employee.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess_Employee_AssessmentAndCommunication.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess_Employee_CarAndDrivingLicence.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess_Language_SectorAndProfessions.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess_Mandant.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess_Propose.vb" />
+    <Compile Include="Tablesetting\TablesDatabaseAccess_Vacancy.vb" />
+    <Compile Include="Translation\Language.vb" />
+    <Compile Include="Vacancy\DataObjects\VacancyData.vb" />
+    <Compile Include="Vacancy\IVacancyDatabaseAccess.vb" />
+    <Compile Include="Vacancy\JobPlatform\AVAM\AVAMDatabaseAccess.vb" />
+    <Compile Include="Vacancy\JobPlatform\AVAM\AVAM_Datatransfer.vb" />
+    <Compile Include="Vacancy\JobPlatform\AVAM\IAVAMDatabaseAccess.vb" />
+    <Compile Include="Vacancy\VacancyDatabaseAccess.vb" />
+    <Compile Include="Vacancy\VacancyDatabaseAccess_MasterData.vb" />
+    <Compile Include="Vacancy\VacancyDatabaseAccess_Plattforms.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SP.DatabaseAccess.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Applications\SqlScripts\AdminCv.sql" />
+    <None Include="Applications\SqlScripts\CreateCvStoredProcedures.sql" />
+    <None Include="Applications\SqlScripts\CreateCvTables.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SP.Infrastructure\SP.Infrastructure.vbproj">
+      <Project>{4b0bb9d6-0fd0-48cf-9256-6b42582d5f9f}</Project>
+      <Name>SP.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPProgUtility\SPProgUtility.vbproj">
+      <Project>{78bb37a6-7753-4586-a42f-39e591e1e229}</Project>
+      <Name>SPProgUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

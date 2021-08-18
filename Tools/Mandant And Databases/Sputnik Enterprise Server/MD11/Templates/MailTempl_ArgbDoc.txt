@@ -1,0 +1,15 @@
+<font face="Trebuchet MS" size="2"> Guten Tag
+
+Hiermit senden wir Ihnen die Arbeitgeberbescheinigung von <b>{TMPL_VAR name='MAForAnrede'} {TMPL_VAR name='MAVorname'} {TMPL_VAR name='MANachname'}</b> zu.
+
+
+Freundliche Grüsse
+{TMPL_VAR name='USVorname'} {TMPL_VAR name='USNachname'}
+<hr />
+{TMPL_VAR name='USMDName'}
+{TMPL_VAR name='USMDStrasse'}
+{TMPL_VAR name='USMDPLZ'} {TMPL_VAR name='USMDOrt'}
+Telefon {TMPL_VAR name='USMDTelefon'}
+Telefax {TMPL_VAR name='USMDTelefax'}
+Email {TMPL_VAR name='USMDeMail'}
+http://{TMPL_VAR name='USMDHomepage'}

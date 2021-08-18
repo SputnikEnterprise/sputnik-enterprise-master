@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{E6368963-DB62-442E-9E74-DAA71E2B100D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SP.MA.ReportMng</RootNamespace>
+    <AssemblyName>SP.MA.ReportMng</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DocumentationFile>SP.MA.ReportMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Components.net\</OutputPath>
+    <DocumentationFile>SP.MA.ReportMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SP.MA.ReportMng.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Controls\BottomTabs\ucAdvancePayment.Designer.vb">
+      <DependentUpon>ucAdvancePayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\BottomTabs\ucAdvancePayment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\BottomTabs\ucBaseControlBottomTab.Designer.vb">
+      <DependentUpon>ucBaseControlBottomTab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\BottomTabs\ucBaseControlBottomTab.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\BottomTabs\ucCredit.Designer.vb">
+      <DependentUpon>ucCredit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\BottomTabs\ucCredit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\BottomTabs\ucMonthlySalaryData.Designer.vb">
+      <DependentUpon>ucMonthlySalaryData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\BottomTabs\ucMonthlySalaryData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\BottomTabs\ucNotes.Designer.vb">
+      <DependentUpon>ucNotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\BottomTabs\ucNotes.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucBaseControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucMainContent.Designer.vb">
+      <DependentUpon>ucMainContent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucMainContent.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucReportDetailData2.Designer.vb">
+      <DependentUpon>ucReportDetailData2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucReportDetailData2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucReportDetailData.Designer.vb">
+      <DependentUpon>ucReportDetailData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucReportDetailData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucTimetableAndInfoData.Designer.vb">
+      <DependentUpon>ucTimetableAndInfoData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucTimetableAndInfoData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHourInput.Designer.vb">
+      <DependentUpon>frmHourInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHourInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewReport.Designer.vb">
+      <DependentUpon>frmNewReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportMng.Designer.vb">
+      <DependentUpon>frmReportMng.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportMng.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupportCode\AcitiveReportData.vb" />
+    <Compile Include="Forms\SupportCode\CreateRPL\Parameters\CreateEmployeeRPLParams.vb" />
+    <Compile Include="Forms\SupportCode\CreateRPL\CreateRPLService.vb" />
+    <Compile Include="Forms\SupportCode\CreateRPL\Parameters\CreateCustomerRPLParams.vb" />
+    <Compile Include="Forms\SupportCode\CreateRP\CreateRPService.vb" />
+    <Compile Include="Forms\SupportCode\CreateRPL\Parameters\UpdateCustomerRPLParams.vb" />
+    <Compile Include="Forms\SupportCode\CreateRPL\Parameters\UpdateEmployeeRPLParams.vb" />
+    <Compile Include="Forms\SupportCode\CreateRP\Parameters\CreateRPCopyForExistingESParams.vb" />
+    <Compile Include="Forms\SupportCode\FlexibleTimeHelper.vb" />
+    <Compile Include="Forms\SupportCode\GAVStringData.vb" />
+    <Compile Include="Forms\SupportCode\Misc\ReportFinishedFlagUpdater.vb" />
+    <Compile Include="Forms\SupportCode\TimeTableDayData.vb" />
+    <Compile Include="Forms\SupportCode\TimeTable.vb" />
+    <Compile Include="Forms\WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Service References\SPUpdateUtilitiesService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SettingKeys.vb" />
+    <Compile Include="Settings\SettingsManager.vb" />
+    <Compile Include="Forms\UserControlFormMediator.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Controls\BottomTabs\ucAdvancePayment.resx">
+      <DependentUpon>ucAdvancePayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\BottomTabs\ucCredit.resx">
+      <DependentUpon>ucCredit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\BottomTabs\ucMonthlySalaryData.resx">
+      <DependentUpon>ucMonthlySalaryData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\BottomTabs\ucNotes.resx">
+      <DependentUpon>ucNotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucBaseControl.resx">
+      <DependentUpon>ucBaseControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucMainContent.resx">
+      <DependentUpon>ucMainContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucReportDetailData.resx">
+      <DependentUpon>ucReportDetailData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucReportDetailData2.resx">
+      <DependentUpon>ucReportDetailData2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucTimetableAndInfoData.resx">
+      <DependentUpon>ucTimetableAndInfoData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHourInput.resx">
+      <DependentUpon>frmHourInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewReport.resx">
+      <DependentUpon>frmNewReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportMng.resx">
+      <DependentUpon>frmReportMng.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.MA.ReportMng.SPUpdateUtilitiesService.FTPUpdateFilesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.MA.ReportMng.SPUpdateUtilitiesService.GAVVersionDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.MA.ReportMng.SPUpdateUtilitiesService.UpdateUtilitiesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SPUpdateUtilities1.wsdl" />
+    <None Include="SP.MA.ReportMng.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Checked.png" />
+    <Content Include="Assets\EditHours.png" />
+    <Content Include="Assets\Empty.png" />
+    <Content Include="Assets\error_small.png" />
+    <Content Include="Assets\Open.png" />
+    <Content Include="Assets\pdf.png" />
+    <None Include="Resources\apply_32x32.png" />
+    <None Include="Resources\apply_16x16.png" />
+    <None Include="Service References\SPUpdateUtilitiesService\SPUpdateUtilities1.disco" />
+    <None Include="Service References\SPUpdateUtilitiesService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\configuration.svcinfo" />
+    <None Include="Service References\SPUpdateUtilitiesService\configuration91.svcinfo" />
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Listing\Common\SPRPListSearch\SPRPListSearch.vbproj">
+      <Project>{7884e337-f21a-4dd1-a6b8-524a11ea337b}</Project>
+      <Name>SPRPListSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.DatabaseAccess\SP.DatabaseAccess.vbproj">
+      <Project>{eedcd73d-17b9-4604-a7c5-10667af63e85}</Project>
+      <Name>SP.DatabaseAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Infrastructure\SP.Infrastructure.vbproj">
+      <Project>{4b0bb9d6-0fd0-48cf-9256-6b42582d5f9f}</Project>
+      <Name>SP.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Intern.Automations\SP.Internal.Automations.vbproj">
+      <Project>{1bbfd14a-03ac-4a44-8040-fc21ca57cc2e}</Project>
+      <Name>SP.Internal.Automations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.KD.ReAdresse\SP.KD.ReAdresse.vbproj">
+      <Project>{a07fecc2-eb06-4991-926d-5bc894c0397d}</Project>
+      <Name>SP.KD.ReAdresse</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.LO.PrintUtility\SP.LO.PrintUtility.vbproj">
+      <Project>{6e5d4c5d-c001-4401-a746-0e507c7526ed}</Project>
+      <Name>SP.LO.PrintUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.AdvancePaymentMng\SP.MA.AdvancePaymentMng.vbproj">
+      <Project>{72d2c8a9-9e86-45d0-8ebf-d108ab21b4d5}</Project>
+      <Name>SP.MA.AdvancePaymentMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.LMMng\SP.MA.MLohnMng.vbproj">
+      <Project>{02c212fa-08ce-46d5-9332-f1e16105a823}</Project>
+      <Name>SP.MA.MLohnMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.RP.ShowScannedDoc\SP.RP.ShowScannedDoc.vbproj">
+      <Project>{71c28b63-7d5a-46e3-b43c-aa79fd7a0cf7}</Project>
+      <Name>SP.RP.ShowScannedDoc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.TinyMessengerWrapper\SP.TinyMessengerWrapper.csproj">
+      <Project>{ff4665b7-a876-4b26-92c5-fea3b5088d66}</Project>
+      <Name>SP.TinyMessengerWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.TodoMng\SP.TodoMng.vbproj">
+      <Project>{4655a31f-3c9d-4611-a9f2-65e0caa2e447}</Project>
+      <Name>SP.TodoMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPGAV\SPGAV.vbproj">
+      <Project>{9f25f725-1652-45d8-b8dd-cefd74e37ac6}</Project>
+      <Name>SPGAV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPProgUtility\SPProgUtility.vbproj">
+      <Project>{78bb37a6-7753-4586-a42f-39e591e1e229}</Project>
+      <Name>SPProgUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.ES.Utility\SPS.ES.Utility.vbproj">
+      <Project>{ec574582-550f-4898-9ce4-d861a59c1aee}</Project>
+      <Name>SPS.ES.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MA.Guthaben\SPS.MA.Guthaben.vbproj">
+      <Project>{f74e93d6-5b73-46b3-ae98-21b25ffd34d4}</Project>
+      <Name>SPS.MA.Guthaben</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MA.Lohn.Utility\SPS.MA.Lohn.Utility.vbproj">
+      <Project>{6194bee0-6fb0-4dfc-9fbb-a3d8f1f0e428}</Project>
+      <Name>SPS.MA.Lohn.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.SalaryValueCalculation\SPS.SalaryValueCalculation.vbproj">
+      <Project>{6ce53ee4-9056-42d7-a70a-46bb0559d3f9}</Project>
+      <Name>SPS.SalaryValueCalculation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SPUpdateUtilitiesService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx">
+      <s:element name="SaveUserData2WSDb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUserData2WSDbResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveUserData2WSDbResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionsData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionsDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegionsDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAnstellungData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBez" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAnstellungDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAnstellungDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBerufeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBerufeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBerufeDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBerufFachbereichData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iID_Parent" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBerufFachbereichDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBerufFachbereichDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBranchenData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBranchenDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBranchenDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPositionData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPositionDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPositionDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBez" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAgeDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBildungData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBildungDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBildungDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLanguageData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLanguageDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLanguageDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLanguageNiveauData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLanguageNiveauDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLanguageNiveauDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveUserData2WSDbSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveUserData2WSDb" />
+  </wsdl:message>
+  <wsdl:message name="SaveUserData2WSDbSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveUserData2WSDbResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionsDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegionsData" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionsDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegionsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAnstellungDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAnstellungData" />
+  </wsdl:message>
+  <wsdl:message name="GetAnstellungDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAnstellungDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBerufeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBerufeData" />
+  </wsdl:message>
+  <wsdl:message name="GetBerufeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBerufeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBerufFachbereichDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBerufFachbereichData" />
+  </wsdl:message>
+  <wsdl:message name="GetBerufFachbereichDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBerufFachbereichDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchenDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBranchenData" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchenDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBranchenDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPositionDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPositionData" />
+  </wsdl:message>
+  <wsdl:message name="GetPositionDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPositionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAgeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAgeData" />
+  </wsdl:message>
+  <wsdl:message name="GetAgeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAgeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBildungDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBildungData" />
+  </wsdl:message>
+  <wsdl:message name="GetBildungDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBildungDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLanguageDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLanguageData" />
+  </wsdl:message>
+  <wsdl:message name="GetLanguageDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLanguageDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLanguageNiveauDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLanguageNiveauData" />
+  </wsdl:message>
+  <wsdl:message name="GetLanguageNiveauDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLanguageNiveauDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SP_JobsCH_UtilSoap">
+    <wsdl:operation name="SaveUserData2WSDb">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Die Benutzerdaten werden in Datenbank registrieren</wsdl:documentation>
+      <wsdl:input message="tns:SaveUserData2WSDbSoapIn" />
+      <wsdl:output message="tns:SaveUserData2WSDbSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionsData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Regionsdaten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetRegionsDataSoapIn" />
+      <wsdl:output message="tns:GetRegionsDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnstellungData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Anstellungsarten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetAnstellungDataSoapIn" />
+      <wsdl:output message="tns:GetAnstellungDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBerufeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Berufe auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetBerufeDataSoapIn" />
+      <wsdl:output message="tns:GetBerufeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBerufFachbereichData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Fachbereiche eines Berufs auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetBerufFachbereichDataSoapIn" />
+      <wsdl:output message="tns:GetBerufFachbereichDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchenData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Branchen auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetBranchenDataSoapIn" />
+      <wsdl:output message="tns:GetBranchenDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Positionen auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetPositionDataSoapIn" />
+      <wsdl:output message="tns:GetPositionDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Alter-Liste auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetAgeDataSoapIn" />
+      <wsdl:output message="tns:GetAgeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBildungData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Bildung-Liste auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetBildungDataSoapIn" />
+      <wsdl:output message="tns:GetBildungDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguageData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Sprach-Liste auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetLanguageDataSoapIn" />
+      <wsdl:output message="tns:GetLanguageDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguageNiveauData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der SprachNiveau-Liste auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetLanguageNiveauDataSoapIn" />
+      <wsdl:output message="tns:GetLanguageNiveauDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SP_JobsCH_UtilSoap" type="tns:SP_JobsCH_UtilSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveUserData2WSDb">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/SaveUserData2WSDb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionsData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetRegionsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnstellungData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetAnstellungData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBerufeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetBerufeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBerufFachbereichData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetBerufFachbereichData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchenData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetBranchenData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetPositionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetAgeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBildungData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetBildungData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguageData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetLanguageData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguageNiveauData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetLanguageNiveauData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SP_JobsCH_UtilSoap12" type="tns:SP_JobsCH_UtilSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveUserData2WSDb">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/SaveUserData2WSDb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionsData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetRegionsData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnstellungData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetAnstellungData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBerufeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetBerufeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBerufFachbereichData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetBerufFachbereichData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchenData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetBranchenData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetPositionData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetAgeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBildungData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetBildungData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguageData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetLanguageData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguageNiveauData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx/GetLanguageNiveauData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SP_JobsCH_Util">
+    <wsdl:port name="SP_JobsCH_UtilSoap" binding="tns:SP_JobsCH_UtilSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SP_JobsCH_UtilSoap12" binding="tns:SP_JobsCH_UtilSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

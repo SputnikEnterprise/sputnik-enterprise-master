@@ -1,0 +1,22 @@
+﻿Namespace MainViewSettings
+
+	''' <summary>
+	''' Settings manager keys.
+	''' </summary>
+	Public Class SettingMainViewKeys
+
+		Public Const SETTING_MAINVIEW_FORM_WIDTH As String = "SETTING_MAINVIEW_WIDTH"
+		Public Const SETTING_MAINVIEW_FORM_HEIGHT As String = "SETTING_MAINVIEW_HEIGHT"
+		Public Const SETTING_MAINVIEW_FORM_LOCATION As String = "SETTING_MAINVIEW_LOCATION"
+
+		Public Const SETTING_MDLOGING_FORM_WIDTH As String = "SETTING_MDLOGING_WIDTH"
+		Public Const SETTING_MDLOGING_FORM_HEIGHT As String = "SETTING_MDLOGING_HEIGHT"
+		Public Const SETTING_MDLOGING_FORM_LOCATION As String = "SETTING_MDLOGING_LOCATION"
+
+		Public Const SETTING_ENABLE_CV_DROPIN As String = "SETTING_ENABLE_CV_DROPIN"
+		Public Const SETTING_ENABLE_SCAN_DROPIN As String = "SETTING_ENABLE_SCAN_DROPIN"
+
+
+	End Class
+
+End Namespace

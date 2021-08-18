@@ -1,0 +1,3199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Schéma xds version 1.03d / avril 2011 -->
+<xs:schema xmlns:ISEL_LR_1_03="http://etat.geneve.ch/financeisel/schema/1_0" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://etat.geneve.ch/financeisel/schema/1_0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.03d">
+	<xs:annotation>
+		<xs:documentation xml:lang="fr">Schéma xds version 1.03d / avril 2011</xs:documentation>
+	</xs:annotation>
+	<xs:element name="declarationListeRecapitulative" type="ISEL_LR_1_03:DeclarationListeRecapitulative_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Schéma xds version 1.03d / avril 2011. Déclaration de la liste récapitulative (LR) par l'employeur appelé Débiteur de Prestations Imposables (DPI). Il s'agit de définir les données (informations) requises par la liste recapitulative. Elle contient les informations propres au DPI et, par employé, les informations détaillées concernant son identification, le détail des prestations versées par l'employeur et l'impôt retenu. L'employeur peut posséder plusieurs n° de DPI selon son activité mais il doit fournir une seule LR par numéro de DPI. Les types de LR (une au choix) sont : 
+Type 1 : les salariés, les activités accessoires, les permis 120j, les administrateurs et les effeuilleurs
+Type 2 : les autres cantons
+Type 3 : les bénéficiaires de rente
+Type 4 : les revenus acquis en compensation et le travail au noir
+Type 5 : les artistes, les sportifs et les conférenciers
+Type 6 : les prestations en capital 
+Exemple : un employeur pour fournir 2 fichier LR de type 1 et 3 doit posséder 2 numéros de DPI
+			</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="DeclarationListeRecapitulative_Type">
+		<xs:sequence>
+			<xs:element name="DPI" type="ISEL_LR_1_03:IdentifiantDPI_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Informations concernant le  DPI (Débiteur de Prestations Imposables)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Informations concernant les employés pour le type de LR  choisi. De 1 à N déclarations contribuables. Pour chaque employé sont renseignés les informations détaillées concernant son identification, le détail des prestations versées par l'employeur et l'impôt retenu.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="ListeRecapitulativeT1" type="ISEL_LR_1_03:ListeRecapitulativeType1_Type">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">liste recapitulative pour les salariés, activités accessoires, permis 120j, administrateurs et effeuilleurs (Type 1) </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ListeRecapitulativeT2" type="ISEL_LR_1_03:ListeRecapitulativeType2_Type">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">liste recapitulative pour les autres cantons (Type 2)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ListeRecapitulativeT3" type="ISEL_LR_1_03:ListeRecapitulativeType3_Type">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">Liste recapitulative pour les bénéficiaires de rente (Type 3) </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ListeRecapitulativeT4" type="ISEL_LR_1_03:ListeRecapitulativeType4_Type">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">Liste recapitulative pour les revenus acquis en compensation et le travail au noir (type 4)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ListeRecapitulativeT5" type="ISEL_LR_1_03:ListeRecapitulativeType5_Type">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">liste recapitulative pour les artistes, sportifs et conférenciers (Type 5)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ListeRecapitulativeT6" type="ISEL_LR_1_03:ListeRecapitulativeType6_Type">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">liste recapitulative pour les prestations en capital (Type 6)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType1_Type">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_1_03:DeclarationContribuableType1_Type" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType2_Type">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_1_03:DeclarationContribuableType2_Type" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType3_Type">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_1_03:DeclarationContribuableType3_Type" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType4_Type">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_1_03:DeclarationContribuableType4_Type" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType5_Type">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_1_03:DeclarationContribuableType5_Type" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListeRecapitulativeType6_Type">
+		<xs:sequence>
+			<xs:element name="declarationContribuable" type="ISEL_LR_1_03:DeclarationContribuableType6_Type" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType1_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les contribuables de type 1 (salariés, activités accessoires, permis 120j, administrateurs, effeuilleurs) 
+Pour chaque contribuable de ce type : 
+	type de contribuable au choix : 1 - salariés, 2 - activités accessoires, 3 - permis 120j, 4 - administrateurs, 5 - effeuilleurs 
+	confession
+	info du contribuable
+	info de la famille
+	adresse domicile
+	info assujettissement(s) du contribuable
+	retenues, prestations et impots
+	adresse d'expédition (facultative)		</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR1_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">type de contribuable au choix : 1 - salariés, 2 - activités accessoires, 3 - permis 120j, 4 - administrateurs, 5 - effeuilleurs
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="confession" type="ISEL_LR_1_03:EnumConfession_Type" minOccurs="0"/>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="famille" type="ISEL_LR_1_03:FamillePersonne_Type" minOccurs="0"/>
+			<xs:element name="adresseDomicile" type="ISEL_LR_1_03:AdresseDomicile_Type"/>
+			<xs:element name="baremepreferentiel" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Vrai si un (ou plusieurs) barème(s) préférentiel(s) est (sont) appliqué(s) sur les assujettissements du contribuable</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assujettissementContribuable" type="ISEL_LR_1_03:Assujettissement_Type" maxOccurs="unbounded"/>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_1_03:RetenueType1_2_Type"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType2_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les contribuables de type 2 (autres cantons)
+Pour chaque contribuable de ce type : 
+	type de contribuable : 6 - autres cantons
+	info du contribuable
+	info de la famille
+	adresse domicile
+	info assujettissement(s) du contribuable
+	retenues, prestations et impots
+	informations liés à la retenue autres cantons
+	adresse d'expédition (facultative)		</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR2_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">type de contribuable 6 - autres cantons
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="famille" type="ISEL_LR_1_03:FamillePersonne_Type" minOccurs="0"/>
+			<xs:element name="adresseDomicile" type="ISEL_LR_1_03:AdresseDomicile_Type"/>
+			<xs:element name="assujettissementContribuable" type="ISEL_LR_1_03:Assujettissement_Type" maxOccurs="unbounded"/>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_1_03:RetenueType1_2_Type"/>
+			<xs:element name="retenueAutresCantons" type="ISEL_LR_1_03:RetenueAutreCanton_Type"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType3_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les contribuables de type 3 ( bénéficiaires de rente)
+Pour chaque contribuable de ce type : 
+	type contribuable : 7 - bénéficiaire de rente
+	info du contribuable
+	adresse domicile
+	périodes d'impositions
+	retenues, prestations et impots
+	adresse d'expédition (facultative)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR3_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">type contribuable  : 7 - bénéficiaire de rente 
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="adresseDomicile" type="ISEL_LR_1_03:AdresseDomicile_Type"/>
+			<xs:element name="periodeImposition" type="ISEL_LR_1_03:PeriodeImposition_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">période d'imposition</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_1_03:RetenueType3_4_Type"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType4_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les contribuables de type 4 (bénéficiaires de revenus acquis en compensation et travail au noir)
+Pour chaque contribuable de ce type : 
+	type contribuable au choix : 8 - revenus acquis en compensation, 9 - travail au noir
+	info du contribuable
+	adresse domicile
+	périodes d'impositions
+	retenues, prestations et impots
+	adresse d'expédition (facultative)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR4_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">type contribuable au choix : 8 - revenus acquis en compensation, 9 - travail au noir
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="adresseDomicile" type="ISEL_LR_1_03:AdresseDomicile_Type"/>
+			<xs:element name="periodeImposition" type="ISEL_LR_1_03:PeriodeImposition_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">liste des périodes d'impositions (minimum : une)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_1_03:RetenueType3_4_Type"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType5_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les contribuables de type 5 (artistes, sportifs et conférenciers)
+Pour chaque contribuable de ce type : 
+	type contribuable 10 - artistes, sportifs et conférenciers
+	info du contribuable
+	info de l'artiste
+	pays artiste
+	assujettissement de l'artiste
+	retenues, prestations et impots
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR5_Type">
+				<xs:annotation>
+					<xs:documentation>type contribuable 10 - artistes, sportifs et conférenciers</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="infoArtiste" type="ISEL_LR_1_03:InfoArtiste_Type"/>
+			<xs:element name="paysArtiste" type="ISEL_LR_1_03:EnumPays_Type">
+				<xs:annotation>
+					<xs:documentation>Pays de domicile : etranger</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assujettissementContribuable" type="ISEL_LR_1_03:Assujettissement_Type"/>
+			<xs:element name="assujettissementArtiste" type="ISEL_LR_1_03:AssujettissementArtiste_Type"/>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_1_03:RetenueType5_Type"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeclarationContribuableType6_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des informations pour les sontribuables de type 6 (prestations en capital)
+Pour chaque contribuable de ce type : 
+	type contribuable 11 - prestations en capital
+	info du contribuable
+	adresse domicile
+	retenues, prestations et impots
+	adresse d'expédition (facultative)		</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeContribuable" type="ISEL_LR_1_03:EnumTypeContribuableLR6_Type">
+				<xs:annotation>
+					<xs:documentation>type contribuable 11 - prestations en capital</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="infoContribuable" type="ISEL_LR_1_03:InfoPersonne_Type" minOccurs="0"/>
+			<xs:element name="adresseDomicile" type="ISEL_LR_1_03:AdresseDomicile_Type"/>
+			<xs:element name="retenuePrestationsImpots" type="ISEL_LR_1_03:RetenueType6_Type"/>
+			<xs:element name="adresseExpedition" type="ISEL_LR_1_03:AdresseExpedition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Utilisée comme adresse d'expédition dans impression AQ si présente</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="texteLibre" type="ISEL_LR_1_03:TexteLibre_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Texte libre à la disposition du Dpi qui apparaîtra dans l'impression de l'AQ, un maximum de 3 lignes de 50 caractères seront affichées</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="IdentifiantDPI_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Données d'identification du débiteur de prestations imposables
+Numéro DPI
+Nom ou raison sociale
+Adresse
+période d'imposition du DPI
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="numeroDPI" type="ISEL_LR_1_03:NumeroDPI_Type">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Numéro de DPI : Obligatoire</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nomRaisonSocialeDPI">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Nom  ou raison sociale exacte (registre du commerce / REG) : Obligatoire
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="adresseDPI" type="ISEL_LR_1_03:AdresseDPI_Type">
+				<xs:annotation>
+					<xs:documentation>Adresse où sera envoyé le courrier du DPI
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="periodeImpositionDPI" type="ISEL_LR_1_03:PeriodeImposition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Période d'imposition du DPI : Obligatoire sauf pour les prestations en capital
+debut d'imposition : Pour l'année conncernée, date à partir de laquelle le DPI à son premier employé imposé à la source
+fin d'imposition : Pour l'année conncernée, date de départ du dernier employé imposé à la source
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueAutreCanton_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations pour les contribuables à l'IS de type Autres Cantons
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="raisonSocialeEmployeur">
+				<xs:annotation>
+					<xs:documentation>Raison sociale de l'employeur</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="commissionPerception" type="ISEL_LR_1_03:DecimalArrondi5Cts_Type">
+				<xs:annotation>
+					<xs:documentation>Montant de la commission de perception, arrondi aux 5 centimes inférieurs</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueType1_2_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Retenue pour les contribuables à l'IS de types : salariés, permis 120 j, administrateurs, effeuilleurs, activités accessoires, autres cantons
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tauxImposition" type="ISEL_LR_1_03:TauxImposition_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Taux d'imposition : Obligatoire pour les 
+salariés, permis 120 jours, autres cantons : entre 0.00 % et 36.00 %
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="prestationsSoumisesImpot" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Prestations soumises à l'impôt
+Revenu brut : salaire, bonus, alloc familliales,...
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="retenueSalarie" type="ISEL_LR_1_03:RetenueSalaries_Type" minOccurs="0"/>
+			<xs:element name="impotsRetenus" type="ISEL_LR_1_03:DecimalArrondi5Cts_Type">
+				<xs:annotation>
+					<xs:documentation>Impôt prélevé par le DPI</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contributionEcclesiastique" type="ISEL_LR_1_03:DecimalArrondi5Cts_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Montant retenu au titre de la contribution ecclésiastique</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueType3_4_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Retenue pour les contribuables à l'IS de types : bénéficaires de rente, acquis en compensation, travail au noir
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="prestationsSoumisesImpot" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Rentes, chômage, maladie, travail au noir,....</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="impotsRetenus" type="ISEL_LR_1_03:DecimalArrondi5Cts_Type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueType5_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Retenue pour les contribuables à l'IS de types : artistes, sportifs, conférenciers
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="retenueArtiste" type="ISEL_LR_1_03:RetenueArtistes_Type"/>
+			<xs:element name="impotsRetenus" type="ISEL_LR_1_03:DecimalArrondi5Cts_Type">
+				<xs:annotation>
+					<xs:documentation>Impôt prélevé par l'employeur</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueType6_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Retenue pour les contribuables à l'IS de type : prestations en capital
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tauxImpositionICC" type="ISEL_LR_1_03:TauxImposition5Dec_Type">
+				<xs:annotation>
+					<xs:documentation>Taux d'imposition (à 5 décimales) pour la part de l'impôt cantonal et communal</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="prestationsSoumisesImpot" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Montant de la prestation en capital versé par le DPI</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="retenuePrestation" type="ISEL_LR_1_03:RetenuePrestationsCapital_Type"/>
+			<xs:element name="impotICCRetenu" type="ISEL_LR_1_03:DecimalArrondi5Cts_Type">
+				<xs:annotation>
+					<xs:documentation>Montant de l'impôt retenu pour l'ICC</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="impotIFDRetenu" type="ISEL_LR_1_03:DecimalArrondi5Cts_Type">
+				<xs:annotation>
+					<xs:documentation>Montant de l'impôt retenu pour l'IFD</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueSalaries_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations spécifiques de la retenue liée aux salariés</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="categorieProfessionnelle" type="ISEL_LR_1_03:EnumCatProfessionnelle_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">la catégorie professionnelle est obligatoire pour les salariés, les activités accessoires et les permis 120 jours.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nbrJoursAbsence" type="ISEL_LR_1_03:NbrJours_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A renseigner si l'employeur ne verse pas les indemnités de maladie, chômage
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nbrJourstravailEffectif" type="ISEL_LR_1_03:NbrJoursPermis120_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Obligatoire pour les permis 120 jours
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="indemnitesDepart" type="xs:integer" minOccurs="0"/>
+			<xs:element name="prestationsNonPeriodiques" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Bonus, prime unique,... compris dans  les prestations soumises à l'impôt
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="allocationsFamiliales" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Comprises dans prestations soumises à l'impôt</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fraisEffectifsNonInclus" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Frais effectifs non compris dans les prestations soumises à l'impôt</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fraisForfaitairesNonInclus" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Frais forfaitaires non compris dans les prestations soumises à l'impôt</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="conformeFERGeneve" type="ISEL_LR_1_03:EnumBooleen3Etats_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Si frais effectifs et/ou forfaitaires confomes à la Fédération des Entreprises Genevoises (0 : non, 1 : oui, 2 : non renseigné)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tauxActivite" type="ISEL_LR_1_03:TauxActivite_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Dernier taux d'activité de l'employé</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenueArtistes_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations spécifiques de la retenue liée aux artistes</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="vingtPctRetribCachet" type="ISEL_LR_1_03:EnumOuiNon_Type">
+				<xs:annotation>
+					<xs:documentation>20% pour rétribution au cachet</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fraisEffectifsSelonJustificatif" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Frais effectifs selon justificatifs</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="prestationsBrutes" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Prestations brutes versées par l'employeur</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetenuePrestationsCapital_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations spécifiques de la retenue liées aux prestations en capital
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dateEcheancePrestation" type="ISEL_LR_1_03:Date_Type">
+				<xs:annotation>
+					<xs:documentation>Date à partir de laquelle l'employé a 3 ans pour réclamer l'impôt retenu</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="motifVersement" type="ISEL_LR_1_03:EnumMotifPrestationCapital_Type">
+				<xs:annotation>
+					<xs:documentation>Motif du versement de la prestation :
+-Retraite ou invalidité
+-Départ à l'étranger
+-Décès
+-Installation à son propre compte
+-Achat d'un logement ou amortissement d'une hypothèque</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nationalite" type="ISEL_LR_1_03:PaysOuSuisse_Type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FamillePersonne_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations concernant la famille de la personne
+Nom et prénom du conjoint (facultatifs)
+conjoint travaillant à Geneve (oui/non)
+conjoint travaillant en Suisse (oui/non)
+Nombre d'enfants de moins de 25 ans
+Années de naissance des enfants de moins de 25 ans (de 0 à N)
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nomConjoint" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="prenomConjoint" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="conjointTravailleGE" type="ISEL_LR_1_03:EnumBooleen3Etats_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Si le conjoint travaille dans le canton de Genève (0 : non, 1 : oui, 2 : non renseigné)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="conjointTravailleCH" type="ISEL_LR_1_03:EnumBooleen3Etats_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Si le conjoint travaille en suisse (0 : non, 1 : oui, 2 : non renseigné)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nbrEnfantsInf25" type="ISEL_LR_1_03:NbrEnfantsInf25_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Nombre d'enfants à charge dont l'âge est strictement inférieur à 25 ans au 31 décembre.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dateNaissanceEnfantInf25" type="ISEL_LR_1_03:AnneeNaissance_Type" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Dates de naissance correspondantes.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unionLibre" type="ISEL_LR_1_03:EnumBooleen3Etats_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Couple vivant en union libre (0 : non, 1 : oui, 2 : non renseigné)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Assujettissement_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations de l'assujettissement du contribuable à l'IS
+la periode d'impostion
+la raison sociale employeur (autres cantons)
+l'adresse de travail
+le barème d'imposition
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="periodeImposition" type="ISEL_LR_1_03:PeriodeImposition_Type"/>
+			<xs:element name="adresseTravail" type="ISEL_LR_1_03:AdresseTravail_Type"/>
+			<xs:element name="baremeImposition" type="ISEL_LR_1_03:EnumBareme_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">le barème d'imposition est obligatoire pour les salariés et les permis 120 jours.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AssujettissementArtiste_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations supplémentaires de l'assujettissement spécifique à l'artiste
+le nom de la salle
+le nombre de jour de représentation
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nomSalle" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Dénomination de la salle ou du lieu où à eu lieu la représentation</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="nbrJoursRepresentation" type="ISEL_LR_1_03:NbrJours_Type">
+				<xs:annotation>
+					<xs:documentation>Durée de la représentation en jours</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InfoPersonne_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations concernant un contribuable :
+Nouveau numéro AVS ancien numéro AVS 
+Nom
+Prénom
+Date de naissance
+Sexe
+Etat Civil</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nouveauNAVS13" type="ISEL_LR_1_03:NumeroSecuriteSociale_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Numéro AVS : saisir le nouveau numéro AVS s'il est connu (NAVS13)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="numeroAVS" type="ISEL_LR_1_03:NumeroAVS_Type" minOccurs="0"/>
+			<xs:element name="nomPersonne" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="prenomPersonne" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="dateNaissance" type="ISEL_LR_1_03:Date_Type" minOccurs="0"/>
+			<xs:element name="sexe" type="ISEL_LR_1_03:EnumSexe_Type" minOccurs="0"/>
+			<xs:element name="etatCivil" type="ISEL_LR_1_03:EnumEtatCivil_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Etat civil en fin de la période d'assujettissement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InfoArtiste_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations concernant un artiste : nom d'artiste, désignation de l'ensemble, et nombre de personnes de l'ensemble
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nomArtiste" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="designationEnsemble" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="nbrPersonnesEnsemble" type="ISEL_LR_1_03:EntierSupZero_Type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AdresseSimple_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Partie commune d'une adresse : 
+rue
+numero de rue (facultatif)
+code postal / NPA
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="voie" type="ISEL_LR_1_03:Voie_Type">
+				<xs:annotation>
+					<xs:documentation>Type de voie, liant et nom de la voie
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="numeroVoie" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NPA" type="ISEL_LR_1_03:NPA_Type">
+				<xs:annotation>
+					<xs:documentation>numéro postal d'acheminement
+Suisse 4 car Ex : 1211
+France 5 car Ex : 74930
+......
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="VoieCasePostale_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Voie et/ou case postale </xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="voieSeule" type="ISEL_LR_1_03:Voie_Type">
+				<xs:annotation>
+					<xs:documentation>Type de voie, liant et nom de la voie
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="casePostaleSeule" type="ISEL_LR_1_03:EntierSupZero_Type"/>
+			<xs:sequence>
+				<xs:element name="voie" type="ISEL_LR_1_03:Voie_Type"/>
+				<xs:element name="casePostale" type="ISEL_LR_1_03:EntierSupZero_Type"/>
+			</xs:sequence>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="AdresseDPI_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Adresse du débiteur de prestations imposables : logeur (c/o : facultatif), rue et/ou case postale, numéro de rue (facultatif), NPA, localité (facultatif), pays (Suisse ou hors Suisse)
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CO" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Chez ....</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="voieCasePostale" type="ISEL_LR_1_03:VoieCasePostale_Type"/>
+			<xs:element name="numeroVoie" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NPA" type="ISEL_LR_1_03:NPA_Type">
+				<xs:annotation>
+					<xs:documentation>numéro postal d'acheminement
+Suisse 4 car Ex : 1211
+France 5 car Ex : 74930
+......</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="localite" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Commune</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="pays" type="ISEL_LR_1_03:PaysOuSuisse_Type">
+				<xs:annotation>
+					<xs:documentation>pays etranger : code ISO2 (hors Suisse) ou Suisse</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AdresseTravail_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Adresse de travail : adresse simple, localité (facultatif), canton et commune politique</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="adresse" type="ISEL_LR_1_03:AdresseSimple_Type"/>
+			<xs:element name="localite" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Localité où est exercée l'activité de l'employé</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:element name="pays" type="ISEL_LR_1_03:EnumPays_Type">
+					<xs:annotation>
+						<xs:documentation>Pays où est exercé l'activité (hors Suisse)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="canton" type="ISEL_LR_1_03:EnumCanton_Type">
+					<xs:annotation>
+						<xs:documentation>Canton où est exercé l'activité (hors Genève)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="communePolitique" type="ISEL_LR_1_03:EnumCommuneGE_Type">
+					<xs:annotation>
+						<xs:documentation>Commune politique correspondant à la localité où est exercée l'activité (dans le canton de Genève)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AdresseDomicile_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Adresse de domicile : logeur (c/o : facultatif), adresse simple, localité, canton, commune politique, pays</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CO" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Logeur</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="adresse" type="ISEL_LR_1_03:AdresseSimple_Type"/>
+			<xs:element name="localite">
+				<xs:annotation>
+					<xs:documentation>Commune de résidence</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:choice>
+				<xs:element name="pays" type="ISEL_LR_1_03:EnumPays_Type">
+					<xs:annotation>
+						<xs:documentation>Pays (hors Suisse)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="canton" type="ISEL_LR_1_03:EnumCanton_Type">
+					<xs:annotation>
+						<xs:documentation>Canton Suisse (hors Genève)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="communePolitique" type="ISEL_LR_1_03:EnumCommuneGE_Type">
+					<xs:annotation>
+						<xs:documentation>Pour les Suisses du canton de Genève, commune de votation.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AdresseExpedition_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Adresse d'expédition : 6 lignes libres</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ligneAdresse1" type="xs:string" minOccurs="0"/>
+			<xs:element name="ligneAdresse2" type="xs:string" minOccurs="0"/>
+			<xs:element name="ligneAdresse3" type="xs:string" minOccurs="0"/>
+			<xs:element name="ligneAdresse4" type="xs:string" minOccurs="0"/>
+			<xs:element name="ligneAdresse5" type="xs:string" minOccurs="0"/>
+			<xs:element name="ligneAdresse6" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TexteLibre_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Texte Libre : 3 lignes de 50 carractères maximum</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ligne1" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ligne2" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ligne3" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PeriodeImposition_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Période d'imposition : une date de début et une date de fin de la période
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="debut_imposition" type="ISEL_LR_1_03:Date_Type">
+				<xs:annotation>
+					<xs:documentation>date de début d'imposition</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fin_imposition" type="ISEL_LR_1_03:Date_Type">
+				<xs:annotation>
+					<xs:documentation>date de fin d'imposition</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Voie_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Type de voie, liant (facultatif) et nom de voie</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="typeVoie" type="ISEL_LR_1_03:EnumVoie_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>type de voie : rue, route, place...			</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="liantVoie" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>liant : de, du, de la, des, ...</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="voie">
+				<xs:annotation>
+					<xs:documentation>mettre uniquement le nom de la voie.
+Ex : stand pour rue du stand, fontaine pour place de la fontaine
+						</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PaysOuSuisse_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">code ISO 2 de la Suisse ou d'un pays etranger au choix</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="paysEtranger" type="ISEL_LR_1_03:EnumPays_Type"/>
+			<xs:element name="suisse" type="ISEL_LR_1_03:EnumCH_Type"/>
+		</xs:choice>
+	</xs:complexType>
+	<!--
+		TYPES SIMPLES 
+	-->
+	<xs:simpleType name="TauxImposition_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Taux d'imposition à deux décimales entre 0.00 et 99.00.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0.00"/>
+			<xs:maxInclusive value="99.00"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TauxImposition5Dec_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Taux d'imposition à cinq décimales entre 0.00000 et 99.00000.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0.00000"/>
+			<xs:maxInclusive value="99.00000"/>
+			<xs:fractionDigits value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TauxActivite_Type">
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0.00"/>
+			<xs:maxInclusive value="100.00"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumVoie_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Types de voie :
+allée
+avenue
+boulevard
+carrefour
+chemin
+clos
+cour
+cours
+galerie
+hameau
+île
+impasse
+jardin
+parc
+passage
+passerelle
+place
+plateau
+pont
+promenade
+quai
+rampe
+rondeau
+rond-point
+route
+rue
+ruelle
+sentier
+square
+terrasse
+tunnel
+venelle
+via
+viaduc
+voie
+vy</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="allée"/>
+			<xs:enumeration value="avenue"/>
+			<xs:enumeration value="boulevard"/>
+			<xs:enumeration value="carrefour"/>
+			<xs:enumeration value="chemin"/>
+			<xs:enumeration value="clos"/>
+			<xs:enumeration value="cour"/>
+			<xs:enumeration value="cours"/>
+			<xs:enumeration value="galerie"/>
+			<xs:enumeration value="hameau"/>
+			<xs:enumeration value="île"/>
+			<xs:enumeration value="impasse"/>
+			<xs:enumeration value="jardin"/>
+			<xs:enumeration value="parc"/>
+			<xs:enumeration value="passage"/>
+			<xs:enumeration value="passerelle"/>
+			<xs:enumeration value="place"/>
+			<xs:enumeration value="plateau"/>
+			<xs:enumeration value="pont"/>
+			<xs:enumeration value="promenade"/>
+			<xs:enumeration value="quai"/>
+			<xs:enumeration value="rampe"/>
+			<xs:enumeration value="rondeau"/>
+			<xs:enumeration value="rond-point"/>
+			<xs:enumeration value="route"/>
+			<xs:enumeration value="rue"/>
+			<xs:enumeration value="ruelle"/>
+			<xs:enumeration value="sentier"/>
+			<xs:enumeration value="square"/>
+			<xs:enumeration value="terrasse"/>
+			<xs:enumeration value="tunnel"/>
+			<xs:enumeration value="venelle"/>
+			<xs:enumeration value="via"/>
+			<xs:enumeration value="viaduc"/>
+			<xs:enumeration value="voie"/>
+			<xs:enumeration value="vy"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumMotifPrestationCapital_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Motif de versement des prestations en capital :
+1-Retraite ou invalidité
+2-Départ à l'étranger
+3-Décès
+4-Installation à son propre compte
+5-Achat d'un logement ou amortissement d'une hypothèque</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Retraite ou invalidité</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Départ à l'étranger</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Décès</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Installation à son propre compte</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Achat d'un logement ou amortissement d'une hypothèque</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumCanton_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Codes ISO2 des cantons suisses (sauf Geneve)
+AG : Argovie
+AI : Appenzell Rhodes-Intérieures
+AR : Appenzell Rhodes-Extérieures
+BE : Berne
+BL : Bâle-Campagne
+BS : Bâle-Ville
+FR : Fribourg
+GL : Glaris
+GR : Grisons
+JU : Jura
+LU : Lucerne
+NE : Neuchâtel
+NW : Nidwald
+OW : Obwald
+SG : Saint-Gall
+SH : Schaffhouse
+SO : Soleure
+SZ : Schwytz
+TG : Thurgovie
+TI : Tessin
+UR : Uri
+VD : Vaud
+VS : Valais
+ZG : Zoug
+ZH : Zurich
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="AG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Argovie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AI">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Appenzell Rhodes-Intérieures</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Appenzell Rhodes-Extérieures</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Berne</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BL">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bâle-Campagne</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BS">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bâle-Ville</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Fribourg</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GL">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Glaris</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Grisons</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JU">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Jura</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LU">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Lucerne</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Neuchâtel</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NW">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Nidwald</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OW">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Obwald</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Saint-Gall</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SH">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Schaffhouse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SO">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Soleure</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SZ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Schwytz</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Thurgovie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TI">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Tessin</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Uri</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VD">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Vaud</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VS">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Valais</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ZG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Zoug</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ZH">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Zurich</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumCommuneGE_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">numéros OFS (Office Fédéral de la Statistique) des communes du canton de Genève
+6601 : Aire-la-Ville
+6602 : Anières
+6603 : Avully
+6604 : Avusy
+6605 : Bardonnex
+6606 : Bellevue
+6607 : Bernex
+6608 : Carouge (GE)
+6609 : Cartigny
+6610 : Céligny
+6611 : Chancy
+6612 : Chêne-Bougeries
+6613 : Chêne-Bourg
+6614 : Choulex
+6615 : Collex-Bossy
+6616 : Collonge-Bellerive
+6617 : Cologny
+6618 : Confignon
+6619 : Corsier (GE)
+6620 : Dardagny
+6621 : Genève
+6622 : Genthod
+6623 : Le Grand-Saconnex
+6624 : Gy
+6625 : Hermance
+6626 : Jussy
+6627 : Laconnex
+6628 : Lancy
+6629 : Meinier
+6630 : Meyrin
+6631 : Onex
+6632 : Perly-Certoux
+6633 : Plan-les-Ouates
+6634 : Pregny-Chambésy
+6635 : Presinge
+6636 : Puplinge
+6637 : Russin
+6638 : Satigny
+6639 : Soral
+6640 : Thônex
+6641 : Troinex
+6642 : Vandoeuvres
+6643 : Vernier
+6644 : Versoix
+6645 : Veyrier
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="6601">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Aire La Ville</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6602">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Anières</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6603">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Avully</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6604">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Avusy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6605">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Bardonnex</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6606">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Bellevue</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6607">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Bernex</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6608">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Carouge</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6609">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Cartigny</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6610">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Céligny</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6611">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Chancy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6612">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Chene-Bougeries</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6613">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Chene-Bourg</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6614">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Choulex</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6615">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Collex-Bossy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6616">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Collonge Bellerive</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6617">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Cologny</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6618">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Confignon</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6619">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Corsier</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6620">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Dardagny</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6621">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Genève</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6622">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Genthod</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6623">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Le Grand Saconnex</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6624">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Gy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6625">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Hermance</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6626">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Jussy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6627">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Laconnex</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6628">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Lancy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6629">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Meinier</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6630">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Meyrin</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6631">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Onex</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6632">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Perly Certoux</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6633">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Plan Les Ouates</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6634">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Pregny Chambesy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6635">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Presinge</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6636">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Puplinge</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6637">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Russin</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6638">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Satigny</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6639">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Soral</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6640">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Thonex</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6641">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Troinex</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6642">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Vandoeuvres</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6643">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Vernier</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6644">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Versoix</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6645">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Num. OFS Veyrier</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumEtatCivil_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Etat Civil : 
+1 - Célibataire
+2 - Marié
+3 - Divorcé
+4 - Séparé
+5 - Veuf
+6 - Partenariat enregistré</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Célibataire</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Marié</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Divorcé</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Séparé</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Veuf</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Partenariat enregistré</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumCH_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">code ISO 2 de la Suisse</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="CH">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Suisse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumPays_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Listes des codes ISO 2 des pays (sauf Suisse)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="AD">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Andorre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Emirats arabes unis</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AF">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Afghanistan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Antigua-et-Barbuda</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AL">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Albanie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Arménie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AO">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Angola</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Argentine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AT">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Autriche</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AU">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Australie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AZ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Azerbaïdjan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bosnie et Herzégovine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BB">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barbade</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BD">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bangladesh</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Belgique</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BF">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Burkina Faso</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bulgarie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BH">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bahreïn</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BI">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Burundi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BJ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bénin</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BN">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Brunéi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BO">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bolivie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Brésil</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BS">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bahamas</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BT">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bhoutan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BW">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Botswana</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BY">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bélarus</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BZ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Belize</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Canada</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CD">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Congo (Kinshasa)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CF">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Rép. Centrafricaine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Congo (Brazzaville)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CI">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Côte d'Ivoire</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CL">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Chili</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Cameroun</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CN">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Chine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CO">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Colombie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Costa Rica</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CU">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Cuba</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CV">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Cap-Vert</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CY">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Chypre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CZ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Rép. Tchèque</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Allemagne</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DJ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Djibouti</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DK">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Danemark</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Dominique</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DO">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Rép. Dominicaine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DZ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Algérie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="EC">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Equateur</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="EE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Estonie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="EG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Egypte</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="EH">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Sahara occidental</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ER">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Érythrée</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ES">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Espagne</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ET">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Ethiopie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FI">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Finlande</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FJ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Iles Fidji</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Micronésie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">France</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Gabon</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GB">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Royaume-Uni</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GD">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Grenade</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Géorgie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GH">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Ghana</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Gambie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GN">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Guinée</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GQ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Guinée équatoriale</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Grèce</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GT">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Guatemala</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GW">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Guinée-Bissau</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GY">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Guyana</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HN">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Honduras</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Croatie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HT">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Haïti</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HU">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Hongrie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ID">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Indonésie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Irlande</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IL">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Israël</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IN">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Inde</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IQ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Iraq</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Iran</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IS">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Islande</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IT">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Italie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Jamaïque</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JO">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Jordanie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JP">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Japon</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Kenya</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Kirghizistan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KH">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Cambodge</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KI">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Kiribati</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Comores</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KN">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">St-Kitts-et-Nevis</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KP">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Corée (Nord)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Corée (Sud)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KW">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Koweït</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KZ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Kazakhstan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Laos</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LB">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Liban</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LC">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Ste-Lucie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LI">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Liechtenstein</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LK">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Sri Lanka</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Libéria</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LS">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Lesotho</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LT">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Lituanie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LU">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Luxembourg</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LV">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Lettonie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LY">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Libye</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Maroc</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MC">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Monaco</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MD">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Moldova</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ME">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Monténégro</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Madagascar</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MH">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Iles Marshall</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MK">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Macédoine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ML">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Mali</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Myanmar (Birmanie)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MN">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Mongolie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Mauritanie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MT">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Malte</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MU">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Maurice</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MV">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Maldives</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MW">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Malawi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MX">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Mexique</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MY">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Malaisie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MZ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Mozambique</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Namibie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Niger</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Nigéria</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NI">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Nicaragua</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NL">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Pays-Bas</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NO">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Norvège</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NP">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Népal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Nauru</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NZ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Nouvelle-Zélande</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Oman</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Panama</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Pérou</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Papouasie-Nle Guinée</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PH">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Philippines</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PK">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Pakistan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PL">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Pologne</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PS">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Palestine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PT">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Portugal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PW">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Palaos</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PY">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Paraguay</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="QA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Qatar</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="QO">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Kosovo</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RO">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Roumanie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RS">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Serbie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RU">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Russie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RW">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Rwanda</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Arabie Saoudite</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SB">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Iles Salomon</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SC">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Seychelles</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SD">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Soudan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Suède</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Singapour</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SI">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Slovénie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SK">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Slovaquie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SL">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Sierra Leone</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">St-Marin</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SN">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Sénégal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SO">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Somalie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Suriname</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ST">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Sao Tomé-et-Principe</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SV">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">El Salvador</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SY">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Syrie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SZ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Swaziland</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TD">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Tchad</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Togo</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TH">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Thaïlande</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TJ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Tadjikistan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TL">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Timor-Leste</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Turkménistan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TN">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Tunisie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TO">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Tonga</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TR">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Turquie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TT">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Trinité-et-Tobago</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TV">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Tuvalu</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TW">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Chine (Taïwan)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TZ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Tanzanie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Ukraine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UG">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Ouganda</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="US">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Etats-Unis</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UY">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Uruguay</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UZ">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Ouzbékistan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Vatican</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VC">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">St-Vincent-Grenadine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Venezuela</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VN">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Vietnam</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VU">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Vanuatu</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WS">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Samoa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="YE">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Yémen</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ZA">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Afrique du Sud</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ZM">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Zambie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ZW">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Zimbabwe</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DecimalArrondi5Cts_Type">
+		<xs:annotation>
+			<xs:documentation>Montant en CHF décimal positif à deux décimales, arrondi à 5 centimes de CHF</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:pattern value="([0-9]|[1-9][0-9]+)\.[0-9](0|5)"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NumeroDPI_Type">
+		<xs:annotation>
+			<xs:documentation>Numéro du DPI : entier entre 1 et 999999</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NPA_Type">
+		<xs:annotation>
+			<xs:documentation>NPA, code postal : alphanumérique, taille max = 30</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Date_Type">
+		<xs:annotation>
+			<xs:documentation>Date au format jj.mm.aaaa (jour entre 01 et 31, mois entre 01 et 12, année entre 1900 et 2099)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(0[1-9]|[12][0-9]|3[01])([.])(0[1-9]|1[012])([.])(19|20)\d\d"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NumeroSecuriteSociale_Type">
+		<xs:annotation>
+			<xs:documentation>Nouveau numéro AVS : xxx.xxxx.xxxx.xx</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:pattern value="[0-9]{3}\.[0-9]{4}\.[0-9]{4}\.[0-9]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NumeroAVS_Type">
+		<xs:annotation>
+			<xs:documentation>Numéro AVS : xxx.xx.xxx.xxx</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[1-9][0-9]{2}\.[0-9]{2}\.[1-8][0-9]{2}\.[0-9]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumOuiNon_Type">
+		<xs:annotation>
+			<xs:documentation>0 : Non, 1 : Oui</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Non</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Oui</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumBooleen3Etats_Type">
+		<xs:annotation>
+			<xs:documentation>0: Non, 1: Oui, 2: Non Renseigné</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Non</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Oui</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Non Renseigné</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EntierSupZero_Type">
+		<xs:annotation>
+			<xs:documentation>Entier supérieur à zéro</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NbrEnfantsInf25_Type">
+		<xs:annotation>
+			<xs:documentation>Nombre d'enfants de moins de 25 ans : de 0 à 99</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-9]{1,2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AnneeNaissance_Type">
+		<xs:annotation>
+			<xs:documentation>Année de naissance &gt;= 1900</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1900"/>
+			<xs:pattern value="[0-9]{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NbrJours_Type">
+		<xs:annotation>
+			<xs:documentation>Nombre de jours entre 0 et 360</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="360"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NbrJoursPermis120_Type">
+		<xs:annotation>
+			<xs:documentation>Nombre de jours entre 0 et 120</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="120"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumSexe_Type">
+		<xs:annotation>
+			<xs:documentation>Sexe
+1 : Masculin
+2 : Féminin</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Masculin</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Féminin</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumConfession_Type">
+		<xs:annotation>
+			<xs:documentation>Confession
+1	: Protestant
+2	: Catholique chrétien
+3	: Catholique romain
+4	: Sans confession
+5	: Autre confession
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Protestant</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Catholique chrétien</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Catholique romain</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Sans confession</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Autre confession</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumTypeContribuableLR1_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Type du contribuable pour les LR de type 1
+1: Salariés 
+2: Activités accessoires pour résident
+3: Autorisation permis 120 jours
+4: Administrateur
+5: Effeuilleurs
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Salariés</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Activités accessoires pour résident</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Autorisation permis 120 jours</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Administrateur</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Effeuilleurs</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumTypeContribuableLR2_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Type du contribuable pour les LR de type 2
+6: Travailleurs autres cantons
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Travailleurs autres cantons</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumTypeContribuableLR3_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Type du contribuable pour les LR de type 3
+7: Bénéficiaire de rente caisses publiques
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bénéficiaires de rentes caisses publiques</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumTypeContribuableLR4_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Type du contribuable pour les LR de type 4
+8: Bénéficiaire de revenus acquis en compensation
+9: Travail au noir
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Bénéficiaire de revenus acquis en compensation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Travail au noir</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumTypeContribuableLR5_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Type du contribuable pour les LR de type 5
+10: Artistes, sportifs et conférenciers 
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="10">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Artistes, sportifs et conférenciers </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumTypeContribuableLR6_Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Type du contribuable pour les LR de type 6
+11: Prestations en capital
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="11">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Prestations en capital</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumCatProfessionnelle_Type">
+		<xs:annotation>
+			<xs:documentation>Catégorie professionnelle
+1: Ouvrier-ère
+2: Artisan-e
+3: Indépendant- e
+4: Agriculteur-trice
+5: Employé-e
+6: Enseignant-e et assimilé-e
+7: Cadre
+8: Professions libérales, dirigeant-e
+9: Chômeur-euse
+10: Sans emploi
+11: Divers
+12: Apprenti-e , étudiant-e
+13: Rentier-e, AVS, AI
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Ouvrier-ère</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Artisan-e</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Indépendant- e</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Agriculteur-trice</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Employé-e</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Enseignant-e et assimilé-e</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Cadre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Professions libérales, dirigeant-e</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Chômeur-euse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="10">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Sans emploi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="11">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Divers</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="12">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Apprenti-e , étudiant-e</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Rentier-e, AVS, AI</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumBareme_Type">
+		<xs:annotation>
+			<xs:documentation>Barèmes IS
+1: A
+2: B
+3: B1
+4: B2
+5: B3
+6: B4
+7: B5
+8: B6
+9: B7
+10: B8
+11: B9
+12: B10
+13: B11
+14: B12
+15: B13
+16: B14
+17: B15
+18: I
+19: I1
+20: I2
+21: I3
+22: I4
+23: I5
+24: I6
+25: I7
+26: I8</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème A</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B4</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B5</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B6</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B7</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="10">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B8</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="11">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B9</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="12">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B10</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B11</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="14">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B12</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="15">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B13</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="16">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B14</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="17">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème B15</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="18">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème I</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="19">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème I1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="20">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème I2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="21">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème I3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="22">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème I4</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="23">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème I5</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="24">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème I6</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="25">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème I7</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="26">
+				<xs:annotation>
+					<xs:documentation xml:lang="fr">Barème I8</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

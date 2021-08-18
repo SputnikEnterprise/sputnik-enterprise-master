@@ -1,0 +1,880 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BBFD14A-03AC-4A44-8040-FC21CA57CC2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SP.Internal.Automations</RootNamespace>
+    <AssemblyName>SP.Internal.Automations</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Components.net\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MyType>Windows</MyType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SP.Internal.Automations.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Docs.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.Docs.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Drawing, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\Libraries\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BaseTables_Employee.vb" />
+    <Compile Include="Common\BaseTables_SettingFiles.vb" />
+    <Compile Include="Common\CVLBaseTables.vb" />
+    <Compile Include="Common\CVLBaseTables_WorkPhases.vb" />
+    <Compile Include="Common\CVLBaseTable_Employee.vb" />
+    <Compile Include="Common\CVLSearchData.vb" />
+    <Compile Include="Common\Notifier.vb" />
+    <Compile Include="Common\Profilmatcher.vb" />
+    <Compile Include="Common\ProfilmatcherUtility.vb" />
+    <Compile Include="Common\ProviderData.vb" />
+    <Compile Include="Common\DataObjects.vb" />
+    <Compile Include="Common\PVLSearchData.vb" />
+    <Compile Include="Common\SendSputnikLoginInfomations.vb" />
+    <Compile Include="Forms\frmeCalllogs.Designer.vb">
+      <DependentUpon>frmeCalllogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmeCalllogs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMessageDetails.Designer.vb">
+      <DependentUpon>frmMessageDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMessageDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPDFFormData.Designer.vb">
+      <DependentUpon>frmPDFFormData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPDFFormData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQuellensteuer.designer.vb">
+      <DependentUpon>frmQuellensteuer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQuellensteuer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSaveWOSData.designer.vb">
+      <DependentUpon>frmSaveWOSData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSaveWOSData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supported Codes\frmMain_Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supported Codes\frmMain_Employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service References\EmployeeTaxInfoWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InternVacancyService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\JobPlattformsVacancyService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPALKUtilWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPApplicationWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPBankUtilWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPCustomerPaymentServicesWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPeCallWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPNotificationWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPUpdateUtilitiesService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPWOSCustomerWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPWOSEmployeeWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPX28ProfilmatcherWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SettingKeys.vb" />
+    <Compile Include="Settings\SettingsManager.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="WOS\Customer\CustomerWOS.vb" />
+    <Compile Include="WOS\Customer\VacancyWOS.vb" />
+    <Compile Include="WOS\DataObjects\WOSData.vb" />
+    <Compile Include="WOS\Employee\EmployeeWOS.vb" />
+    <Compile Include="WOS\Vacancy\VacancyWOS.vb" />
+    <Compile Include="WOS\WOSDocumentData.vb" />
+    <EmbeddedResource Include="Forms\frmeCalllogs.resx">
+      <DependentUpon>frmeCalllogs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMessageDetails.resx">
+      <DependentUpon>frmMessageDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPDFFormData.resx">
+      <DependentUpon>frmPDFFormData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQuellensteuer.resx">
+      <DependentUpon>frmQuellensteuer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSaveWOSData.resx">
+      <DependentUpon>frmSaveWOSData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.ArrayOfInt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.ChildEducationDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.CommunityDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.EmploymentTypeDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.GetIsAllowedQstCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.GetQstDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.GetTaxInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadAllowedQstCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadChildEducationDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadCommunityDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadEmploymentTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadForeignCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadOtherEmploymentTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadPermissionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadTaxChurchCodeDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadTaxCodeDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadTaxInfoDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadTaxNumberOfChilderDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.LoadTypeOfStayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.PermissionDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.QstDataAllowedDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.QstDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.TaxChurchCodeDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.TaxCodeDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.TaxDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SP.Internal.Automations.EmployeeTaxInfoWebService.TypeOfStayDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmployeeTaxInfoWebService\SPEmployeeTaxInfoService.wsdl" />
+    <None Include="Service References\InternVacancyService\SP.Internal.Automations.InternVacancyService.AVAMJobCreationData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternVacancyService\SP.Internal.Automations.InternVacancyService.STMPJobData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternVacancyService\SP.Internal.Automations.InternVacancyService.VacancyJobCHPeripheryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternVacancyService\SPInternVacancies.wsdl" />
+    <None Include="Service References\JobPlattformsVacancyService\SPJobPlattformsCreateXML.wsdl" />
+    <None Include="Service References\SPALKUtilWebService\SP.Internal.Automations.SPALKUtilWebService.ALKResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPALKUtilWebService\SP.Internal.Automations.SPALKUtilWebService.GetALKDataByALKNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPALKUtilWebService\SP.Internal.Automations.SPALKUtilWebService.GetALKDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPALKUtilWebService\SPALKUtil.wsdl" />
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.AdditionalInfoViewDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.ApplicantDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.ApplicantDocumentDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.ApplicationDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.CVLizerCustomerDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.CVLizerProfileDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.CVLPersonalDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.CVLSearchHistoryDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.CVLSearchResultDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.DocumentViewDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.EducationPhaseViewDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.EMailDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.ExperiencesViewDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.LanguageViewDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.LocationGoordinateDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.PostcodeCityViewDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.PublicationViewDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SP.Internal.Automations.SPApplicationWebService.WorkPhaseViewDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPApplicationWebService\SPApplication1.wsdl" />
+    <None Include="Service References\SPBankUtilWebService\SP.Internal.Automations.SPBankUtilWebService.BankSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPBankUtilWebService\SP.Internal.Automations.SPBankUtilWebService.IBANConvertResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPBankUtilWebService\SP.Internal.Automations.SPBankUtilWebService.IBANDecodeResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPBankUtilWebService\SP.Internal.Automations.SPBankUtilWebService.IBANVersionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPBankUtilWebService\SPBankUtil.wsdl" />
+    <None Include="Service References\SPCustomerPaymentServicesWebService\SP.Internal.Automations.SPCustomerPaymentServicesWebService.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\SP.Internal.Automations.SPCustomerPaymentServicesWebService.CustomerSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\SP.Internal.Automations.SPCustomerPaymentServicesWebService.CustomerUserNameSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\SP.Internal.Automations.SPCustomerPaymentServicesWebService.PaidSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\SP.Internal.Automations.SPCustomerPaymentServicesWebService.PaymentSearchResultDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\SPCustomerPaymentServices.wsdl" />
+    <None Include="Service References\SPeCallWebService\eCall.wsdl" />
+    <None Include="Service References\SPeCallWebService\SP.Internal.Automations.SPeCallWebService.GetStateBasicResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPeCallWebService\SP.Internal.Automations.SPeCallWebService.Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPeCallWebService\SP.Internal.Automations.SPeCallWebService.SendFaxBasicResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPeCallWebService\SP.Internal.Automations.SPeCallWebService.SendFaxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPeCallWebService\SP.Internal.Automations.SPeCallWebService.SendSMSBasicResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPeCallWebService\SP.Internal.Automations.SPeCallWebService.SendVoiceBasicResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPeCallWebService\SP.Internal.Automations.SPeCallWebService.StatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.AdvisorLoginData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.CustomerNotificationDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.CVLBaseDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.EMailNotificationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.JobplattformCounterDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.LocationGoordinateDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.MainViewSettingFileDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.MandantData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.NotifyMessageData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.ProviderDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.QualificationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.ScanDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.UserFormControlTemplateDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SP.Internal.Automations.SPNotificationWebService.WOSNotificationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPNotificationWebService\SPNotification1.wsdl" />
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.FTPUpdateFilesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.GAVVersionDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.GetFTPUpdateFileContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.GetFTPUpdateFilesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.GetGAVersionDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.GetGAVVersionNotificationDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.GetProgramModuleFileIDContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.GetProgramModuleFileNameContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.GetProgramModuleFilesListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.GetUpdateInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.GetUpdateNotificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.IsMandantUpdateAllowedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.IsStationUpdateAllowedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.ModuleFilesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.SendNewUpdateFileNotificationToSputnikResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.UpdateUtilitiesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SP.Internal.Automations.SPUpdateUtilitiesService.UploadNewUpdateFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SPUpdateUtilities.wsdl" />
+    <None Include="Service References\SPWOSCustomerWebService\SP.Internal.Automations.SPWOSCustomerWebService.CustomerWOSDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPWOSCustomerWebService\SP.Internal.Automations.SPWOSCustomerWebService.KDVakanzenDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPWOSCustomerWebService\SPWOSCustomerUtilities1.wsdl" />
+    <None Include="Service References\SPWOSEmployeeWebService\SP.Internal.Automations.SPWOSEmployeeWebService.AvailableEmployeeApplicationFields.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPWOSEmployeeWebService\SP.Internal.Automations.SPWOSEmployeeWebService.AvailableEmployeeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPWOSEmployeeWebService\SP.Internal.Automations.SPWOSEmployeeWebService.EmployeeWOSDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPWOSEmployeeWebService\SP.Internal.Automations.SPWOSEmployeeWebService.WebServiceResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPWOSEmployeeWebService\SPWOSEmployeeUtilities1.wsdl" />
+    <None Include="Service References\SPX28ProfilmatcherWebService\SP.Internal.Automations.SPX28ProfilmatcherWebService.ProfilMatcherNotificationData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPX28ProfilmatcherWebService\SP.Internal.Automations.SPX28ProfilmatcherWebService.ProfilmatcherQueryResultData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPX28ProfilmatcherWebService\SPX28Profilmatcher.wsdl" />
+    <None Include="SP.Internal.Automations.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EmployeeTaxInfoWebService\" />
+    <WCFMetadataStorage Include="Service References\InternVacancyService\" />
+    <WCFMetadataStorage Include="Service References\JobPlattformsVacancyService\" />
+    <WCFMetadataStorage Include="Service References\SPALKUtilWebService\" />
+    <WCFMetadataStorage Include="Service References\SPApplicationWebService\" />
+    <WCFMetadataStorage Include="Service References\SPBankUtilWebService\" />
+    <WCFMetadataStorage Include="Service References\SPCustomerPaymentServicesWebService\" />
+    <WCFMetadataStorage Include="Service References\SPeCallWebService\" />
+    <WCFMetadataStorage Include="Service References\SPNotificationWebService\" />
+    <WCFMetadataStorage Include="Service References\SPUpdateUtilitiesService\" />
+    <WCFMetadataStorage Include="Service References\SPWOSCustomerWebService\" />
+    <WCFMetadataStorage Include="Service References\SPWOSEmployeeWebService\" />
+    <WCFMetadataStorage Include="Service References\SPX28ProfilmatcherWebService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JobPlattformsVacancyService\SPJobPlattformsCreateXML.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JobPlattformsVacancyService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JobPlattformsVacancyService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JobPlattformsVacancyService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPCustomerPaymentServicesWebService\SPCustomerPaymentServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SP.DatabaseAccess\SP.DatabaseAccess.vbproj">
+      <Project>{eedcd73d-17b9-4604-a7c5-10667af63e85}</Project>
+      <Name>SP.DatabaseAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Infrastructure\SP.Infrastructure.vbproj">
+      <Project>{4b0bb9d6-0fd0-48cf-9256-6b42582d5f9f}</Project>
+      <Name>SP.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.TinyMessengerWrapper\SP.TinyMessengerWrapper.csproj">
+      <Project>{ff4665b7-a876-4b26-92c5-fea3b5088d66}</Project>
+      <Name>SP.TinyMessengerWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPProgUtility\SPProgUtility.vbproj">
+      <Project>{78bb37a6-7753-4586-a42f-39e591e1e229}</Project>
+      <Name>SPProgUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPWOSCustomerWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPWOSCustomerWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPWOSCustomerWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPWOSEmployeeWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPWOSEmployeeWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPWOSEmployeeWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPNotificationWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPNotificationWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPNotificationWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPX28ProfilmatcherWebService\SPX28Profilmatcher.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPX28ProfilmatcherWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPX28ProfilmatcherWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPX28ProfilmatcherWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPApplicationWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPApplicationWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPApplicationWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPBankUtilWebService\SPBankUtil.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPBankUtilWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPBankUtilWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPBankUtilWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternVacancyService\SPInternVacancies.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternVacancyService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternVacancyService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternVacancyService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPApplicationWebService\SPApplication1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPUpdateUtilitiesService\SPUpdateUtilities.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPUpdateUtilitiesService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPUpdateUtilitiesService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPUpdateUtilitiesService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPWOSCustomerWebService\SPWOSCustomerUtilities1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPWOSEmployeeWebService\SPWOSEmployeeUtilities1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmployeeTaxInfoWebService\SPEmployeeTaxInfoService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmployeeTaxInfoWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmployeeTaxInfoWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmployeeTaxInfoWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPALKUtilWebService\SPALKUtil.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPALKUtilWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPALKUtilWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPALKUtilWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPNotificationWebService\SPNotification1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showallfieldresults_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showallfieldresults_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showallfieldresults_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPeCallWebService\eCall.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPeCallWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPeCallWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPeCallWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,33 @@
+{TMPL_VAR name='P_CreatedOn'} {TMPL_VAR name='P_CreatedFrom'}
+
+Ihr Dokument: <a href="">Dokumenten-Link</a>
+
+
+Freundliche Grüsse
+
+{TMPL_VAR name='USVorname'} {TMPL_VAR name='USNachname'}
+{TMPL_VAR name='USTitel¬_1'}
+
+{TMPL_VAR name='USMDName'}
+{TMPL_VAR name='USMDStrasse'}
+{TMPL_VAR name='USMDPlz'} {TMPL_VAR name='USMDort'}
+
+Fon {TMPL_VAR name='USMDTelefon'}
+Direkt {TMPL_VAR name='USMDDTelefon'}
+Fax {TMPL_VAR name='USMDTelefax'}
+
+{TMPL_VAR name='USeMail'}
+{TMPL_VAR name='USMDHomepage'}
+
+
+
+
+Wichtiger Hinweis: Diese E-Mail und etwaige Anlagen
+können vertrauliche Informationen enthalten. Sollten Sie
+dieses E-Mail irrtümlich erhalten haben, ist Ihnen dieser
+Umstand hiermit bekannt. Bitte benachrichtigen Sie den
+Absender umgehend durch Rücksendung der E-Mail und
+löschen Sie diese einschließlich etwaiger Anlagen von
+Ihrem System. Diese E-Mail und ihre Anlagen dürfen
+im weiteren nicht kopiert oder an Dritte weitergegeben
+werden. Herzlichen Dank.

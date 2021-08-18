@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Translate4_Net", "Translate4_Net.vbproj", "{909EDD59-1190-49FE-9379-951B3D692CE8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SPServiceUtil", "..\DLL Moduls\SPServiceUtil\SPServiceUtil.vbproj", "{52D00DFF-0870-4DE8-8F92-63171EF77E01}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SPProgUtility", "..\SPProgUtility\SPProgUtility\SPProgUtility.vbproj", "{78BB37A6-7753-4586-A42F-39E591E1E229}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SP.Infrastructure", "..\DLL Moduls\SP.KD.CustomerMng\SP.Infrastructure\SP.Infrastructure.vbproj", "{4B0BB9D6-0FD0-48CF-9256-6B42582D5F9F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://spbl04:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = Translate4_Net.vbproj
+		SccProjectName0 = .
+		SccAuxPath0 = http://spbl04:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ..\\DLL\u0020Moduls\\SPServiceUtil\\SPServiceUtil.vbproj
+		SccProjectName1 = ../DLL\u0020Moduls/SPServiceUtil
+		SccAuxPath1 = http://spbl04:8080/tfs/defaultcollection
+		SccLocalPath1 = ..\\DLL\u0020Moduls\\SPServiceUtil
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = ..\\SPProgUtility\\SPProgUtility\\SPProgUtility.vbproj
+		SccProjectName2 = ../SPProgUtility/SPProgUtility
+		SccAuxPath2 = http://spbl04:8080/tfs/defaultcollection
+		SccLocalPath2 = ..\\SPProgUtility\\SPProgUtility
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = ..\\DLL\u0020Moduls\\SP.KD.CustomerMng\\SP.Infrastructure\\SP.Infrastructure.vbproj
+		SccProjectName3 = ../DLL\u0020Moduls/SP.KD.CustomerMng/SP.Infrastructure
+		SccAuxPath3 = http://spbl04:8080/tfs/defaultcollection
+		SccLocalPath3 = ..\\DLL\u0020Moduls\\SP.KD.CustomerMng\\SP.Infrastructure
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{909EDD59-1190-49FE-9379-951B3D692CE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{909EDD59-1190-49FE-9379-951B3D692CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{909EDD59-1190-49FE-9379-951B3D692CE8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{909EDD59-1190-49FE-9379-951B3D692CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{909EDD59-1190-49FE-9379-951B3D692CE8}.Release|x86.ActiveCfg = Release|Any CPU
+		{52D00DFF-0870-4DE8-8F92-63171EF77E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52D00DFF-0870-4DE8-8F92-63171EF77E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52D00DFF-0870-4DE8-8F92-63171EF77E01}.Debug|x86.ActiveCfg = Debug|x86
+		{52D00DFF-0870-4DE8-8F92-63171EF77E01}.Debug|x86.Build.0 = Debug|x86
+		{52D00DFF-0870-4DE8-8F92-63171EF77E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52D00DFF-0870-4DE8-8F92-63171EF77E01}.Release|x86.ActiveCfg = Release|x86
+		{52D00DFF-0870-4DE8-8F92-63171EF77E01}.Release|x86.Build.0 = Release|x86
+		{78BB37A6-7753-4586-A42F-39E591E1E229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78BB37A6-7753-4586-A42F-39E591E1E229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78BB37A6-7753-4586-A42F-39E591E1E229}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{78BB37A6-7753-4586-A42F-39E591E1E229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78BB37A6-7753-4586-A42F-39E591E1E229}.Release|x86.ActiveCfg = Release|Any CPU
+		{4B0BB9D6-0FD0-48CF-9256-6B42582D5F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B0BB9D6-0FD0-48CF-9256-6B42582D5F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B0BB9D6-0FD0-48CF-9256-6B42582D5F9F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4B0BB9D6-0FD0-48CF-9256-6B42582D5F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B0BB9D6-0FD0-48CF-9256-6B42582D5F9F}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

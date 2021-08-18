@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadBankData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clearingNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankPostcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankLocation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="swift" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadBankDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadBankDataResult" type="tns:ArrayOfBankSearchResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBankSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BankSearchResultDTO" nillable="true" type="tns:BankSearchResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BankSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClearingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Swift" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostAccount" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadAssignedBankData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clearingNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankLocation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedBankDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedBankDataResult" type="tns:BankSearchResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeSwissIBAN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bcPC_Or_SwiftBicNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeSwissIBANResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncodeSwissIBANResult" type="tns:IBANConvertResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IBANConvertResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IBAN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IBANEncodeDLLVersionInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IBANEncodeDLLVersionInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IBANEncodeDLLVersionInfoResult" type="tns:IBANVersionResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IBANVersionResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MajorVersion" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinorVersion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValidUntil" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DecodeIBAN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iban" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecodeIBANResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DecodeIBANResult" type="tns:IBANDecodeResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IBANDecodeResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Landcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Kontonummer" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="tns:IBANDecodeResultCode" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="IBANDecodeResultCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="InvalidIBAN" />
+          <s:enumeration value="UnkownIBANCountryCode" />
+          <s:enumeration value="Failure" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetBankData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clearingNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankPostcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankLocation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="swift" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBankDataResult" type="tns:ArrayOfBankSearchResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankDataByClearingNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clearingNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankDataByClearingNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBankDataByClearingNumberResult" type="tns:BankSearchResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadBankData" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadBankDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedBankDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedBankData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedBankDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedBankDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncodeSwissIBANSoapIn">
+    <wsdl:part name="parameters" element="tns:EncodeSwissIBAN" />
+  </wsdl:message>
+  <wsdl:message name="EncodeSwissIBANSoapOut">
+    <wsdl:part name="parameters" element="tns:EncodeSwissIBANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBANEncodeDLLVersionInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:IBANEncodeDLLVersionInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBANEncodeDLLVersionInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:IBANEncodeDLLVersionInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DecodeIBANSoapIn">
+    <wsdl:part name="parameters" element="tns:DecodeIBAN" />
+  </wsdl:message>
+  <wsdl:message name="DecodeIBANSoapOut">
+    <wsdl:part name="parameters" element="tns:DecodeIBANResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBankData" />
+  </wsdl:message>
+  <wsdl:message name="GetBankDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBankDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankDataByClearingNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBankDataByClearingNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetBankDataByClearingNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBankDataByClearingNumberResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPBankUtilSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load bank data for employee</wsdl:documentation>
+      <wsdl:input message="tns:LoadBankDataSoapIn" />
+      <wsdl:output message="tns:LoadBankDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedBankData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load alk data for employee</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedBankDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedBankDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncodeSwissIBAN">
+      <wsdl:input message="tns:EncodeSwissIBANSoapIn" />
+      <wsdl:output message="tns:EncodeSwissIBANSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IBANEncodeDLLVersionInfo">
+      <wsdl:input message="tns:IBANEncodeDLLVersionInfoSoapIn" />
+      <wsdl:output message="tns:IBANEncodeDLLVersionInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DecodeIBAN">
+      <wsdl:input message="tns:DecodeIBANSoapIn" />
+      <wsdl:output message="tns:DecodeIBANSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Bankdaten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetBankDataSoapIn" />
+      <wsdl:output message="tns:GetBankDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankDataByClearingNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Bankdaten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetBankDataByClearingNumberSoapIn" />
+      <wsdl:output message="tns:GetBankDataByClearingNumberSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPBankUtilSoap" type="tns:SPBankUtilSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/LoadBankData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedBankData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/LoadAssignedBankData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncodeSwissIBAN">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/EncodeSwissIBAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IBANEncodeDLLVersionInfo">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/IBANEncodeDLLVersionInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecodeIBAN">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/DecodeIBAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/GetBankData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankDataByClearingNumber">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/GetBankDataByClearingNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPBankUtilSoap12" type="tns:SPBankUtilSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/LoadBankData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedBankData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/LoadAssignedBankData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncodeSwissIBAN">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/EncodeSwissIBAN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IBANEncodeDLLVersionInfo">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/IBANEncodeDLLVersionInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecodeIBAN">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/DecodeIBAN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/GetBankData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankDataByClearingNumber">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx/GetBankDataByClearingNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPBankUtil">
+    <wsdl:port name="SPBankUtilSoap" binding="tns:SPBankUtilSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPBankUtilSoap12" binding="tns:SPBankUtilSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPBankUtil.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

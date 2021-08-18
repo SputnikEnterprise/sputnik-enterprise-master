@@ -1,0 +1,43 @@
+			Dim data = grdNotification.DataSource
+
+			Dim SelectedData = CType(rowobject, NotifyViewData)
+			If SelectedData.ID = 0 Then
+
+			
+			
+Text	strGavBeruf = String.Empty, pvl.id_meta, strGavBeruf),
+0		pvl.id_meta,
+1		pvl.gav_number,
+2		pvl.ave,
+3		strGAVUniaAb,
+4		strGAVUniaEnd,
+5		strGAVAveAb,
+6		strGAVAveEnd,
+7		strGAVPubOn,
+8		strGAVValidAb,
+9		strGAVState,
+10		strGAVStdWeek,
+11		strGAVStdMonth,
+12		strGAVStdYear,
+13		strGAVFAG,
+14		strGAVFAN,
+15		strGAVWAG,
+16		strGAVWAN,
+17		strGAVVAG,
+18		strGAVVAN,
+19		strGAVWAG_,
+20		strGAVWAN_,
+21		strGAVWAG_S,
+22		strGAVWAN_S,
+23		strGAVWAG_J,
+24		strGAVWAN_J,
+25		strGAVVAG_,
+26		strGAVVAN_,
+27		strGAVVAG_S,
+28		strGAVVAN_S,
+29		strGAVVAG_J,
+30		strGAVVAN_J,
+31		strGAVFAG_,
+32		strGAVFAN_,
+33		bResor.ToString,
+34		PublicationOfGAV)

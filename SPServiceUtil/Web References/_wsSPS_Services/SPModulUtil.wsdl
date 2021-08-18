@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx">
+      <s:element name="SaveUserData2WSDb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUserData2WSDbResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveUserData2WSDbResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUserData2WSDb_2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUserData2WSDb_2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveUserData2WSDb_2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQstData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKanton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cEinkommen" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="iKinder" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGruppe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKichensteuer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGeschlecht" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQstDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQstDataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AllowedQstCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strKanton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iKinder" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGruppe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKichensteuer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGeschlecht" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllowedQstCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AllowedQstCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQstCodeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKanton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGeschlecht" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQstCodeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQstCodeDataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQstKirchensteuerData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKanton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGruppe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGeschlecht" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQstKirchensteuerDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQstKirchensteuerDataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQstData4Kinder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKanton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGruppe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGeschlecht" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQstData4KinderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQstData4KinderResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountrylist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCountryCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountrylistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountrylistResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBCNr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cEinkommen" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="iKinder" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGruppe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGeschlecht" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBankDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJobData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSex" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJobDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJobDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_HBBJob_Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSex" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_HBBJob_DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_HBBJob_DataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BGBJob_Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSex" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BGBJob_DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BGBJob_DataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BGBHBBJob_Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSex" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BGBHBBJob_DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BGBHBBJob_DataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionsData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRegion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionsDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegionsDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveUserData2WSDbSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveUserData2WSDb" />
+  </wsdl:message>
+  <wsdl:message name="SaveUserData2WSDbSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveUserData2WSDbResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveUserData2WSDb_2SoapIn">
+    <wsdl:part name="parameters" element="tns:SaveUserData2WSDb_2" />
+  </wsdl:message>
+  <wsdl:message name="SaveUserData2WSDb_2SoapOut">
+    <wsdl:part name="parameters" element="tns:SaveUserData2WSDb_2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetQstDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQstData" />
+  </wsdl:message>
+  <wsdl:message name="GetQstDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQstDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllowedQstCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:AllowedQstCode" />
+  </wsdl:message>
+  <wsdl:message name="AllowedQstCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:AllowedQstCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQstCodeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQstCodeData" />
+  </wsdl:message>
+  <wsdl:message name="GetQstCodeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQstCodeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQstKirchensteuerDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQstKirchensteuerData" />
+  </wsdl:message>
+  <wsdl:message name="GetQstKirchensteuerDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQstKirchensteuerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQstData4KinderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQstData4Kinder" />
+  </wsdl:message>
+  <wsdl:message name="GetQstData4KinderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQstData4KinderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountrylistSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountrylist" />
+  </wsdl:message>
+  <wsdl:message name="GetCountrylistSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountrylistResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBankData" />
+  </wsdl:message>
+  <wsdl:message name="GetBankDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBankDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJobDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJobData" />
+  </wsdl:message>
+  <wsdl:message name="GetJobDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJobDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_HBBJob_DataSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_HBBJob_Data" />
+  </wsdl:message>
+  <wsdl:message name="Get_HBBJob_DataSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_HBBJob_DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BGBJob_DataSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_BGBJob_Data" />
+  </wsdl:message>
+  <wsdl:message name="Get_BGBJob_DataSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BGBJob_DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BGBHBBJob_DataSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_BGBHBBJob_Data" />
+  </wsdl:message>
+  <wsdl:message name="Get_BGBHBBJob_DataSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BGBHBBJob_DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionsDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegionsData" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionsDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegionsDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPModulUtilSoap">
+    <wsdl:operation name="SaveUserData2WSDb">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Die Benutzerdaten werden in Datenbank registrieren</wsdl:documentation>
+      <wsdl:input message="tns:SaveUserData2WSDbSoapIn" />
+      <wsdl:output message="tns:SaveUserData2WSDbSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserData2WSDb_2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Die 2. Benutzerdaten werden in Datenbank registrieren</wsdl:documentation>
+      <wsdl:input message="tns:SaveUserData2WSDb_2SoapIn" />
+      <wsdl:output message="tns:SaveUserData2WSDb_2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQstData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Quellensteuerdaten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetQstDataSoapIn" />
+      <wsdl:output message="tns:GetQstDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllowedQstCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Getrennte String: Ob der eingetragene QST-Code korrekt ist</wsdl:documentation>
+      <wsdl:input message="tns:AllowedQstCodeSoapIn" />
+      <wsdl:output message="tns:AllowedQstCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQstCodeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Getrennte String: Zur Auflistung der QST-Code auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetQstCodeDataSoapIn" />
+      <wsdl:output message="tns:GetQstCodeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQstKirchensteuerData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Getrennte String: Zur Auflistung der Kirchensteuer für QST auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetQstKirchensteuerDataSoapIn" />
+      <wsdl:output message="tns:GetQstKirchensteuerDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQstData4Kinder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Getrennte String: Zur Auflistung der Kinderanzahl für QST auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetQstData4KinderSoapIn" />
+      <wsdl:output message="tns:GetQstData4KinderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountrylist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Ländertabelle auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetCountrylistSoapIn" />
+      <wsdl:output message="tns:GetCountrylistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Bankdaten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetBankDataSoapIn" />
+      <wsdl:output message="tns:GetBankDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Berufdaten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetJobDataSoapIn" />
+      <wsdl:output message="tns:GetJobDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_HBBJob_Data">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der HBB-Berufdaten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:Get_HBBJob_DataSoapIn" />
+      <wsdl:output message="tns:Get_HBBJob_DataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_BGBJob_Data">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der BGB-Berufdaten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:Get_BGBJob_DataSoapIn" />
+      <wsdl:output message="tns:Get_BGBJob_DataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_BGBHBBJob_Data">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der BGB und HBB-Berufdaten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:Get_BGBHBBJob_DataSoapIn" />
+      <wsdl:output message="tns:Get_BGBHBBJob_DataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionsData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Regionsdaten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetRegionsDataSoapIn" />
+      <wsdl:output message="tns:GetRegionsDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPModulUtilSoap" type="tns:SPModulUtilSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveUserData2WSDb">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/SaveUserData2WSDb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserData2WSDb_2">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/SaveUserData2WSDb_2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQstData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetQstData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllowedQstCode">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/AllowedQstCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQstCodeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetQstCodeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQstKirchensteuerData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetQstKirchensteuerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQstData4Kinder">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetQstData4Kinder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountrylist">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetCountrylist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetBankData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetJobData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_HBBJob_Data">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/Get_HBBJob_Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BGBJob_Data">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/Get_BGBJob_Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BGBHBBJob_Data">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/Get_BGBHBBJob_Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionsData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetRegionsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPModulUtilSoap12" type="tns:SPModulUtilSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveUserData2WSDb">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/SaveUserData2WSDb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserData2WSDb_2">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/SaveUserData2WSDb_2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQstData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetQstData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllowedQstCode">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/AllowedQstCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQstCodeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetQstCodeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQstKirchensteuerData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetQstKirchensteuerData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQstData4Kinder">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetQstData4Kinder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountrylist">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetCountrylist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetBankData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetJobData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_HBBJob_Data">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/Get_HBBJob_Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BGBJob_Data">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/Get_BGBJob_Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BGBHBBJob_Data">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/Get_BGBHBBJob_Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionsData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx/GetRegionsData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPModulUtil">
+    <wsdl:port name="SPModulUtilSoap" binding="tns:SPModulUtilSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPModulUtilSoap12" binding="tns:SPModulUtilSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

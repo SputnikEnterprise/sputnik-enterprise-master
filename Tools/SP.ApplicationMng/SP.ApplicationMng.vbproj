@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E33EFFC2-EFC4-4156-A10D-610D218D5EFA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SP.ApplicationMng.UI.Program</StartupObject>
+    <RootNamespace>SP.ApplicationMng</RootNamespace>
+    <AssemblyName>SP.ApplicationMng</AssemblyName>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\spx01\spenterprise%24\setup\Sputnik-EMail\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\spx01\spenterprise%24\setup\Sputnik-EMail\</InstallUrl>
+    <ProductName>SP.ApplicationMng</ProductName>
+    <PublisherName>mf Sputnik Informatik GmbH</PublisherName>
+    <SuiteName>SP.ApplicationMng</SuiteName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SP.ApplicationMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Components.net\</OutputPath>
+    <DocumentationFile>SP.ApplicationMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SP.ApplicationMng.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>30304A3E467CC2526B4BD1C558281A44B5383B69</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SP.ApplicationMng_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Assets\Mail2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChilkatDotNet45, Version=9.5.0.77, Culture=neutral, PublicKeyToken=eb5fc1fc52ef09bd, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\ChilkatDotNet45.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v20.1.Drawing, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Html2Markdown">
+      <HintPath>..\..\Libraries\.Net 4.5\Html2Markdown.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\Libraries\.Net 4.5\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="SP.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=01a42180be458028, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Components.net\SP.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="SP.Internal.Automations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c1d007ac564c9abb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Components.net\SP.Internal.Automations.dll</HintPath>
+    </Reference>
+    <Reference Include="SP.Main.Notify">
+      <HintPath>..\..\bin\Components.net\SP.Main.Notify.dll</HintPath>
+    </Reference>
+    <Reference Include="SPProgUtility, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ebd9f578600f5340, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Components.net\SPProgUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Web" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="DataObjects\jv_hr_3_0.vb" />
+    <Compile Include="DataObjects\TrXMLData.vb" />
+    <Compile Include="EMailJobs\ClsFTPData.vb" />
+    <Compile Include="EMailJobs\ClsEMailData.vb" />
+    <Compile Include="EMailJobs\EMailUtility_CV.vb" />
+    <Compile Include="EMailJobs\EMailUtility_Report.vb" />
+    <Compile Include="Forms\Controls\frmCVLizer_MailNotification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVEMailWatcher.designer.vb">
+      <DependentUpon>ucCVEMailWatcher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVEMailWatcher.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucBaseControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLDocument.Designer.vb">
+      <DependentUpon>ucCVLDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLDocument.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLEducation.Designer.vb">
+      <DependentUpon>ucCVLEducation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLEducation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLAdditioinalInformation.Designer.vb">
+      <DependentUpon>ucCVLAdditioinalInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLAdditioinalInformation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLPersonal.Designer.vb">
+      <DependentUpon>ucCVLPersonal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLPersonal.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLPublication.Designer.vb">
+      <DependentUpon>ucCVLPublication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLPublication.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLWork.Designer.vb">
+      <DependentUpon>ucCVLWork.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLWork.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucReportEMailWatcher.Designer.vb">
+      <DependentUpon>ucReportEMailWatcher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucReportEMailWatcher.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucWOSMailNotifications.Designer.vb">
+      <DependentUpon>ucWOSMailNotifications.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucWOSMailNotifications.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCVLizer.Designer.vb">
+      <DependentUpon>frmCVLizer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCVLizer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCVLizer_DocScan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCVLizer_LOG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCVWatcher.Designer.vb">
+      <DependentUpon>frmCVWatcher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCVWatcher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSourceBox.Designer.vb">
+      <DependentUpon>frmSourceBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSourceBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTest.Designer.vb">
+      <DependentUpon>frmTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTest2.Designer.vb">
+      <DependentUpon>frmTest2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTest2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTextKernel.Designer.vb">
+      <DependentUpon>frmTextKernel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTextKernel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\ApiHelpers.vb" />
+    <Compile Include="Helpers\FileWatcher.vb" />
+    <Compile Include="Helpers\GraphicsEdit.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\GraphicsEditViewInfo.vb" />
+    <Compile Include="Helpers\HttpHelper.vb" />
+    <Compile Include="Helpers\RepositoryItemGraphicsEdit.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Programm.vb" />
+    <Compile Include="PublicDataJobs\spPublicData.vb" />
+    <Compile Include="Service References\ExternalVacancyService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPCVLSemanticExtraction\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucSourceBox.Designer.vb">
+      <DependentUpon>ucSourceBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucSourceBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service References\VacancyService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\HtmlUtilities.vb" />
+    <Compile Include="Web References\SPCVLCategorizeService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Controls\ucCVEMailWatcher.resx">
+      <DependentUpon>ucCVEMailWatcher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCVLDocument.resx">
+      <DependentUpon>ucCVLDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCVLEducation.resx">
+      <DependentUpon>ucCVLEducation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCVLAdditioinalInformation.resx">
+      <DependentUpon>ucCVLAdditioinalInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCVLPersonal.resx">
+      <DependentUpon>ucCVLPersonal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCVLPublication.resx">
+      <DependentUpon>ucCVLPublication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCVLWork.resx">
+      <DependentUpon>ucCVLWork.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucReportEMailWatcher.resx">
+      <DependentUpon>ucReportEMailWatcher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucWOSMailNotifications.resx">
+      <DependentUpon>ucWOSMailNotifications.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCVLizer.resx">
+      <DependentUpon>frmCVLizer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCVWatcher.resx">
+      <DependentUpon>frmCVWatcher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSourceBox.resx">
+      <DependentUpon>frmSourceBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTest.resx">
+      <DependentUpon>frmTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTest2.resx">
+      <DependentUpon>frmTest2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTextKernel.resx">
+      <DependentUpon>frmTextKernel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucSourceBox.resx">
+      <DependentUpon>ucSourceBox.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CVLizer\CVLizer.XMLObjects.vb" />
+    <Compile Include="CVLizer\CVLizer.Import.vb" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.AdditionalInfoViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.ApplicantDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.ApplicantDocumentDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.ApplicationDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.CVLizerProfileDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.CVLPersonalDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.CVLSearchHistoryDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.CVLSearchResultDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.DocumentViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.EducationPhaseViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.EMailDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.ExperiencesViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.LanguageViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.LocationGoordinateDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.PostcodeCityViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.PublicationViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Main.Notify.SPApplicationWebService.WorkPhaseViewDataDTO.datasource" />
+    <None Include="packages.config" />
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.GetSelectedVacancyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.GetSelectedVacancyWithVacancyNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.KDVakanzenDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacanciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancyBranchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancyCantonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancyCityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancyGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancyJobCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancyJobDisciplinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancyJobPositionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancyRegionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancySectorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancySloganResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancySubGroupAssignedGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancySubGroupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.ListVacancyTitleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SP.ApplicationMng.ExternalVacancyService.LoadAssignedVacancyWithCustomerIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SPVacancyServices1.wsdl" />
+    <None Include="Service References\SPCVLSemanticExtraction\exservicesoap1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPCVLSemanticExtraction\SemanticExtractionService1.wsdl" />
+    <None Include="Service References\SPCVLSemanticExtraction\SP.ApplicationMng.SPCVLSemanticExtraction.outputDoc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VacancyService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\VacancyService\configuration.svcinfo" />
+    <None Include="Service References\VacancyService\configuration91.svcinfo" />
+    <None Include="Service References\VacancyService\SP.ApplicationMng.VacancyService.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="app.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\VacancyService\SPVacancyData.wsdl" />
+    <None Include="SP.ApplicationMng.snk" />
+    <None Include="SP.ApplicationMng_TemporaryKey.pfx" />
+    <None Include="Web References\SPCVLCategorizeService\exservicesoap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SPCVLCategorizeService\outputDoc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SPCVLCategorizeService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\SPCVLCategorizeService\SemanticExtractionService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ExternalVacancyService\" />
+    <WCFMetadataStorage Include="Service References\SPCVLSemanticExtraction\" />
+    <WCFMetadataStorage Include="Service References\VacancyService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.BonusSkins.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Charts.v20.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Office.v20.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v20.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v20.1.Drawing">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.PivotGrid.v20.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v20.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v20.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v20.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v20.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGrid.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraLayout.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPdfViewer.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v20.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Mail2.ico" />
+    <None Include="Service References\ExternalVacancyService\configuration91.svcinfo" />
+    <None Include="Service References\ExternalVacancyService\configuration.svcinfo" />
+    <None Include="Service References\ExternalVacancyService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\ExternalVacancyService\SPVacancyServices1.disco" />
+    <None Include="Service References\VacancyService\SPVacancyData.disco" />
+    <None Include="Resources\refresh_16x16.png" />
+    <None Include="Resources\mail_16x16.png" />
+    <None Include="Resources\exporttoxml_16x16.png" />
+    <None Include="Resources\home_16x16.png" />
+    <None Include="Resources\exporttoxls_16x16.png" />
+    <Content Include="Settings\NotifyerSettings.XML" />
+    <None Include="Service References\SPCVLSemanticExtraction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\SPCVLSemanticExtraction\configuration.svcinfo" />
+    <None Include="Service References\SPCVLSemanticExtraction\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://cvlizer.joinvision.com/cvlizer/exservicesoap%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SPCVLCategorizeService\</RelPath>
+      <UpdateFromURL>https://cvlizer.joinvision.com/cvlizer/exservicesoap%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SP_ApplicationMng_SPCVLCategorizeService_SemanticExtractionService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

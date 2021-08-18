@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{EE95AEC2-DEE9-486B-92A6-790E31896097}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SP.MA.EinsatzMng</RootNamespace>
+    <AssemblyName>SP.MA.EinsatzMng</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DocumentationFile>SP.MA.EinsatzMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Components.net\</OutputPath>
+    <DocumentationFile>SP.MA.EinsatzMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SP.MA.EinsatzMng.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConstantValues.vb" />
+    <Compile Include="Forms\Controls\NewES\INewESUserControlFormMediator.vb" />
+    <Compile Include="Forms\Controls\NewES\InitData\PreselectionData.vb" />
+    <Compile Include="Forms\Controls\NewES\NewESUserControlFormMediator.vb" />
+    <Compile Include="Forms\Controls\NewES\InitData\InitCandidateAndCustomerData.vb" />
+    <Compile Include="Forms\Controls\NewES\InitData\InitESData.vb" />
+    <Compile Include="Forms\Controls\NewES\InitData\InitESSalaryData.vb" />
+    <Compile Include="Forms\Controls\NewES\ucExactSalaryValues.Designer.vb">
+      <DependentUpon>ucExactSalaryValues.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewES\ucExactSalaryValues.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewES\ucPageCreateES.Designer.vb">
+      <DependentUpon>ucPageCreateES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewES\ucPageCreateES.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewES\ucPageSelectESData.Designer.vb">
+      <DependentUpon>ucPageSelectESData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewES\ucPageSelectESData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewES\ucPageSelectSalaryData.Designer.vb">
+      <DependentUpon>ucPageSelectSalaryData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewES\ucPageSelectSalaryData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewES\ucWizardPageBaseControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewES\ucPageSelectCandidateAndCustomer.Designer.vb">
+      <DependentUpon>ucPageSelectCandidateAndCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewES\ucPageSelectCandidateAndCustomer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucAdditionalInfoFields.Designer.vb">
+      <DependentUpon>ucAdditionalInfoFields.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucAdditionalInfoFields.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucAdditionalSalaryTypes.Designer.vb">
+      <DependentUpon>ucAdditionalSalaryTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucAdditionalSalaryTypes.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucBaseControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCandidateAndCustomer.Designer.vb">
+      <DependentUpon>ucCandidateAndCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCandidateAndCustomer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucESData.Designer.vb">
+      <DependentUpon>ucESData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucESData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucKostenteilung.Designer.vb">
+      <DependentUpon>ucKostenteilung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucKostenteilung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ESCreationSupportCode\ESCreateService.vb" />
+    <Compile Include="Forms\ESCreationSupportCode\MargeStringData.vb" />
+    <Compile Include="Forms\frmConflictedLO.Designer.vb">
+      <DependentUpon>frmConflictedLO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConflictedLO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFoundedReports.Designer.vb">
+      <DependentUpon>frmFoundedReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFoundedReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMargenInfo.Designer.vb">
+      <DependentUpon>frmMargenInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMargenInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewESLohn.Designer.vb">
+      <DependentUpon>frmNewESLohn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewESLohn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ESCreationSupportCode\GAVStringData.vb" />
+    <Compile Include="Forms\Controls\ucSalaryData.Designer.vb">
+      <DependentUpon>ucSalaryData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucSalaryData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frmES.Designer.vb">
+      <DependentUpon>frmES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewES.Designer.vb">
+      <DependentUpon>frmNewES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConflictedRPL.Designer.vb">
+      <DependentUpon>frmConflictedRPL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConflictedRPL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConflictedMonthClose.Designer.vb">
+      <DependentUpon>frmConflictedMonthClose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConflictedMonthClose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ESCreationSupportCode\ESValidationUtility.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\ESCreationSupportCode\EffectiveGAVData.vb" />
+    <Compile Include="Settings\SettingKeys.vb" />
+    <Compile Include="Settings\SettingsManager.vb" />
+    <Compile Include="Forms\UserControlFormMediator.vb" />
+    <Compile Include="Win32Api.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Controls\NewES\ucExactSalaryValues.resx">
+      <DependentUpon>ucExactSalaryValues.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewES\ucPageCreateES.resx">
+      <DependentUpon>ucPageCreateES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewES\ucPageSelectESData.resx">
+      <DependentUpon>ucPageSelectESData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewES\ucPageSelectSalaryData.resx">
+      <DependentUpon>ucPageSelectSalaryData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewES\ucWizardPageBaseControl.resx">
+      <DependentUpon>ucWizardPageBaseControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewES\ucPageSelectCandidateAndCustomer.resx">
+      <DependentUpon>ucPageSelectCandidateAndCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucAdditionalInfoFields.resx">
+      <DependentUpon>ucAdditionalInfoFields.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucAdditionalSalaryTypes.resx">
+      <DependentUpon>ucAdditionalSalaryTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucBaseControl.resx">
+      <DependentUpon>ucBaseControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCandidateAndCustomer.resx">
+      <DependentUpon>ucCandidateAndCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucESData.resx">
+      <DependentUpon>ucESData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucKostenteilung.resx">
+      <DependentUpon>ucKostenteilung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucSalaryData.resx">
+      <DependentUpon>ucSalaryData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConflictedLO.resx">
+      <DependentUpon>frmConflictedLO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmES.resx">
+      <DependentUpon>frmES.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFoundedReports.resx">
+      <DependentUpon>frmFoundedReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMargenInfo.resx">
+      <DependentUpon>frmMargenInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewES.resx">
+      <DependentUpon>frmNewES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewESLohn.resx">
+      <DependentUpon>frmNewESLohn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConflictedRPL.resx">
+      <DependentUpon>frmConflictedRPL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConflictedMonthClose.resx">
+      <DependentUpon>frmConflictedMonthClose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\SP.MA.ReportMng.SPUpdateUtilitiesService.FTPUpdateFilesDTO.datasource" />
+    <None Include="My Project\DataSources\SP.MA.ReportMng.SPUpdateUtilitiesService.GAVVersionDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.MA.ReportMng.SPUpdateUtilitiesService.UpdateUtilitiesDTO.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SP.MA.EinsatzMng.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Listing\Common\SPRPListSearch\SPRPListSearch.vbproj">
+      <Project>{7884e337-f21a-4dd1-a6b8-524a11ea337b}</Project>
+      <Name>SPRPListSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Employee.SuvaSTDSearch\SP.Employee.SuvaSTDSearch.vbproj">
+      <Project>{2a9b8fbd-4af2-427f-8151-b3660eceb4d2}</Project>
+      <Name>SP.Employee.SuvaSTDSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.ES.PrintUtility\SP.ES.PrintUtility.vbproj">
+      <Project>{0836f21c-c7e8-43c9-9216-258723f3e653}</Project>
+      <Name>SP.ES.PrintUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Infrastructure\SP.Infrastructure.vbproj">
+      <Project>{4b0bb9d6-0fd0-48cf-9256-6b42582d5f9f}</Project>
+      <Name>SP.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Intern.Automations\SP.Internal.Automations.vbproj">
+      <Project>{1bbfd14a-03ac-4a44-8040-fc21ca57cc2e}</Project>
+      <Name>SP.Internal.Automations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.TinyMessengerWrapper\SP.TinyMessengerWrapper.csproj">
+      <Project>{ff4665b7-a876-4b26-92c5-fea3b5088d66}</Project>
+      <Name>SP.TinyMessengerWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.TodoMng\SP.TodoMng.vbproj">
+      <Project>{4655a31f-3c9d-4611-a9f2-65e0caa2e447}</Project>
+      <Name>SP.TodoMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPGAV\SPGAV.vbproj">
+      <Project>{9f25f725-1652-45d8-b8dd-cefd74e37ac6}</Project>
+      <Name>SPGAV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPProgUtility\SPProgUtility.vbproj">
+      <Project>{78bb37a6-7753-4586-a42f-39e591e1e229}</Project>
+      <Name>SPProgUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPQualicationUtility\SPQualicationUtility.vbproj">
+      <Project>{0b0133b8-bfbc-4277-90e5-ceaeb4eab2f7}</Project>
+      <Name>SPQualicationUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.ES.Utility\SPS.ES.Utility.vbproj">
+      <Project>{ec574582-550f-4898-9ce4-d861a59c1aee}</Project>
+      <Name>SPS.ES.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.DatabaseAccess\SP.DatabaseAccess.vbproj">
+      <Project>{eedcd73d-17b9-4604-a7c5-10667af63e85}</Project>
+      <Name>SP.DatabaseAccess</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.ReportMng\SP.MA.ReportMng.vbproj">
+      <Project>{e6368963-db62-442e-9e74-daa71e2b100d}</Project>
+      <Name>SP.MA.ReportMng</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Export.Listing.Utility\SPS.Export.Listing.Utility.vbproj">
+      <Project>{abc11771-1bbb-4e11-a9c1-841620412f84}</Project>
+      <Name>SPS.Export.Listing.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Listing.Print.Utility\SPS.Listing.Print.Utility.vbproj">
+      <Project>{ca4ffd19-3751-41be-97c8-b969b76836a5}</Project>
+      <Name>SPS.Listing.Print.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MA.Guthaben\SPS.MA.Guthaben.vbproj">
+      <Project>{f74e93d6-5b73-46b3-ae98-21b25ffd34d4}</Project>
+      <Name>SPS.MA.Guthaben</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.SalaryValueCalculation\SPS.SalaryValueCalculation.vbproj">
+      <Project>{6ce53ee4-9056-42d7-a70a-46bb0559d3f9}</Project>
+      <Name>SPS.SalaryValueCalculation</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Checked.png" />
+    <Content Include="Assets\error_small.png" />
+    <Content Include="Assets\exclamation.png" />
+    <Content Include="Assets\exclamation_small.png" />
+    <Content Include="Assets\Open.png" />
+    <None Include="Resources\apply_32x32.png" />
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

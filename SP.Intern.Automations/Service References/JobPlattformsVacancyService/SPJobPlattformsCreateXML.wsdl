@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPJobPlattformsCreateXML.asmx/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPJobPlattformsCreateXML.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPJobPlattformsCreateXML.asmx/">
+      <s:element name="CreateNewXMLForJobsCH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="organisationID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="organisationSubID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewXMLForJobsCHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateNewXMLForJobsCHResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewXMLForOstJobCH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewXMLForOstJobCHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateNewXMLForOstJobCHResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateNewXMLForJobsCHSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateNewXMLForJobsCH" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewXMLForJobsCHSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateNewXMLForJobsCHResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewXMLForOstJobCHSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateNewXMLForOstJobCH" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewXMLForOstJobCHSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateNewXMLForOstJobCHResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPJobPlattformsCreateXMLSoap">
+    <wsdl:operation name="CreateNewXMLForJobsCH">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Erstellt die XML-Datei Für Jobs.ch.</wsdl:documentation>
+      <wsdl:input message="tns:CreateNewXMLForJobsCHSoapIn" />
+      <wsdl:output message="tns:CreateNewXMLForJobsCHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewXMLForOstJobCH">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Erstellt die XML-Datei Für Jobs.ch.</wsdl:documentation>
+      <wsdl:input message="tns:CreateNewXMLForOstJobCHSoapIn" />
+      <wsdl:output message="tns:CreateNewXMLForOstJobCHSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPJobPlattformsCreateXMLSoap" type="tns:SPJobPlattformsCreateXMLSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateNewXMLForJobsCH">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPJobPlattformsCreateXML.asmx/CreateNewXMLForJobsCH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewXMLForOstJobCH">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPJobPlattformsCreateXML.asmx/CreateNewXMLForOstJobCH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPJobPlattformsCreateXMLSoap12" type="tns:SPJobPlattformsCreateXMLSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateNewXMLForJobsCH">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPJobPlattformsCreateXML.asmx/CreateNewXMLForJobsCH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewXMLForOstJobCH">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPJobPlattformsCreateXML.asmx/CreateNewXMLForOstJobCH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPJobPlattformsCreateXML">
+    <wsdl:port name="SPJobPlattformsCreateXMLSoap" binding="tns:SPJobPlattformsCreateXMLSoap">
+      <soap:address location="http://asmx.domain.com/wssps_services/SPJobPlattformsCreateXML.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPJobPlattformsCreateXMLSoap12" binding="tns:SPJobPlattformsCreateXMLSoap12">
+      <soap12:address location="http://asmx.domain.com/wssps_services/SPJobPlattformsCreateXML.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

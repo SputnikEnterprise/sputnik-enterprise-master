@@ -1,0 +1,19 @@
+<font face="Trebuchet MS" size="2"> {TMPL_VAR name='Anredeform'} {TMPL_VAR name='KDzNachname'}
+
+Wir freuen uns Ihnen mitteilen zu dürfen dass Ihre Dokumente auf unserem Server bereitstehen.
+Der folgende Link führt Sie zu Ihren Dokumenten:
+{TMPL_VAR name='ZHDDocLink'}
+
+Bitte behandeln Sie den oberen Link als vertraulich.
+
+Freundliche Grüsse
+{TMPL_VAR name='USVorname'} {TMPL_VAR name='USNachname'}
+<hr />
+{TMPL_VAR name='USMDName'}
+{TMPL_VAR name='USMDStrasse'}
+{TMPL_VAR name='USMDPLZ'} {TMPL_VAR name='USMDOrt'}
+Telefon {TMPL_VAR name='USMDTelefon'}
+Telefax {TMPL_VAR name='USMDTelefax'}
+Email {TMPL_VAR name='USMDeMail'}
+http://{TMPL_VAR name='USMDHomepage'}
+

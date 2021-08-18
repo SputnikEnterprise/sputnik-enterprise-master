@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPMQueryNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="customerNumber" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="employeeNumber" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPMQueryNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadPMQueryNotificationsResult" type="tns:ArrayOfProfilMatcherNotificationData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProfilMatcherNotificationData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProfilMatcherNotificationData" nillable="true" type="tns:ProfilMatcherNotificationData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProfilMatcherNotificationData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QueryName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QueryContent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QueryResultContent" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Notify" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadPMQueryAssignedNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPMQueryAssignedNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadPMQueryAssignedNotificationsResult" type="tns:ProfilMatcherNotificationData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SavePMQueryNotificationData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="customerNumber" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="employeeNumber" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="notify" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="createdFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tplName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pmQueryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pmQueryData" type="tns:ProfilmatcherQueryData" />
+            <s:element minOccurs="0" maxOccurs="1" name="pmJobResult" type="tns:ProfilmatcherQueryResultData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProfilmatcherQueryData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Terms" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Companies" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Companysizes" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Industries" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="Recruitmentagencies" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Management" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Temporary" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Regions" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locations" type="tns:ArrayOfProfilMatcherLocationData" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationDistance" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Clusters" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Experiences" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Educations" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Skills" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="WorkquotaMinimum" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="WorkquotaMaximum" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateFrom" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateTo" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Page" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Size" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProfilMatcherLocationData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProfilMatcherLocationData" nillable="true" type="tns:ProfilMatcherLocationData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProfilMatcherLocationData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocationDistances" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProfilmatcherQueryResultData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Page" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Size" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultContent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Jobs" type="tns:ArrayOfProfilmatcherQueryJob" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProfilmatcherQueryJob">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProfilmatcherQueryJob" nillable="true" type="tns:ProfilmatcherQueryJob" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProfilmatcherQueryJob">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateCreated" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SavePMQueryNotificationDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SavePMQueryNotificationDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePMQueryAssignedNotificationData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePMQueryAssignedNotificationDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeletePMQueryAssignedNotificationDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuildPMQueryString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryData" type="tns:ProfilmatcherQueryData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuildPMQueryStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuildPMQueryStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPMQueryResultData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryData" type="tns:ProfilmatcherQueryData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPMQueryResultDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadPMQueryResultDataResult" type="tns:ProfilmatcherQueryResultData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPMQueryResultDa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryData" type="tns:ProfilmatcherQueryData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPMQueryResultDaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadPMQueryResultDaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadPMQueryNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadPMQueryNotifications" />
+  </wsdl:message>
+  <wsdl:message name="LoadPMQueryNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadPMQueryNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadPMQueryAssignedNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadPMQueryAssignedNotifications" />
+  </wsdl:message>
+  <wsdl:message name="LoadPMQueryAssignedNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadPMQueryAssignedNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SavePMQueryNotificationDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SavePMQueryNotificationData" />
+  </wsdl:message>
+  <wsdl:message name="SavePMQueryNotificationDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SavePMQueryNotificationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePMQueryAssignedNotificationDataSoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePMQueryAssignedNotificationData" />
+  </wsdl:message>
+  <wsdl:message name="DeletePMQueryAssignedNotificationDataSoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePMQueryAssignedNotificationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuildPMQueryStringSoapIn">
+    <wsdl:part name="parameters" element="tns:BuildPMQueryString" />
+  </wsdl:message>
+  <wsdl:message name="BuildPMQueryStringSoapOut">
+    <wsdl:part name="parameters" element="tns:BuildPMQueryStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadPMQueryResultDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadPMQueryResultData" />
+  </wsdl:message>
+  <wsdl:message name="LoadPMQueryResultDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadPMQueryResultDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadPMQueryResultDaSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadPMQueryResultDa" />
+  </wsdl:message>
+  <wsdl:message name="LoadPMQueryResultDaSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadPMQueryResultDaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPX28ProfilmatcherSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryNotifications">
+      <wsdl:input message="tns:LoadPMQueryNotificationsSoapIn" />
+      <wsdl:output message="tns:LoadPMQueryNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryAssignedNotifications">
+      <wsdl:input message="tns:LoadPMQueryAssignedNotificationsSoapIn" />
+      <wsdl:output message="tns:LoadPMQueryAssignedNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePMQueryNotificationData">
+      <wsdl:input message="tns:SavePMQueryNotificationDataSoapIn" />
+      <wsdl:output message="tns:SavePMQueryNotificationDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePMQueryAssignedNotificationData">
+      <wsdl:input message="tns:DeletePMQueryAssignedNotificationDataSoapIn" />
+      <wsdl:output message="tns:DeletePMQueryAssignedNotificationDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuildPMQueryString">
+      <wsdl:input message="tns:BuildPMQueryStringSoapIn" />
+      <wsdl:output message="tns:BuildPMQueryStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryResultData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Speichert OstJobs.ch Daten in die interne Datenbanken.</wsdl:documentation>
+      <wsdl:input message="tns:LoadPMQueryResultDataSoapIn" />
+      <wsdl:output message="tns:LoadPMQueryResultDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryResultDa">
+      <wsdl:input message="tns:LoadPMQueryResultDaSoapIn" />
+      <wsdl:output message="tns:LoadPMQueryResultDaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPX28ProfilmatcherSoap" type="tns:SPX28ProfilmatcherSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryNotifications">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/LoadPMQueryNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryAssignedNotifications">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/LoadPMQueryAssignedNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePMQueryNotificationData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/SavePMQueryNotificationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePMQueryAssignedNotificationData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/DeletePMQueryAssignedNotificationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuildPMQueryString">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/BuildPMQueryString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryResultData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/LoadPMQueryResultData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryResultDa">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/LoadPMQueryResultDa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPX28ProfilmatcherSoap12" type="tns:SPX28ProfilmatcherSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryNotifications">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/LoadPMQueryNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryAssignedNotifications">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/LoadPMQueryAssignedNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePMQueryNotificationData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/SavePMQueryNotificationData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePMQueryAssignedNotificationData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/DeletePMQueryAssignedNotificationData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuildPMQueryString">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/BuildPMQueryString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryResultData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/LoadPMQueryResultData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPMQueryResultDa">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx/LoadPMQueryResultDa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPX28Profilmatcher">
+    <wsdl:port name="SPX28ProfilmatcherSoap" binding="tns:SPX28ProfilmatcherSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPX28ProfilmatcherSoap12" binding="tns:SPX28ProfilmatcherSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPX28Profilmatcher.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

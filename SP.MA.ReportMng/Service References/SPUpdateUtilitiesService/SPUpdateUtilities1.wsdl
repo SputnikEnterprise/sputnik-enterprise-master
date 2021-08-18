@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/">
+      <s:element name="GetUpdateInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpdateInfoResult" type="tns:ArrayOfUpdateUtilitiesDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUpdateUtilitiesDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UpdateUtilitiesDTO" nillable="true" type="tns:UpdateUtilitiesDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UpdateUtilitiesDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateFileDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateFileTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateFilename" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUpdateNotification">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUpdateNotificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpdateNotificationResult" type="tns:UpdateUtilitiesDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVVersionNotificationData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="gavNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVVersionNotificationDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVVersionNotificationDataResult" type="tns:GAVVersionDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GAVVersionDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GAVNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GAVDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAVInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="schema_version" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGAVersionData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="gavNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVersionDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVersionDataResult" type="tns:GAVVersionDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFTPUpdateFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerData" type="tns:CustomerMDData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CustomerMDData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalIPAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalIPAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalHostName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalDomainName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFTPUpdateFilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFTPUpdateFilesResult" type="tns:ArrayOfFTPUpdateFilesDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFTPUpdateFilesDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FTPUpdateFilesDTO" nillable="true" type="tns:FTPUpdateFilesDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FTPUpdateFilesDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateFilename" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileDestPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileDestVersion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateFileDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateFileTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateFileSize" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="File_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileContent" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFTPUpdateFileContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="recID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFTPUpdateFileContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFTPUpdateFileContentResult" type="tns:FTPUpdateFilesDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsStationUpdateAllowed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stationData" type="tns:StationData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StationData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LocalIPAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalIPAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalHostName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalDomainName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IsStationUpdateAllowedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsStationUpdateAllowedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsMandantUpdateAllowed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerData" type="tns:CustomerMDData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsMandantUpdateAllowedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsMandantUpdateAllowedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUpdateInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdateInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdateInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateNotificationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdateNotification" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateNotificationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdateNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVVersionNotificationDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVVersionNotificationData" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVVersionNotificationDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVVersionNotificationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVersionDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVersionData" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVersionDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVersionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFTPUpdateFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFTPUpdateFiles" />
+  </wsdl:message>
+  <wsdl:message name="GetFTPUpdateFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFTPUpdateFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFTPUpdateFileContentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFTPUpdateFileContent" />
+  </wsdl:message>
+  <wsdl:message name="GetFTPUpdateFileContentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFTPUpdateFileContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsStationUpdateAllowedSoapIn">
+    <wsdl:part name="parameters" element="tns:IsStationUpdateAllowed" />
+  </wsdl:message>
+  <wsdl:message name="IsStationUpdateAllowedSoapOut">
+    <wsdl:part name="parameters" element="tns:IsStationUpdateAllowedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsMandantUpdateAllowedSoapIn">
+    <wsdl:part name="parameters" element="tns:IsMandantUpdateAllowed" />
+  </wsdl:message>
+  <wsdl:message name="IsMandantUpdateAllowedSoapOut">
+    <wsdl:part name="parameters" element="tns:IsMandantUpdateAllowedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPUpdateUtilitiesSoap">
+    <wsdl:operation name="GetUpdateInfo">
+      <wsdl:input message="tns:GetUpdateInfoSoapIn" />
+      <wsdl:output message="tns:GetUpdateInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateNotification">
+      <wsdl:input message="tns:GetUpdateNotificationSoapIn" />
+      <wsdl:output message="tns:GetUpdateNotificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVVersionNotificationData">
+      <wsdl:input message="tns:GetGAVVersionNotificationDataSoapIn" />
+      <wsdl:output message="tns:GetGAVVersionNotificationDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVersionData">
+      <wsdl:input message="tns:GetGAVersionDataSoapIn" />
+      <wsdl:output message="tns:GetGAVersionDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFTPUpdateFiles">
+      <wsdl:input message="tns:GetFTPUpdateFilesSoapIn" />
+      <wsdl:output message="tns:GetFTPUpdateFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFTPUpdateFileContent">
+      <wsdl:input message="tns:GetFTPUpdateFileContentSoapIn" />
+      <wsdl:output message="tns:GetFTPUpdateFileContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsStationUpdateAllowed">
+      <wsdl:input message="tns:IsStationUpdateAllowedSoapIn" />
+      <wsdl:output message="tns:IsStationUpdateAllowedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsMandantUpdateAllowed">
+      <wsdl:input message="tns:IsMandantUpdateAllowedSoapIn" />
+      <wsdl:output message="tns:IsMandantUpdateAllowedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPUpdateUtilitiesSoap" type="tns:SPUpdateUtilitiesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUpdateInfo">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetUpdateInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateNotification">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetUpdateNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVVersionNotificationData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetGAVVersionNotificationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVersionData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetGAVersionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFTPUpdateFiles">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetFTPUpdateFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFTPUpdateFileContent">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetFTPUpdateFileContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsStationUpdateAllowed">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/IsStationUpdateAllowed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsMandantUpdateAllowed">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/IsMandantUpdateAllowed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPUpdateUtilitiesSoap12" type="tns:SPUpdateUtilitiesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUpdateInfo">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetUpdateInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateNotification">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetUpdateNotification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVVersionNotificationData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetGAVVersionNotificationData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVersionData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetGAVersionData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFTPUpdateFiles">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetFTPUpdateFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFTPUpdateFileContent">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/GetFTPUpdateFileContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsStationUpdateAllowed">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/IsStationUpdateAllowed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsMandantUpdateAllowed">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx/IsMandantUpdateAllowed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPUpdateUtilities">
+    <wsdl:port name="SPUpdateUtilitiesSoap" binding="tns:SPUpdateUtilitiesSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPUpdateUtilitiesSoap12" binding="tns:SPUpdateUtilitiesSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPUpdateUtilities.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

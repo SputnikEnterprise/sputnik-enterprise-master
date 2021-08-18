@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHBerufeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHBerufeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadJobCHBerufeDataResult" type="tns:ArrayOfVacancyJobCHPeripheryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfVacancyJobCHPeripheryDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VacancyJobCHPeripheryDTO" nillable="true" type="tns:VacancyJobCHPeripheryDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VacancyJobCHPeripheryDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Parent" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecNr" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TranslatedLabel" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadJobCHFachbereichData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHFachbereichDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadJobCHFachbereichDataResult" type="tns:ArrayOfVacancyJobCHPeripheryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHRegionData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHRegionDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadJobCHRegionDataResult" type="tns:ArrayOfVacancyJobCHPeripheryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHBranchenData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHBranchenDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadJobCHBranchenDataResult" type="tns:ArrayOfVacancyJobCHPeripheryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHLanguageData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHLanguageDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadJobCHLanguageDataResult" type="tns:ArrayOfVacancyJobCHPeripheryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHLanguageNiveauData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHLanguageNiveauDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadJobCHLanguageNiveauDataResult" type="tns:ArrayOfVacancyJobCHPeripheryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHPositionData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHPositionDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadJobCHPositionDataResult" type="tns:ArrayOfVacancyJobCHPeripheryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHBildungNiveauData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobCHBildungNiveauDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadJobCHBildungNiveauDataResult" type="tns:ArrayOfVacancyJobCHPeripheryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAVAMEducationData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAVAMEducationDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAVAMEducationDataResult" type="tns:ArrayOfVacancyJobCHPeripheryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSTMPAllJobTitleData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="jobNumber" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSTMPAllJobTitleDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSTMPAllJobTitleDataResult" type="tns:ArrayOfSTMPJobData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSTMPJobData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STMPJobData" nillable="true" type="tns:STMPJobData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STMPJobData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GroupNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TitleNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bez_DE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bez_FR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bez_IT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bez_Translated" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Group_DE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Group_FR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Group_IT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Group_Translated" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TransmittVacancyToAVAMProtal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="asStaging" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="vacancyData" type="tns:VacancyMasterData" />
+            <s:element minOccurs="0" maxOccurs="1" name="vacancyJobCHData" type="tns:VacancyInseratJobCHData" />
+            <s:element minOccurs="0" maxOccurs="1" name="vacancyStmpData" type="tns:VacancyStmpSettingData" />
+            <s:element minOccurs="0" maxOccurs="1" name="vacancyStmpLanguageData" type="tns:ArrayOfVacancyJobCHLanguageData" />
+            <s:element minOccurs="0" maxOccurs="1" name="MDData" type="tns:MandantData" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="tns:AdvisorData" />
+            <s:element minOccurs="0" maxOccurs="1" name="employerData" type="tns:CustomerMasterData" />
+            <s:element minOccurs="1" maxOccurs="1" name="jobNumber" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VacancyMasterData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VakNr" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Berater" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Filiale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VakKontakt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VakState" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VakKontakt_Value" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VakState_Value" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bezeichnung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Slogan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gruppe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubGroup" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="KDNr" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBNNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBNPublicationState" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SBNPublicationDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SBNPublicationFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="KDZHDNr" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExistLink" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="VakLink" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Beginn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobProzent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Anstellung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dauer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MAAge" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MASex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MAZivil" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MALohn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Jobtime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobOrt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MAFSchein" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MAAuto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MANationality" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IEExport" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="KDBeschreibung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KDBietet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SBeschreibung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Taetigkeit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Anforderung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ausbildung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Weiterbildung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SKennt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EDVKennt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChangedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangedFrom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vak_Region" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transfered_User" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Transfered_On" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transfered_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vak_Kanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bemerkung" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MDNr" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobPLZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserKontakt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserEMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TitelForSearch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VacancyNumberOffset" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VacancyInseratJobCHData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Bezeichnung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vorspann" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aufgabe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Anforderung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Wirbieten" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VacancyStmpSettingData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VakNr" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EducationCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsOnline" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Less_One_Year" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="More_One_Year" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="More_Three_Years" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sunday_and_Holidays" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Shift_Work" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Night_Work" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Home_Work" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportToAvam" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShortEmployment" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Immediately" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Surrogate" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Permanent" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="EuresDisplay" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PublicDisplay" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobroomID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportingObligation" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportingObligationEndDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportingDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReportingFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVacancyJobCHLanguageData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VacancyJobCHLanguageData" nillable="true" type="tns:VacancyJobCHLanguageData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VacancyJobCHLanguageData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VakNr" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LanguageNiveau_Value" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Bezeichnung_Value" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageNiveau" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bezeichnung" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MandantData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MandantNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MandantName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MandantName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MandantCanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Homepage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MandantDbConnection" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AdvisorData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserMDNr" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Firstname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lastname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KST" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KST1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KST2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginPassword" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserBusinessBranch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFiliale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFTitel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSTitel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserTelefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsereMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLanguage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDDTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDTelefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDeMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDPostfach" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDStrasse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDPLZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDOrt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MDCanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDLand" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDHomepage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomerMasterData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerMandantNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WOSGuid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SolvencyDecisionID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SolvencyInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostOfficeBox" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefax" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Telefax_Mailing" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Email_Mailing" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hompage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="facebook" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="xing" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KST" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstProperty" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HowContact" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerState1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerState2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoUse" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoUseComment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SalaryPerMonth" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SalaryPerHour" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve4" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreditLimit1" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreditLimit2" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreditLimitsFromDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreditLimitsToDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="OpenInvoiceAmount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="KD_UmsMin" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="mwstpflicht" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfCopies" nillable="true" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValueAddedTaxNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreditWarning" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="OPShipment" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NotPrintReports" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="TermsAndConditions_WOS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="sendToWOS" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DoNotShowContractInWOS" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillTypeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumberOfEmployees" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanteenAvailable" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransportationOptions" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceOption" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShowHoursInNormal" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChangedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangedFrom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transfered_Guid" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TransmittVacancyToAVAMProtalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransmittVacancyToAVAMProtalResult" type="tns:AVAMJobCreationData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AVAMJobCreationData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="JobroomID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportingObligation" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="reportingObligationEndDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="tns:JobContentData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="JobContentData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobDescriptions" type="tns:ArrayOfJobDescriptionData" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="tns:CompanyData" />
+          <s:element minOccurs="0" maxOccurs="1" name="Employment" type="tns:EmploymentData" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="tns:LocationData" />
+          <s:element minOccurs="0" maxOccurs="1" name="Occupations" type="tns:ArrayOfOccupationsData" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageSkills" type="tns:ArrayOfLanguageSkillsData" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplyChannel" type="tns:ApplyChannelData" />
+          <s:element minOccurs="0" maxOccurs="1" name="PublicContact" type="tns:PublicContactData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfJobDescriptionData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="JobDescriptionData" nillable="true" type="tns:JobDescriptionData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="JobDescriptionData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageIsoCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CompanyData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HouseNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryIsoCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostOfficeBoxNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostOfficeBoxPostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostOfficeBoxCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Website" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Surrogate" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmploymentData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShortEmployment" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Immediately" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Permanent" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkloadPercentageMin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkloadPercentageMax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkForms" type="tns:ArrayOfWorkFormsData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfWorkFormsData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WorkFormsData" nillable="true" type="tns:WorkFormsData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WorkFormsData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LocationData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CommunalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CantonCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryIsoCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Coordinates" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOccupationsData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OccupationsData" nillable="true" type="tns:OccupationsData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OccupationsData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AvamOccupationCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkExperience" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EducationCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLanguageSkillsData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LanguageSkillsData" nillable="true" type="tns:LanguageSkillsData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LanguageSkillsData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageIsoCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpokenLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WrittenLevel" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ApplyChannelData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalInfo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PublicContactData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveInternalVacancy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerData" type="tns:CustomerUserData" />
+            <s:element minOccurs="0" maxOccurs="1" name="vacancyData">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CustomerUserData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_VacancyNr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_EmployeeNr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_CustomerNr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Telefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_eMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Homepage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Lastname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Firstname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Telefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_eMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Homepage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Filiale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Initial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Salution" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Loged_UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Loged_UserGuid" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveInternalVacancyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveInternalVacancyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHBerufeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadJobCHBerufeData" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHBerufeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadJobCHBerufeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHFachbereichDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadJobCHFachbereichData" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHFachbereichDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadJobCHFachbereichDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHRegionDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadJobCHRegionData" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHRegionDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadJobCHRegionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHBranchenDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadJobCHBranchenData" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHBranchenDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadJobCHBranchenDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHLanguageDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadJobCHLanguageData" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHLanguageDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadJobCHLanguageDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHLanguageNiveauDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadJobCHLanguageNiveauData" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHLanguageNiveauDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadJobCHLanguageNiveauDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHPositionDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadJobCHPositionData" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHPositionDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadJobCHPositionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHBildungNiveauDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadJobCHBildungNiveauData" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobCHBildungNiveauDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadJobCHBildungNiveauDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAVAMEducationDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAVAMEducationData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAVAMEducationDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAVAMEducationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSTMPAllJobTitleDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSTMPAllJobTitleData" />
+  </wsdl:message>
+  <wsdl:message name="LoadSTMPAllJobTitleDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSTMPAllJobTitleDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransmittVacancyToAVAMProtalSoapIn">
+    <wsdl:part name="parameters" element="tns:TransmittVacancyToAVAMProtal" />
+  </wsdl:message>
+  <wsdl:message name="TransmittVacancyToAVAMProtalSoapOut">
+    <wsdl:part name="parameters" element="tns:TransmittVacancyToAVAMProtalResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveInternalVacancySoapIn">
+    <wsdl:part name="parameters" element="tns:SaveInternalVacancy" />
+  </wsdl:message>
+  <wsdl:message name="SaveInternalVacancySoapOut">
+    <wsdl:part name="parameters" element="tns:SaveInternalVacancyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPInternVacanciesSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHBerufeData">
+      <wsdl:input message="tns:LoadJobCHBerufeDataSoapIn" />
+      <wsdl:output message="tns:LoadJobCHBerufeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHFachbereichData">
+      <wsdl:input message="tns:LoadJobCHFachbereichDataSoapIn" />
+      <wsdl:output message="tns:LoadJobCHFachbereichDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHRegionData">
+      <wsdl:input message="tns:LoadJobCHRegionDataSoapIn" />
+      <wsdl:output message="tns:LoadJobCHRegionDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHBranchenData">
+      <wsdl:input message="tns:LoadJobCHBranchenDataSoapIn" />
+      <wsdl:output message="tns:LoadJobCHBranchenDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHLanguageData">
+      <wsdl:input message="tns:LoadJobCHLanguageDataSoapIn" />
+      <wsdl:output message="tns:LoadJobCHLanguageDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHLanguageNiveauData">
+      <wsdl:input message="tns:LoadJobCHLanguageNiveauDataSoapIn" />
+      <wsdl:output message="tns:LoadJobCHLanguageNiveauDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHPositionData">
+      <wsdl:input message="tns:LoadJobCHPositionDataSoapIn" />
+      <wsdl:output message="tns:LoadJobCHPositionDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHBildungNiveauData">
+      <wsdl:input message="tns:LoadJobCHBildungNiveauDataSoapIn" />
+      <wsdl:output message="tns:LoadJobCHBildungNiveauDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAVAMEducationData">
+      <wsdl:input message="tns:LoadAVAMEducationDataSoapIn" />
+      <wsdl:output message="tns:LoadAVAMEducationDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSTMPAllJobTitleData">
+      <wsdl:input message="tns:LoadSTMPAllJobTitleDataSoapIn" />
+      <wsdl:output message="tns:LoadSTMPAllJobTitleDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransmittVacancyToAVAMProtal">
+      <wsdl:input message="tns:TransmittVacancyToAVAMProtalSoapIn" />
+      <wsdl:output message="tns:TransmittVacancyToAVAMProtalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveInternalVacancy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Speichert Vakanzdaten in die interne Datenbanken.</wsdl:documentation>
+      <wsdl:input message="tns:SaveInternalVacancySoapIn" />
+      <wsdl:output message="tns:SaveInternalVacancySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPInternVacanciesSoap" type="tns:SPInternVacanciesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHBerufeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHBerufeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHFachbereichData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHFachbereichData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHRegionData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHRegionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHBranchenData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHBranchenData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHLanguageData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHLanguageData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHLanguageNiveauData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHLanguageNiveauData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHPositionData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHPositionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHBildungNiveauData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHBildungNiveauData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAVAMEducationData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadAVAMEducationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSTMPAllJobTitleData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadSTMPAllJobTitleData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransmittVacancyToAVAMProtal">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/TransmittVacancyToAVAMProtal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInternalVacancy">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/SaveInternalVacancy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPInternVacanciesSoap12" type="tns:SPInternVacanciesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHBerufeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHBerufeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHFachbereichData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHFachbereichData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHRegionData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHRegionData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHBranchenData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHBranchenData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHLanguageData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHLanguageData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHLanguageNiveauData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHLanguageNiveauData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHPositionData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHPositionData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobCHBildungNiveauData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadJobCHBildungNiveauData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAVAMEducationData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadAVAMEducationData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSTMPAllJobTitleData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/LoadSTMPAllJobTitleData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransmittVacancyToAVAMProtal">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/TransmittVacancyToAVAMProtal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInternalVacancy">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx/SaveInternalVacancy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPInternVacancies">
+    <wsdl:port name="SPInternVacanciesSoap" binding="tns:SPInternVacanciesSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPInternVacanciesSoap12" binding="tns:SPInternVacanciesSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPInternVacancies.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

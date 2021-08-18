@@ -1,0 +1,1918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/">
+      <s:element name="LoadMailNotificationbyDateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="assignedDate" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMailNotificationbyDateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMailNotificationbyDateDataResult" type="tns:ArrayOfEMailNotificationDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEMailNotificationDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EMailNotificationDTO" nillable="true" type="tns:EMailNotificationDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EMailNotificationDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailFrom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailSubject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailBody" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocLink" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecipientGuid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadAdvisorLoginByDateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="assignedDate" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAdvisorLoginByDateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAdvisorLoginByDateDataResult" type="tns:ArrayOfAdvisorLoginData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAdvisorLoginData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AdvisorLoginData" nillable="true" type="tns:AdvisorLoginData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AdvisorLoginData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserCount" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Advisorname" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LogYear" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LogMonth" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadAdvisorMonthlyLoginByDateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="assignedDate" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAdvisorMonthlyLoginByDateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAdvisorMonthlyLoginByDateDataResult" type="tns:ArrayOfAdvisorLoginData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCVLBaseData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableKind" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCVLBaseDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCVLBaseDataResult" type="tns:ArrayOfCVLBaseDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCVLBaseDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CVLBaseDataDTO" nillable="true" type="tns:CVLBaseDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CVLBaseDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bez_DE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Translated_Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveUserFormControlTemplateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fieldName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fieldData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="createdFrom" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUserFormControlTemplateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveUserFormControlTemplateDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserFormControlTemplateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadUserFormControlTemplateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadUserFormControlTemplateDataResult" type="tns:ArrayOfUserFormControlTemplateDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserFormControlTemplateDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserFormControlTemplateDTO" nillable="true" type="tns:UserFormControlTemplateDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserFormControlTemplateDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TemplateName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FieldName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FieldData" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadMainViewSettingFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMainViewSettingFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMainViewSettingFileResult" type="tns:MainViewSettingFileDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MainViewSettingFileDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Filename" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FileDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateFileTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateFileSize" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileContent" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadTranslateionSettingFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTranslateionSettingFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTranslateionSettingFileResult" type="tns:MainViewSettingFileDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMailTemplateFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMailTemplateFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMailTemplateFileResult" type="tns:MainViewSettingFileDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadInvoiceTemplateFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadInvoiceTemplateFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadInvoiceTemplateFileResult" type="tns:MainViewSettingFileDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMoreInvoicesTemplateFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMoreInvoicesTemplateFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMoreInvoicesTemplateFileResult" type="tns:MainViewSettingFileDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMorePayrollsTemplateFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMorePayrollsTemplateFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMorePayrollsTemplateFileResult" type="tns:MainViewSettingFileDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProviderData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="providerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProviderDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProviderDataResult" type="tns:ProviderDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProviderDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProviderName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserData" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetJobplattformCounterData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wos_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="jobsCHAccountNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ostjobAccountNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJobplattformCounterDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJobplattformCounterDataResult" type="tns:JobplattformCounterDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="JobplattformCounterDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WOS_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OwnCounter" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JobsCHCounter" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OstJobCounter" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JobChannelPriorityCounter" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddUserData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="tns:SystemUserData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SystemUserData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserNr" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginPassword" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSalutation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Birthdate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserKST" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserKST_1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserKST_2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserBranchOffice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFiliale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFTitel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSTitel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserTelefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsereMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLanguage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDDTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDTelefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDeMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDPostfach" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDStrasse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDPLZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDOrt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDCanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDLand" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDHomepage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFullNameWithComma" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail_UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail_UserPW" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail_SMTP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Deactivated" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="jch_layoutID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="jch_logoID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OstJob_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ostjob_Kontingent" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JCH_SubID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserPicture" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSign" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChangedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="AsCostCenter" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="LogonMorePlaces" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeWOSID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerWOSID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddUserDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddUserDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedNotificationForTODO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedNotificationForTODOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedNotificationForTODOResult" type="tns:ArrayOfNotifyMessageData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNotifyMessageData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NotifyMessageData" nillable="true" type="tns:NotifyMessageData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NotifyMessageData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotifyHeader" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotifyComments" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NotifyArt" type="tns:NotifyArtEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="NotifyArtEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="COMMON" />
+          <s:enumeration value="DOCUMENTSCANNING" />
+          <s:enumeration value="APPLICATION" />
+          <s:enumeration value="EMPLOYEEWOS" />
+          <s:enumeration value="CUSTOMERWOS" />
+          <s:enumeration value="WOSMAIL" />
+          <s:enumeration value="STATIONUPDATE" />
+          <s:enumeration value="FTPUPDATE" />
+          <s:enumeration value="PVLCATEGORIES" />
+          <s:enumeration value="PVLVERSIONCHECK" />
+          <s:enumeration value="GAVFLDATA" />
+          <s:enumeration value="PVLADDRESS" />
+          <s:enumeration value="SYSTEMUPDATE" />
+          <s:enumeration value="SCANFILEINFO" />
+          <s:enumeration value="SCANERROR" />
+          <s:enumeration value="INTERNALINFO" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="LoadAssignedNotificationArt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="notifyArt" type="tns:NotifyArtEnum" />
+            <s:element minOccurs="1" maxOccurs="1" name="excludeChecked" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedNotificationArtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedNotificationArtResult" type="tns:ArrayOfNotifyMessageData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNLogEntries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="logEntry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nlogData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notificationMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNLogEntriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddNLogEntriesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="excludeChecked" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerNotificationsResult" type="tns:ArrayOfCustomerNotificationDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomerNotificationDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomerNotificationDataDTO" nillable="true" type="tns:CustomerNotificationDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomerNotificationDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotifyGroup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotifyHeader" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotifyComments" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCustomerDataForApplicationJoblist">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCustomerDataForApplicationJoblistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerDataForApplicationJoblistResult" type="tns:ArrayOfMandantData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMandantData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MandantData" nillable="true" type="tns:MandantData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MandantData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MandantNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MandantName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MandantName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MandantCanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Homepage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MandantDbConnection" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCustomerDataForScanJoblist">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCustomerDataForScanJoblistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerDataForScanJoblistResult" type="tns:ArrayOfMandantData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScanJobsNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="excludeChecked" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScanJobsNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScanJobsNotificationsResult" type="tns:ArrayOfScanDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfScanDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ScanDTO" nillable="true" type="tns:ScanDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ScanDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FoundedCodeValue" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModulNumber" type="tns:ScannModulEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecordNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentCategoryNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsValid" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportYear" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportMonth" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportWeek" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportFirstDay" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportLastDay" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportLineID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanContent" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImportedFileGuid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ScannModulEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="Employee" />
+          <s:enumeration value="Customer" />
+          <s:enumeration value="Employment" />
+          <s:enumeration value="Report" />
+          <s:enumeration value="Invoice" />
+          <s:enumeration value="Payroll" />
+          <s:enumeration value="NotDefined" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="UpdateAssignedNotification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="checked" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedNotificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedNotificationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCustomerNotification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notifyHeader" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notifyComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCustomerNotificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCustomerNotificationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedCustomerNotificationContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="notifyHeader" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notifyComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedCustomerNotificationContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedCustomerNotificationContentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedCustomerNotification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="notifyHeader" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notifyComment" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="checked" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedCustomerNotificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedCustomerNotificationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedCustomerPayableService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="tns:SystemUserData" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jobID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedCustomerPayableServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedCustomerPayableServiceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendReportNotificationsWithEMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="notFoundedReportQuantity" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendReportNotificationsWithEMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendReportNotificationsWithEMailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWOSMailNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="month" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWOSMailNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWOSMailNotificationsResult" type="tns:ArrayOfWOSNotificationDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWOSNotificationDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WOSNotificationDTO" nillable="true" type="tns:WOSNotificationDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WOSNotificationDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailFrom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailSubject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailBody" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocLink" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecipientGuid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetWOSModulMailNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="modulNumber" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="number" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWOSModulMailNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWOSModulMailNotificationsResult" type="tns:ArrayOfWOSNotificationDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadQualificationData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="qualificationModul" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadQualificationDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadQualificationDataResult" type="tns:ArrayOfQualificationDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfQualificationDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QualificationDTO" nillable="true" type="tns:QualificationDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QualificationDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TranslatedValue" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MeldePflichtig" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadGeoCoordinationPostcodeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v_plz1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGeoCoordinationPostcodeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadGeoCoordinationPostcodeDataResult" type="tns:LocationGoordinateDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LocationGoordinateDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlaceName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminCode1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminCode2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminCode3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Accuracy" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadGeoCoordinationTwoPostcodeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v_plz1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v_plz2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGeoCoordinationTwoPostcodeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadGeoCoordinationTwoPostcodeDataResult" type="tns:ArrayOfLocationGoordinateDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLocationGoordinateDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LocationGoordinateDataDTO" nillable="true" type="tns:LocationGoordinateDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadGeoDistancesData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v_plz1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v_plz2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="unit" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGeoDistancesDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoadGeoDistancesDataResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoadMailNotificationbyDateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMailNotificationbyDateData" />
+  </wsdl:message>
+  <wsdl:message name="LoadMailNotificationbyDateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMailNotificationbyDateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAdvisorLoginByDateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAdvisorLoginByDateData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAdvisorLoginByDateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAdvisorLoginByDateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAdvisorMonthlyLoginByDateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAdvisorMonthlyLoginByDateData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAdvisorMonthlyLoginByDateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAdvisorMonthlyLoginByDateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCVLBaseDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCVLBaseData" />
+  </wsdl:message>
+  <wsdl:message name="GetCVLBaseDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCVLBaseDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveUserFormControlTemplateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveUserFormControlTemplateData" />
+  </wsdl:message>
+  <wsdl:message name="SaveUserFormControlTemplateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveUserFormControlTemplateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserFormControlTemplateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadUserFormControlTemplateData" />
+  </wsdl:message>
+  <wsdl:message name="LoadUserFormControlTemplateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadUserFormControlTemplateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMainViewSettingFileSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMainViewSettingFile" />
+  </wsdl:message>
+  <wsdl:message name="LoadMainViewSettingFileSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMainViewSettingFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTranslateionSettingFileSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTranslateionSettingFile" />
+  </wsdl:message>
+  <wsdl:message name="LoadTranslateionSettingFileSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTranslateionSettingFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMailTemplateFileSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMailTemplateFile" />
+  </wsdl:message>
+  <wsdl:message name="LoadMailTemplateFileSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMailTemplateFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadInvoiceTemplateFileSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadInvoiceTemplateFile" />
+  </wsdl:message>
+  <wsdl:message name="LoadInvoiceTemplateFileSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadInvoiceTemplateFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMoreInvoicesTemplateFileSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMoreInvoicesTemplateFile" />
+  </wsdl:message>
+  <wsdl:message name="LoadMoreInvoicesTemplateFileSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMoreInvoicesTemplateFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMorePayrollsTemplateFileSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMorePayrollsTemplateFile" />
+  </wsdl:message>
+  <wsdl:message name="LoadMorePayrollsTemplateFileSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMorePayrollsTemplateFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProviderData" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProviderDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJobplattformCounterDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJobplattformCounterData" />
+  </wsdl:message>
+  <wsdl:message name="GetJobplattformCounterDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJobplattformCounterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserDataSoapIn">
+    <wsdl:part name="parameters" element="tns:AddUserData" />
+  </wsdl:message>
+  <wsdl:message name="AddUserDataSoapOut">
+    <wsdl:part name="parameters" element="tns:AddUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedNotificationForTODOSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedNotificationForTODO" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedNotificationForTODOSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedNotificationForTODOResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedNotificationArtSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedNotificationArt" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedNotificationArtSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedNotificationArtResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNLogEntriesSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNLogEntries" />
+  </wsdl:message>
+  <wsdl:message name="AddNLogEntriesSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNLogEntriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerNotifications" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDataForApplicationJoblistSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerDataForApplicationJoblist" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDataForApplicationJoblistSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerDataForApplicationJoblistResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDataForScanJoblistSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerDataForScanJoblist" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDataForScanJoblistSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerDataForScanJoblistResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScanJobsNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScanJobsNotifications" />
+  </wsdl:message>
+  <wsdl:message name="GetScanJobsNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScanJobsNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedNotificationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedNotification" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedNotificationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCustomerNotificationSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCustomerNotification" />
+  </wsdl:message>
+  <wsdl:message name="AddCustomerNotificationSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCustomerNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedCustomerNotificationContentSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedCustomerNotificationContent" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedCustomerNotificationContentSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedCustomerNotificationContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedCustomerNotificationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedCustomerNotification" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedCustomerNotificationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedCustomerNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedCustomerPayableServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedCustomerPayableService" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedCustomerPayableServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedCustomerPayableServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendReportNotificationsWithEMailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendReportNotificationsWithEMail" />
+  </wsdl:message>
+  <wsdl:message name="SendReportNotificationsWithEMailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendReportNotificationsWithEMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWOSMailNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWOSMailNotifications" />
+  </wsdl:message>
+  <wsdl:message name="GetWOSMailNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWOSMailNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWOSModulMailNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWOSModulMailNotifications" />
+  </wsdl:message>
+  <wsdl:message name="GetWOSModulMailNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWOSModulMailNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadQualificationDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadQualificationData" />
+  </wsdl:message>
+  <wsdl:message name="LoadQualificationDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadQualificationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoCoordinationPostcodeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadGeoCoordinationPostcodeData" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoCoordinationPostcodeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadGeoCoordinationPostcodeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoCoordinationTwoPostcodeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadGeoCoordinationTwoPostcodeData" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoCoordinationTwoPostcodeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadGeoCoordinationTwoPostcodeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoDistancesDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadGeoDistancesData" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoDistancesDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadGeoDistancesDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPNotificationSoap">
+    <wsdl:operation name="LoadMailNotificationbyDateData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load mailnotification data</wsdl:documentation>
+      <wsdl:input message="tns:LoadMailNotificationbyDateDataSoapIn" />
+      <wsdl:output message="tns:LoadMailNotificationbyDateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAdvisorLoginByDateData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load advisor login data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAdvisorLoginByDateDataSoapIn" />
+      <wsdl:output message="tns:LoadAdvisorLoginByDateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAdvisorMonthlyLoginByDateData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load advisor login data monthly</wsdl:documentation>
+      <wsdl:input message="tns:LoadAdvisorMonthlyLoginByDateDataSoapIn" />
+      <wsdl:output message="tns:LoadAdvisorMonthlyLoginByDateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCVLBaseData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get cvl base table data</wsdl:documentation>
+      <wsdl:input message="tns:GetCVLBaseDataSoapIn" />
+      <wsdl:output message="tns:GetCVLBaseDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserFormControlTemplateData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">save user form control data</wsdl:documentation>
+      <wsdl:input message="tns:SaveUserFormControlTemplateDataSoapIn" />
+      <wsdl:output message="tns:SaveUserFormControlTemplateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserFormControlTemplateData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load user saved form control data</wsdl:documentation>
+      <wsdl:input message="tns:LoadUserFormControlTemplateDataSoapIn" />
+      <wsdl:output message="tns:LoadUserFormControlTemplateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMainViewSettingFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">upload MainView.xml file</wsdl:documentation>
+      <wsdl:input message="tns:LoadMainViewSettingFileSoapIn" />
+      <wsdl:output message="tns:LoadMainViewSettingFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTranslateionSettingFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">upload TranslationData.xml file</wsdl:documentation>
+      <wsdl:input message="tns:LoadTranslateionSettingFileSoapIn" />
+      <wsdl:output message="tns:LoadTranslateionSettingFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMailTemplateFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">upload MailTemplates file</wsdl:documentation>
+      <wsdl:input message="tns:LoadMailTemplateFileSoapIn" />
+      <wsdl:output message="tns:LoadMailTemplateFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadInvoiceTemplateFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">upload MailTempl_Invoice_01 file</wsdl:documentation>
+      <wsdl:input message="tns:LoadInvoiceTemplateFileSoapIn" />
+      <wsdl:output message="tns:LoadInvoiceTemplateFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMoreInvoicesTemplateFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">upload MailTempl_MoreInvoices_01 file</wsdl:documentation>
+      <wsdl:input message="tns:LoadMoreInvoicesTemplateFileSoapIn" />
+      <wsdl:output message="tns:LoadMoreInvoicesTemplateFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMorePayrollsTemplateFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">upload MailTempl_MorePayrolls_01 file</wsdl:documentation>
+      <wsdl:input message="tns:LoadMorePayrollsTemplateFileSoapIn" />
+      <wsdl:output message="tns:LoadMorePayrollsTemplateFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get data for provider</wsdl:documentation>
+      <wsdl:input message="tns:GetProviderDataSoapIn" />
+      <wsdl:output message="tns:GetProviderDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobplattformCounterData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get data for job plattforms</wsdl:documentation>
+      <wsdl:input message="tns:GetJobplattformCounterDataSoapIn" />
+      <wsdl:output message="tns:GetJobplattformCounterDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">adds user informations with remote data.</wsdl:documentation>
+      <wsdl:input message="tns:AddUserDataSoapIn" />
+      <wsdl:output message="tns:AddUserDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedNotificationForTODO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List Notification-Data for todo in client</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedNotificationForTODOSoapIn" />
+      <wsdl:output message="tns:LoadAssignedNotificationForTODOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedNotificationArt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List Notification-Data in client</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedNotificationArtSoapIn" />
+      <wsdl:output message="tns:LoadAssignedNotificationArtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNLogEntries">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">saves data into loging table</wsdl:documentation>
+      <wsdl:input message="tns:AddNLogEntriesSoapIn" />
+      <wsdl:output message="tns:AddNLogEntriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerNotifications">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List customer notification-Data in client</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerNotificationsSoapIn" />
+      <wsdl:output message="tns:GetCustomerNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDataForApplicationJoblist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List customer data for application listing in client</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerDataForApplicationJoblistSoapIn" />
+      <wsdl:output message="tns:GetCustomerDataForApplicationJoblistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDataForScanJoblist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List customer data for scanjob listing in client</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerDataForScanJoblistSoapIn" />
+      <wsdl:output message="tns:GetCustomerDataForScanJoblistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScanJobsNotifications">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List Notification-Data for scan jobs</wsdl:documentation>
+      <wsdl:input message="tns:GetScanJobsNotificationsSoapIn" />
+      <wsdl:output message="tns:GetScanJobsNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedNotification">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update notification record as checked</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedNotificationSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedNotificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerNotification">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">add customer notification record</wsdl:documentation>
+      <wsdl:input message="tns:AddCustomerNotificationSoapIn" />
+      <wsdl:output message="tns:AddCustomerNotificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCustomerNotificationContent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update customer notification record as checked</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedCustomerNotificationContentSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedCustomerNotificationContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCustomerNotification">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update customer notification record as checked</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedCustomerNotificationSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedCustomerNotificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCustomerPayableService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update customer payable service.</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedCustomerPayableServiceSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedCustomerPayableServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendReportNotificationsWithEMail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">sends notification mail to user</wsdl:documentation>
+      <wsdl:input message="tns:SendReportNotificationsWithEMailSoapIn" />
+      <wsdl:output message="tns:SendReportNotificationsWithEMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWOSMailNotifications">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">list mail notification for WOS</wsdl:documentation>
+      <wsdl:input message="tns:GetWOSMailNotificationsSoapIn" />
+      <wsdl:output message="tns:GetWOSMailNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWOSModulMailNotifications">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">list mail notification for WOS modul</wsdl:documentation>
+      <wsdl:input message="tns:GetWOSModulMailNotificationsSoapIn" />
+      <wsdl:output message="tns:GetWOSModulMailNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadQualificationData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load geo data for postfach data</wsdl:documentation>
+      <wsdl:input message="tns:LoadQualificationDataSoapIn" />
+      <wsdl:output message="tns:LoadQualificationDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationPostcodeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load geo data for postfach data</wsdl:documentation>
+      <wsdl:input message="tns:LoadGeoCoordinationPostcodeDataSoapIn" />
+      <wsdl:output message="tns:LoadGeoCoordinationPostcodeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationTwoPostcodeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load distance between two postfach data</wsdl:documentation>
+      <wsdl:input message="tns:LoadGeoCoordinationTwoPostcodeDataSoapIn" />
+      <wsdl:output message="tns:LoadGeoCoordinationTwoPostcodeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoDistancesData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load distance between two postfach data</wsdl:documentation>
+      <wsdl:input message="tns:LoadGeoDistancesDataSoapIn" />
+      <wsdl:output message="tns:LoadGeoDistancesDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPNotificationSoap" type="tns:SPNotificationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadMailNotificationbyDateData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadMailNotificationbyDateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAdvisorLoginByDateData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadAdvisorLoginByDateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAdvisorMonthlyLoginByDateData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadAdvisorMonthlyLoginByDateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCVLBaseData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetCVLBaseData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserFormControlTemplateData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/SaveUserFormControlTemplateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserFormControlTemplateData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadUserFormControlTemplateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMainViewSettingFile">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadMainViewSettingFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTranslateionSettingFile">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadTranslateionSettingFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMailTemplateFile">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadMailTemplateFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadInvoiceTemplateFile">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadInvoiceTemplateFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMoreInvoicesTemplateFile">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadMoreInvoicesTemplateFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMorePayrollsTemplateFile">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadMorePayrollsTemplateFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetProviderData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobplattformCounterData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetJobplattformCounterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/AddUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedNotificationForTODO">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadAssignedNotificationForTODO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedNotificationArt">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadAssignedNotificationArt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNLogEntries">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/AddNLogEntries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerNotifications">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetCustomerNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDataForApplicationJoblist">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetCustomerDataForApplicationJoblist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDataForScanJoblist">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetCustomerDataForScanJoblist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScanJobsNotifications">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetScanJobsNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedNotification">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/UpdateAssignedNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerNotification">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/AddCustomerNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCustomerNotificationContent">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/UpdateAssignedCustomerNotificationContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCustomerNotification">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/UpdateAssignedCustomerNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCustomerPayableService">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/UpdateAssignedCustomerPayableService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendReportNotificationsWithEMail">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/SendReportNotificationsWithEMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWOSMailNotifications">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetWOSMailNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWOSModulMailNotifications">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetWOSModulMailNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadQualificationData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadQualificationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationPostcodeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadGeoCoordinationPostcodeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationTwoPostcodeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadGeoCoordinationTwoPostcodeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoDistancesData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadGeoDistancesData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPNotificationSoap12" type="tns:SPNotificationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadMailNotificationbyDateData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadMailNotificationbyDateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAdvisorLoginByDateData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadAdvisorLoginByDateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAdvisorMonthlyLoginByDateData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadAdvisorMonthlyLoginByDateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCVLBaseData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetCVLBaseData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserFormControlTemplateData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/SaveUserFormControlTemplateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserFormControlTemplateData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadUserFormControlTemplateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMainViewSettingFile">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadMainViewSettingFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTranslateionSettingFile">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadTranslateionSettingFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMailTemplateFile">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadMailTemplateFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadInvoiceTemplateFile">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadInvoiceTemplateFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMoreInvoicesTemplateFile">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadMoreInvoicesTemplateFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMorePayrollsTemplateFile">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadMorePayrollsTemplateFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetProviderData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobplattformCounterData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetJobplattformCounterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/AddUserData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedNotificationForTODO">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadAssignedNotificationForTODO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedNotificationArt">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadAssignedNotificationArt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNLogEntries">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/AddNLogEntries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerNotifications">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetCustomerNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDataForApplicationJoblist">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetCustomerDataForApplicationJoblist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDataForScanJoblist">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetCustomerDataForScanJoblist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScanJobsNotifications">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetScanJobsNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedNotification">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/UpdateAssignedNotification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerNotification">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/AddCustomerNotification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCustomerNotificationContent">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/UpdateAssignedCustomerNotificationContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCustomerNotification">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/UpdateAssignedCustomerNotification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCustomerPayableService">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/UpdateAssignedCustomerPayableService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendReportNotificationsWithEMail">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/SendReportNotificationsWithEMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWOSMailNotifications">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetWOSMailNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWOSModulMailNotifications">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/GetWOSModulMailNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadQualificationData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadQualificationData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationPostcodeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadGeoCoordinationPostcodeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationTwoPostcodeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadGeoCoordinationTwoPostcodeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoDistancesData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPNotification.asmx/LoadGeoDistancesData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPNotification">
+    <wsdl:port name="SPNotificationSoap" binding="tns:SPNotificationSoap">
+      <soap:address location="http://localhost/wsSPS_services/SPNotification.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPNotificationSoap12" binding="tns:SPNotificationSoap12">
+      <soap12:address location="http://localhost/wsSPS_services/SPNotification.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

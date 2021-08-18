@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://servlets.iex.jv.com/" targetNamespace="http://servlets.iex.jv.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SOAPException" type="tns:SOAPException" />
+  <xs:complexType name="SOAPException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="inputDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="filename" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="outputDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="documentType" type="xs:string" />
+      <xs:element minOccurs="0" name="filename" type="xs:string" />
+      <xs:element name="ocr" type="xs:boolean" />
+      <xs:element name="pages" type="xs:int" />
+      <xs:element minOccurs="0" name="plainText" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="inputDocArray" final="#all">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="item" nillable="true" type="tns:inputDoc" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="outputDocArray" final="#all">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="item" nillable="true" type="tns:outputDoc" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

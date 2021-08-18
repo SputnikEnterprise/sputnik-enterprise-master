@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/">
+      <s:element name="GetTaxInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaxInfoResult" type="tns:TaxDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TaxDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:ArrayOfTaxDataItemDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTaxDataItemDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TaxDataItemDTO" nillable="true" type="tns:TaxDataItemDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TaxDataItemDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Kanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gruppe" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Kinder" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Kirchensteuer" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadTaxInfoData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTaxInfoDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTaxInfoDataResult" type="tns:TaxDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTaxCodeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTaxCodeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTaxCodeDataResult" type="tns:ArrayOfTaxCodeDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTaxCodeDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TaxCodeDataDTO" nillable="true" type="tns:TaxCodeDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TaxCodeDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rec_Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Translated_Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadTaxChurchCodeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTaxChurchCodeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTaxChurchCodeDataResult" type="tns:ArrayOfTaxChurchCodeDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTaxChurchCodeDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TaxChurchCodeDataDTO" nillable="true" type="tns:TaxChurchCodeDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TaxChurchCodeDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rec_Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Translated_Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadTaxNumberOfChilderData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="church" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTaxNumberOfChilderDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTaxNumberOfChilderDataResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetQstData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="einkommen" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="childern" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="qstGroup" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kirchsteuer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="geschlecht" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQstDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQstDataResult" type="tns:ArrayOfQstDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfQstDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QstDataDTO" nillable="true" type="tns:QstDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QstDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Mindest_Abzug" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Steuer_Proz" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Steuer_Fr" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Einkommen" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Schritt" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadAllowedQstCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="childern" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="qstGroup" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kirchsteuer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="geschlecht" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAllowedQstCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAllowedQstCodeResult" type="tns:QstDataAllowedDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QstDataAllowedDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsQstDataAllowed" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetIsAllowedQstCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="childern" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="qstGroup" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kirchsteuer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="geschlecht" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIsAllowedQstCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIsAllowedQstCodeResult" type="tns:QstDataAllowedDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCommunityData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCommunityDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCommunityDataResult" type="tns:ArrayOfCommunityDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCommunityDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CommunityDataDTO" nillable="true" type="tns:CommunityDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CommunityDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HistoricNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Canton" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BezirkNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BezirkName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BFSNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Translated_Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadEmploymentType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadEmploymentTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadEmploymentTypeResult" type="tns:ArrayOfEmploymentTypeDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmploymentTypeDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmploymentTypeDataDTO" nillable="true" type="tns:EmploymentTypeDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmploymentTypeDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rec_Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Translated_Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadOtherEmploymentType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadOtherEmploymentTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadOtherEmploymentTypeResult" type="tns:ArrayOfEmploymentTypeDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTypeOfStay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTypeOfStayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTypeOfStayResult" type="tns:ArrayOfTypeOfStayDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTypeOfStayDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TypeOfStayDataDTO" nillable="true" type="tns:TypeOfStayDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TypeOfStayDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rec_Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Translated_Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadPermission">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPermissionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadPermissionResult" type="tns:ArrayOfPermissionDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPermissionDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PermissionDataDTO" nillable="true" type="tns:PermissionDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PermissionDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecNr" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rec_Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Translated_Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadForeignCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadForeignCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadForeignCategoryResult" type="tns:ArrayOfPermissionDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadChildEducationData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadChildEducationDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadChildEducationDataResult" type="tns:ChildEducationDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ChildEducationDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MDYear" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FAK_Kanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fak_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fak_ZHD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fak_Postfach" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fak_Strasse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fak_PLZOrt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="YMinLohn" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ki1_Month" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ki2_Month" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Au1_Month" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ki1_Std" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ki2_Std" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ki1_Day" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ki2_Day" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangeKiIn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangeKiIn_2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Au1_Std" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Au2_Std" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Au1_Day" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Au2_Day" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangeAuIn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangeAuIn_2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChangedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ki1_FakMax" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ki2_FakMax" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fak_Proz" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Geb_Zulage" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ado_Zulage" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bemerkung_1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bemerkung_2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bemerkung_3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bemerkung_4" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTaxInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaxInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaxInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTaxInfoDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTaxInfoData" />
+  </wsdl:message>
+  <wsdl:message name="LoadTaxInfoDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTaxInfoDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTaxCodeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTaxCodeData" />
+  </wsdl:message>
+  <wsdl:message name="LoadTaxCodeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTaxCodeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTaxChurchCodeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTaxChurchCodeData" />
+  </wsdl:message>
+  <wsdl:message name="LoadTaxChurchCodeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTaxChurchCodeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTaxNumberOfChilderDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTaxNumberOfChilderData" />
+  </wsdl:message>
+  <wsdl:message name="LoadTaxNumberOfChilderDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTaxNumberOfChilderDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQstDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQstData" />
+  </wsdl:message>
+  <wsdl:message name="GetQstDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQstDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAllowedQstCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAllowedQstCode" />
+  </wsdl:message>
+  <wsdl:message name="LoadAllowedQstCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAllowedQstCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIsAllowedQstCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIsAllowedQstCode" />
+  </wsdl:message>
+  <wsdl:message name="GetIsAllowedQstCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIsAllowedQstCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCommunityDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCommunityData" />
+  </wsdl:message>
+  <wsdl:message name="LoadCommunityDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCommunityDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadEmploymentTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadEmploymentType" />
+  </wsdl:message>
+  <wsdl:message name="LoadEmploymentTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadEmploymentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadOtherEmploymentTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadOtherEmploymentType" />
+  </wsdl:message>
+  <wsdl:message name="LoadOtherEmploymentTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadOtherEmploymentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTypeOfStaySoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTypeOfStay" />
+  </wsdl:message>
+  <wsdl:message name="LoadTypeOfStaySoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTypeOfStayResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadPermissionSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadPermission" />
+  </wsdl:message>
+  <wsdl:message name="LoadPermissionSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadForeignCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:LoadForeignCategory" />
+  </wsdl:message>
+  <wsdl:message name="LoadForeignCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:LoadForeignCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadChildEducationDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadChildEducationData" />
+  </wsdl:message>
+  <wsdl:message name="LoadChildEducationDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadChildEducationDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPEmployeeTaxInfoServiceSoap">
+    <wsdl:operation name="GetTaxInfo">
+      <wsdl:input message="tns:GetTaxInfoSoapIn" />
+      <wsdl:output message="tns:GetTaxInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxInfoData">
+      <wsdl:input message="tns:LoadTaxInfoDataSoapIn" />
+      <wsdl:output message="tns:LoadTaxInfoDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxCodeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">loads tax code data</wsdl:documentation>
+      <wsdl:input message="tns:LoadTaxCodeDataSoapIn" />
+      <wsdl:output message="tns:LoadTaxCodeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxChurchCodeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">loads tax church code data</wsdl:documentation>
+      <wsdl:input message="tns:LoadTaxChurchCodeDataSoapIn" />
+      <wsdl:output message="tns:LoadTaxChurchCodeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxNumberOfChilderData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">loads number of children for given canton, tax and church code data</wsdl:documentation>
+      <wsdl:input message="tns:LoadTaxNumberOfChilderDataSoapIn" />
+      <wsdl:output message="tns:LoadTaxNumberOfChilderDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQstData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Quellensteuerdaten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetQstDataSoapIn" />
+      <wsdl:output message="tns:GetQstDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllowedQstCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Test ob der eingetragene QST-Code korrekt ist</wsdl:documentation>
+      <wsdl:input message="tns:LoadAllowedQstCodeSoapIn" />
+      <wsdl:output message="tns:LoadAllowedQstCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsAllowedQstCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Test ob der eingetragene QST-Code korrekt ist</wsdl:documentation>
+      <wsdl:input message="tns:GetIsAllowedQstCodeSoapIn" />
+      <wsdl:output message="tns:GetIsAllowedQstCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCommunityData">
+      <wsdl:input message="tns:LoadCommunityDataSoapIn" />
+      <wsdl:output message="tns:LoadCommunityDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadEmploymentType">
+      <wsdl:input message="tns:LoadEmploymentTypeSoapIn" />
+      <wsdl:output message="tns:LoadEmploymentTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadOtherEmploymentType">
+      <wsdl:input message="tns:LoadOtherEmploymentTypeSoapIn" />
+      <wsdl:output message="tns:LoadOtherEmploymentTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTypeOfStay">
+      <wsdl:input message="tns:LoadTypeOfStaySoapIn" />
+      <wsdl:output message="tns:LoadTypeOfStaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPermission">
+      <wsdl:input message="tns:LoadPermissionSoapIn" />
+      <wsdl:output message="tns:LoadPermissionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadForeignCategory">
+      <wsdl:input message="tns:LoadForeignCategorySoapIn" />
+      <wsdl:output message="tns:LoadForeignCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadChildEducationData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Test ob der eingetragene QST-Code korrekt ist</wsdl:documentation>
+      <wsdl:input message="tns:LoadChildEducationDataSoapIn" />
+      <wsdl:output message="tns:LoadChildEducationDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPEmployeeTaxInfoServiceSoap" type="tns:SPEmployeeTaxInfoServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTaxInfo">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/GetTaxInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxInfoData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadTaxInfoData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxCodeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadTaxCodeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxChurchCodeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadTaxChurchCodeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxNumberOfChilderData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadTaxNumberOfChilderData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQstData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/GetQstData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllowedQstCode">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadAllowedQstCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsAllowedQstCode">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/GetIsAllowedQstCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCommunityData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadCommunityData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadEmploymentType">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadEmploymentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadOtherEmploymentType">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadOtherEmploymentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTypeOfStay">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadTypeOfStay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPermission">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadForeignCategory">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadForeignCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadChildEducationData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadChildEducationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPEmployeeTaxInfoServiceSoap12" type="tns:SPEmployeeTaxInfoServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTaxInfo">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/GetTaxInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxInfoData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadTaxInfoData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxCodeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadTaxCodeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxChurchCodeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadTaxChurchCodeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTaxNumberOfChilderData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadTaxNumberOfChilderData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQstData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/GetQstData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllowedQstCode">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadAllowedQstCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsAllowedQstCode">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/GetIsAllowedQstCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCommunityData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadCommunityData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadEmploymentType">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadEmploymentType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadOtherEmploymentType">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadOtherEmploymentType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTypeOfStay">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadTypeOfStay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPermission">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadPermission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadForeignCategory">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadForeignCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadChildEducationData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx/LoadChildEducationData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPEmployeeTaxInfoService">
+    <wsdl:port name="SPEmployeeTaxInfoServiceSoap" binding="tns:SPEmployeeTaxInfoServiceSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPEmployeeTaxInfoServiceSoap12" binding="tns:SPEmployeeTaxInfoServiceSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPEmployeeTaxInfoService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SPProgUtility.ClsAssInfo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAABAAAgAEAAAQAAAAAAAAAAEAAAAAAABAAAAAA=</HashCode>
+      <FileName>ClsAssInfo.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SPProgUtility.ClsDivReg" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAhAQBQAAEAAAAAAAAAAAAAAgAAAAIAA=</HashCode>
+      <FileName>ClsDivReg.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.ClsEventLog" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABADAAAAAAAAAAAAAIAAAEAIAAAAAgA=</HashCode>
+      <FileName>ClsEventLog.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.ClsProgSettingPath" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BADg94gBLpkCXALW4TDjBMACBT/EYAwqIwgMK6BCk0Q=</HashCode>
+      <FileName>ClsProgSettingPath.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.ScanDbData" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAABAAAAAAAAAAAI=</HashCode>
+      <FileName>Database\ClsMDData.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.ClsDbSelectData" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAABAAQAAAAAAAAA=</HashCode>
+      <FileName>Database\ClsMDData.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.ClsMDData" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAEAqAAAAAAAEAYAAAQAAAECAACAABAASAAAAAAogA=</HashCode>
+      <FileName>Database\ClsMDData.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.ClsMailingData" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAQAAAEIACAAAgAAAAA=</HashCode>
+      <FileName>Database\ClsMDData.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.LicenseData" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAEAgAEAAAAAAAAIACBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\ClsMDData.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.TapiData" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Database\ClsMDData.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.O2SolutionData" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\ClsMDData.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.WOSData" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAYAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\ClsMDData.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.TemplateData" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAABAAAAAAAAAAAAAAAAAAEAAAAAIAAAAAAA=</HashCode>
+      <FileName>Database\ClsMDData.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.DataBaseAccess" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgEAABAAAAAAAAAAEAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\DataBaseAccess.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.ClsTranslationData" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAABAEAAAAAAAAAAAAABACAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Translation\ClsTranslationData.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.ColorUtility.ClsColorUtility" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAEAAAAAAAAAAAAgAAAAAAAQAAAAAAAwAAAAAA=</HashCode>
+      <FileName>ClsColorUtility.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.SPConverter.ClsConvert" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAABAAAAAAAAAAAAAAAAAAABIAAAAAAAAAAA=</HashCode>
+      <FileName>ClsConvert.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.SPExceptionsManager.ClsErrorExceptions" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQCAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClsErrorExeptions.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.ProgPath.ClsProgPath" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIABAAAAAAACAICQAoABAEAAAAAAgAEAAAAAAAA=</HashCode>
+      <FileName>ClsProgPath.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.SPUserSec.ClsUserSec" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACQAAAAAAAAAAAAgIABAAAQAABAAA=</HashCode>
+      <FileName>ClsUserSec.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.CommonSettings.CommonSetting" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIQBAAACAEACAAACUAAAAEBEAARIEIABBAAAABA=</HashCode>
+      <FileName>Common Methods\CommonSettings.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.Mandanten.Mandant">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAJAB0AgkADBAAUAAEEAAAEABgAAAEAAAAABAw=</HashCode>
+      <FileName>MDData\Mandant.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.My.MySettings" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.SPTranslation.ClsTranslation" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Translation\ClsTranslation.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.MainUtilities.Utilities" Collapsed="true">
+    <Position X="4.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBAggAAADAAAGAACBDCCBIAABQAEgAQiAgQICCAAEAA=</HashCode>
+      <FileName>Utilities.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPProgUtility.MainUtilities.DataBaseUtility" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAICAAAAAeAAAQgAQAAFgAAAAAAAAAA=</HashCode>
+      <FileName>Utilities.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SPProgUtility.IAssInfo" Collapsed="true">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAABAAAgAEAAAAAAAAAAAAAAEAAAAAAABAAAAAA=</HashCode>
+      <FileName>ClsAssInfo.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Module Name="SPProgUtility.My.Resources.Resources" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="SPProgUtility.My.MySettingsProperty" Collapsed="true">
+    <Position X="11.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

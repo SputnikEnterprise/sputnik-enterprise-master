@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPALKUtil.asmx/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPALKUtil.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPALKUtil.asmx/">
+      <s:element name="GetALKData">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetALKDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetALKDataResult" type="tns:ArrayOfALKResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfALKResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ALKResultDTO" nillable="true" type="tns:ALKResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ALKResultDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ALKNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ALKName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="POBox" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetALKDataByALKNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ALKNumber" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetALKDataByALKNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetALKDataByALKNumberResult" type="tns:ALKResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetALKDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetALKData" />
+  </wsdl:message>
+  <wsdl:message name="GetALKDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetALKDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetALKDataByALKNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetALKDataByALKNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetALKDataByALKNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetALKDataByALKNumberResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPALKUtilSoap">
+    <wsdl:operation name="GetALKData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der ALK-Daten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetALKDataSoapIn" />
+      <wsdl:output message="tns:GetALKDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetALKDataByALKNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der ALK-Daten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetALKDataByALKNumberSoapIn" />
+      <wsdl:output message="tns:GetALKDataByALKNumberSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPALKUtilSoap" type="tns:SPALKUtilSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetALKData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPALKUtil.asmx/GetALKData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetALKDataByALKNumber">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPALKUtil.asmx/GetALKDataByALKNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPALKUtilSoap12" type="tns:SPALKUtilSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetALKData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPALKUtil.asmx/GetALKData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetALKDataByALKNumber">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPALKUtil.asmx/GetALKDataByALKNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPALKUtil">
+    <wsdl:port name="SPALKUtilSoap" binding="tns:SPALKUtilSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPALKUtil.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPALKUtilSoap12" binding="tns:SPALKUtilSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPALKUtil.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

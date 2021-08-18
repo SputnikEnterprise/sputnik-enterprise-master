@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Sputnik_SES_Logo_Symbol_OrangeReflection_5_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\splash\sputnik_ses_logo_symbol_orangereflection_5 4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Bruttolohnjournal_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon bruttolohnjournal_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Einsätze" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_einsätze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Kinder_Ausbildungszulage_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon kinder&amp;ausbildungszulage_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Umsatz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_umsatz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Telefon_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_telefon_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Vakanzen_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_vakanzen_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Fremdrechnung_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_fremdrechnung_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Zahlungen_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_zahlungen_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Massenversand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_massenversand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_eXtra_Updateprotokoll_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon extra-updateprotokoll_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_AG_Lohnrekap_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon ag-lohnrekap_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_eXtra_Datenliste_72pixel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon_extra_datenliste_72pixel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="announcement_16x161" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\announcement_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Franz__Grenzg_nger_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon franz .grenzg nger_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Verw__Benutzer_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon verw.-benutzer_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Nachrichten_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_nachrichten_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_FAK_Abrechnung_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon fak-abrechnung_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Dokliste_72pixel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_dokliste_72pixel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Kandidaten" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_kandidaten.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Verw__Einstellungen_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon verw.-einstellungen_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_eXtra_Löschprotokoll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon extra_löschprotokoll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Auszahlungen_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_auszahlungen_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Fremdrechnungen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_fremdrechnungen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Rapporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_rapporte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_AN_Lohnrekap_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon an-lohnrekap_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Verw__Mandantenverw__GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon verw.-mandantenverw._gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Verw__Dokumentenverwaltung_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon verw.-dokumentenverwaltung_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Einsätze_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_einsätze_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Bewerbermanagement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_bewerbermanagement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Vorschüsse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_vorschüsse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Quellensteuer_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon quellensteuer_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_ball_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\bullet_ball_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_eXtra_Fernwartung_R_Ring_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon extra-fernwartung_r.ring_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Kunden_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_kunden_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\usergreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="protectsheet_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\protectsheet_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Vorschlag_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_vorschlag_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_AHV_Lohnbescheinigung_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon ahv-lohnbescheinigung_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_eXtra_GAV_News_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon extra-gav-news_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Debitoren_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_debitoren_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Fremdleistungen_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon fremdleistungen_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Far_Stiftung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\far stiftung.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_KIGA_Statistik_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon kiga-statistik_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Arbeitsstunden_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon arbeitsstunden_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Vorschläge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_vorschläge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Lohnkonti_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon lohnkonti_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Lohnbelege_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon lohnbelege_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Löhne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_löhne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Lohn_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_lohn_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Guthaben_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon guthaben_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tempdata" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\tempdata.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Kunden" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_kunden.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_DB1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_db1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_eXtra_Fernwartung_SOS_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon extra-fernwartung_sos_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Gutschriften" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_gutschriften.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Rapporte_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_rapporte_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_BVG_Liste_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon bvg-liste_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Verw__Tabellenverwaltung_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon verw.-tabellenverwaltung_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_LI_Kandidaten_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\listen\sputnik_icon_li_kandidaten_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Fakturen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_fakturen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="announcement_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\announcement_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Mahnungen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_mahnungen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Vakanzen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_vakanzen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_ball_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\bullet_ball_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Kassenbuch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_kassenbuch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="more_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\more_arrow.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Buchungsbelege_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon buchungsbelege_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Lohnarten_Rekap_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon lohnarten-rekap_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_ball_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\bullet_ball_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_eXtra_Benutzerhandbuch_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon extra-benutzerhandbuch_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warning_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warning_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="announcement_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\announcement_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gefak_BL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\gefak_bl.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Lohnausweis_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon lohnausweis_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_UVG_Jahresliste_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon uvg-jahresliste_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_ICON_Zahlungseingänge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\mainview\main\sputnik_icon_zahlungseingänge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sputnik_Icon_Verw__Lohnartenstamm_GzD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainview\assets\sputnik_icon verw.-lohnartenstamm_gzd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="announcement_32x321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\announcement_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

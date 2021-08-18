@@ -1,0 +1,2161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="str102" xml:space="preserve">
+    <value>Vorhandene Datenbanken</value>
+  </data>
+  <data name="str103" xml:space="preserve">
+    <value>MDName</value>
+  </data>
+  <data name="str104" xml:space="preserve">
+    <value>Datenbank</value>
+  </data>
+  <data name="str105" xml:space="preserve">
+    <value>Verzeichnis</value>
+  </data>
+  <data name="str106" xml:space="preserve">
+    <value>Sonstiges</value>
+  </data>
+  <data name="str107" xml:space="preserve">
+    <value>LL Options</value>
+  </data>
+  <data name="str108" xml:space="preserve">
+    <value>LLZoomfaktor</value>
+  </data>
+  <data name="str109" xml:space="preserve">
+    <value>Bitte kontaktieren Sie Ihr Systemadministrator.</value>
+  </data>
+  <data name="str110" xml:space="preserve">
+    <value>ZGGebührAusland</value>
+  </data>
+  <data name="str111" xml:space="preserve">
+    <value>LOGebührAusland</value>
+  </data>
+  <data name="str112" xml:space="preserve">
+    <value>GAVTabelle</value>
+  </data>
+  <data name="str113" xml:space="preserve">
+    <value>CharForZGAbzug</value>
+  </data>
+  <data name="str114" xml:space="preserve">
+    <value>BewSeco</value>
+  </data>
+  <data name="str115" xml:space="preserve">
+    <value>Sie sind nicht berechtigt mit irgendeineinem Mandanten zu arbeiten.</value>
+  </data>
+  <data name="str116" xml:space="preserve">
+    <value>Neue Daten hinzufügen ...</value>
+  </data>
+  <data name="str117" xml:space="preserve">
+    <value>Allgemeine GAV</value>
+  </data>
+  <data name="str118" xml:space="preserve">
+    <value>BURNumber</value>
+  </data>
+  <data name="str119" xml:space="preserve">
+    <value>SPSSetup.exe</value>
+  </data>
+  <data name="str120" xml:space="preserve">
+    <value>UIDNumber</value>
+  </data>
+  <data name="str121" xml:space="preserve">
+    <value>AHVAddressZusatz</value>
+  </data>
+  <data name="str122" xml:space="preserve">
+    <value>Nicht vorhanden ...</value>
+  </data>
+  <data name="str123" xml:space="preserve">
+    <value>Kein GAV-Einsatz</value>
+  </data>
+  <data name="str124" xml:space="preserve">
+    <value>Liste bearbeiten...</value>
+  </data>
+  <data name="str125" xml:space="preserve">
+    <value>AHVAddressZHD</value>
+  </data>
+  <data name="str126" xml:space="preserve">
+    <value>Keine Daten vorhanden...</value>
+  </data>
+  <data name="str127" xml:space="preserve">
+    <value>AHVAddressPostfach</value>
+  </data>
+  <data name="str128" xml:space="preserve">
+    <value>Während der Ausführung vom Programm ist ein Fehler aufgetreten.</value>
+  </data>
+  <data name="str129" xml:space="preserve">
+    <value>SPSCLUpdate.exe</value>
+  </data>
+  <data name="str130" xml:space="preserve">
+    <value>SPSInfo.ClsMain</value>
+  </data>
+  <data name="str131" xml:space="preserve">
+    <value>AHVAddressStrasse</value>
+  </data>
+  <data name="str132" xml:space="preserve">
+    <value>AHVAddressPLZOrt</value>
+  </data>
+  <data name="str133" xml:space="preserve">
+    <value>AHVMitgliedNr</value>
+  </data>
+  <data name="str134" xml:space="preserve">
+    <value>ProgUpperPath</value>
+  </data>
+  <data name="str135" xml:space="preserve">
+    <value>\Forms</value>
+  </data>
+  <data name="str136" xml:space="preserve">
+    <value>Modernfrm</value>
+  </data>
+  <data name="str137" xml:space="preserve">
+    <value>IndDropDown</value>
+  </data>
+  <data name="str138" xml:space="preserve">
+    <value>ModulNumber</value>
+  </data>
+  <data name="str139" xml:space="preserve">
+    <value>SaveSMSData</value>
+  </data>
+  <data name="str140" xml:space="preserve">
+    <value>SMSUSKey</value>
+  </data>
+  <data name="str141" xml:space="preserve">
+    <value>SMSPW</value>
+  </data>
+  <data name="str142" xml:space="preserve">
+    <value>SMS</value>
+  </data>
+  <data name="str143" xml:space="preserve">
+    <value>AHVSub1</value>
+  </data>
+  <data name="str144" xml:space="preserve">
+    <value>AHVSub2</value>
+  </data>
+  <data name="str145" xml:space="preserve">
+    <value>PrintFileSaveIn</value>
+  </data>
+  <data name="str146" xml:space="preserve">
+    <value>HideAHVNr</value>
+  </data>
+  <data name="str147" xml:space="preserve">
+    <value>HideAHVKarte</value>
+  </data>
+  <data name="str148" xml:space="preserve">
+    <value>HideBewilligung</value>
+  </data>
+  <data name="str149" xml:space="preserve">
+    <value>HideQSteuer</value>
+  </data>
+  <data name="str150" xml:space="preserve">
+    <value>ShowMailButtonInHeader</value>
+  </data>
+  <data name="str151" xml:space="preserve">
+    <value>ButtonCaption</value>
+  </data>
+  <data name="str152" xml:space="preserve">
+    <value>BezKST1</value>
+  </data>
+  <data name="str153" xml:space="preserve">
+    <value>BezKST2</value>
+  </data>
+  <data name="str154" xml:space="preserve">
+    <value>BezKST3</value>
+  </data>
+  <data name="str155" xml:space="preserve">
+    <value>BezReserve1</value>
+  </data>
+  <data name="str156" xml:space="preserve">
+    <value>BezReserve2</value>
+  </data>
+  <data name="str157" xml:space="preserve">
+    <value>BezReserve3</value>
+  </data>
+  <data name="str158" xml:space="preserve">
+    <value>BezReserve4</value>
+  </data>
+  <data name="str159" xml:space="preserve">
+    <value>BezReserve5</value>
+  </data>
+  <data name="str160" xml:space="preserve">
+    <value>MABerufPflichtig</value>
+  </data>
+  <data name="str161" xml:space="preserve">
+    <value>MABetreuerPflichtig</value>
+  </data>
+  <data name="str162" xml:space="preserve">
+    <value>KDWährungPflichtig</value>
+  </data>
+  <data name="str163" xml:space="preserve">
+    <value>ESKST1Pflichtig</value>
+  </data>
+  <data name="str164" xml:space="preserve">
+    <value>ESKST2Pflichtig</value>
+  </data>
+  <data name="str165" xml:space="preserve">
+    <value>ESKST3Pflichtig</value>
+  </data>
+  <data name="str166" xml:space="preserve">
+    <value>OPKST1Pflichtig</value>
+  </data>
+  <data name="str167" xml:space="preserve">
+    <value>OPKST2Pflichtig</value>
+  </data>
+  <data name="str168" xml:space="preserve">
+    <value>OPKST3Pflichtig</value>
+  </data>
+  <data name="str169" xml:space="preserve">
+    <value>AHVSub3</value>
+  </data>
+  <data name="str170" xml:space="preserve">
+    <value>KDDienstleistung</value>
+  </data>
+  <data name="str171" xml:space="preserve">
+    <value>MAKontaktPflichtig</value>
+  </data>
+  <data name="str172" xml:space="preserve">
+    <value>MAStatusPflichtig</value>
+  </data>
+  <data name="str173" xml:space="preserve">
+    <value>KDKontaktPflichtig</value>
+  </data>
+  <data name="str174" xml:space="preserve">
+    <value>KDStatusPflichtig</value>
+  </data>
+  <data name="str175" xml:space="preserve">
+    <value>LMKST1Pflichtig</value>
+  </data>
+  <data name="str176" xml:space="preserve">
+    <value>LMKST2Pflichtig</value>
+  </data>
+  <data name="str177" xml:space="preserve">
+    <value>LMKST3Pflichtig</value>
+  </data>
+  <data name="str178" xml:space="preserve">
+    <value>MABewPflichtig</value>
+  </data>
+  <data name="str179" xml:space="preserve">
+    <value>MABewBisPflichtig</value>
+  </data>
+  <data name="str180" xml:space="preserve">
+    <value>ESGAVPflichtig</value>
+  </data>
+  <data name="str181" xml:space="preserve">
+    <value>NOVertragNoLO</value>
+  </data>
+  <data name="str182" xml:space="preserve">
+    <value>NoKINoQSTKI</value>
+  </data>
+  <data name="str183" xml:space="preserve">
+    <value>LostFocusNormalColor</value>
+  </data>
+  <data name="str184" xml:space="preserve">
+    <value>GotFocusNormalColor</value>
+  </data>
+  <data name="str185" xml:space="preserve">
+    <value>LostFocusPflichtColor</value>
+  </data>
+  <data name="str186" xml:space="preserve">
+    <value>GotFocusPflichtColor</value>
+  </data>
+  <data name="str187" xml:space="preserve">
+    <value>LightBorderColor</value>
+  </data>
+  <data name="str188" xml:space="preserve">
+    <value>FerienBack</value>
+  </data>
+  <data name="str189" xml:space="preserve">
+    <value>FeiertagBack</value>
+  </data>
+  <data name="str190" xml:space="preserve">
+    <value>13. LohnBack</value>
+  </data>
+  <data name="str191" xml:space="preserve">
+    <value>Rahmenarbeitsvertrag</value>
+  </data>
+  <data name="str192" xml:space="preserve">
+    <value>AHVSub4</value>
+  </data>
+  <data name="str193" xml:space="preserve">
+    <value>AHVSub5</value>
+  </data>
+  <data name="str194" xml:space="preserve">
+    <value>AHVSub6</value>
+  </data>
+  <data name="str195" xml:space="preserve">
+    <value>SUVAAddressZusatz</value>
+  </data>
+  <data name="str196" xml:space="preserve">
+    <value>SUVAAddressZHD</value>
+  </data>
+  <data name="str197" xml:space="preserve">
+    <value>SUVAAddressPostfach</value>
+  </data>
+  <data name="str198" xml:space="preserve">
+    <value>RootConnStr</value>
+  </data>
+  <data name="str199" xml:space="preserve">
+    <value>RegisterTelInMAKontakt</value>
+  </data>
+  <data name="str200" xml:space="preserve">
+    <value>HideBankSite</value>
+  </data>
+  <data name="str201" xml:space="preserve">
+    <value>PrintFeiertagInLO</value>
+  </data>
+  <data name="str202" xml:space="preserve">
+    <value>PrintFerienInLO</value>
+  </data>
+  <data name="str203" xml:space="preserve">
+    <value>Print13LohnInLO</value>
+  </data>
+  <data name="str204" xml:space="preserve">
+    <value>PrintDarlehenInLO</value>
+  </data>
+  <data name="str205" xml:space="preserve">
+    <value>PrintGleitStdInLO</value>
+  </data>
+  <data name="str206" xml:space="preserve">
+    <value>SUVAAddressStrasse</value>
+  </data>
+  <data name="str207" xml:space="preserve">
+    <value>SUVAAddressPLZOrt</value>
+  </data>
+  <data name="str208" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="str209" xml:space="preserve">
+    <value>SUVAAddressSub1</value>
+  </data>
+  <data name="str210" xml:space="preserve">
+    <value>SUVAAddressSub2</value>
+  </data>
+  <data name="str211" xml:space="preserve">
+    <value>SUVAAddressSub3</value>
+  </data>
+  <data name="str212" xml:space="preserve">
+    <value>RegisterTelInKDKontakt</value>
+  </data>
+  <data name="str213" xml:space="preserve">
+    <value>SaveWindowsPos</value>
+  </data>
+  <data name="str214" xml:space="preserve">
+    <value>SUVAAddressSub4</value>
+  </data>
+  <data name="str215" xml:space="preserve">
+    <value>SUVAAddressSub5</value>
+  </data>
+  <data name="str216" xml:space="preserve">
+    <value>PrintModulNr</value>
+  </data>
+  <data name="str217" xml:space="preserve">
+    <value>SUVAAddressSub6</value>
+  </data>
+  <data name="str218" xml:space="preserve">
+    <value>ShowAgendaOnStart</value>
+  </data>
+  <data name="str219" xml:space="preserve">
+    <value>ShowUpdateOnStart</value>
+  </data>
+  <data name="str220" xml:space="preserve">
+    <value>\Forms\Colour</value>
+  </data>
+  <data name="str221" xml:space="preserve">
+    <value>Color1</value>
+  </data>
+  <data name="str222" xml:space="preserve">
+    <value>Color2</value>
+  </data>
+  <data name="str223" xml:space="preserve">
+    <value>Color3</value>
+  </data>
+  <data name="str224" xml:space="preserve">
+    <value>ZGGebührBar</value>
+  </data>
+  <data name="str225" xml:space="preserve">
+    <value>TagesSpesenStd</value>
+  </data>
+  <data name="str226" xml:space="preserve">
+    <value>Color4</value>
+  </data>
+  <data name="str227" xml:space="preserve">
+    <value>Color5</value>
+  </data>
+  <data name="str228" xml:space="preserve">
+    <value>Color6</value>
+  </data>
+  <data name="str229" xml:space="preserve">
+    <value>Color7</value>
+  </data>
+  <data name="str230" xml:space="preserve">
+    <value>Color8</value>
+  </data>
+  <data name="str231" xml:space="preserve">
+    <value>UseColorInMainForm</value>
+  </data>
+  <data name="str232" xml:space="preserve">
+    <value>Blau4</value>
+  </data>
+  <data name="str233" xml:space="preserve">
+    <value>Roundfrm</value>
+  </data>
+  <data name="str234" xml:space="preserve">
+    <value>KDKontaktWordText</value>
+  </data>
+  <data name="str235" xml:space="preserve">
+    <value>MAKontaktWordText</value>
+  </data>
+  <data name="str236" xml:space="preserve">
+    <value>MAKontaktCallText</value>
+  </data>
+  <data name="str237" xml:space="preserve">
+    <value>KDKontakteMailText</value>
+  </data>
+  <data name="str238" xml:space="preserve">
+    <value>KDKontaktKreditText</value>
+  </data>
+  <data name="str239" xml:space="preserve">
+    <value>FAKAddressZusatz</value>
+  </data>
+  <data name="str240" xml:space="preserve">
+    <value>FAKAddressZHD</value>
+  </data>
+  <data name="str241" xml:space="preserve">
+    <value>BackColor</value>
+  </data>
+  <data name="str242" xml:space="preserve">
+    <value>MouseoverColor</value>
+  </data>
+  <data name="str243" xml:space="preserve">
+    <value>ClickColor</value>
+  </data>
+  <data name="str244" xml:space="preserve">
+    <value>BorderColor</value>
+  </data>
+  <data name="str245" xml:space="preserve">
+    <value>FocusColor</value>
+  </data>
+  <data name="str246" xml:space="preserve">
+    <value>ChangeStandardColor</value>
+  </data>
+  <data name="str247" xml:space="preserve">
+    <value>FAKAddressPostfach</value>
+  </data>
+  <data name="str248" xml:space="preserve">
+    <value>FAKAddressStrasse</value>
+  </data>
+  <data name="str249" xml:space="preserve">
+    <value>\Forms\DbGrid</value>
+  </data>
+  <data name="str250" xml:space="preserve">
+    <value>\Forms\Tabs</value>
+  </data>
+  <data name="str251" xml:space="preserve">
+    <value>\Options</value>
+  </data>
+  <data name="str252" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="str253" xml:space="preserve">
+    <value>Software\ajande.com\Sputnik Suite</value>
+  </data>
+  <data name="str254" xml:space="preserve">
+    <value>RegisterMailInMAKontakt</value>
+  </data>
+  <data name="str255" xml:space="preserve">
+    <value>\Forms\Coordination</value>
+  </data>
+  <data name="str256" xml:space="preserve">
+    <value>\Path</value>
+  </data>
+  <data name="str257" xml:space="preserve">
+    <value>\Documents</value>
+  </data>
+  <data name="str258" xml:space="preserve">
+    <value>\Path\Library</value>
+  </data>
+  <data name="str259" xml:space="preserve">
+    <value>\Options\DbSelections</value>
+  </data>
+  <data name="str260" xml:space="preserve">
+    <value>RegisterMailInKDKontakt</value>
+  </data>
+  <data name="str261" xml:space="preserve">
+    <value>MDPath</value>
+  </data>
+  <data name="str262" xml:space="preserve">
+    <value>ProgPath</value>
+  </data>
+  <data name="str263" xml:space="preserve">
+    <value>Sonstiges</value>
+  </data>
+  <data name="str264" xml:space="preserve">
+    <value>\ProgOptions</value>
+  </data>
+  <data name="str265" xml:space="preserve">
+    <value>MDYear</value>
+  </data>
+  <data name="str266" xml:space="preserve">
+    <value>ActivForm</value>
+  </data>
+  <data name="str267" xml:space="preserve">
+    <value>UserNr</value>
+  </data>
+  <data name="str268" xml:space="preserve">
+    <value>MDNr</value>
+  </data>
+  <data name="str269" xml:space="preserve">
+    <value>CreditInfo</value>
+  </data>
+  <data name="str270" xml:space="preserve">
+    <value>\Forms\SearchFields</value>
+  </data>
+  <data name="str271" xml:space="preserve">
+    <value>\Forms\LoadedForms</value>
+  </data>
+  <data name="str272" xml:space="preserve">
+    <value>InitPath</value>
+  </data>
+  <data name="str273" xml:space="preserve">
+    <value>MainModulSel</value>
+  </data>
+  <data name="str274" xml:space="preserve">
+    <value>\Options\DbForList</value>
+  </data>
+  <data name="str275" xml:space="preserve">
+    <value>CalledBankModulFrom</value>
+  </data>
+  <data name="str276" xml:space="preserve">
+    <value>DocPath</value>
+  </data>
+  <data name="str277" xml:space="preserve">
+    <value>AllowedGAVKontroll</value>
+  </data>
+  <data name="str278" xml:space="preserve">
+    <value>FAKAddressPLZOrt</value>
+  </data>
+  <data name="str279" xml:space="preserve">
+    <value>FAKAddressMitgliednr</value>
+  </data>
+  <data name="str280" xml:space="preserve">
+    <value>CalledModulFromForShowModul</value>
+  </data>
+  <data name="str281" xml:space="preserve">
+    <value>ModulToShow</value>
+  </data>
+  <data name="str282" xml:space="preserve">
+    <value>FAKAddressSub1</value>
+  </data>
+  <data name="str283" xml:space="preserve">
+    <value>RegisterBriefInMAKontakt</value>
+  </data>
+  <data name="str284" xml:space="preserve">
+    <value>RegisterBriefInKDKontakt</value>
+  </data>
+  <data name="str285" xml:space="preserve">
+    <value>RegisterCreditInKDCreditLv</value>
+  </data>
+  <data name="str286" xml:space="preserve">
+    <value>EXEPath</value>
+  </data>
+  <data name="str287" xml:space="preserve">
+    <value>DocKDZustand</value>
+  </data>
+  <data name="str288" xml:space="preserve">
+    <value>Connection String</value>
+  </data>
+  <data name="str289" xml:space="preserve">
+    <value>USSecLevel</value>
+  </data>
+  <data name="str290" xml:space="preserve">
+    <value>LastSelectedMDIndex</value>
+  </data>
+  <data name="str291" xml:space="preserve">
+    <value>ShowXPNoSmart</value>
+  </data>
+  <data name="str292" xml:space="preserve">
+    <value>AutoProzentsatz</value>
+  </data>
+  <data name="str293" xml:space="preserve">
+    <value>FtpServer</value>
+  </data>
+  <data name="str294" xml:space="preserve">
+    <value>FtpUserName</value>
+  </data>
+  <data name="str295" xml:space="preserve">
+    <value>FtpPassword</value>
+  </data>
+  <data name="str296" xml:space="preserve">
+    <value>FtpStartPath</value>
+  </data>
+  <data name="str297" xml:space="preserve">
+    <value>KDKontakteTelText</value>
+  </data>
+  <data name="str298" xml:space="preserve">
+    <value>MAKontakteTelText</value>
+  </data>
+  <data name="str299" xml:space="preserve">
+    <value>ShowAllMAInLO</value>
+  </data>
+  <data name="str300" xml:space="preserve">
+    <value>Mandantenauswahl</value>
+  </data>
+  <data name="str301" xml:space="preserve">
+    <value>\PrintModul</value>
+  </data>
+  <data name="str302" xml:space="preserve">
+    <value>Direkthilfe</value>
+  </data>
+  <data name="str303" xml:space="preserve">
+    <value>CheckUSRights</value>
+  </data>
+  <data name="str304" xml:space="preserve">
+    <value>Vorschusszahlungen</value>
+  </data>
+  <data name="str305" xml:space="preserve">
+    <value>LastCheckNr</value>
+  </data>
+  <data name="str306" xml:space="preserve">
+    <value>ZGGrund</value>
+  </data>
+  <data name="str307" xml:space="preserve">
+    <value>ListToLearn</value>
+  </data>
+  <data name="str308" xml:space="preserve">
+    <value>ListOfCountries</value>
+  </data>
+  <data name="str309" xml:space="preserve">
+    <value>ListOfLanguages</value>
+  </data>
+  <data name="str310" xml:space="preserve">
+    <value>FerFeierNoInDistrain</value>
+  </data>
+  <data name="str311" xml:space="preserve">
+    <value>SignFromUnterzeichner</value>
+  </data>
+  <data name="str312" xml:space="preserve">
+    <value>QSTBasisNot180</value>
+  </data>
+  <data name="str313" xml:space="preserve">
+    <value>KompensMoreStdInRP</value>
+  </data>
+  <data name="str314" xml:space="preserve">
+    <value>AllowedChangeGAVKanton</value>
+  </data>
+  <data name="str315" xml:space="preserve">
+    <value>FAKAddressSub2</value>
+  </data>
+  <data name="str316" xml:space="preserve">
+    <value>DeletLOWithBrutto0</value>
+  </data>
+  <data name="str317" xml:space="preserve">
+    <value>HideLohnSite</value>
+  </data>
+  <data name="str318" xml:space="preserve">
+    <value>HideTempLists</value>
+  </data>
+  <data name="str319" xml:space="preserve">
+    <value>HideDebiFields</value>
+  </data>
+  <data name="str320" xml:space="preserve">
+    <value>HideOPGAVSites</value>
+  </data>
+  <data name="str321" xml:space="preserve">
+    <value>HideKreditInfo</value>
+  </data>
+  <data name="str322" xml:space="preserve">
+    <value>HideSQLQuery</value>
+  </data>
+  <data name="str323" xml:space="preserve">
+    <value>BezESTSpesen</value>
+  </data>
+  <data name="str324" xml:space="preserve">
+    <value>BezESZuSatz1</value>
+  </data>
+  <data name="str325" xml:space="preserve">
+    <value>BezESZuSatz2</value>
+  </data>
+  <data name="str326" xml:space="preserve">
+    <value>BezESZuSatz3</value>
+  </data>
+  <data name="str327" xml:space="preserve">
+    <value>BezESZuSatz4</value>
+  </data>
+  <data name="str328" xml:space="preserve">
+    <value>BezESZuSatz5</value>
+  </data>
+  <data name="str329" xml:space="preserve">
+    <value>BezESZuSatz6</value>
+  </data>
+  <data name="str330" xml:space="preserve">
+    <value>BezTelefon-P</value>
+  </data>
+  <data name="str331" xml:space="preserve">
+    <value>BezTelefon-1</value>
+  </data>
+  <data name="str332" xml:space="preserve">
+    <value>BezTelefon-2</value>
+  </data>
+  <data name="str333" xml:space="preserve">
+    <value>BezTelefon-3</value>
+  </data>
+  <data name="str334" xml:space="preserve">
+    <value>DTAFileName</value>
+  </data>
+  <data name="str335" xml:space="preserve">
+    <value>TempRPAnz</value>
+  </data>
+  <data name="str336" xml:space="preserve">
+    <value>StopRPPrintAfter</value>
+  </data>
+  <data name="str337" xml:space="preserve">
+    <value>RPWeekOpen</value>
+  </data>
+  <data name="str338" xml:space="preserve">
+    <value>RPWeekObligation</value>
+  </data>
+  <data name="str339" xml:space="preserve">
+    <value>CheckHeight</value>
+  </data>
+  <data name="str340" xml:space="preserve">
+    <value>CheckPaper</value>
+  </data>
+  <data name="str341" xml:space="preserve">
+    <value>ZGKontoGebühr</value>
+  </data>
+  <data name="str342" xml:space="preserve">
+    <value>AusgNummer</value>
+  </data>
+  <data name="str343" xml:space="preserve">
+    <value>BewName</value>
+  </data>
+  <data name="str344" xml:space="preserve">
+    <value>BewStrasse</value>
+  </data>
+  <data name="str345" xml:space="preserve">
+    <value>BewPostfach</value>
+  </data>
+  <data name="str346" xml:space="preserve">
+    <value>BewPLZOrt</value>
+  </data>
+  <data name="str347" xml:space="preserve">
+    <value>Last OPNr</value>
+  </data>
+  <data name="str348" xml:space="preserve">
+    <value>MWST-Satz</value>
+  </data>
+  <data name="str349" xml:space="preserve">
+    <value>MWSTNr</value>
+  </data>
+  <data name="str350" xml:space="preserve">
+    <value>Debitoren</value>
+  </data>
+  <data name="str351" xml:space="preserve">
+    <value>RoundDiff</value>
+  </data>
+  <data name="str352" xml:space="preserve">
+    <value>BuchungsKonten</value>
+  </data>
+  <data name="str353" xml:space="preserve">
+    <value>Mahnspesen</value>
+  </data>
+  <data name="str354" xml:space="preserve">
+    <value>VerzugszinsOn</value>
+  </data>
+  <data name="str355" xml:space="preserve">
+    <value>Mahnspesen</value>
+  </data>
+  <data name="str356" xml:space="preserve">
+    <value>Verzugszinsen</value>
+  </data>
+  <data name="str357" xml:space="preserve">
+    <value>AnzahlJTage</value>
+  </data>
+  <data name="str358" xml:space="preserve">
+    <value>AnzahlMTage</value>
+  </data>
+  <data name="str359" xml:space="preserve">
+    <value>Verzugszins ab</value>
+  </data>
+  <data name="str360" xml:space="preserve">
+    <value>Mahnspesen ab</value>
+  </data>
+  <data name="str361" xml:space="preserve">
+    <value>Sum_Var</value>
+  </data>
+  <data name="str362" xml:space="preserve">
+    <value>U_Var</value>
+  </data>
+  <data name="str363" xml:space="preserve">
+    <value>\Lohnbuchhaltung</value>
+  </data>
+  <data name="str364" xml:space="preserve">
+    <value>InitFileName</value>
+  </data>
+  <data name="str365" xml:space="preserve">
+    <value>Mandant</value>
+  </data>
+  <data name="str366" xml:space="preserve">
+    <value>ESRArt</value>
+  </data>
+  <data name="str367" xml:space="preserve">
+    <value>ESR-ID</value>
+  </data>
+  <data name="str368" xml:space="preserve">
+    <value>ESRKonto</value>
+  </data>
+  <data name="str369" xml:space="preserve">
+    <value>ESRFile</value>
+  </data>
+  <data name="str370" xml:space="preserve">
+    <value>KontoNr</value>
+  </data>
+  <data name="str371" xml:space="preserve">
+    <value>OpArt</value>
+  </data>
+  <data name="str372" xml:space="preserve">
+    <value>RPPaper</value>
+  </data>
+  <data name="str373" xml:space="preserve">
+    <value>TempCheckAnz</value>
+  </data>
+  <data name="str374" xml:space="preserve">
+    <value>USKst2</value>
+  </data>
+  <data name="str375" xml:space="preserve">
+    <value>USVorname</value>
+  </data>
+  <data name="str376" xml:space="preserve">
+    <value>USNachname</value>
+  </data>
+  <data name="str377" xml:space="preserve">
+    <value>Lohnbuchhaltung</value>
+  </data>
+  <data name="str378" xml:space="preserve">
+    <value>CheckVorschuss</value>
+  </data>
+  <data name="str379" xml:space="preserve">
+    <value>CheckAuszahlung</value>
+  </data>
+  <data name="str380" xml:space="preserve">
+    <value>Achtung: Die anzuzeigenden Daten sind nicht vollständig.</value>
+  </data>
+  <data name="str381" xml:space="preserve">
+    <value>frmKD</value>
+  </data>
+  <data name="str382" xml:space="preserve">
+    <value>frmES</value>
+  </data>
+  <data name="str383" xml:space="preserve">
+    <value>frmRP</value>
+  </data>
+  <data name="str384" xml:space="preserve">
+    <value>frmVS</value>
+  </data>
+  <data name="str385" xml:space="preserve">
+    <value>frmOP</value>
+  </data>
+  <data name="str386" xml:space="preserve">
+    <value>Mitarbeiter</value>
+  </data>
+  <data name="str387" xml:space="preserve">
+    <value>Kunden</value>
+  </data>
+  <data name="str388" xml:space="preserve">
+    <value>Einsatzverwaltung</value>
+  </data>
+  <data name="str389" xml:space="preserve">
+    <value>Rapporte</value>
+  </data>
+  <data name="str390" xml:space="preserve">
+    <value>Fakturen</value>
+  </data>
+  <data name="str391" xml:space="preserve">
+    <value>Zahlungseingänge</value>
+  </data>
+  <data name="str392" xml:space="preserve">
+    <value>Vorschussverwaltung</value>
+  </data>
+  <data name="str393" xml:space="preserve">
+    <value>Mahnungen</value>
+  </data>
+  <data name="str394" xml:space="preserve">
+    <value>Lohnabrechnung</value>
+  </data>
+  <data name="str395" xml:space="preserve">
+    <value>StartNr</value>
+  </data>
+  <data name="str396" xml:space="preserve">
+    <value>frmLO</value>
+  </data>
+  <data name="str397" xml:space="preserve">
+    <value>AHV-Ausgleichskasse</value>
+  </data>
+  <data name="str398" xml:space="preserve">
+    <value>Unfallversicherung</value>
+  </data>
+  <data name="str399" xml:space="preserve">
+    <value>Abrechnungsnummer</value>
+  </data>
+  <data name="str400" xml:space="preserve">
+    <value>PROGRAMM.DAT</value>
+  </data>
+  <data name="str401" xml:space="preserve">
+    <value>LastModulSelL</value>
+  </data>
+  <data name="str402" xml:space="preserve">
+    <value>LastSelectBookmark</value>
+  </data>
+  <data name="str403" xml:space="preserve">
+    <value>SaveDbGridColWidth</value>
+  </data>
+  <data name="str404" xml:space="preserve">
+    <value>frmTablesDbField2Search</value>
+  </data>
+  <data name="str405" xml:space="preserve">
+    <value>RecordSearch </value>
+  </data>
+  <data name="str406" xml:space="preserve">
+    <value>FAKAddressSub3</value>
+  </data>
+  <data name="str407" xml:space="preserve">
+    <value>FAKAddressSub4</value>
+  </data>
+  <data name="str408" xml:space="preserve">
+    <value>USKst1</value>
+  </data>
+  <data name="str409" xml:space="preserve">
+    <value>USKst</value>
+  </data>
+  <data name="str410" xml:space="preserve">
+    <value>DBServer</value>
+  </data>
+  <data name="str411" xml:space="preserve">
+    <value>ModulBarTemplate</value>
+  </data>
+  <data name="str412" xml:space="preserve">
+    <value>SQLDSNName</value>
+  </data>
+  <data name="str413" xml:space="preserve">
+    <value>SQLDriverName</value>
+  </data>
+  <data name="str414" xml:space="preserve">
+    <value>SQLServerName</value>
+  </data>
+  <data name="str415" xml:space="preserve">
+    <value>SQLDbUserName</value>
+  </data>
+  <data name="str416" xml:space="preserve">
+    <value>SQLLogName</value>
+  </data>
+  <data name="str417" xml:space="preserve">
+    <value>SQLDbName</value>
+  </data>
+  <data name="str418" xml:space="preserve">
+    <value>UID=</value>
+  </data>
+  <data name="str419" xml:space="preserve">
+    <value>Database=</value>
+  </data>
+  <data name="str420" xml:space="preserve">
+    <value>DSN=</value>
+  </data>
+  <data name="str421" xml:space="preserve">
+    <value>TimeOut</value>
+  </data>
+  <data name="str422" xml:space="preserve">
+    <value>S/N</value>
+  </data>
+  <data name="str423" xml:space="preserve">
+    <value>UserCount</value>
+  </data>
+  <data name="str424" xml:space="preserve">
+    <value>ProgName</value>
+  </data>
+  <data name="str425" xml:space="preserve">
+    <value>UserName</value>
+  </data>
+  <data name="str426" xml:space="preserve">
+    <value>Registeriert</value>
+  </data>
+  <data name="str427" xml:space="preserve">
+    <value>RPPrinterName</value>
+  </data>
+  <data name="str428" xml:space="preserve">
+    <value>CheckPrinterName</value>
+  </data>
+  <data name="str429" xml:space="preserve">
+    <value>FAKAddressSub5</value>
+  </data>
+  <data name="str430" xml:space="preserve">
+    <value>Verleihvertrag.doc</value>
+  </data>
+  <data name="str431" xml:space="preserve">
+    <value>Einsatzvertrag.doc</value>
+  </data>
+  <data name="str432" xml:space="preserve">
+    <value>Gutschrift...</value>
+  </data>
+  <data name="str433" xml:space="preserve">
+    <value>ESUhr</value>
+  </data>
+  <data name="str434" xml:space="preserve">
+    <value>KDKommArt</value>
+  </data>
+  <data name="str435" xml:space="preserve">
+    <value>SelMDMainPath</value>
+  </data>
+  <data name="str436" xml:space="preserve">
+    <value>TemplatePath</value>
+  </data>
+  <data name="str437" xml:space="preserve">
+    <value>SkinName</value>
+  </data>
+  <data name="str438" xml:space="preserve">
+    <value>WindowsXPNav</value>
+  </data>
+  <data name="str439" xml:space="preserve">
+    <value>SQLQuery</value>
+  </data>
+  <data name="str440" xml:space="preserve">
+    <value>NavArt</value>
+  </data>
+  <data name="str441" xml:space="preserve">
+    <value>LvFontProperty</value>
+  </data>
+  <data name="str442" xml:space="preserve">
+    <value>Fremdrechnungen</value>
+  </data>
+  <data name="str443" xml:space="preserve">
+    <value>Kreditoren</value>
+  </data>
+  <data name="str444" xml:space="preserve">
+    <value>FAKAddressSub6</value>
+  </data>
+  <data name="str445" xml:space="preserve">
+    <value>FAKAddressNr</value>
+  </data>
+  <data name="str446" xml:space="preserve">
+    <value>FAKKassenname</value>
+  </data>
+  <data name="str447" xml:space="preserve">
+    <value>USFiliale</value>
+  </data>
+  <data name="str448" xml:space="preserve">
+    <value>\Forms\Colour\LVG</value>
+  </data>
+  <data name="str449" xml:space="preserve">
+    <value>SavePreviewInDiffFolder</value>
+  </data>
+  <data name="str450" xml:space="preserve">
+    <value>Mahnspesen</value>
+  </data>
+  <data name="str451" xml:space="preserve">
+    <value>Verzugszinsen bis</value>
+  </data>
+  <data name="str452" xml:space="preserve">
+    <value>Vakanzennr</value>
+  </data>
+  <data name="str453" xml:space="preserve">
+    <value>RefNrTo10</value>
+  </data>
+  <data name="str454" xml:space="preserve">
+    <value>Trenne die Einzahlungsscheine</value>
+  </data>
+  <data name="str455" xml:space="preserve">
+    <value>\PrintModul\ExportedFileName</value>
+  </data>
+  <data name="str456" xml:space="preserve">
+    <value>\PrintModul\ExportedPath</value>
+  </data>
+  <data name="str457" xml:space="preserve">
+    <value>EinsatzeinstufungPflichtig</value>
+  </data>
+  <data name="str458" xml:space="preserve">
+    <value>Art des ZV</value>
+  </data>
+  <data name="str459" xml:space="preserve">
+    <value>Art des ArGb</value>
+  </data>
+  <data name="str460" xml:space="preserve">
+    <value>AmtsZiffer</value>
+  </data>
+  <data name="str461" xml:space="preserve">
+    <value>Create3MahnByNotPaid</value>
+  </data>
+  <data name="str462" xml:space="preserve">
+    <value>Check LaserPrinter</value>
+  </data>
+  <data name="str463" xml:space="preserve">
+    <value>ExportPathForAbacus</value>
+  </data>
+  <data name="str464" xml:space="preserve">
+    <value>ExportPathForSesam</value>
+  </data>
+  <data name="str465" xml:space="preserve">
+    <value>ExportPathForSimba</value>
+  </data>
+  <data name="str466" xml:space="preserve">
+    <value>SepFieldForAbacus</value>
+  </data>
+  <data name="str467" xml:space="preserve">
+    <value>SepFieldForSesam</value>
+  </data>
+  <data name="str468" xml:space="preserve">
+    <value>SepFieldForSimba</value>
+  </data>
+  <data name="str469" xml:space="preserve">
+    <value>FieldInForAbacus</value>
+  </data>
+  <data name="str470" xml:space="preserve">
+    <value>HQualifikation</value>
+  </data>
+  <data name="str471" xml:space="preserve">
+    <value>ResAuto</value>
+  </data>
+  <data name="str472" xml:space="preserve">
+    <value>Beurteilung</value>
+  </data>
+  <data name="str473" xml:space="preserve">
+    <value>SQualifikation</value>
+  </data>
+  <data name="str474" xml:space="preserve">
+    <value>MAKontakt</value>
+  </data>
+  <data name="str475" xml:space="preserve">
+    <value>MA1Status</value>
+  </data>
+  <data name="str476" xml:space="preserve">
+    <value>MA2Status</value>
+  </data>
+  <data name="str477" xml:space="preserve">
+    <value>Einstellungsart</value>
+  </data>
+  <data name="str478" xml:space="preserve">
+    <value>MA1Res</value>
+  </data>
+  <data name="str479" xml:space="preserve">
+    <value>MA2Res</value>
+  </data>
+  <data name="str480" xml:space="preserve">
+    <value>MA3Res</value>
+  </data>
+  <data name="str481" xml:space="preserve">
+    <value>MA4Res</value>
+  </data>
+  <data name="str482" xml:space="preserve">
+    <value>KDKontakt</value>
+  </data>
+  <data name="str483" xml:space="preserve">
+    <value>KD1Status</value>
+  </data>
+  <data name="str484" xml:space="preserve">
+    <value>KD2Status</value>
+  </data>
+  <data name="str485" xml:space="preserve">
+    <value>KD1Res</value>
+  </data>
+  <data name="str486" xml:space="preserve">
+    <value>KD2Res</value>
+  </data>
+  <data name="str487" xml:space="preserve">
+    <value>KD3Res</value>
+  </data>
+  <data name="str488" xml:space="preserve">
+    <value>KD4Res</value>
+  </data>
+  <data name="str489" xml:space="preserve">
+    <value>KDMwStNr</value>
+  </data>
+  <data name="str490" xml:space="preserve">
+    <value>MAKommArt</value>
+  </data>
+  <data name="str491" xml:space="preserve">
+    <value>MAResLbl</value>
+  </data>
+  <data name="str492" xml:space="preserve">
+    <value>MA1LOCheck</value>
+  </data>
+  <data name="str493" xml:space="preserve">
+    <value>MA2LOCheck</value>
+  </data>
+  <data name="str494" xml:space="preserve">
+    <value>MA3LOCheck</value>
+  </data>
+  <data name="str495" xml:space="preserve">
+    <value>KDResLbl</value>
+  </data>
+  <data name="str496" xml:space="preserve">
+    <value>FieldInForSesam</value>
+  </data>
+  <data name="str497" xml:space="preserve">
+    <value>FieldInForSimba</value>
+  </data>
+  <data name="str498" xml:space="preserve">
+    <value>LANr_For_Parifond_1</value>
+  </data>
+  <data name="str499" xml:space="preserve">
+    <value>LANr_For_Parifond_2</value>
+  </data>
+  <data name="str500" xml:space="preserve">
+    <value>WordTempPathToSave</value>
+  </data>
+  <data name="str501" xml:space="preserve">
+    <value>MABrief</value>
+  </data>
+  <data name="str502" xml:space="preserve">
+    <value>KDBrief</value>
+  </data>
+  <data name="str503" xml:space="preserve">
+    <value>SaveListsIn</value>
+  </data>
+  <data name="str504" xml:space="preserve">
+    <value>MAZeilenanzahl</value>
+  </data>
+  <data name="str505" xml:space="preserve">
+    <value>KDZeilenanzahl</value>
+  </data>
+  <data name="str506" xml:space="preserve">
+    <value>ESZeilenanzahl</value>
+  </data>
+  <data name="str507" xml:space="preserve">
+    <value>ZGZeilenanzahl</value>
+  </data>
+  <data name="str508" xml:space="preserve">
+    <value>OPZeilenanzahl</value>
+  </data>
+  <data name="str509" xml:space="preserve">
+    <value>ZEZeilenanzahl</value>
+  </data>
+  <data name="str510" xml:space="preserve">
+    <value>BruttoZeilenanzahl</value>
+  </data>
+  <data name="str511" xml:space="preserve">
+    <value>LOrekapZeilenanzahl</value>
+  </data>
+  <data name="str512" xml:space="preserve">
+    <value>Fibu Buchungsbeleg</value>
+  </data>
+  <data name="str513" xml:space="preserve">
+    <value>FakListeZeilenanzahl</value>
+  </data>
+  <data name="str514" xml:space="preserve">
+    <value>FremdListZeilenanzahl</value>
+  </data>
+  <data name="str515" xml:space="preserve">
+    <value>MALAListeZeilenanzahl</value>
+  </data>
+  <data name="str516" xml:space="preserve">
+    <value>AGLAListeZeilenanzahl</value>
+  </data>
+  <data name="str517" xml:space="preserve">
+    <value>QstListeZeilenanzahl</value>
+  </data>
+  <data name="str518" xml:space="preserve">
+    <value>StdListeZeilenanzahl</value>
+  </data>
+  <data name="str519" xml:space="preserve">
+    <value>BruttoumsatzRPZeilenanzahl</value>
+  </data>
+  <data name="str520" xml:space="preserve">
+    <value>BruttoumsatzRPTotalZeilenanzahl</value>
+  </data>
+  <data name="str521" xml:space="preserve">
+    <value>BruttoumsatzOPZeilenanzahl</value>
+  </data>
+  <data name="str522" xml:space="preserve">
+    <value>KDUmsatzZeilenanzahl</value>
+  </data>
+  <data name="str523" xml:space="preserve">
+    <value>ESNormalZeilenanzahl</value>
+  </data>
+  <data name="str524" xml:space="preserve">
+    <value>LANr_For_Parifond_Div</value>
+  </data>
+  <data name="str525" xml:space="preserve">
+    <value>FAR.-MitgliedNr</value>
+  </data>
+  <data name="str526" xml:space="preserve">
+    <value>GetIndKstInES</value>
+  </data>
+  <data name="str527" xml:space="preserve">
+    <value>ExternDb_Country</value>
+  </data>
+  <data name="str528" xml:space="preserve">
+    <value>ExternDb_Job</value>
+  </data>
+  <data name="str529" xml:space="preserve">
+    <value>ExternDb_Bank</value>
+  </data>
+  <data name="str530" xml:space="preserve">
+    <value>ExterDb_Qst</value>
+  </data>
+  <data name="str531" xml:space="preserve">
+    <value>NoCheckForNewGAV</value>
+  </data>
+  <data name="str532" xml:space="preserve">
+    <value>GetLastFeiertagProz</value>
+  </data>
+  <data name="str533" xml:space="preserve">
+    <value>KDTelefonBez</value>
+  </data>
+  <data name="str534" xml:space="preserve">
+    <value>KDTelefaxBez</value>
+  </data>
+  <data name="str535" xml:space="preserve">
+    <value>KDHomepageBez</value>
+  </data>
+  <data name="str536" xml:space="preserve">
+    <value>KDeMailBez</value>
+  </data>
+  <data name="str537" xml:space="preserve">
+    <value>SelectAllGAVInKanton</value>
+  </data>
+  <data name="str538" xml:space="preserve">
+    <value>EsBranchePflichtig</value>
+  </data>
+  <data name="str539" xml:space="preserve">
+    <value>ShowterminHead1</value>
+  </data>
+  <data name="str540" xml:space="preserve">
+    <value>ShowTerminHead2</value>
+  </data>
+  <data name="str541" xml:space="preserve">
+    <value>ShowTerminHead3</value>
+  </data>
+  <data name="str542" xml:space="preserve">
+    <value>ShowTerminHead6</value>
+  </data>
+  <data name="str543" xml:space="preserve">
+    <value>ShowTerminHead7</value>
+  </data>
+  <data name="str544" xml:space="preserve">
+    <value>\Forms\LVG-Property</value>
+  </data>
+  <data name="str545" xml:space="preserve">
+    <value>WindowsState</value>
+  </data>
+  <data name="str546" xml:space="preserve">
+    <value>LastMDNrForSimba</value>
+  </data>
+  <data name="str547" xml:space="preserve">
+    <value>LastFilialNameForSimba</value>
+  </data>
+  <data name="str548" xml:space="preserve">
+    <value>LocalIPAddress</value>
+  </data>
+  <data name="str549" xml:space="preserve">
+    <value>LocalHostName</value>
+  </data>
+  <data name="str550" xml:space="preserve">
+    <value>spUsereMail</value>
+  </data>
+  <data name="str551" xml:space="preserve">
+    <value>Extension4Deletedrecs</value>
+  </data>
+  <data name="str552" xml:space="preserve">
+    <value>MakeNewDb4BUmsatz</value>
+  </data>
+  <data name="str553" xml:space="preserve">
+    <value>bActivateBUmsatzAsService</value>
+  </data>
+  <data name="str554" xml:space="preserve">
+    <value>bActivateKandAsService</value>
+  </data>
+  <data name="str555" xml:space="preserve">
+    <value>bActivateLOAsService</value>
+  </data>
+  <data name="str556" xml:space="preserve">
+    <value>CopyRPKST2IndTextBox</value>
+  </data>
+  <data name="str557" xml:space="preserve">
+    <value>FakDateAsRPEndDate</value>
+  </data>
+  <data name="str558" xml:space="preserve">
+    <value>ChangeMAStateAsService</value>
+  </data>
+  <data name="str559" xml:space="preserve">
+    <value>SendeMailWithBewAsService</value>
+  </data>
+  <data name="str560" xml:space="preserve">
+    <value>Automations</value>
+  </data>
+  <data name="str561" xml:space="preserve">
+    <value>  bActivateKandAsService</value>
+  </data>
+  <data name="str562" xml:space="preserve">
+    <value>SendeMailWithKDKreditBisAsService</value>
+  </data>
+  <data name="str563" xml:space="preserve">
+    <value>SendeMailWithKDKreditLimitAsService</value>
+  </data>
+  <data name="str564" xml:space="preserve">
+    <value>MDSelectedColor</value>
+  </data>
+  <data name="str565" xml:space="preserve">
+    <value>FACTOSKDNr</value>
+  </data>
+  <data name="str566" xml:space="preserve">
+    <value>OPFileName</value>
+  </data>
+  <data name="str567" xml:space="preserve">
+    <value>OPZipFileName</value>
+  </data>
+  <data name="str568" xml:space="preserve">
+    <value>OPZipFileLen</value>
+  </data>
+  <data name="str569" xml:space="preserve">
+    <value>LastSubmittedFileDate</value>
+  </data>
+  <data name="str570" xml:space="preserve">
+    <value>MDNrAutomations</value>
+  </data>
+  <data name="str571" xml:space="preserve">
+    <value>ZGMaxBetragBar</value>
+  </data>
+  <data name="str572" xml:space="preserve">
+    <value>ZGMaxBetragCheck</value>
+  </data>
+  <data name="str573" xml:space="preserve">
+    <value>QSTAnsatzByGrenz</value>
+  </data>
+  <data name="str574" xml:space="preserve">
+    <value>NLA_2_3</value>
+  </data>
+  <data name="str575" xml:space="preserve">
+    <value>NLA_3_0</value>
+  </data>
+  <data name="str576" xml:space="preserve">
+    <value>NLA_4_0</value>
+  </data>
+  <data name="str577" xml:space="preserve">
+    <value>NLA_7_0</value>
+  </data>
+  <data name="str578" xml:space="preserve">
+    <value>NLA_13_1_2</value>
+  </data>
+  <data name="str579" xml:space="preserve">
+    <value>NLA_13_2_3</value>
+  </data>
+  <data name="str580" xml:space="preserve">
+    <value>NLA_Nebenleistung_1</value>
+  </data>
+  <data name="str581" xml:space="preserve">
+    <value>NLA_Nebenleistung_2</value>
+  </data>
+  <data name="str582" xml:space="preserve">
+    <value>NLA_Bemerkung_1</value>
+  </data>
+  <data name="str583" xml:space="preserve">
+    <value>NLA_Bemerkung_2</value>
+  </data>
+  <data name="str584" xml:space="preserve">
+    <value>Lohnausweis (NLA)</value>
+  </data>
+  <data name="str585" xml:space="preserve">
+    <value>OffersNr</value>
+  </data>
+  <data name="str586" xml:space="preserve">
+    <value>CashRegNr</value>
+  </data>
+  <data name="str587" xml:space="preserve">
+    <value>KreditorNr</value>
+  </data>
+  <data name="str588" xml:space="preserve">
+    <value>OffertenstatusBez</value>
+  </data>
+  <data name="str589" xml:space="preserve">
+    <value>OffertenKontakteBez</value>
+  </data>
+  <data name="str590" xml:space="preserve">
+    <value>OffertenRes1Bez</value>
+  </data>
+  <data name="str591" xml:space="preserve">
+    <value>OffertenRes2Bez</value>
+  </data>
+  <data name="str592" xml:space="preserve">
+    <value>OffertenRes3Bez</value>
+  </data>
+  <data name="str593" xml:space="preserve">
+    <value>OffertenRes4Bez</value>
+  </data>
+  <data name="str594" xml:space="preserve">
+    <value>OffertenRes5Bez</value>
+  </data>
+  <data name="str595" xml:space="preserve">
+    <value>OffertenBem1Bez</value>
+  </data>
+  <data name="str596" xml:space="preserve">
+    <value>OffertenBem2Bez</value>
+  </data>
+  <data name="str597" xml:space="preserve">
+    <value>OffertenBem3Bez</value>
+  </data>
+  <data name="str598" xml:space="preserve">
+    <value>OffertenBem4Bez</value>
+  </data>
+  <data name="str599" xml:space="preserve">
+    <value>OffertenBem5Bez</value>
+  </data>
+  <data name="str600" xml:space="preserve">
+    <value>Während der Ausführung des Prozesses ist ein Fehler aufgetreten.</value>
+  </data>
+  <data name="str601" xml:space="preserve">
+    <value>OffertenGruppeBez</value>
+  </data>
+  <data name="str602" xml:space="preserve">
+    <value>Offers</value>
+  </data>
+  <data name="str603" xml:space="preserve">
+    <value>FremdOP</value>
+  </data>
+  <data name="str604" xml:space="preserve">
+    <value>Kassenbuch</value>
+  </data>
+  <data name="str605" xml:space="preserve">
+    <value>FirstKassenBetrag</value>
+  </data>
+  <data name="str606" xml:space="preserve">
+    <value>KassaStartEndepflicht</value>
+  </data>
+  <data name="str607" xml:space="preserve">
+    <value>KassaStartEndeAfter</value>
+  </data>
+  <data name="str608" xml:space="preserve">
+    <value>CashRegBelegNummerPflicht</value>
+  </data>
+  <data name="str609" xml:space="preserve">
+    <value>CashRegFilialPflicht</value>
+  </data>
+  <data name="str610" xml:space="preserve">
+    <value>CashRegDispoPflicht</value>
+  </data>
+  <data name="str611" xml:space="preserve">
+    <value>CashRegBermerk1</value>
+  </data>
+  <data name="str612" xml:space="preserve">
+    <value>CashRegBermerk2</value>
+  </data>
+  <data name="str613" xml:space="preserve">
+    <value>CashRegBermerk3</value>
+  </data>
+  <data name="str614" xml:space="preserve">
+    <value>KIAuZulagenNotLANr</value>
+  </data>
+  <data name="str615" xml:space="preserve">
+    <value>PrintNightStdInLO</value>
+  </data>
+  <data name="str616" xml:space="preserve">
+    <value>\Options\PID_Hwnd</value>
+  </data>
+  <data name="str700" xml:space="preserve">
+    <value>Zeigt die Banktabelle an.</value>
+  </data>
+  <data name="str701" xml:space="preserve">
+    <value>Zeigt Kalender an.</value>
+  </data>
+  <data name="str702" xml:space="preserve">
+    <value>Zeigt die Tabelle mit Mitarbeiternamen an.</value>
+  </data>
+  <data name="str703" xml:space="preserve">
+    <value>Zeigt die Tabelle mit Kundennamen an.</value>
+  </data>
+  <data name="str704" xml:space="preserve">
+    <value>Zeigt die Tabelle mit PLZ und Ortschaften an.</value>
+  </data>
+  <data name="str705" xml:space="preserve">
+    <value>Zeigt die Tabelle mit Berufe an.</value>
+  </data>
+  <data name="str706" xml:space="preserve">
+    <value>Keine Daten sind vorhanden ...</value>
+  </data>
+  <data name="str707" xml:space="preserve">
+    <value>Lbl_ZHD_Kontakt</value>
+  </data>
+  <data name="str708" xml:space="preserve">
+    <value>Lbl_ZHD_1State</value>
+  </data>
+  <data name="str709" xml:space="preserve">
+    <value>Lbl_ZHD_2State</value>
+  </data>
+  <data name="str710" xml:space="preserve">
+    <value>Lbl_ZHD_Kommunikation</value>
+  </data>
+  <data name="str711" xml:space="preserve">
+    <value>Lbl_ZHD_Versand</value>
+  </data>
+  <data name="str712" xml:space="preserve">
+    <value>Lbl_ZHD_Res1</value>
+  </data>
+  <data name="str713" xml:space="preserve">
+    <value>Lbl_ZHD_Res2</value>
+  </data>
+  <data name="str714" xml:space="preserve">
+    <value>Lbl_ZHD_Res3</value>
+  </data>
+  <data name="str715" xml:space="preserve">
+    <value>Lbl_ZHD_Res4</value>
+  </data>
+  <data name="str716" xml:space="preserve">
+    <value>Lbl_KD_1Property</value>
+  </data>
+  <data name="str717" xml:space="preserve">
+    <value>Lbl_KD_2Property</value>
+  </data>
+  <data name="str718" xml:space="preserve">
+    <value>Lbl_MA_Gemeinde</value>
+  </data>
+  <data name="str750" xml:space="preserve">
+    <value>FieldsLable</value>
+  </data>
+  <data name="str9000" xml:space="preserve">
+    <value>SPSShowInfo.ClsMain</value>
+  </data>
+  <data name="str10000" xml:space="preserve">
+    <value>SPSMain.SPSFunc</value>
+  </data>
+  <data name="str10001" xml:space="preserve">
+    <value>SPSMain.SPSReg</value>
+  </data>
+  <data name="str10002" xml:space="preserve">
+    <value>ExcelExport.XLExport</value>
+  </data>
+  <data name="str10003" xml:space="preserve">
+    <value>SPSMailUtility.ClsMain</value>
+  </data>
+  <data name="str10004" xml:space="preserve">
+    <value>SPSTxtUtility.ClsMain</value>
+  </data>
+  <data name="str10005" xml:space="preserve">
+    <value>SMSExport.SMSExport</value>
+  </data>
+  <data name="str10006" xml:space="preserve">
+    <value>FaxExport.FaxSendExport</value>
+  </data>
+  <data name="str10007" xml:space="preserve">
+    <value>SPSExportFunc.ClsMain</value>
+  </data>
+  <data name="str10008" xml:space="preserve">
+    <value>SearchMAData.ClsMain</value>
+  </data>
+  <data name="str10009" xml:space="preserve">
+    <value>SearchKDData.ClsMain</value>
+  </data>
+  <data name="str10010" xml:space="preserve">
+    <value>SPSUserSec.SecLevel</value>
+  </data>
+  <data name="str10011" xml:space="preserve">
+    <value>SPSMDUtil.ClsMain</value>
+  </data>
+  <data name="str10012" xml:space="preserve">
+    <value>DispoFunc.ClsMain</value>
+  </data>
+  <data name="str10013" xml:space="preserve">
+    <value>LModulBar.ClsMain</value>
+  </data>
+  <data name="str10014" xml:space="preserve">
+    <value>LOFibuList.ClsMain</value>
+  </data>
+  <data name="str10015" xml:space="preserve">
+    <value>LOQstList.ClsMain</value>
+  </data>
+  <data name="str10016" xml:space="preserve">
+    <value>LOBJournalList.ClsMain</value>
+  </data>
+  <data name="str10017" xml:space="preserve">
+    <value>LOStdList.ClsMain</value>
+  </data>
+  <data name="str10018" xml:space="preserve">
+    <value>SPSLoPrint.ClsMain</value>
+  </data>
+  <data name="str10019" xml:space="preserve">
+    <value>SPSLaPrint.ClsMain</value>
+  </data>
+  <data name="str10020" xml:space="preserve">
+    <value>LOMAGList.ClsMain</value>
+  </data>
+  <data name="str10021" xml:space="preserve">
+    <value>LOMMAList.ClsMain</value>
+  </data>
+  <data name="str10022" xml:space="preserve">
+    <value>SPSMAZVUtil.ClsMain</value>
+  </data>
+  <data name="str10023" xml:space="preserve">
+    <value>SPSMaArgbUtil.ClsMain</value>
+  </data>
+  <data name="str10024" xml:space="preserve">
+    <value>SPSMASuvaList.ClsMain</value>
+  </data>
+  <data name="str10025" xml:space="preserve">
+    <value>ESUtility.ClsMain</value>
+  </data>
+  <data name="str10026" xml:space="preserve">
+    <value>SPSUSUtil.ClsMain</value>
+  </data>
+  <data name="str10027" xml:space="preserve">
+    <value>SPSTableSet.ClsMain</value>
+  </data>
+  <data name="str10028" xml:space="preserve">
+    <value>SPSESUtil.ClsMain</value>
+  </data>
+  <data name="str10029" xml:space="preserve">
+    <value>LOUtility.ClsMain</value>
+  </data>
+  <data name="str10030" xml:space="preserve">
+    <value>LoLmUtility.ClsMain</value>
+  </data>
+  <data name="str10031" xml:space="preserve">
+    <value>SPSDocUtility.ClsMain</value>
+  </data>
+  <data name="str10032" xml:space="preserve">
+    <value>RPUtility.ClsMain</value>
+  </data>
+  <data name="str10033" xml:space="preserve">
+    <value>SPSRPUtility.ClsMain</value>
+  </data>
+  <data name="str10034" xml:space="preserve">
+    <value>SPSLoUtility.ClsMain</value>
+  </data>
+  <data name="str10035" xml:space="preserve">
+    <value>SPSSubMDUtil.ClsMain</value>
+  </data>
+  <data name="str10036" xml:space="preserve">
+    <value>SPSLaUtility.ClsMain</value>
+  </data>
+  <data name="str10037" xml:space="preserve">
+    <value>ZGUtility.ClsMain</value>
+  </data>
+  <data name="str10038" xml:space="preserve">
+    <value>SPSZGUtil.ClsMain</value>
+  </data>
+  <data name="str10040" xml:space="preserve">
+    <value>SPSModulsView.ClsMain</value>
+  </data>
+  <data name="str10041" xml:space="preserve">
+    <value>SPSCPrintUtil.ClsMain</value>
+  </data>
+  <data name="str10042" xml:space="preserve">
+    <value>SPSQPrintUtil.ClsMain</value>
+  </data>
+  <data name="str10043" xml:space="preserve">
+    <value>SPSPrintRPUtil.ClsMain</value>
+  </data>
+  <data name="str10044" xml:space="preserve">
+    <value>SPSPrintRPListUtil.ClsMain</value>
+  </data>
+  <data name="str10045" xml:space="preserve">
+    <value>SPSPrintESRPUtil.ClsMain</value>
+  </data>
+  <data name="str10046" xml:space="preserve">
+    <value>KandidatUtility.ClsMain</value>
+  </data>
+  <data name="str10047" xml:space="preserve">
+    <value>SPSKandidatUtil.ClsMain</value>
+  </data>
+  <data name="str10048" xml:space="preserve">
+    <value>SPSMLoUtil.ClsMain</value>
+  </data>
+  <data name="str10049" xml:space="preserve">
+    <value>SPSKiUtil.ClsMain</value>
+  </data>
+  <data name="str10050" xml:space="preserve">
+    <value>SPSMContactUtil.ClsMain</value>
+  </data>
+  <data name="str10051" xml:space="preserve">
+    <value>SPSMBankUtil.ClsMain</value>
+  </data>
+  <data name="str10052" xml:space="preserve">
+    <value>ExportKDUtil.ClsMain</value>
+  </data>
+  <data name="str10053" xml:space="preserve">
+    <value>ExportMAUtil.ClsMain</value>
+  </data>
+  <data name="str10054" xml:space="preserve">
+    <value>SPSMJobTerminUtil.ClsMain</value>
+  </data>
+  <data name="str10055" xml:space="preserve">
+    <value>SPSMDocUtil.ClsMain</value>
+  </data>
+  <data name="str10056" xml:space="preserve">
+    <value>SPSLOAddressUtil.ClsMain</value>
+  </data>
+  <data name="str10057" xml:space="preserve">
+    <value>SPSRPAddressUtil.ClsMain</value>
+  </data>
+  <data name="str10058" xml:space="preserve">
+    <value>SPSMATemplatesUtil.ClsMain</value>
+  </data>
+  <data name="str10059" xml:space="preserve">
+    <value>SPSMACheckDataUtil.ClsMain</value>
+  </data>
+  <data name="str10060" xml:space="preserve">
+    <value>LOMRekapList.ClsMain</value>
+  </data>
+  <data name="str10061" xml:space="preserve">
+    <value>LOMFrekapList.ClsMain</value>
+  </data>
+  <data name="str10062" xml:space="preserve">
+    <value>LOFremdList.ClsMain</value>
+  </data>
+  <data name="str10063" xml:space="preserve">
+    <value>LOFakList.ClsMain</value>
+  </data>
+  <data name="str10064" xml:space="preserve">
+    <value>LOBVGList.ClsMain</value>
+  </data>
+  <data name="str10065" xml:space="preserve">
+    <value>LOKiAuYList.ClsMain</value>
+  </data>
+  <data name="str10066" xml:space="preserve">
+    <value>LOKigaYList.ClsMain</value>
+  </data>
+  <data name="str10067" xml:space="preserve">
+    <value>LOLausweisYList.ClsMain</value>
+  </data>
+  <data name="str10068" xml:space="preserve">
+    <value>LOSuvaYList.ClsMain</value>
+  </data>
+  <data name="str10069" xml:space="preserve">
+    <value>LOAHVYList.ClsMain</value>
+  </data>
+  <data name="str10070" xml:space="preserve">
+    <value>LOAHVFreiYList.ClsMain</value>
+  </data>
+  <data name="str10071" xml:space="preserve">
+    <value>LOLKontiList.ClsMain</value>
+  </data>
+  <data name="str10072" xml:space="preserve">
+    <value>LOLRJList.ClsMain</value>
+  </data>
+  <data name="str10073" xml:space="preserve">
+    <value>LOFranzList.ClsMain</value>
+  </data>
+  <data name="str10074" xml:space="preserve">
+    <value>LOGuList.ClsMain</value>
+  </data>
+  <data name="str10075" xml:space="preserve">
+    <value>LOFranzList.ClsMain</value>
+  </data>
+  <data name="str10076" xml:space="preserve">
+    <value>LOGuList.ClsMain</value>
+  </data>
+  <data name="str10077" xml:space="preserve">
+    <value>LOLKontiList.ClsMain</value>
+  </data>
+  <data name="str10078" xml:space="preserve">
+    <value>LOLRJList.ClsMain</value>
+  </data>
+  <data name="str10079" xml:space="preserve">
+    <value>LOFranzList.ClsMain</value>
+  </data>
+  <data name="str10080" xml:space="preserve">
+    <value>SearchESData.ClsMain</value>
+  </data>
+  <data name="str10081" xml:space="preserve">
+    <value>SearchZGData.ClsMain</value>
+  </data>
+  <data name="str10082" xml:space="preserve">
+    <value>LOGuList.ClsMain</value>
+  </data>
+  <data name="str10083" xml:space="preserve">
+    <value>LoNLAList.ClsMain</value>
+  </data>
+  <data name="str10084" xml:space="preserve">
+    <value>SPSSuvaMList.ClsMain</value>
+  </data>
+  <data name="str10090" xml:space="preserve">
+    <value>OPUtility.ClsMain</value>
+  </data>
+  <data name="str10091" xml:space="preserve">
+    <value>SPSOpUtil.ClsMain</value>
+  </data>
+  <data name="str10092" xml:space="preserve">
+    <value>SPSCreateOPUtility.ClsMain</value>
+  </data>
+  <data name="str10093" xml:space="preserve">
+    <value>SPSDTAUtility.ClsMain</value>
+  </data>
+  <data name="str10094" xml:space="preserve">
+    <value>SPSESRUtility.ClsMain</value>
+  </data>
+  <data name="str10095" xml:space="preserve">
+    <value>SearchOPData.ClsMain</value>
+  </data>
+  <data name="str10096" xml:space="preserve">
+    <value>SPSCreateMahn.ClsMain</value>
+  </data>
+  <data name="str10097" xml:space="preserve">
+    <value>SPSMahnPrint.ClsMain</value>
+  </data>
+  <data name="str10098" xml:space="preserve">
+    <value>KundenUtility.ClsMain</value>
+  </data>
+  <data name="str10099" xml:space="preserve">
+    <value>SPSKDZHD.ClsMain</value>
+  </data>
+  <data name="str10100" xml:space="preserve">
+    <value>SPSReAddress.ClsMain</value>
+  </data>
+  <data name="str10101" xml:space="preserve">
+    <value>SPSBAInfo.ClsMain</value>
+  </data>
+  <data name="str10102" xml:space="preserve">
+    <value>SPSKundenUtil.ClsMain</value>
+  </data>
+  <data name="str10103" xml:space="preserve">
+    <value>SPSKDTemplates.ClsMain</value>
+  </data>
+  <data name="str10104" xml:space="preserve">
+    <value>SPSRPScanUtil.ClsMain</value>
+  </data>
+  <data name="str10105" xml:space="preserve">
+    <value>SPSKDZHDContactUtil.ClsMain</value>
+  </data>
+  <data name="str10106" xml:space="preserve">
+    <value>SPSKDDocUtil.ClsMain</value>
+  </data>
+  <data name="str10107" xml:space="preserve">
+    <value>SPSUmsatzUtil.ClsMain</value>
+  </data>
+  <data name="str10108" xml:space="preserve">
+    <value>SPSKDUmsatzUtil.ClsMain</value>
+  </data>
+  <data name="str10109" xml:space="preserve">
+    <value>SPSZEUtil.ClsMain</value>
+  </data>
+  <data name="str10110" xml:space="preserve">
+    <value>ZEUtility.ClsMain</value>
+  </data>
+  <data name="str10111" xml:space="preserve">
+    <value>SearchZEData.ClsMain</value>
+  </data>
+  <data name="str10112" xml:space="preserve">
+    <value>SPSKDContactUtil.ClsMain</value>
+  </data>
+  <data name="str10113" xml:space="preserve">
+    <value>SPSKandTables.ClsMain</value>
+  </data>
+  <data name="str10114" xml:space="preserve">
+    <value>SPSKDTables.ClsMain</value>
+  </data>
+  <data name="str10115" xml:space="preserve">
+    <value>SPSTerminUtil.ClsMain</value>
+  </data>
+  <data name="str10116" xml:space="preserve">
+    <value>SPSStdUtil.ClsMain</value>
+  </data>
+  <data name="str10117" xml:space="preserve">
+    <value>SPSRPContentUtil.ClsMain</value>
+  </data>
+  <data name="str10118" xml:space="preserve">
+    <value>SPSMANLAUtil.ClsMain</value>
+  </data>
+  <data name="str10119" xml:space="preserve">
+    <value>SPSMAAddressUtil.ClsMain</value>
+  </data>
+  <data name="str10200" xml:space="preserve">
+    <value>FOpUtility.ClsMain</value>
+  </data>
+  <data name="str10201" xml:space="preserve">
+    <value>SearchFOpData.ClsMain</value>
+  </data>
+  <data name="str10202" xml:space="preserve">
+    <value>SPSLaDivUtility.ClsMain</value>
+  </data>
+  <data name="str10203" xml:space="preserve">
+    <value>SPSCommUtil.ClsMain</value>
+  </data>
+  <data name="str10204" xml:space="preserve">
+    <value>SPSTwixUtil.ClsMain</value>
+  </data>
+  <data name="str10205" xml:space="preserve">
+    <value>SPSGavUtil.ClsMain</value>
+  </data>
+  <data name="str10206" xml:space="preserve">
+    <value>SPSKstStdUtil.ClsMain</value>
+  </data>
+  <data name="str10207" xml:space="preserve">
+    <value>SPSWriteLOGUtil.ClsMain</value>
+  </data>
+  <data name="str10208" xml:space="preserve">
+    <value>VakanzUtility.ClsMain</value>
+  </data>
+  <data name="str10209" xml:space="preserve">
+    <value>SPSVakanzUtil.ClsMain</value>
+  </data>
+  <data name="str10210" xml:space="preserve">
+    <value>SPSBewUtility.ClsMain</value>
+  </data>
+  <data name="str10211" xml:space="preserve">
+    <value>SPSQstAddressUtil.ClsMain</value>
+  </data>
+  <data name="str10300" xml:space="preserve">
+    <value>LOFARYList.ClsMain</value>
+  </data>
+  <data name="str10301" xml:space="preserve">
+    <value>LOIPList.ClsMain</value>
+  </data>
+  <data name="str10302" xml:space="preserve">
+    <value>LOSchList.ClsMain</value>
+  </data>
+  <data name="str10303" xml:space="preserve">
+    <value>FAR.-MitgliedNr</value>
+  </data>
+  <data name="str10304" xml:space="preserve">
+    <value>SPSQualifikationUtil.ClsMain</value>
+  </data>
+  <data name="str10305" xml:space="preserve">
+    <value>SearchVakData.ClsMain</value>
+  </data>
+  <data name="str10306" xml:space="preserve">
+    <value>spFileUploadUtil.ClsMain</value>
+  </data>
+  <data name="str10307" xml:space="preserve">
+    <value>SPSNLAUtil.ClsMain</value>
+  </data>
+  <data name="str10308" xml:space="preserve">
+    <value>LODivGAVBLList.ClsMain</value>
+  </data>
+  <data name="str10309" xml:space="preserve">
+    <value>OfferUtility.ClsMain</value>
+  </data>
+  <data name="str10310" xml:space="preserve">
+    <value>CashRegUtility.ClsMain</value>
+  </data>
+  <data name="str10311" xml:space="preserve">
+    <value>KrediAccountUtility.ClsMain</value>
+  </data>
+  <data name="str10312" xml:space="preserve">
+    <value>SPSOfferUtil.ClsMain</value>
+  </data>
+  <data name="str10313" xml:space="preserve">
+    <value>SPSVakTables.ClsMain</value>
+  </data>
+  <data name="str10314" xml:space="preserve">
+    <value>SPSOffTables.ClsMain</value>
+  </data>
+  <data name="str10315" xml:space="preserve">
+    <value>SPSSesamUtility.ClsMain</value>
+  </data>
+  <data name="str10316" xml:space="preserve">
+    <value>SPSTranslateUtil.ClsMain</value>
+  </data>
+  <data name="SPSRegKey" xml:space="preserve">
+    <value>Software\ajande.com</value>
+    <comment>Standard RegKey</comment>
+  </data>
+</root>

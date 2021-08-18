@@ -1,0 +1,9 @@
+{TMPL_VAR name='USVorname'} {TMPL_VAR name='USNachname'}
+{TMPL_VAR name='USMDName'}
+{TMPL_VAR name='USMDStrasse'}
+{TMPL_VAR name='USMDPLZ'} {TMPL_VAR name='USMDOrt'}
+Telefon {TMPL_VAR name='USMDTelefon'}
+Direkt {TMPL_VAR name='USMDDTelefon'}
+Mobile {TMPL_VAR name='USNatel'}
+{TMPL_VAR name='USeMail'}
+{TMPL_VAR name='USMDHomepage'}

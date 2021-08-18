@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{2F527867-C64A-4DC4-A659-32AEEC194410}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SP.KD.InvoiceMng</RootNamespace>
+    <AssemblyName>SP.KD.InvoiceMng</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DocumentationFile>SP.KD.InvoiceMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Components.net\</OutputPath>
+    <DocumentationFile>SP.KD.InvoiceMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SP.KD.InvoiceMng.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConstantValues.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\CreateAutomatedInvoices.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\CreateInvoiceDunning.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\INewInvoiceUserControlFormMediator.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\InitData\Debitorenart.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\InitData\InitDataPage1.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\InitData\InitDataPage2.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\InitData\PreselectionData.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\NewInvoiceUserControlFormMediator.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\NewPaymentUserControlFormMediator.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\NewZE\InitData\InitDataPage1.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\NewZE\InitData\PreselectionData.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\NewZE\ucPageCreatePayment.Designer.vb">
+      <DependentUpon>ucPageCreatePayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewInvoice\NewZE\ucPageCreatePayment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewInvoice\NewZE\ucPageSelectMandantPayment.Designer.vb">
+      <DependentUpon>ucPageSelectMandantPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewInvoice\NewZE\ucPageSelectMandantPayment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewInvoice\NewZE\ucPageSelectZEData.Designer.vb">
+      <DependentUpon>ucPageSelectZEData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewInvoice\NewZE\ucPageSelectZEData.vb" />
+    <Compile Include="Forms\Controls\NewInvoice\ucPageCreateInvoice.Designer.vb">
+      <DependentUpon>ucPageCreateInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewInvoice\ucPageCreateInvoice.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewInvoice\ucPageSelectInvoiceData.Designer.vb">
+      <DependentUpon>ucPageSelectInvoiceData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewInvoice\ucPageSelectInvoiceData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewInvoice\ucPageSelectMandant.Designer.vb">
+      <DependentUpon>ucPageSelectMandant.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewInvoice\ucPageSelectMandant.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewInvoice\ucWizardPageBaseControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInvoiceProperties.Designer.vb">
+      <DependentUpon>frmInvoiceProperties.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInvoiceProperties.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInvoices.Designer.vb">
+      <DependentUpon>frmInvoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInvoices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewAutomatedInvoice.Designer.vb">
+      <DependentUpon>frmNewAutomatedInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewAutomatedInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewZahlungsEingang.Designer.vb">
+      <DependentUpon>frmNewZahlungsEingang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewZahlungsEingang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewInvoice.Designer.vb">
+      <DependentUpon>frmNewInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewMahnung.Designer.vb">
+      <DependentUpon>frmNewMahnung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewMahnung.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmZE.Designer.vb">
+      <DependentUpon>frmZE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmZE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmZEedit.Designer.vb">
+      <DependentUpon>frmZEedit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmZEedit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings\SettingKeys.vb" />
+    <Compile Include="Settings\SettingsManager.vb" />
+    <Compile Include="Utility\MahnstopDialog.Designer.vb">
+      <DependentUpon>MahnstopDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\MahnstopDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utility\DateInputDialog.Designer.vb">
+      <DependentUpon>DateInputDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\DateInputDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utility\SingleLineTextInputDialog.Designer.vb">
+      <DependentUpon>SingleLineTextInputDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\SingleLineTextInputDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Controls\NewInvoice\NewZE\ucPageCreatePayment.resx">
+      <DependentUpon>ucPageCreatePayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewInvoice\NewZE\ucPageSelectMandantPayment.resx">
+      <DependentUpon>ucPageSelectMandantPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewInvoice\NewZE\ucPageSelectZEData.resx">
+      <DependentUpon>ucPageSelectZEData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewInvoice\ucPageCreateInvoice.resx">
+      <DependentUpon>ucPageCreateInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewInvoice\ucPageSelectInvoiceData.resx">
+      <DependentUpon>ucPageSelectInvoiceData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewInvoice\ucPageSelectMandant.resx">
+      <DependentUpon>ucPageSelectMandant.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewInvoice\ucWizardPageBaseControl.resx">
+      <DependentUpon>ucWizardPageBaseControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInvoiceProperties.resx">
+      <DependentUpon>frmInvoiceProperties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInvoices.resx">
+      <DependentUpon>frmInvoices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewAutomatedInvoice.resx">
+      <DependentUpon>frmNewAutomatedInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewZahlungsEingang.resx">
+      <DependentUpon>frmNewZahlungsEingang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewInvoice.resx">
+      <DependentUpon>frmNewInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewMahnung.resx">
+      <DependentUpon>frmNewMahnung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmZE.resx">
+      <DependentUpon>frmZE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmZEedit.resx">
+      <DependentUpon>frmZEedit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utility\MahnstopDialog.resx">
+      <DependentUpon>MahnstopDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utility\DateInputDialog.resx">
+      <DependentUpon>DateInputDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utility\SingleLineTextInputDialog.resx">
+      <DependentUpon>SingleLineTextInputDialog.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SP.KD.InvoiceMng.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\search.png" />
+    <None Include="Resources\emailtemplate_16x16.png" />
+    <None Include="Resources\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SP.Infrastructure\SP.Infrastructure.vbproj">
+      <Project>{4b0bb9d6-0fd0-48cf-9256-6b42582d5f9f}</Project>
+      <Name>SP.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Intern.Automations\SP.Internal.Automations.vbproj">
+      <Project>{1bbfd14a-03ac-4a44-8040-fc21ca57cc2e}</Project>
+      <Name>SP.Internal.Automations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Invoice.PrintUtility\SP.Invoice.PrintUtility.vbproj">
+      <Project>{323d216e-b25e-4998-a3e7-1571fe32aae6}</Project>
+      <Name>SP.Invoice.PrintUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.KD.CPersonMng\SP.KD.CPersonMng.vbproj">
+      <Project>{64077d2c-cb12-425a-8a62-3e8098ca4e72}</Project>
+      <Name>SP.KD.CPersonMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.KD.ReAdresse\SP.KD.ReAdresse.vbproj">
+      <Project>{a07fecc2-eb06-4991-926d-5bc894c0397d}</Project>
+      <Name>SP.KD.ReAdresse</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.TinyMessengerWrapper\SP.TinyMessengerWrapper.csproj">
+      <Project>{ff4665b7-a876-4b26-92c5-fea3b5088d66}</Project>
+      <Name>SP.TinyMessengerWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.TodoMng\SP.TodoMng.vbproj">
+      <Project>{4655a31f-3c9d-4611-a9f2-65e0caa2e447}</Project>
+      <Name>SP.TodoMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPProgUtility\SPProgUtility.vbproj">
+      <Project>{78bb37a6-7753-4586-a42f-39e591e1e229}</Project>
+      <Name>SPProgUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Listing.Print.Utility\SPS.Listing.Print.Utility.vbproj">
+      <Project>{ca4ffd19-3751-41be-97c8-b969b76836a5}</Project>
+      <Name>SPS.Listing.Print.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.DatabaseAccess\SP.DatabaseAccess.vbproj">
+      <Project>{eedcd73d-17b9-4604-a7c5-10667af63e85}</Project>
+      <Name>SP.DatabaseAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPSSendMail\SPSSendMail.vbproj">
+      <Project>{afda057f-94d1-4d68-85fb-31ca8ee131f7}</Project>
+      <Name>SPSSendMail</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

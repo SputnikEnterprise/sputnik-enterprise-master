@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserProfile>
+  <Layouts>
+    <Form_DevEx>
+      <FormStyle>DevExpress Style</FormStyle>
+    </Form_DevEx>
+    <Report>
+      <matrixprintername>FinePrint</matrixprintername>
+    </Report>
+  </Layouts>
+  <!--Export Einstellungen-->
+  <CSV-Setting Name="MASearch">
+    <SelectedFields>MANr{0}MANachname{0}MAVorname{0}MAStrasse{0}MAPostfach{0}MAPLZ{0}MAOrt{0}MALand{0}MAGebDat{0}MATelefonP{0}MATelefonG{0}MATelefon3{0}MAGeschlecht{0}MABeruf{0}MABerufCode{0}MABewillig{0}MABew_Bis{0}MAQ_Steuer{0}KST{0}MAAHV_Nr_New{0}MANationality{0}MAZivilstand{0}MAS_Kanton{0}MAeMail{0}MABerater</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="KDSearch">
+    <SelectedFields>KDNr{0}Firma1{0}KDFirma2{0}KDFirma3{0}KDPLZ{0}KDOrt{0}KDPostfach{0}KDLand{0}KDTelefon{0}KDStrasse{0}KDTelefax{0}KDStrasse{0}KDAllFiliale{0}Anrede{0}Nachname{0}Vorname{0}AnredeForm{0}ZHDAbt{0}ZHDPos{0}ZHDBerater{0}ZHDeMail</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="ESSearch">
+    <SelectedFields>MANr{0}ES_Als{0}ESBranche{0}Stundenlohn{0}MATSpesen{0}MAStdSpesen{0}GAVNumber{0}GAVGruppe0{0}GAVGruppe1{0}GAVGruppe2{0}GAVGruppe3{0}GAVBezeichnung{0}GAVKanton{0}GAVStdLohn{0}GAV_StdWeek{0}GAV_StdMonth{0}GAV_StdYear{0}Grundlohn{0}FerienProz{0}Ferien{0}FeierProz{0}Feier{0}Lohn13Proz{0}Lohn13{0}AktivLODaten{0}GAVInfo_String</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="ESKDSearch">
+    <SelectedFields>KDNr{0}ESKDZHDNr{0}Firma1{0}Nachname{0}Vorname{0}ZNatel{0}ZeMail{0}Anrede{0}AnredeForm{0}KDPostfach{0}KDStrasse{0}KDLand{0}KDPLZ{0}KDOrt</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="ESMASearch">
+    <SelectedFields>MANr{0}Nachname{0}Vorname{0}Natel{0}eMail{0}Geschlecht{0}MACo{0}MAPostfach{0}Anredeform{0}MAStrasse{0}MALand{0}MAPLZ{0}MAOrt</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <!--Exporteinstellung für den Druck und Export Lohnabrechnungen...-->
+  <ExportSetting Name="SP.LO.PrintUtility">
+    <exportpfad></exportpfad>
+    <exportfilename>lo_{0}.pdf</exportfilename>
+    <exportfinalfilefilename>
+    </exportfinalfilefilename>
+  </ExportSetting>
+  <!--Exporteinstellung für den Druck und Export Einsatzverträge...-->
+  <ExportSetting Name="SP.ES.PrintUtility">
+    <exportpfad></exportpfad>
+    <exportfilename_esvertrag>ES_{0}_{1}.pdf</exportfilename_esvertrag>
+    <exportfilename_verleih>VV_{1}_{0}.pdf</exportfilename_verleih>
+    <exportfinalfilefilename_esvertrag>ESF_{0}_{1}.pdf</exportfinalfilefilename_esvertrag>
+    <exportfinalfilefilename_verleih>VVF_{1}_{0}.pdf</exportfinalfilefilename_verleih>
+    <esunterzeichner_esvertrag>true</esunterzeichner_esvertrag>
+  </ExportSetting>
+  <!--AdvancePayment Quitttung and Check...-->
+  <advancepayment>
+    <maxvalue8900>0</maxvalue8900>
+    <maxvalue8930>0</maxvalue8930>
+  </advancepayment>
+  <programsetting>
+    <DeleteUserTempFilesOnLogin>true</DeleteUserTempFilesOnLogin>
+    <askonexit>false</askonexit>
+    <showcustomerrecordsincolor>true</showcustomerrecordsincolor>
+    <deleteusertempfilesonlogin>true</deleteusertempfilesonlogin>
+    <printcustomerdataonreporttemplate>true</printcustomerdataonreporttemplate>
+  </programsetting>
+  <CSV-Setting Name="KDUmsatz_Grouped_Liste">
+    <SelectedFields>KDNr{0}fBetragOhne{0}fBetragEx{0}fBetragMwSt{0}fBetragInk{0}sBetragOhne{0}sBetragEx{0}sBetragMwSt{0}sBetragInk{0}R_Name1</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="PVLListToCSV">
+    <SelectedFields>MANr{0}Nachname{0}Vorname{0}GebDat{0}AHV_Nr_New{0}AnzahlStd{0}BeitragLohnAN{0}BeitragLohnAG{0}Lohnsumme{0}EinsatzAls{0}Ablp{0}BisLp</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="JLORekapListToCSV">
+    <SelectedFields>LANR{0}Bezeichnung{0}Januar{0}Februar{0}März{0}April{0}Mai{0}Juni{0}Juli{0}August{0}September{0}Oktober{0}November{0}Dezember{0}Kumulativ{0}Jahr</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="LOGUToCSV">
+    <SelectedFields>MANr{0}MANachname{0}MAVorname{0}G500{0}G600{0}G700{0}G529{0}G629{0}G729{0}GDar{0}GGTime{0}GGTotal{0}</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="RPNotfinishedSearch">
+    <SelectedFields>RPNr{0}MANr{0}ESNr{0}KDNr{0}Monat{0}Jahr{0}Result{0}PrintedWeeks{0}Von{0}Bis{0}MDNr{0}MANachname{0}MAVorname{0}Firma1{0}KSOrt{0}ES_Ab{0}ES_Ende{0}ES_Als{0}Day1{0}Day2{0}Day3{0}Day4{0}Day5{0}Day6{0}Day7{0}Day8{0}Day9{0}Day10{0}Day11{0}Day12{0}Day13{0}Day14{0}Day15{0}Day16{0}Day17{0}Day18{0}Day19{0}Day20{0}Day21{0}Day22{0}Day23{0}Day24{0}Day25{0}Day26{0}Day27{0}Day28{0}Day29{0}Day30{0}Day31{0}WeekNr</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="OPSearch">
+    <SelectedFields>RENr{0}Art{0}Fak_Dat{0}BetragOhne{0}BetragEx{0}BetragInk{0}Mwst1{0}Bezahlt{0}FKSoll{0}FKHaben1{0}Faellig{0}ma0{0}ma1{0}ma2{0}ma3{0}R_Name1{0}R_Name2{0}R_Name3{0}R_ZHD{0}R_Strasse{0}R_Land{0}R_Ort{0}CreatedOn{0}CreatedFrom{0}ES_Einstufung{0}KDBranche{0}Gebucht</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="Db1ListTOCSV">
+    <SelectedFields>KST3_1{0}KST3Bez{0}USFiliale{0}Monat{0}Jahr{0}_tempumsatz{0}_indUmsatz{0}_festumsatz{0}Bruttolohn{0}ahvlohn{0}agbetrag{0}fremdleistung{0}_lohnaufwand_1{0}_lohnaufwand_2{0}_marge{0}_bgtemp{0}_bgind{0}_bgfest{0}</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="LOStdListToCSV">
+    <SelectedFields>LONr{0}MANr{0}Vorname{0}Nachname{0}LANr{0}LP{0}Jahr{0}m_btr{0}gav_kanton{0}gav_beruf{0}GAV_Kanton{0}GAV_Beruf{0}Geschlecht</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="QSTTOCSV">
+    <SelectedFields>MANR{0}NACHNAME{0}VORNAME{0}GEBDAT{0}AHV_NR_NEW{0}MASTRASSE{0}MAPLZ{0}MAORT{0}MALAND{0}ESAB{0}ESENDE{0}STDANZ{0}S_KANTON{0}M_ANZ{0}M_BAS{0}M_ANS{0}M_BTR{0}QSTBASIS{0}BRUTTOLOHN{0}TARIFCODE</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <ExportSetting Name="SP.RPContent.PrintUtility">
+    <printcustomerdataonreporttemplate>false</printcustomerdataonreporttemplate>
+    <exportpfad></exportpfad>
+    <exportfilename>test_{0}.pdf</exportfilename>
+    <exportfinalfilefilename>Final_{0}.pdf</exportfinalfilefilename>
+  </ExportSetting>
+  <CSV-Setting Name="BVGTOCSV">
+    <SelectedFields>Row{0}LANR{0}LALOText{0}Jahr{0}Monat{0}LONR{0}M_ANZ{0}M_BAS{0}M_ANS{0}M_BTR{0}Nachname{0}Vorname{0}MonatVon{0}MonatBis{0}JahrVon{0}JahrBis{0}GebDat{0}AHV_Nr{0}AHV_Nr_New{0}Geschlecht{0}MAStrasse{0}MAPLZ{0}MAOrt{0}MAPLZOrt{0}MALand{0}Zivilstand{0}Sprache{0}Kinder{0}Bewillig{0}MACo{0}Postfach{0}Arbeitspensum{0}BVGStd{0}AHVLohn{0}FirstESBegin{0}BVGEin{0}BVGAus{0}BVGBegin_{0}BVGEnd_{0}BVGDays{0}MANR{0}MANr{0}LANr{0}LALOText{0}M_Anz{0}M_Bas{0}M_Ans{0}M_Btr{0}Nachname{0}Vorname{0}GebDat{0}GebDat{0}AHV_Nr_New{0}MAStrasse{0}MAPLZ{0}MAOrt{0}MALand{0}Zivilstand{0}BVGStd{0}AHVLohn{0}BVGEin{0}BVGAus{0}Arbeitspensum</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="ZESearch">
+    <SelectedFields>ZENr{0}RENr{0}KDNr{0}fak_dat{0}v_date{0}b_date{0}InvoiceCreatedOn{0}currency{0}betrag{0}mwst-betrag{0}mwst{0}createdon{0}r_name1{0}r_zhd{0}r_strasse{0}r_plz{0}r_ort{0}r_land{0}zahlkond{0}faellig{0}mwstproz{0}kst{0}reart</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="KDUmsatz_Detail_Liste">
+    <SelectedFields>
+    </SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <DocName ID="11.7">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="11.7.G">
+    <Export>1</Export>
+  </DocName>
+  <CSV-Setting Name="CustomerHourListing">
+    <SelectedFields>CustomerNumber{0}Company1{0}Company2{0}Company3{0}PostOfficeBox{0}Street{0}CountryCode{0}Postcode{0}Location{0}Telephone{0}Telefax{0}EMail{0}TotalHours</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <CSV-Setting Name="LOLOLKontiToCSV">
+    <SelectedFields>MANR{0}EMPLOYEELASTNAME{0}EMPLOYEEFIRSTNAME{0}AHVNUMBER{0}SATRTOFEMPLOYMENT{0}ENDOFEMPLOYMENT{0}LANR{0}BEZEICHNUNG{0}JANUAR{0}FEBRAUAR{0}MARCH{0}APRIL{0}MAI{0}JUNI{0}JULI{0}AUGUST{0}SEPTEMBER{0}OKTOBER{0}NOVEMBER{0}DEZEMBER{0}KUMULATIV</SelectedFields>
+    <FieldIn>
+    </FieldIn>
+    <FieldSep>;</FieldSep>
+    <ExportFileName></ExportFileName>
+  </CSV-Setting>
+  <DocName ID="2.1.4">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="2.1.5">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="2.3">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="2.3.3">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="2.3.4">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="2.4">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="3.3">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="3.3.1">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="3.3.2">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="3.3.4">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="3.3.3">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="Mail.CustomerWOS.01">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="1.3">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="1.1">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="1.0">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="11.0">
+    <Export>1</Export>
+  </DocName>
+  <DocName ID="11.0.G">
+    <Export>1</Export>
+  </DocName>
+</UserProfile>

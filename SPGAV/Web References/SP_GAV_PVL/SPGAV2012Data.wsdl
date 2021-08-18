@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx">
+      <s:element name="GetGruppe0ByKanton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVKanton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPLZ" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruppe0ByKantonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGruppe0ByKantonResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGruppe0ByKanton_DS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVKanton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPLZ" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruppe0ByKanton_DSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGruppe0ByKanton_DSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLAnhang1Berufe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLAnhang1BerufeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPVLAnhang1BerufeResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLBerufWarning">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iGAVNr" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLBerufWarningResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPVLBerufWarningResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryNames_DS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Meta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryNames_DSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVCategoryNames_DSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Meta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVCategoryNamesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Category" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVCategoryValuesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryValuesWithLanguage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Category" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryValuesWithLanguageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVCategoryValuesWithLanguageResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryValuesWithBaseValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Category" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_BaseCategoryValue" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryValuesWithBaseValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVCategoryValuesWithBaseValueResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCalculationValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strID_CategoryValues" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCalculationValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVCalculationValueResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCriterionValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Meta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCriterionValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVCriterionValueResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCriterionValueByIDCriterion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Criterion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCriterionValueByIDCriterionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVCriterionValueByIDCriterionResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVTaxonomyEntryValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Meta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVTaxonomyEntryValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVTaxonomyEntryValueResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVVersionValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iGAVNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVVersionValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVVersionValueResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGruppe0ByKantonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGruppe0ByKanton" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe0ByKantonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGruppe0ByKantonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe0ByKanton_DSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGruppe0ByKanton_DS" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe0ByKanton_DSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGruppe0ByKanton_DSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLAnhang1BerufeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPVLAnhang1Berufe" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLAnhang1BerufeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPVLAnhang1BerufeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLBerufWarningSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPVLBerufWarning" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLBerufWarningSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPVLBerufWarningResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryNames_DSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryNames_DS" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryNames_DSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryNames_DSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryNames" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryValues" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryValuesWithLanguageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryValuesWithLanguage" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryValuesWithLanguageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryValuesWithLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryValuesWithBaseValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryValuesWithBaseValue" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryValuesWithBaseValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryValuesWithBaseValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCalculationValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVCalculationValue" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCalculationValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVCalculationValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCriterionValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVCriterionValue" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCriterionValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVCriterionValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCriterionValueByIDCriterionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVCriterionValueByIDCriterion" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCriterionValueByIDCriterionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVCriterionValueByIDCriterionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVTaxonomyEntryValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVTaxonomyEntryValue" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVTaxonomyEntryValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVTaxonomyEntryValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVVersionValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVVersionValue" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVVersionValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVVersionValueResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPGAV2012DataSoap">
+    <wsdl:operation name="GetGruppe0ByKanton">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Berufe eines Kantons</wsdl:documentation>
+      <wsdl:input message="tns:GetGruppe0ByKantonSoapIn" />
+      <wsdl:output message="tns:GetGruppe0ByKantonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe0ByKanton_DS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Kundendokumente auf der Client (Gesamte Datensätze)</wsdl:documentation>
+      <wsdl:input message="tns:GetGruppe0ByKanton_DSSoapIn" />
+      <wsdl:output message="tns:GetGruppe0ByKanton_DSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLAnhang1Berufe">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Berufe im Anhang1</wsdl:documentation>
+      <wsdl:input message="tns:GetPVLAnhang1BerufeSoapIn" />
+      <wsdl:output message="tns:GetPVLAnhang1BerufeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLBerufWarning">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gibt die kritischen Infos über eine GAV-Number zurück. Das pflegen wir selbst ein!!!</wsdl:documentation>
+      <wsdl:input message="tns:GetPVLBerufWarningSoapIn" />
+      <wsdl:output message="tns:GetPVLBerufWarningSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryNames_DS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Name aller Kategorien einer MetaNr</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVCategoryNames_DSSoapIn" />
+      <wsdl:output message="tns:GetGAVCategoryNames_DSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryNames">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Name aller Kategorien einer MetaNr</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVCategoryNamesSoapIn" />
+      <wsdl:output message="tns:GetGAVCategoryNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValues">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Werte aller Kategorievalues einer CategoryNr</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVCategoryValuesSoapIn" />
+      <wsdl:output message="tns:GetGAVCategoryValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValuesWithLanguage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">lists Kategorievalues with CategoryNr and language</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVCategoryValuesWithLanguageSoapIn" />
+      <wsdl:output message="tns:GetGAVCategoryValuesWithLanguageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValuesWithBaseValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Werte aller Kategorievalues einer BaseCategoryValue</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVCategoryValuesWithBaseValueSoapIn" />
+      <wsdl:output message="tns:GetGAVCategoryValuesWithBaseValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCalculationValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Wert von Calculation-Db anhand Kategorievalues</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVCalculationValueSoapIn" />
+      <wsdl:output message="tns:GetGAVCalculationValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCriterionValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Details von Criterion-Db anhand ID_Meta</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVCriterionValueSoapIn" />
+      <wsdl:output message="tns:GetGAVCriterionValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCriterionValueByIDCriterion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Details von CriterionValue-Db anhand ID_Criterion</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVCriterionValueByIDCriterionSoapIn" />
+      <wsdl:output message="tns:GetGAVCriterionValueByIDCriterionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVTaxonomyEntryValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Kantone von TaxonomyEntry-Db anhand ID_Meta</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVTaxonomyEntryValueSoapIn" />
+      <wsdl:output message="tns:GetGAVTaxonomyEntryValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVVersionValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Kontrolle der GAV-Version anhand GAVNumber und GAVDatum</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVVersionValueSoapIn" />
+      <wsdl:output message="tns:GetGAVVersionValueSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPGAV2012DataSoap" type="tns:SPGAV2012DataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGruppe0ByKanton">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGruppe0ByKanton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe0ByKanton_DS">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGruppe0ByKanton_DS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLAnhang1Berufe">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetPVLAnhang1Berufe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLBerufWarning">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetPVLBerufWarning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryNames_DS">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCategoryNames_DS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryNames">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCategoryNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValues">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCategoryValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValuesWithLanguage">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCategoryValuesWithLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValuesWithBaseValue">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCategoryValuesWithBaseValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCalculationValue">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCalculationValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCriterionValue">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCriterionValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCriterionValueByIDCriterion">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCriterionValueByIDCriterion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVTaxonomyEntryValue">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVTaxonomyEntryValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVVersionValue">
+      <soap:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVVersionValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPGAV2012DataSoap12" type="tns:SPGAV2012DataSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGruppe0ByKanton">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGruppe0ByKanton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe0ByKanton_DS">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGruppe0ByKanton_DS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLAnhang1Berufe">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetPVLAnhang1Berufe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLBerufWarning">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetPVLBerufWarning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryNames_DS">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCategoryNames_DS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryNames">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCategoryNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValues">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCategoryValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValuesWithLanguage">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCategoryValuesWithLanguage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValuesWithBaseValue">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCategoryValuesWithBaseValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCalculationValue">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCalculationValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCriterionValue">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCriterionValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCriterionValueByIDCriterion">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVCriterionValueByIDCriterion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVTaxonomyEntryValue">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVTaxonomyEntryValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVVersionValue">
+      <soap12:operation soapAction="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx/GetGAVVersionValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPGAV2012Data">
+    <wsdl:port name="SPGAV2012DataSoap" binding="tns:SPGAV2012DataSoap">
+      <soap:address location="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPGAV2012DataSoap12" binding="tns:SPGAV2012DataSoap12">
+      <soap12:address location="http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

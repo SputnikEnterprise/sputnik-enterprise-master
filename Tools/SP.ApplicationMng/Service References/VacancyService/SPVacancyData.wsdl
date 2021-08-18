@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/">
+      <s:element name="ListVacancyTitle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyTitleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancyTitleResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListVacancyRegion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyRegionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancyRegionResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyBranch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyBranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancyBranchResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyCity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyCityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancyCityResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyCanton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyCantonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancyCantonResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancyGroupResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancySubGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancySubGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancySubGroupResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancySubGroupAssignedGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancySubGroupAssignedGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancySubGroupAssignedGroupResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancySector">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancySectorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancySectorResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyJobCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyJobCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancyJobCategoryResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyJobDisciplines">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JobCategories" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyJobDisciplinesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancyJobDisciplinesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyJobPositions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JobCategories" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JobDisciplines" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListVacancyJobPositionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListVacancyJobPositionsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListVacancyTitleSoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancyTitle" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyTitleSoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancyTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyRegionSoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancyRegion" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyRegionSoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancyRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyBranchSoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancyBranch" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyBranchSoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancyBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyCitySoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancyCity" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyCitySoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancyCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyCantonSoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancyCanton" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyCantonSoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancyCantonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancyGroup" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancyGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancySubGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancySubGroup" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancySubGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancySubGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancySubGroupAssignedGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancySubGroupAssignedGroup" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancySubGroupAssignedGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancySubGroupAssignedGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancySectorSoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancySector" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancySectorSoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancySectorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyJobCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancyJobCategory" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyJobCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancyJobCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyJobDisciplinesSoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancyJobDisciplines" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyJobDisciplinesSoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancyJobDisciplinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyJobPositionsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListVacancyJobPositions" />
+  </wsdl:message>
+  <wsdl:message name="ListVacancyJobPositionsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListVacancyJobPositionsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPVakanzDataSoap">
+    <wsdl:operation name="ListVacancyTitle">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-Berufe (Titel)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancyTitleSoapIn" />
+      <wsdl:output message="tns:ListVacancyTitleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyRegion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-Regionen (Region)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancyRegionSoapIn" />
+      <wsdl:output message="tns:ListVacancyRegionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyBranch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-Filiale (Filiale)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancyBranchSoapIn" />
+      <wsdl:output message="tns:ListVacancyBranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyCity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-Ort (Ort)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancyCitySoapIn" />
+      <wsdl:output message="tns:ListVacancyCitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyCanton">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-Kanton (Vak_Kanton)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancyCantonSoapIn" />
+      <wsdl:output message="tns:ListVacancyCantonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyGroup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-Gruppe (Gruppe)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancyGroupSoapIn" />
+      <wsdl:output message="tns:ListVacancyGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancySubGroup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-SubGruppe (SubGroup)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancySubGroupSoapIn" />
+      <wsdl:output message="tns:ListVacancySubGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancySubGroupAssignedGroup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-SubGruppe anhand einer Grouppe (SubGroup)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancySubGroupAssignedGroupSoapIn" />
+      <wsdl:output message="tns:ListVacancySubGroupAssignedGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancySector">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-Branchen (Branchen)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancySectorSoapIn" />
+      <wsdl:output message="tns:ListVacancySectorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyJobCategory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-Berufsgruppen (Berufgruppe)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancyJobCategorySoapIn" />
+      <wsdl:output message="tns:ListVacancyJobCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyJobDisciplines">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-Beruf-Fachrichtigungen (Fachrichtung)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancyJobDisciplinesSoapIn" />
+      <wsdl:output message="tns:ListVacancyJobDisciplinesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyJobPositions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Vakanzen-Beruf-Position (Berufposition)</wsdl:documentation>
+      <wsdl:input message="tns:ListVacancyJobPositionsSoapIn" />
+      <wsdl:output message="tns:ListVacancyJobPositionsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPVakanzDataSoap" type="tns:SPVakanzDataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListVacancyTitle">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyRegion">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyBranch">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyCity">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyCanton">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyCanton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyGroup">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancySubGroup">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancySubGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancySubGroupAssignedGroup">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancySubGroupAssignedGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancySector">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancySector" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyJobCategory">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyJobCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyJobDisciplines">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyJobDisciplines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyJobPositions">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyJobPositions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPVakanzDataSoap12" type="tns:SPVakanzDataSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListVacancyTitle">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyTitle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyRegion">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyBranch">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyBranch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyCity">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyCity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyCanton">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyCanton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyGroup">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancySubGroup">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancySubGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancySubGroupAssignedGroup">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancySubGroupAssignedGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancySector">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancySector" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyJobCategory">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyJobCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyJobDisciplines">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyJobDisciplines" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVacancyJobPositions">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/ListVacancyJobPositions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPVakanzData">
+    <wsdl:port name="SPVakanzDataSoap" binding="tns:SPVakanzDataSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPVakanzDataSoap12" binding="tns:SPVakanzDataSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

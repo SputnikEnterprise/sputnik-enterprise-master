@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SPSSetting", "SPSSetting.vbproj", "{F98E7DFC-422E-4BC0-94AE-6A49255E9D8E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SPProgUtility", "..\..\SPProgUtility\SPProgUtility\SPProgUtility.vbproj", "{78BB37A6-7753-4586-A42F-39E591E1E229}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SPSEnterprise", "..\..\SPSEnterprise\SPSEnterprise.vbproj", "{D025EA4C-2BB9-420A-86B5-8788D5157897}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://spbl04:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SPSSetting.vbproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\..\\SPProgUtility\\SPProgUtility\\SPProgUtility.vbproj
+		SccProjectName2 = ../../SPProgUtility/SPProgUtility
+		SccLocalPath2 = ..\\..\\SPProgUtility\\SPProgUtility
+		SccProjectUniqueName3 = ..\\..\\SPSEnterprise\\SPSEnterprise.vbproj
+		SccProjectName3 = ../../SPSEnterprise
+		SccLocalPath3 = ..\\..\\SPSEnterprise
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F98E7DFC-422E-4BC0-94AE-6A49255E9D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F98E7DFC-422E-4BC0-94AE-6A49255E9D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F98E7DFC-422E-4BC0-94AE-6A49255E9D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F98E7DFC-422E-4BC0-94AE-6A49255E9D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78BB37A6-7753-4586-A42F-39E591E1E229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78BB37A6-7753-4586-A42F-39E591E1E229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78BB37A6-7753-4586-A42F-39E591E1E229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78BB37A6-7753-4586-A42F-39E591E1E229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D025EA4C-2BB9-420A-86B5-8788D5157897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D025EA4C-2BB9-420A-86B5-8788D5157897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D025EA4C-2BB9-420A-86B5-8788D5157897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D025EA4C-2BB9-420A-86B5-8788D5157897}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

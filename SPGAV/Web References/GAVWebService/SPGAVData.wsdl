@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/spwebservice/SPGAVData.asmx" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/spwebservice/SPGAVData.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/spwebservice/SPGAVData.asmx">
+      <s:element name="GetGruppe0ByKanton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVKanton" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruppe0ByKantonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGruppe0ByKantonResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGruppe0inAllCanton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruppe0inAllCantonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGruppe0inAllCantonResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruppe1ByKanton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVKanton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe0" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruppe1ByKantonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGruppe1ByKantonResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruppe2ByKanton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVKanton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe0" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruppe2ByKantonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGruppe2ByKantonResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruppe3ByKanton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVKanton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe0" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruppe3ByKantonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGruppe3ByKantonResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVAdressen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVKanton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVBeruf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVOrgan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVAdressenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVAdressenResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVText">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVKanton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe0" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVTextResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVTextResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVRecByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVKanton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe0" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVGruppe3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGAVText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVRecByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVRecByIDResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGruppe0ByKantonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGruppe0ByKanton" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe0ByKantonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGruppe0ByKantonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe0inAllCantonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGruppe0inAllCanton" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe0inAllCantonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGruppe0inAllCantonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe1ByKantonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGruppe1ByKanton" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe1ByKantonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGruppe1ByKantonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe2ByKantonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGruppe2ByKanton" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe2ByKantonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGruppe2ByKantonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe3ByKantonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGruppe3ByKanton" />
+  </wsdl:message>
+  <wsdl:message name="GetGruppe3ByKantonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGruppe3ByKantonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVAdressenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVAdressen" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVAdressenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVAdressenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVTextSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVText" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVTextSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVRecByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVRecByID" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVRecByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVRecByIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ClsGetGAVDataSoap">
+    <wsdl:operation name="GetGruppe0ByKanton">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Berufe eines Kantons</wsdl:documentation>
+      <wsdl:input message="tns:GetGruppe0ByKantonSoapIn" />
+      <wsdl:output message="tns:GetGruppe0ByKantonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe0inAllCanton">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Berufe in allen Kantonen</wsdl:documentation>
+      <wsdl:input message="tns:GetGruppe0inAllCantonSoapIn" />
+      <wsdl:output message="tns:GetGruppe0inAllCantonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe1ByKanton">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Gruppe1</wsdl:documentation>
+      <wsdl:input message="tns:GetGruppe1ByKantonSoapIn" />
+      <wsdl:output message="tns:GetGruppe1ByKantonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe2ByKanton">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Gruppe2</wsdl:documentation>
+      <wsdl:input message="tns:GetGruppe2ByKantonSoapIn" />
+      <wsdl:output message="tns:GetGruppe2ByKantonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe3ByKanton">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Gruppe3</wsdl:documentation>
+      <wsdl:input message="tns:GetGruppe3ByKantonSoapIn" />
+      <wsdl:output message="tns:GetGruppe3ByKantonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVAdressen">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Adressen</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVAdressenSoapIn" />
+      <wsdl:output message="tns:GetGAVAdressenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVText">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Text</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVTextSoapIn" />
+      <wsdl:output message="tns:GetGAVTextSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVRecByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-ID</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVRecByIDSoapIn" />
+      <wsdl:output message="tns:GetGAVRecByIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ClsGetGAVDataSoap" type="tns:ClsGetGAVDataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGruppe0ByKanton">
+      <soap:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGruppe0ByKanton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe0inAllCanton">
+      <soap:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGruppe0inAllCanton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe1ByKanton">
+      <soap:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGruppe1ByKanton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe2ByKanton">
+      <soap:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGruppe2ByKanton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe3ByKanton">
+      <soap:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGruppe3ByKanton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVAdressen">
+      <soap:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGAVAdressen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVText">
+      <soap:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGAVText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVRecByID">
+      <soap:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGAVRecByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ClsGetGAVDataSoap12" type="tns:ClsGetGAVDataSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGruppe0ByKanton">
+      <soap12:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGruppe0ByKanton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe0inAllCanton">
+      <soap12:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGruppe0inAllCanton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe1ByKanton">
+      <soap12:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGruppe1ByKanton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe2ByKanton">
+      <soap12:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGruppe2ByKanton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruppe3ByKanton">
+      <soap12:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGruppe3ByKanton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVAdressen">
+      <soap12:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGAVAdressen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVText">
+      <soap12:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGAVText" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVRecByID">
+      <soap12:operation soapAction="http://asmx.domain.com/spwebservice/SPGAVData.asmx/GetGAVRecByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClsGetGAVData">
+    <wsdl:port name="ClsGetGAVDataSoap" binding="tns:ClsGetGAVDataSoap">
+      <soap:address location="http://asmx.domain.com/spwebservice/SPGAVData.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ClsGetGAVDataSoap12" binding="tns:ClsGetGAVDataSoap12">
+      <soap12:address location="http://asmx.domain.com/spwebservice/SPGAVData.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

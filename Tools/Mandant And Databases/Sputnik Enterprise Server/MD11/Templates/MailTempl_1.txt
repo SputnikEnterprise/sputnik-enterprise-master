@@ -1,0 +1,28 @@
+<font face="Trebuchet MS" size="2"> {TMPL_VAR name='AnredeForm'} {TMPL_VAR name='KDznachname'}
+
+{TMPL_VAR name='OfferNachricht'}
+
+{TMPL_VAR name='OfferSchlusstext'}
+
+
+
+
+
+<hr />
+
+<font face="Trebuchet MS" size="2">
+<b>
+ELITA Personalberatung
+{TMPL_VAR name='USVorname'} {TMPL_VAR name='USNachname'}
+{TMPL_VAR name='USTitel_1'}
+{TMPL_VAR name='USTitel_2'}
+{TMPL_VAR name='USMDStrasse'}
+{TMPL_VAR name='USMDPLZ'} {TMPL_VAR name='USMDOrt'}
+Telefon {TMPL_VAR name='USTelefon'}
+Telefax {TMPL_VAR name='USTelefax'}
+email mailto:{TMPL_VAR name='USeMail'}
+
+
+Besuchen Sie unsere Homepage http://{TMPL_VAR name='USMDHomepage'}
+
+<hr />

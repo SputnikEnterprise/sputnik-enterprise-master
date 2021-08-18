@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="SPS.SYS.SrvFTPUpdate.My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="SPS.SYS.SrvFTPUpdate.My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <system.diagnostics>
+        <sources>
+            <!-- Dieser Abschnitt definiert die Protokollierungskonfiguration für My.Application.Log -->
+            <source name="DefaultSource" switchName="DefaultSwitch">
+                <listeners>
+                    <add name="FileLog"/>
+                    <!-- Auskommentierung des nachfolgenden Abschnitts aufheben, um in das Anwendungsereignisprotokoll zu schreiben -->
+                    <!--<add name="EventLog"/>-->
+                </listeners>
+            </source>
+        </sources>
+        <switches>
+            <add name="DefaultSwitch" value="Information"/>
+        </switches>
+        <sharedListeners>
+            <add name="FileLog" type="Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" initializeData="FileLogWriter"/>
+            <!-- Auskommentierung des nachfolgenden Abschnitts aufheben und APPLICATION_NAME durch den Namen der Anwendung ersetzen, um in das Anwendungsereignisprotokoll zu schreiben -->
+            <!--<add name="EventLog" type="System.Diagnostics.EventLogTraceListener" initializeData="APPLICATION_NAME"/> -->
+        </sharedListeners>
+    </system.diagnostics>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+        <binding name="SPUpdateUtilitiesSoap" maxReceivedMessageSize="2147483647" />
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://asmx.sputnik-it.com/wsSPS_services/SPUpdateUtilities.asmx" binding="basicHttpBinding" bindingConfiguration="SPUpdateUtilitiesSoap" contract="SPUpdateUtilitiesService.SPUpdateUtilitiesSoap" name="SPUpdateUtilitiesSoap"/>
+        </client>
+    </system.serviceModel>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup><applicationSettings>
+        <SPS.SYS.SrvFTPUpdate.My.MySettings>
+            <setting name="dbSelectConn" serializeAs="String">
+                <value>Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Sputnik DbSelect;Data Source=SPX01\MSSQLSERVER12</value>
+            </setting>
+        </SPS.SYS.SrvFTPUpdate.My.MySettings>
+    </applicationSettings>
+    <userSettings>
+        <SPS.SYS.SrvFTPUpdate.My.MySettings>
+            <setting name="SearchInterval" serializeAs="String">
+                <value>0</value>
+            </setting>
+            <setting name="SPSEnterpriseFolder" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="DbConn" serializeAs="String">
+                <value />
+            </setting>
+        </SPS.SYS.SrvFTPUpdate.My.MySettings>
+    </userSettings>
+</configuration>

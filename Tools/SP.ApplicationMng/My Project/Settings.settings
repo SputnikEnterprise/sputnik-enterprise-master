@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="ftpSite_Scan" Type="System.String" Scope="User">
+      <Value Profile="(Default)">scan.domain.com</Value>
+    </Setting>
+    <Setting Name="CVLWatchingFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)"></Value>
+    </Setting>
+    <Setting Name="CVLParsedFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)"></Value>
+    </Setting>
+    <Setting Name="CVL_Connstring" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=spCVLizerBaseInfo;Data Source=dbserver</Value>
+    </Setting>
+    <Setting Name="CV_Folder_ToWatch" Type="System.String" Scope="User">
+      <Value Profile="(Default)"></Value>
+    </Setting>
+    <Setting Name="SP_ApplicationMng_SPCVLCategorizeService_SemanticExtractionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://cvlizer.joinvision.com:443/cvlizer/exservicesoap</Value>
+    </Setting>
+    <Setting Name="ConnString_Email" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=spEMailJobs;Data Source=dbserver;Connection Timeout=120;Current Language=German;Max Pool Size=500</Value>
+    </Setting>
+    <Setting Name="ConnString_Scan" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=spScanJobs;Data Source=dbserver;Connection Timeout=120;Current Language=German;Max Pool Size=500</Value>
+    </Setting>
+    <Setting Name="ConnString_Info" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=spSystemInfo;Data Source=dbserver;Connection Timeout=120;Current Language=German;Max Pool Size=500</Value>
+    </Setting>
+    <Setting Name="ConnString_Application" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=applicant;Data Source=dbserver;Connection Timeout=120;Current Language=German;Max Pool Size=500</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

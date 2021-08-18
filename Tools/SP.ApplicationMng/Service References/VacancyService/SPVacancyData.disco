@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx?wsdl" docRef="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx" xmlns:q1="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/" binding="q1:SPVakanzDataSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx" xmlns:q2="http://asmx.domain.com/wsSPS_services/SPVacancyData.asmx/" binding="q2:SPVakanzDataSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

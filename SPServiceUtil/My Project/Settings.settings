@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="iTop" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="iLeft" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="frmLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LV_GAV_Size" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SPGAV_SP_GAV_PVL_SPGAV2012Data" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://asmx.domain.com/spgav_services/SPGAV2012Data.asmx</Value>
+    </Setting>
+    <Setting Name="SP_ServiceUtil_SP_ServiceUtil_SPServiceUtil" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://asmx.domain.com/spgav_services/SPServiceUtil.asmx</Value>
+    </Setting>
+    <Setting Name="SP_ServiceUtil__wsSPS_Services_SPModulUtil" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://asmx.domain.com/wsSPS_services/SPModulUtil.asmx</Value>
+    </Setting>
+    <Setting Name="SPServiceUtil__wsSP_JobsCH_Util_SP_JobsCH_Util" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://asmx.domain.com/wsSPS_services/SP_JobsCH_Util.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://servlets.iex.jv.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="SemanticExtractionService" targetNamespace="http://servlets.iex.jv.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://cvlizer.joinvision.com:443/cvlizer/exservicesoap?xsd=1" namespace="http://servlets.iex.jv.com/" />
+    </xsd:schema>
+  </types>
+  <message name="convertToPNG">
+    <part name="sourceFormat" type="xsd:string" />
+    <part name="sourceDocument" type="xsd:base64Binary" />
+    <part name="page" type="xsd:int" />
+    <part name="imageWidth" type="xsd:int" />
+    <part name="dpi" type="xsd:int" />
+    <part name="maximumImageWidth" type="xsd:int" />
+    <part name="imageColorScheme" type="xsd:string" />
+    <part name="username" type="xsd:string" />
+    <part name="password" type="xsd:string" />
+  </message>
+  <message name="convertToPNGResponse">
+    <part name="return" type="xsd:base64Binary" />
+  </message>
+  <message name="SOAPException">
+    <part name="fault" element="tns:SOAPException" />
+  </message>
+  <message name="getContingent">
+    <part name="username" type="xsd:string" />
+    <part name="password" type="xsd:string" />
+  </message>
+  <message name="getContingentResponse">
+    <part name="return" type="xsd:int" />
+  </message>
+  <message name="getXMLDomainsFor">
+    <part name="language" type="xsd:string" />
+  </message>
+  <message name="getXMLDomainsForResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="extractToXML">
+    <part name="username" type="xsd:string" />
+    <part name="password" type="xsd:string" />
+    <part name="language" type="xsd:string" />
+    <part name="model" type="xsd:string" />
+    <part name="inputdata" type="xsd:base64Binary" />
+    <part name="inputdatatype" type="xsd:string" />
+  </message>
+  <message name="extractToXMLResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="extractToTemplate">
+    <part name="username" type="xsd:string" />
+    <part name="password" type="xsd:string" />
+    <part name="language" type="xsd:string" />
+    <part name="model" type="xsd:string" />
+    <part name="inputdata" type="xsd:base64Binary" />
+    <part name="inputdatatype" type="xsd:string" />
+    <part name="documenttemplate" type="xsd:base64Binary" />
+  </message>
+  <message name="extractToTemplateResponse">
+    <part name="return" type="xsd:base64Binary" />
+  </message>
+  <message name="mergeToXML">
+    <part name="username" type="xsd:string" />
+    <part name="password" type="xsd:string" />
+    <part name="language" type="xsd:string" />
+    <part name="model" type="xsd:string" />
+    <part name="inputDocument" type="tns:inputDocArray" />
+  </message>
+  <message name="mergeToXMLResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="categorize">
+    <part name="inputDocument" type="tns:inputDocArray" />
+    <part name="domain" type="xsd:string" />
+    <part name="username" type="xsd:string" />
+    <part name="password" type="xsd:string" />
+  </message>
+  <message name="categorizeResponse">
+    <part name="return" type="tns:outputDocArray" />
+  </message>
+  <message name="cutOutSingleOffer">
+    <part name="username" type="xsd:string" />
+    <part name="password" type="xsd:string" />
+    <part name="url" type="xsd:string" />
+  </message>
+  <message name="cutOutSingleOfferResponse">
+    <part name="return" type="xsd:base64Binary" />
+  </message>
+  <message name="test" />
+  <message name="testResponse">
+    <part name="return" type="xsd:boolean" />
+  </message>
+  <portType name="ISemanticExtraction">
+    <operation name="convertToPNG" parameterOrder="sourceFormat sourceDocument page imageWidth dpi maximumImageWidth imageColorScheme username password">
+      <input wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/convertToPNGRequest" message="tns:convertToPNG" />
+      <output wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/convertToPNGResponse" message="tns:convertToPNGResponse" />
+      <fault wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/convertToPNG/Fault/SOAPException" name="SOAPException" message="tns:SOAPException" />
+    </operation>
+    <operation name="getContingent" parameterOrder="username password">
+      <input wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/getContingentRequest" message="tns:getContingent" />
+      <output wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/getContingentResponse" message="tns:getContingentResponse" />
+      <fault wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/getContingent/Fault/SOAPException" name="SOAPException" message="tns:SOAPException" />
+    </operation>
+    <operation name="getXMLDomainsFor">
+      <input wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/getXMLDomainsForRequest" message="tns:getXMLDomainsFor" />
+      <output wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/getXMLDomainsForResponse" message="tns:getXMLDomainsForResponse" />
+      <fault wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/getXMLDomainsFor/Fault/SOAPException" name="SOAPException" message="tns:SOAPException" />
+    </operation>
+    <operation name="extractToXML" parameterOrder="username password language model inputdata inputdatatype">
+      <input wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/extractToXMLRequest" message="tns:extractToXML" />
+      <output wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/extractToXMLResponse" message="tns:extractToXMLResponse" />
+      <fault wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/extractToXML/Fault/SOAPException" name="SOAPException" message="tns:SOAPException" />
+    </operation>
+    <operation name="extractToTemplate" parameterOrder="username password language model inputdata inputdatatype documenttemplate">
+      <input wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/extractToTemplateRequest" message="tns:extractToTemplate" />
+      <output wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/extractToTemplateResponse" message="tns:extractToTemplateResponse" />
+      <fault wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/extractToTemplate/Fault/SOAPException" name="SOAPException" message="tns:SOAPException" />
+    </operation>
+    <operation name="mergeToXML" parameterOrder="username password language model inputDocument">
+      <input wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/mergeToXMLRequest" message="tns:mergeToXML" />
+      <output wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/mergeToXMLResponse" message="tns:mergeToXMLResponse" />
+      <fault wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/mergeToXML/Fault/SOAPException" name="SOAPException" message="tns:SOAPException" />
+    </operation>
+    <operation name="categorize" parameterOrder="inputDocument domain username password">
+      <input wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/categorizeRequest" message="tns:categorize" />
+      <output wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/categorizeResponse" message="tns:categorizeResponse" />
+      <fault wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/categorize/Fault/SOAPException" name="SOAPException" message="tns:SOAPException" />
+    </operation>
+    <operation name="cutOutSingleOffer" parameterOrder="username password url">
+      <input wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/cutOutSingleOfferRequest" message="tns:cutOutSingleOffer" />
+      <output wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/cutOutSingleOfferResponse" message="tns:cutOutSingleOfferResponse" />
+      <fault wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/cutOutSingleOffer/Fault/SOAPException" name="SOAPException" message="tns:SOAPException" />
+    </operation>
+    <operation name="test">
+      <input wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/testRequest" message="tns:test" />
+      <output wsam:Action="http://servlets.iex.jv.com/ISemanticExtraction/testResponse" message="tns:testResponse" />
+    </operation>
+  </portType>
+  <binding name="SemanticExtractionPortBinding" type="tns:ISemanticExtraction">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="convertToPNG">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </output>
+      <fault name="SOAPException">
+        <soap:fault use="literal" name="SOAPException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getContingent">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </output>
+      <fault name="SOAPException">
+        <soap:fault use="literal" name="SOAPException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getXMLDomainsFor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </output>
+      <fault name="SOAPException">
+        <soap:fault use="literal" name="SOAPException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="extractToXML">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </output>
+      <fault name="SOAPException">
+        <soap:fault use="literal" name="SOAPException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="extractToTemplate">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </output>
+      <fault name="SOAPException">
+        <soap:fault use="literal" name="SOAPException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="mergeToXML">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </output>
+      <fault name="SOAPException">
+        <soap:fault use="literal" name="SOAPException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="categorize">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </output>
+      <fault name="SOAPException">
+        <soap:fault use="literal" name="SOAPException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="cutOutSingleOffer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </output>
+      <fault name="SOAPException">
+        <soap:fault use="literal" name="SOAPException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="test">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://servlets.iex.jv.com/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SemanticExtractionService">
+    <port name="SemanticExtractionPort" binding="tns:SemanticExtractionPortBinding">
+      <soap:address location="https://cvlizer.joinvision.com:443/cvlizer/exservicesoap" />
+    </port>
+  </service>
+</definitions>

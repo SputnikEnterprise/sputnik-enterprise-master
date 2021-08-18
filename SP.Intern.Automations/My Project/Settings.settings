@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ecallLogs_ifrmWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ecallLogs_ifrmHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ecallLogs_frmLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Connstr_InfoService" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Password=password;Persist Security Info=True;User ID=GAVUser;Initial Catalog=Sputnik InfoSystem;Data Source=dbserver</Value>
+    </Setting>
+    <Setting Name="ConnStr_SputnikInfoSystem" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Password=password;Persist Security Info=True;User ID=username;Initial Catalog=Sputnik InfoSystem;Data Source=dbserver</Value>
+    </Setting>
+    <Setting Name="ConnStr_JobCh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Password=password;Persist Security Info=True;User ID=username;Initial Catalog=spContract;Data Source=dbserver</Value>
+    </Setting>
+    <Setting Name="ecallLogs_lastselectedservice" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="pm_ifrmWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="pm_ifrmHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="pm_frmLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

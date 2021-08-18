@@ -1,0 +1,1261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC6BF3F1-3FB2-4007-97DA-2EB8FE0C886B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SPS.MainView.Program</StartupObject>
+    <RootNamespace>SPS.MainView</RootNamespace>
+    <AssemblyName>SPS.MainView</AssemblyName>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DocumentationFile>SPS.MainView.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Components.net\</OutputPath>
+    <DocumentationFile>SPS.MainView.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SP.ModulView.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PersonalDocuments.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoUpdater.NET, Version=1.4.10.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\.Net 4.5\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonMark, Version=0.1.0.0, Culture=neutral, PublicKeyToken=001ef8810438905d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CommonMark.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX, Version=11.0.0.0, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\DevComponents.TreeGX.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Metro.Navigation.11.2">
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.1.Drawing, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Tutorials.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v20.1.Win, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPdfViewer.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\.Net 4.5\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SP.KD.KontaktMng, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7cec164de69d62db, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components.net\SP.KD.KontaktMng.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SP.MA.AdvancePaymentMng, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cbba16a312c4e8f5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components.net\SP.MA.AdvancePaymentMng.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SP.MA.KontaktMng, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a0dcdd4cfc321350, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components.net\SP.MA.KontaktMng.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SP.MA.MLohnMng, Version=1.0.0.0, Culture=neutral, PublicKeyToken=48631e4a8853d0ea, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components.net\SP.MA.MLohnMng.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SP.MA.VorstellungMng, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d035e3584e0ae18, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components.net\SP.MA.VorstellungMng.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SP.ModuleCaching">
+      <HintPath>..\..\..\Components.net\SP.ModuleCaching.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SP.RP.ShowScannedDoc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c9c744c72b34388, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components.net\SP.RP.ShowScannedDoc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SP.RPContent.PrintUtility">
+      <HintPath>..\..\..\Components.net\SP.RPContent.PrintUtility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SP.TinyMessengerWrapper">
+      <HintPath>..\..\..\Components.net\SP.TinyMessengerWrapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SP.TodoMng, Version=1.0.0.0, Culture=neutral, PublicKeyToken=26e46c23f6009fdf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Components.net\SP.TodoMng.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SPGAVBLSearch">
+      <HintPath>..\Libraries\SPGAVBLSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="SPGAVSchreinerSearch">
+      <HintPath>..\Libraries\SPGAVSchreinerSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Traysoft.AddTapi, Version=5.2.0.910, Culture=neutral, PublicKeyToken=36126db033de9077, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Traysoft.AddTapi.dll</HintPath>
+    </Reference>
+    <Reference Include="Traysoft.Internal, Version=6.0.0.50813, Culture=neutral, PublicKeyToken=36126db033de9077, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Traysoft.Internal.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="DataBase\DataBaseAccess.vb" />
+    <Compile Include="DataBase\DataObjects\DataObjects.vb" />
+    <Compile Include="MainView\frmViewPDF.Designer.vb">
+      <DependentUpon>frmViewPDF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainView\frmViewPDF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView\frmWait.Designer.vb">
+      <DependentUpon>frmWait.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainView\frmWait.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView\Loging\ClsDivReg.vb" />
+    <Compile Include="MainView\Loging\ClsMain_Net.vb" />
+    <Compile Include="MainView\Loging\ClsMDData.vb" />
+    <Compile Include="MainView\Loging\ClsPublicData.vb" />
+    <Compile Include="MainView\Loging\Defination.vb" />
+    <Compile Include="MainView\Loging\Forms\frmMDSelection.Designer.vb">
+      <DependentUpon>frmMDSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainView\Loging\Forms\frmMDSelection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView\Loging\Forms\MDList.Designer.vb">
+      <DependentUpon>MDList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainView\Loging\Forms\MDList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainView\Loging\FuncLvg.vb" />
+    <Compile Include="MainView\Loging\Functions.vb" />
+    <Compile Include="MainView\Loging\IPFunctions.vb" />
+    <Compile Include="MainView\Programm.vb" />
+    <Compile Include="MainView\pgLOListing.Designer.vb">
+      <DependentUpon>pgLOListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainView\pgLOListing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainView\SplashScreen2.Designer.vb">
+      <DependentUpon>SplashScreen2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainView\SplashScreen2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView\Update\frmUpdate.Designer.vb">
+      <DependentUpon>frmUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainView\Update\frmUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView\Update\WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainView\Update\WaitForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Application\ClsAppSetting.vb" />
+    <Compile Include="Moduls\Application\ClsAppModuls.vb" />
+    <Compile Include="Moduls\Application\frmApplicationDetail.Designer.vb">
+      <DependentUpon>frmApplicationDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Application\frmApplicationDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Application\frmCVLSearch.Designer.vb">
+      <DependentUpon>frmCVLSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Application\frmCVLSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Application\frmEmployeeQuickSearch.Designer.vb">
+      <DependentUpon>frmEmployeeQuickSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Application\frmEmployeeQuickSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Application\ucApplication.Designer.vb">
+      <DependentUpon>ucApplication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Application\ucApplication.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Application\ucApplicationDetail.Designer.vb">
+      <DependentUpon>ucApplicationDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Application\ucApplicationDetail.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Application\ucCVLSearch.Designer.vb">
+      <DependentUpon>ucCVLSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Application\ucCVLSearch.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\ClsSetting.vb" />
+    <Compile Include="Moduls\ClsOpenModul.vb" />
+    <Compile Include="Moduls\Debitoren\ClsREPropertySetting.vb" />
+    <Compile Include="Moduls\Debitoren\ClsREProperties.vb" />
+    <Compile Include="Moduls\Debitoren\ClsREModuls.vb" />
+    <Compile Include="Moduls\Debitoren\ClsRERPDetails.vb" />
+    <Compile Include="Moduls\Debitoren\ClsRESetting.vb" />
+    <Compile Include="Moduls\Debitoren\Fremdrechnung\ClsFOPModuls.vb" />
+    <Compile Include="Moduls\Debitoren\Fremdrechnung\ClsFOPSetting.vb" />
+    <Compile Include="Moduls\Debitoren\Fremdrechnung\pageFOP.Designer.vb">
+      <DependentUpon>pageFOP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Debitoren\Fremdrechnung\pageFOP.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Debitoren\frmREDetails.Designer.vb">
+      <DependentUpon>frmREDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Debitoren\frmREDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Debitoren\Gutschriften\ClsGutschriftModuls.vb" />
+    <Compile Include="Moduls\Debitoren\Gutschriften\ClsGutschriftSetting.vb" />
+    <Compile Include="Moduls\Debitoren\Gutschriften\pageGutschrif.Designer.vb">
+      <DependentUpon>pageGutschrif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Debitoren\Gutschriften\pageGutschrif.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Debitoren\Mahnung\ClsMahnModuls.vb" />
+    <Compile Include="Moduls\Debitoren\Mahnung\ClsMahnSetting.vb" />
+    <Compile Include="Moduls\Debitoren\Mahnung\pageMahnung.Designer.vb">
+      <DependentUpon>pageMahnung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Debitoren\Mahnung\pageMahnung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Debitoren\pageDebitoren.Designer.vb">
+      <DependentUpon>pageDebitoren.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Debitoren\pageDebitoren.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Debitoren\Zahlungseingang\ClsZEModuls.vb" />
+    <Compile Include="Moduls\Debitoren\Zahlungseingang\ClsGutZESetting.vb" />
+    <Compile Include="Moduls\Debitoren\Zahlungseingang\pageZE.Designer.vb">
+      <DependentUpon>pageZE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Debitoren\Zahlungseingang\pageZE.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Einsatz\ClsESRPDetails.vb" />
+    <Compile Include="Moduls\Einsatz\ClsESProperties.vb" />
+    <Compile Include="Moduls\Einsatz\ClsESPropertySetting.vb" />
+    <Compile Include="Moduls\Einsatz\ClsESModuls.vb" />
+    <Compile Include="Moduls\Einsatz\ClsESSetting.vb" />
+    <Compile Include="Moduls\Einsatz\frmESDetails.Designer.vb">
+      <DependentUpon>frmESDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Einsatz\frmESDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Einsatz\pgES.Designer.vb">
+      <DependentUpon>pgES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Einsatz\pgES.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Lohn\ClsLOESDetails.vb" />
+    <Compile Include="Moduls\Lohn\ClsLOModuls.vb" />
+    <Compile Include="Moduls\Lohn\ClsLOProperties.vb" />
+    <Compile Include="Moduls\Lohn\ClsLOPropertySetting.vb" />
+    <Compile Include="Moduls\Lohn\ClsLORPDetails.vb" />
+    <Compile Include="Moduls\Lohn\ClsLOSetting.vb" />
+    <Compile Include="Moduls\Lohn\ClsLOZGDetails.vb" />
+    <Compile Include="Moduls\Lohn\frmLODetails.Designer.vb">
+      <DependentUpon>frmLODetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Lohn\frmLODetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Lohn\pageSalary.Designer.vb">
+      <DependentUpon>pageSalary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Lohn\pageSalary.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Report\ClsReportModuls.vb" />
+    <Compile Include="Moduls\Report\ClsReportPropertySetting.vb" />
+    <Compile Include="Moduls\Report\ClsReportSetting.vb" />
+    <Compile Include="Moduls\Report\frmReportDetails.Designer.vb">
+      <DependentUpon>frmReportDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Report\frmReportDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Report\pgReport.Designer.vb">
+      <DependentUpon>pgReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Report\pgReport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainView\SupportCode\SuportedCodes.vb" />
+    <Compile Include="Moduls\TODO\pageTODO.Designer.vb">
+      <DependentUpon>pageTODO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\TODO\pageTODO.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Vorschuss\ClsZGModuls.vb" />
+    <Compile Include="Moduls\Vorschuss\ClsZGSetting.vb" />
+    <Compile Include="Moduls\Vorschuss\pgZG.Designer.vb">
+      <DependentUpon>pgZG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Vorschuss\pgZG.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintRibbonControllerResources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPApplicationWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPNotificationWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SPUpdateUtilitiesService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Common\CommonSettings.vb" />
+    <Compile Include="Settings\Common\SettingMainViewKeys.vb" />
+    <Compile Include="Settings\Common\SettingsMainViewManager.vb" />
+    <Compile Include="Settings\Debitoren\SettingDebitorenKeys.vb" />
+    <Compile Include="Settings\Debitoren\SettingsDebitorenManager.vb" />
+    <Compile Include="Settings\ES\SettingESKeys.vb" />
+    <Compile Include="Settings\ES\SettingsESManager.vb" />
+    <Compile Include="Moduls\Offers\ClsOfferSetting.vb" />
+    <Compile Include="Moduls\Offers\ClsOfferModuls.vb" />
+    <Compile Include="Moduls\Offers\pgOffers.Designer.vb">
+      <DependentUpon>pgOffers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Offers\pgOffers.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Propose\ClsPPropertySetting.vb" />
+    <Compile Include="Moduls\Propose\ClsProposeModuls.vb" />
+    <Compile Include="Moduls\Propose\frmProposeDetails.Designer.vb">
+      <DependentUpon>frmProposeDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Propose\frmProposeDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Vakanzen\ClsVakPropertySetting.vb" />
+    <Compile Include="Moduls\Vakanzen\ClsVacanciesModuls.vb" />
+    <Compile Include="Moduls\Vakanzen\frmVakDetails.Designer.vb">
+      <DependentUpon>frmVakDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Vakanzen\frmVakDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Kandidat\SettingMAKeys.vb" />
+    <Compile Include="Settings\Kandidat\SettingsMAManager.vb" />
+    <Compile Include="Settings\Kunden\SettingKDKeys.vb" />
+    <Compile Include="Settings\Kunden\SettingsKDManager.vb" />
+    <Compile Include="MainView\SupportCode\ModulConstants.vb" />
+    <Compile Include="Settings\Report\SettingReportKeys.vb" />
+    <Compile Include="Settings\Report\SettingsReportManager.vb" />
+    <Compile Include="MainView\frmMainView.Designer.vb">
+      <DependentUpon>frmMainView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainView\frmMainView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Kandidaten\ClsMAModuls.vb" />
+    <Compile Include="Moduls\Kandidaten\ClsMAProperties.vb" />
+    <Compile Include="Moduls\Kandidaten\ClsMAPropertySetting.vb" />
+    <Compile Include="Moduls\Kandidaten\ClsMASetting.vb" />
+    <Compile Include="Moduls\Kandidaten\frmMADetails.Designer.vb">
+      <DependentUpon>frmMADetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Kandidaten\frmMADetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Kunden\ClsKDSetting.vb" />
+    <Compile Include="Moduls\Kunden\ClsKDPropertySetting.vb" />
+    <Compile Include="Moduls\Propose\ClsProposeSetting.vb" />
+    <Compile Include="Moduls\Vakanzen\ClsVakSetting.vb" />
+    <Compile Include="Moduls\Kunden\frmKDDetails.Designer.vb">
+      <DependentUpon>frmKDDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Kunden\frmKDDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moduls\Kunden\ClsKDModuls.vb" />
+    <Compile Include="Moduls\Kunden\pageKunden.Designer.vb">
+      <DependentUpon>pageKunden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Kunden\pageKunden.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Kandidaten\pageKandidaten.Designer.vb">
+      <DependentUpon>pageKandidaten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Kandidaten\pageKandidaten.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Propose\pgPropose.Designer.vb">
+      <DependentUpon>pgPropose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Propose\pgPropose.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Moduls\Vakanzen\pgVakanzen.Designer.vb">
+      <DependentUpon>pgVakanzen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Moduls\Vakanzen\pgVakanzen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings\XML\ClsXMLUtility.vb" />
+    <Compile Include="Sonstiges\Pubfunc.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainView\frmViewPDF.resx">
+      <DependentUpon>frmViewPDF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView\frmWait.resx">
+      <DependentUpon>frmWait.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView\Loging\Forms\frmMDSelection.resx">
+      <DependentUpon>frmMDSelection.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView\Loging\Forms\MDList.resx">
+      <DependentUpon>MDList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView\pgLOListing.resx">
+      <DependentUpon>pgLOListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView\SplashScreen2.resx">
+      <DependentUpon>SplashScreen2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView\Update\frmUpdate.resx">
+      <DependentUpon>frmUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView\Update\WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Application\frmApplicationDetail.resx">
+      <DependentUpon>frmApplicationDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Application\frmCVLSearch.resx">
+      <DependentUpon>frmCVLSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Application\frmEmployeeQuickSearch.resx">
+      <DependentUpon>frmEmployeeQuickSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Application\ucApplication.resx">
+      <DependentUpon>ucApplication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Application\ucApplicationDetail.resx">
+      <DependentUpon>ucApplicationDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Application\ucCVLSearch.resx">
+      <DependentUpon>ucCVLSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Debitoren\Fremdrechnung\pageFOP.resx">
+      <DependentUpon>pageFOP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Debitoren\frmREDetails.resx">
+      <DependentUpon>frmREDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Debitoren\Gutschriften\pageGutschrif.resx">
+      <DependentUpon>pageGutschrif.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Debitoren\Mahnung\pageMahnung.resx">
+      <DependentUpon>pageMahnung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Debitoren\pageDebitoren.resx">
+      <DependentUpon>pageDebitoren.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Debitoren\Zahlungseingang\pageZE.resx">
+      <DependentUpon>pageZE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Einsatz\frmESDetails.resx">
+      <DependentUpon>frmESDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Einsatz\pgES.resx">
+      <DependentUpon>pgES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Lohn\frmLODetails.resx">
+      <DependentUpon>frmLODetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Lohn\pageSalary.resx">
+      <DependentUpon>pageSalary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Offers\pgOffers.resx">
+      <DependentUpon>pgOffers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Propose\frmProposeDetails.resx">
+      <DependentUpon>frmProposeDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\TODO\pageTODO.resx">
+      <DependentUpon>pageTODO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Vakanzen\frmVakDetails.resx">
+      <DependentUpon>frmVakDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Report\frmReportDetails.resx">
+      <DependentUpon>frmReportDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Report\pgReport.resx">
+      <DependentUpon>pgReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Vorschuss\pgZG.resx">
+      <DependentUpon>pgZG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView\frmMainView.resx">
+      <DependentUpon>frmMainView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Kandidaten\frmMADetails.resx">
+      <DependentUpon>frmMADetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Kandidaten\pageKandidaten.resx">
+      <DependentUpon>pageKandidaten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Kunden\frmKDDetails.resx">
+      <DependentUpon>frmKDDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Kunden\pageKunden.resx">
+      <DependentUpon>pageKunden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Propose\pgPropose.resx">
+      <DependentUpon>pgPropose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moduls\Vakanzen\pgVakanzen.resx">
+      <DependentUpon>pgVakanzen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPNotificationWebService.CustomerNotificationDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPNotificationWebService.CVLBaseDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPNotificationWebService.JobplattformCounterDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPNotificationWebService.LocationGoordinateDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPNotificationWebService.MainViewSettingFileDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPNotificationWebService.MandantData.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPNotificationWebService.NotifyMessageData.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPNotificationWebService.ProviderDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPNotificationWebService.ScanDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPNotificationWebService.UserFormControlTemplateDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPNotificationWebService.WOSNotificationDTO.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\SPApplicationWebService\SPApplication.wsdl" />
+    <None Include="Service References\SPNotificationWebService\SPNotification.wsdl" />
+    <None Include="Service References\SPUpdateUtilitiesService\SPS.MainView.SPUpdateUtilitiesService.GAVVersionDataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SPS.MainView.SPUpdateUtilitiesService.UpdateUtilitiesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\SPUpdateUtilities.wsdl" />
+    <None Include="SP.ModulView.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Grafiken\ITEMOPEN.GIF" />
+    <Content Include="Grafiken\Kandidat.ico" />
+    <Content Include="Grafiken\Kunde.ico" />
+    <Content Include="MainView\Assets\Far Stiftung.gif" />
+    <Content Include="MainView\Assets\Gefak_BL.gif" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Auszahlungen_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_DB1.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Debitoren_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Dokliste_72pixel.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Einsätze_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Fremdrechnung_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Kandidaten_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Kunden_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Lohn_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Nachrichten_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Rapporte_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Telefon_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Umsatz.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Vakanzen_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Vorschlag_72.png" />
+    <Content Include="MainView\Assets\Listen\Sputnik_Icon_LI_Zahlungen_72.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_Icon_Einsätze.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Fakturen.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Fremdrechnungen.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Gutschriften.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Kandidaten.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Kassenbuch.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Kunden.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Löhne.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Mahnungen.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Massenversand.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Rapporte.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_Icon_Vakanzen.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Vorschläge.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Vorschüsse.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_ICON_Zahlungseingänge.png" />
+    <Content Include="MainView\Assets\Mainview\Splash\Sputnik_SES_Logo_Symbol_OrangeReflection_5 4.jpg" />
+    <Content Include="MainView\Assets\Sputnik_Icon AG-Lohnrekap_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon AHV-Lohnbescheinigung_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon AN-Lohnrekap_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Arbeitsstunden_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Bruttolohnjournal_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Buchungsbelege_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon BVG-Liste_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon eXtra-Benutzerhandbuch_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon eXtra-Fernwartung_R.Ring_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon eXtra-Fernwartung_SOS_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon eXtra-GAV-News_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon eXtra-Updateprotokoll_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon eXtra_Löschprotokoll.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon FAK-Abrechnung_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Franz .Grenzg nger_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Fremdleistungen_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Guthaben_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon KIGA-Statistik_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Kinder&amp;Ausbildungszulage_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Lohnarten-Rekap_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Lohnausweis_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Lohnbelege_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Lohnkonti_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Quellensteuer_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon UVG-Jahresliste_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Verw.-Benutzer_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Verw.-Dokumentenverwaltung_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Verw.-Einstellungen_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Verw.-Lohnartenstamm_GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Verw.-Mandantenverw._GzD.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon Verw.-Tabellenverwaltung_GzD.png" />
+    <Content Include="MainView\Assets\Mainview\Main\Sputnik_Icon_Bewerbermanagement.png" />
+    <Content Include="MainView\Assets\Sputnik_Icon_eXtra_Datenliste_72pixel.png" />
+    <Content Include="MainView\Assets\tempdata.png" />
+    <Content Include="MainView\Assets\UserGreen.png" />
+    <Content Include="PersonalDocuments.ico" />
+    <None Include="Resources\warning_16x16.png" />
+    <None Include="Service References\SPApplicationWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\SPApplicationWebService\configuration.svcinfo" />
+    <None Include="Service References\SPApplicationWebService\configuration91.svcinfo" />
+    <None Include="Service References\SPApplicationWebService\SPApplication.disco" />
+    <None Include="Service References\SPNotificationWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\SPNotificationWebService\configuration.svcinfo" />
+    <None Include="Service References\SPNotificationWebService\configuration91.svcinfo" />
+    <None Include="Service References\SPNotificationWebService\SPNotification.disco" />
+    <None Include="Resources\ChangeApplicationrecord.png" />
+    <None Include="Resources\announcement_16x16.png" />
+    <None Include="Resources\announcement_32x32.png" />
+    <None Include="Resources\announcement_16x161.png" />
+    <None Include="Resources\announcement_32x321.png" />
+    <Content Include="Resources\bullet_ball_green.png" />
+    <Content Include="Resources\bullet_ball_red.png" />
+    <Content Include="Resources\bullet_ball_yellow.png" />
+    <None Include="Resources\Icon1.ico" />
+    <Content Include="Resources\more_arrow.bmp" />
+    <None Include="Resources\protectsheet_16x16.png" />
+    <Content Include="Resources\unread.bmp" />
+    <None Include="Service References\SPUpdateUtilitiesService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\SPUpdateUtilitiesService\configuration.svcinfo" />
+    <None Include="Service References\SPUpdateUtilitiesService\configuration91.svcinfo" />
+    <None Include="Service References\SPUpdateUtilitiesService\SPUpdateUtilities.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SPApplicationWebService\" />
+    <WCFMetadataStorage Include="Service References\SPNotificationWebService\" />
+    <WCFMetadataStorage Include="Service References\SPUpdateUtilitiesService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Listing\Common\SP.RP.EmployeeCustomerHourSearch\SP.RP.EmployeeCustomerHourSearch.vbproj">
+      <Project>{9b8d4756-50dc-4ff4-8924-854ea130b0ac}</Project>
+      <Name>SP.RP.EmployeeCustomerHourSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SP.RP.NotDoneList\SP.RP.NotDoneList.vbproj">
+      <Project>{f7a78726-59d9-4e95-b12a-4223e6b30619}</Project>
+      <Name>SP.RP.NotDoneList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SP.StammDaten.PrintUtility\SP.StammDaten.PrintUtility.vbproj">
+      <Project>{e25e2b8d-eb4f-471d-a5af-fcc0a1f3d44b}</Project>
+      <Name>SP.StammDaten.PrintUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPCallHistory\SPCallHistory.vbproj">
+      <Project>{fb65c3ac-3270-4e93-b3a1-a0a101c76bd5}</Project>
+      <Name>SPCallHistory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPKDSearch\SPKDSearch.vbproj">
+      <Project>{ca5f5909-7505-4f81-9bee-f17f008b1d4d}</Project>
+      <Name>SPKDSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPKDUmsatz\SPKDUmsatz.vbproj">
+      <Project>{35265dcb-dd5c-4249-a6b3-d5e2577e05ee}</Project>
+      <Name>SPKDUmsatz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPMASearch\SPMASearch.vbproj">
+      <Project>{28fbfd2c-9451-48d9-ad75-7d3d96c4c361}</Project>
+      <Name>SPMASearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPRPListSearch\SPRPListSearch.vbproj">
+      <Project>{7884e337-f21a-4dd1-a6b8-524a11ea337b}</Project>
+      <Name>SPRPListSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPSOfferUtility.Net\SPSOfferUtility_Net.vbproj">
+      <Project>{9e07f30f-80f1-4d03-868c-443349a1c091}</Project>
+      <Name>SPSOfferUtility_Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPVakSearch\SPVakSearch.vbproj">
+      <Project>{1ea2f777-89b0-4cc9-9f21-dc7a14084245}</Project>
+      <Name>SPVakSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPZESearch\SPZESearch.vbproj">
+      <Project>{8eaa73f6-db79-406f-bdc5-3fd02b540559}</Project>
+      <Name>SPZESearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPZGSearch\SPZGSearch.vbproj">
+      <Project>{88fbc86a-4fcf-4d18-a76e-4a9395382d62}</Project>
+      <Name>SPZGSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\GAV\SPFARListeSearch\SPFARListeSearch.vbproj">
+      <Project>{e774031f-d914-41cb-98a3-8f74db518e53}</Project>
+      <Name>SPFARListeSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\GAV\SPGAVPVLSearch\SPGAVPVLSearch.vbproj">
+      <Project>{a34593ec-711c-4cf0-85cd-315bafe20961}</Project>
+      <Name>SPGAVPVLSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\GAV\SPLOIPSearch\SPLOIPSearch.vbproj">
+      <Project>{8000d000-72e2-425c-a74d-379f2b1aee01}</Project>
+      <Name>SPLOIPSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Monthly\SPBruttolohnjournal\SPBruttolohnjournal.vbproj">
+      <Project>{a88cbc2f-d588-4d00-bb3b-c89c50b9465d}</Project>
+      <Name>SPBruttolohnjournal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Monthly\SPBVGListeSearch\SPBVGListeSearch.vbproj">
+      <Project>{f9aaea0d-5b69-4482-b396-f5c08d99b3b6}</Project>
+      <Name>SPBVGListeSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Monthly\SPFibuSearch\SPFibuSearch.vbproj">
+      <Project>{5de0823d-1a18-43ef-b3ec-13c66d7db927}</Project>
+      <Name>SPFibuSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Monthly\SPFremdListSearch\SPFremdListSearch.vbproj">
+      <Project>{6d816b6a-a8bd-4916-998b-77eed1be5c95}</Project>
+      <Name>SPFremdListSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Monthly\SPLOAGSearch\SPLOAGSearch.vbproj">
+      <Project>{4afcf5b9-aa0f-43a8-942d-9c8f06d5052e}</Project>
+      <Name>SPLOAGSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Monthly\SPLOANSearch\SPLOANSearch.vbproj">
+      <Project>{9786f822-8320-432a-b1cd-9416a4b4a14e}</Project>
+      <Name>SPLOANSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Monthly\SPLOStdListSearch\SPLOStdListSearch.vbproj">
+      <Project>{4a98c60b-fb27-4ee7-9d45-f481249e393c}</Project>
+      <Name>SPLOStdListSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Monthly\SPMFakListSearch\SPMFakListSearch.vbproj">
+      <Project>{805f9f9d-a958-4aa3-9bc7-020a47587c33}</Project>
+      <Name>SPMFakListSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Monthly\SPQSTListeSearch\SPQSTListeSearch.vbproj">
+      <Project>{679d7c1a-793e-4526-8462-f9b9cc7c69af}</Project>
+      <Name>SPQSTListeSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Yearly\SPLOFranzSearch\SPLOFranzSearch.vbproj">
+      <Project>{77e14b98-fed6-4992-a8f8-f592b57e336b}</Project>
+      <Name>SPLOFranzSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Yearly\SPLOGUSearch\SPLOGUSearch.vbproj">
+      <Project>{22da857f-c060-4e05-8ff5-a91129b89910}</Project>
+      <Name>SPLOGUSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Yearly\SPLOKigaYSearch\SPLOKigaYSearch.vbproj">
+      <Project>{fe94815d-4a2b-4ec7-b1bb-d58dc722abe0}</Project>
+      <Name>SPLOKigaYSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Yearly\SPLOLKontiSearch\SPLOLKontiSearch.vbproj">
+      <Project>{b3fe2089-b9bc-45d5-afdd-8521f7937066}</Project>
+      <Name>SPLOLKontiSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Yearly\SPLOLRJSearch\SPLOLRJSearch.vbproj">
+      <Project>{7117417b-aad2-4f2d-bf87-f36fd7665201}</Project>
+      <Name>SPLOLRJSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Yearly\SPLoNLASearch\SPLoNLASearch.vbproj">
+      <Project>{8c53dbfc-ec49-455f-814a-1aec18c01e88}</Project>
+      <Name>SPLoNLASearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Yearly\SPS.Fill.NLAFields\SPS.Fill.NLAFields.vbproj">
+      <Project>{f155980d-2b36-4397-98a1-72cbb3a048fb}</Project>
+      <Name>SPS.Fill.NLAFields</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Yearly\SPUVGListeSearch\SPUVGListeSearch.vbproj">
+      <Project>{84c3a439-af4a-440d-91d8-1ba1b2bee8ba}</Project>
+      <Name>SPUVGListeSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Yearly\SPYAHVListSearch\SPYAHVListSearch.vbproj">
+      <Project>{d3fd7b5c-95d0-49d4-8cbd-cc949d3b2631}</Project>
+      <Name>SPYAHVListSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Payroll\Yearly\SPYFakListSearch\SPYFakListSearch.vbproj">
+      <Project>{706e9519-6cb3-4bb7-839f-0650e865a601}</Project>
+      <Name>SPYFakListSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDF O2S\SP.PDFO2S.vbproj">
+      <Project>{fa1d45d1-49f1-4eed-a92d-877065fcdac5}</Project>
+      <Name>SP.PDFO2S</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Employee.SuvaSTDSearch\SP.Employee.SuvaSTDSearch.vbproj">
+      <Project>{2a9b8fbd-4af2-427f-8151-b3660eceb4d2}</Project>
+      <Name>SP.Employee.SuvaSTDSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.ES.PrintUtility\SP.ES.PrintUtility.vbproj">
+      <Project>{0836f21c-c7e8-43c9-9216-258723f3e653}</Project>
+      <Name>SP.ES.PrintUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Invoice.PrintUtility\SP.Invoice.PrintUtility.vbproj">
+      <Project>{323d216e-b25e-4998-a3e7-1571fe32aae6}</Project>
+      <Name>SP.Invoice.PrintUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.KD.BAInfo\SP.KD.BAInfo.vbproj">
+      <Project>{ab4a4c2f-8871-4c0c-928f-130f4248bc84}</Project>
+      <Name>SP.KD.BAInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.KD.CPersonMng\SP.KD.CPersonMng.vbproj">
+      <Project>{64077d2c-cb12-425a-8a62-3e8098ca4e72}</Project>
+      <Name>SP.KD.CPersonMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.KD.ReAdresse\SP.KD.ReAdresse.vbproj">
+      <Project>{a07fecc2-eb06-4991-926d-5bc894c0397d}</Project>
+      <Name>SP.KD.ReAdresse</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.LO.PrintUtility\SP.LO.PrintUtility.vbproj">
+      <Project>{6e5d4c5d-c001-4401-a746-0e507c7526ed}</Project>
+      <Name>SP.LO.PrintUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPBUmsatzTotal\SPBUmsatzTotal.vbproj">
+      <Project>{167533a6-2a3c-4e31-81f6-afc8a889d63d}</Project>
+      <Name>SPBUmsatzTotal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPESSearch\SPESSearch.vbproj">
+      <Project>{f8390af9-96e1-4068-95c1-6e42a35bf4d9}</Project>
+      <Name>SPESSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPOPSearch\SPOPSearch.vbproj">
+      <Project>{d8cd09d5-4f9c-4631-8b2b-7738b7816808}</Project>
+      <Name>SPOPSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listing\Common\SPProposeSearch\SPProposeSearch.vbproj">
+      <Project>{a3938eb2-9e9e-48a4-864e-810d962708a6}</Project>
+      <Name>SPProposeSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.BankMng\SP.MA.BankMng.vbproj">
+      <Project>{1a02276c-98cf-40b9-bab8-76a525688b0a}</Project>
+      <Name>SP.MA.BankMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.DocumentMng\SP.MA.DocumentMng.vbproj">
+      <Project>{10db21fb-b323-4316-af35-bba54afee836}</Project>
+      <Name>SP.MA.DocumentMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Main.Notify\SP.Main.Notify.vbproj">
+      <Project>{aa698322-7c15-4728-a6d6-51be5f7108bc}</Project>
+      <Name>SP.Main.Notify</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Vacancies.Intern\SP.Vacancies.Intern.vbproj">
+      <Project>{e9905961-c8a6-4e1d-9359-69d0aeebd2a0}</Project>
+      <Name>SP.Vacancies.Intern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Vacancies.JobCH\SP.Vacancies.JobCH.vbproj">
+      <Project>{8d753bec-5e2a-4d75-96f1-581a8ea818d9}</Project>
+      <Name>SP.Vacancies.JobCH</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Vacancies.OstJobCH\SP.Vacancies.OstJobCH.vbproj">
+      <Project>{734d276c-0a29-4869-aea8-b32b75b7c85a}</Project>
+      <Name>SP.Vacancies.OstJobCH</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPKD.Vakanz\SPKD.Vakanz.vbproj">
+      <Project>{52ca17a5-6161-4e46-831f-908e3b9ffd2c}</Project>
+      <Name>SPKD.Vakanz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPMA.Massenversand\SP.MA.Massenversand.vbproj">
+      <Project>{7e5f6a5b-cdcd-4ccb-9619-1edbdfd7581c}</Project>
+      <Name>SP.MA.Massenversand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPMAAddress\SPMAAddress.vbproj">
+      <Project>{cc6a088f-8d82-459c-962e-4d61dd0b2b89}</Project>
+      <Name>SPMAAddress</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPQualicationUtility\SPQualicationUtility.vbproj">
+      <Project>{0b0133b8-bfbc-4277-90e5-ceaeb4eab2f7}</Project>
+      <Name>SPQualicationUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.DTAUtility\SPS.DTAUtility.vbproj">
+      <Project>{7fdf11e8-0f9f-4c56-b266-6fb37090d5b5}</Project>
+      <Name>SPS.DTAUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.ESRUtility\SPS.ESRUtility.vbproj">
+      <Project>{493693db-397a-46c5-b1be-565903e7bed9}</Project>
+      <Name>SPS.ESRUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.ExternalServices\SPS.ExternalServices.vbproj">
+      <Project>{cb3ab4be-31cb-4258-94ae-8eeb26f049d6}</Project>
+      <Name>SPS.ExternalServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Listing.Print.Utility\SPS.Listing.Print.Utility.vbproj">
+      <Project>{ca4ffd19-3751-41be-97c8-b969b76836a5}</Project>
+      <Name>SPS.Listing.Print.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPProgUtility\SPProgUtility.vbproj">
+      <Project>{78bb37a6-7753-4586-a42f-39e591e1e229}</Project>
+      <Name>SPProgUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Doc.DocumentMng\SP.KD.DocumentMng.vbproj">
+      <Project>{8b20e0d7-3d14-4631-95e3-6197b01153ad}</Project>
+      <Name>SP.KD.DocumentMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.DatabaseAccess\SP.DatabaseAccess.vbproj">
+      <Project>{eedcd73d-17b9-4604-a7c5-10667af63e85}</Project>
+      <Name>SP.DatabaseAccess</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Infrastructure\SP.Infrastructure.vbproj">
+      <Project>{4b0bb9d6-0fd0-48cf-9256-6b42582d5f9f}</Project>
+      <Name>SP.Infrastructure</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.KD.CustomerMng\SP.KD.CustomerMng.vbproj">
+      <Project>{3a7e234c-da9a-45a1-8441-ef151b187d5a}</Project>
+      <Name>SP.KD.CustomerMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.KD.InvoiceMng\SP.KD.InvoiceMng.vbproj">
+      <Project>{2f527867-c64a-4dc4-a659-32aeec194410}</Project>
+      <Name>SP.KD.InvoiceMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.ApplicantMng\SP.MA.ApplicantMng.vbproj">
+      <Project>{c238e9e4-6fc0-4e0f-a91d-05c16891fc60}</Project>
+      <Name>SP.MA.ApplicantMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.EinsatzMng\SP.MA.EinsatzMng.vbproj">
+      <Project>{ee95aec2-dee9-486b-92a6-790e31896097}</Project>
+      <Name>SP.MA.EinsatzMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.EmployeeMng\SP.MA.EmployeeMng.vbproj">
+      <Project>{64a7da2d-37ca-4147-af65-da8c5e21f295}</Project>
+      <Name>SP.MA.EmployeeMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.Payroll\SP.MA.PayrollMng.vbproj">
+      <Project>{fc7ff615-0bfb-4600-9f32-d7caebdfd9d2}</Project>
+      <Name>SP.MA.PayrollMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.ReportMng\SP.MA.ReportMng.vbproj">
+      <Project>{e6368963-db62-442e-9e74-daa71e2b100d}</Project>
+      <Name>SP.MA.ReportMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPGAV\SPGAV.vbproj">
+      <Project>{9f25f725-1652-45d8-b8dd-cefd74e37ac6}</Project>
+      <Name>SPGAV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPMALLUtility\SPMALLUtility.vbproj">
+      <Project>{5f1226b3-82f5-44a7-ad8c-bab1bd3d4235}</Project>
+      <Name>SPMALLUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPProposeUtility\SPProposeUtility.vbproj">
+      <Project>{3276072b-31ae-44a9-bba1-a09369b3539a}</Project>
+      <Name>SPProposeUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.ES.Utility\SPS.ES.Utility.vbproj">
+      <Project>{ec574582-550f-4898-9ce4-d861a59c1aee}</Project>
+      <Name>SPS.ES.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Export.Listing.Utility\SPS.Export.Listing.Utility.vbproj">
+      <Project>{abc11771-1bbb-4e11-a9c1-841620412f84}</Project>
+      <Name>SPS.Export.Listing.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MA.Guthaben\SPS.MA.Guthaben.vbproj">
+      <Project>{f74e93d6-5b73-46b3-ae98-21b25ffd34d4}</Project>
+      <Name>SPS.MA.Guthaben</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MA.Lohn.Utility\SPS.MA.Lohn.Utility.vbproj">
+      <Project>{6194bee0-6fb0-4dfc-9fbb-a3d8f1f0e428}</Project>
+      <Name>SPS.MA.Lohn.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MD.CreateNewUtility\SPS.MD.CreateNewUtility.vbproj">
+      <Project>{7d3ed265-a2d2-4fba-ae99-4cb433822bcd}</Project>
+      <Name>SPS.MD.CreateNewUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MD.ESRDTAUtility\SPS.MD.ESRDTAUtility.vbproj">
+      <Project>{b4ce72b5-6aba-46d2-8a5a-188c7b0c5012}</Project>
+      <Name>SPS.MD.ESRDTAUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MD.GAVAddressUtility\SPS.MD.GAVAddressUtility.vbproj">
+      <Project>{9a3c13d9-d754-4649-904e-4ff9bf8c37f8}</Project>
+      <Name>SPS.MD.GAVAddressUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MD.QstAddressUtility\SPS.MD.QstAddressUtility.vbproj">
+      <Project>{cbcd0073-7c7c-442a-9fd9-d571981c8d36}</Project>
+      <Name>SPS.MD.QstAddressUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Propose.SendMail.Utility\SPS.Propose.SendMail.Utility.vbproj">
+      <Project>{97573459-3a86-454a-a007-8fa18dacb264}</Project>
+      <Name>SPS.Propose.SendMail.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.SalaryValueCalculation\SPS.SalaryValueCalculation.vbproj">
+      <Project>{6ce53ee4-9056-42d7-a70a-46bb0559d3f9}</Project>
+      <Name>SPS.SalaryValueCalculation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Sys.DocUtility\SPS.SYS.DocUtility.vbproj">
+      <Project>{c301a951-323b-4241-8c76-b2b166254f7e}</Project>
+      <Name>SPS.SYS.DocUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.SYS.TableSettingMng\SPS.SYS.TableSettingMng.vbproj">
+      <Project>{c7d1a8d6-fa42-4d2f-8e2a-a5c9325277a7}</Project>
+      <Name>SPS.SYS.TableSettingMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPServiceUtil\SPServiceUtil.vbproj">
+      <Project>{52d00dff-0870-4de8-8f92-63171ef77e01}</Project>
+      <Name>SPServiceUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPSSendMail\SPSSendMail.vbproj">
+      <Project>{afda057f-94d1-4d68-85fb-31ca8ee131f7}</Project>
+      <Name>SPSSendMail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Intern.Automations\SP.Internal.Automations.vbproj">
+      <Project>{1bbfd14a-03ac-4a44-8040-fc21ca57cc2e}</Project>
+      <Name>SP.Internal.Automations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPSSetting\SPSSetting.vbproj">
+      <Project>{f98e7dfc-422e-4bc0-94ae-6a49255e9d8e}</Project>
+      <Name>SPSSetting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPSTapi\SPSTapi.vbproj">
+      <Project>{9e0a6cab-3967-43c3-9e73-778638c1c770}</Project>
+      <Name>SPSTapi</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </ProjectReference>
+    <ProjectReference Include="..\SPTarifCalculate\SPTarifCalculate.vbproj">
+      <Project>{268c934c-9632-43ba-9ea8-8188c04ba139}</Project>
+      <Name>SPTarifCalculate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

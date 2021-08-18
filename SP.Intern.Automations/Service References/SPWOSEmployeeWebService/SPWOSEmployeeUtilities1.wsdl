@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/">
+      <s:element name="LoadAvailableEmployee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="qualifications" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="brunchOffice" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAvailableEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAvailableEmployeeResult" type="tns:ArrayOfAvailableEmployeeDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAvailableEmployeeDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AvailableEmployeeDTO" nillable="true" type="tns:AvailableEmployeeDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AvailableEmployeeDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WOS_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerData" type="tns:CustomerSettingData" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeAdvisor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Advisor_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Firstname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lastname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrunchOffice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Canton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MainLanguage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HowContact" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SecondState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Qualifications" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Branches" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobProzent" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDay" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DriverLicenses" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Civilstate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvailableMobility" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Permit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transfer_UserID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transfer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpokenLanguages" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WritingLanguages" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Properties" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeReserveFields" type="tns:AvailableEmployeeReserveFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeApplicationReserveFields" type="tns:AvailableEmployeeApplicationFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeAdvisorData" type="tns:WOSAdvisorData" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvailableEmployeeTemplates" type="tns:AvailableEmployeeTemplateData" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExistsTemplate" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomerSettingData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Passwort" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="eMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_ZHD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModulName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vak_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KD_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DP_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Verleih_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Ort" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Telefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Telefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_eMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Strasse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_Homepage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AvailableEmployeeReserveFields">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reserve6" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AvailableEmployeeApplicationFields">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LL_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve0" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve6" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve7" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve8" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve9" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve10" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve13" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve14" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserve15" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf0" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf6" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf7" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf8" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf9" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf10" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf13" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf14" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationReserveRtf15" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WOSAdvisorData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WOS_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Firstname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lastname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserInitial" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AvailableEmployeeTemplateData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WOS_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanDoc" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadAssignedAvailableEmployeeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="employeeNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedAvailableEmployeeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedAvailableEmployeeDataResult" type="tns:AvailableEmployeeDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedAvailableEmployeeApplicationData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="employeeNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedAvailableEmployeeApplicationDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedAvailableEmployeeApplicationDataResult" type="tns:AvailableEmployeeApplicationFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAvailableEmployeeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wosID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeData" type="tns:AvailableEmployeeNewDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AvailableEmployeeNewDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WOS_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerData" type="tns:CustomerSettingData" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeAdvisor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Advisor_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Firstname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lastname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrunchOffice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Canton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MainLanguage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HowContact" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SecondState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Qualifications" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Branches" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobProzent" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDay" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DriverLicenses" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Civilstate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvailableMobility" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Permit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transfer_UserID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transfer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpokenLanguages" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WritingLanguages" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Properties" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeReserveFields" type="tns:AvailableEmployeeReserveFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeApplicationReserveFields" type="tns:AvailableEmployeeApplicationFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeAdvisorData" type="tns:WOSAdvisorData" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvailableEmployeeTemplates" type="tns:AvailableEmployeeTemplateData" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExistsTemplate" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DesiredWagesOld" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DesiredWagesNew" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DesiredWagesInMonth" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DesiredWagesInHour" nillable="true" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddAvailableEmployeeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddAvailableEmployeeDataResult" type="tns:WebServiceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="JobResult" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobResultMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RemoveAvailableEmployeeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wosID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeData" type="tns:AvailableEmployeeNewDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveAvailableEmployeeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RemoveAvailableEmployeeDataResult" type="tns:WebServiceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAssignedEmployeeWOSDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeWosData" type="tns:EmployeeWOSData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EmployeeWOSData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeWOSID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmploymentNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmploymentLineNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportLineNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportDocNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PayrollNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MATransferedGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESDoc_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RPDoc_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayrollDoc_Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserAnrede" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserVorname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserTelefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserInitial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFiliale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSign" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserPicture" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="LogedUserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MDTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MD_DTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MDTelefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MDMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Nachname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Vorname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Postfach" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Strasse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_PLZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Ort" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Land" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Filiale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Berater" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_AGB_Wos" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Beruf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Branche" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Language" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MA_GebDat" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_BriefAnrede" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Zivil" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Nationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_FSchein" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Auto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Kontakt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_State1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_State2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Eigenschaft" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_SSprache" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_MSprache" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AHV_Nr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MA_Canton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssignedDocumentGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssignedDocumentArtName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssignedDocumentInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanDoc" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanDocName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SignTransferedDocument" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddAssignedEmployeeWOSDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddAssignedEmployeeWOSDocumentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEmployeeDocumentToWOS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wosData" type="tns:EmployeeWOSData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEmployeeDocumentToWOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddEmployeeDocumentToWOSResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAssignedEmployeeDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iMANr" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="employee_Guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Doc_Guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Doc_Art" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Doc_Info" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAssignedEmployeeDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteAssignedEmployeeDocumentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListEmployeeDocuments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="month" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListEmployeeDocumentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListEmployeeDocumentsResult" type="tns:ArrayOfEmployeeWOSDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmployeeWOSDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeWOSDataDTO" nillable="true" type="tns:EmployeeWOSDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmployeeWOSDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeGuid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmploymentNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PayrollNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentArt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransferedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransferedUser" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastNotification" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanContent" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAssignedEmployeeDocumentsData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerWosGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignedEmployeeDocumentsDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssignedEmployeeDocumentsDataResult" type="tns:EmployeeWOSDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoadAvailableEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAvailableEmployee" />
+  </wsdl:message>
+  <wsdl:message name="LoadAvailableEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAvailableEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedAvailableEmployeeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedAvailableEmployeeData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedAvailableEmployeeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedAvailableEmployeeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedAvailableEmployeeApplicationDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedAvailableEmployeeApplicationData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedAvailableEmployeeApplicationDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedAvailableEmployeeApplicationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAvailableEmployeeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAvailableEmployeeData" />
+  </wsdl:message>
+  <wsdl:message name="AddAvailableEmployeeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAvailableEmployeeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveAvailableEmployeeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveAvailableEmployeeData" />
+  </wsdl:message>
+  <wsdl:message name="RemoveAvailableEmployeeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveAvailableEmployeeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAssignedEmployeeWOSDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAssignedEmployeeWOSDocument" />
+  </wsdl:message>
+  <wsdl:message name="AddAssignedEmployeeWOSDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAssignedEmployeeWOSDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEmployeeDocumentToWOSSoapIn">
+    <wsdl:part name="parameters" element="tns:AddEmployeeDocumentToWOS" />
+  </wsdl:message>
+  <wsdl:message name="AddEmployeeDocumentToWOSSoapOut">
+    <wsdl:part name="parameters" element="tns:AddEmployeeDocumentToWOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAssignedEmployeeDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAssignedEmployeeDocument" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAssignedEmployeeDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAssignedEmployeeDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListEmployeeDocumentsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListEmployeeDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ListEmployeeDocumentsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListEmployeeDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedEmployeeDocumentsDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssignedEmployeeDocumentsData" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedEmployeeDocumentsDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssignedEmployeeDocumentsDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPWOSEmployeeUtilitiesSoap">
+    <wsdl:operation name="LoadAvailableEmployee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List available employee data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAvailableEmployeeSoapIn" />
+      <wsdl:output message="tns:LoadAvailableEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedAvailableEmployeeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List assigned available employee data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedAvailableEmployeeDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedAvailableEmployeeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedAvailableEmployeeApplicationData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List assigned available employee application data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedAvailableEmployeeApplicationDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedAvailableEmployeeApplicationDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAvailableEmployeeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Sicherung eines Kandidaten.</wsdl:documentation>
+      <wsdl:input message="tns:AddAvailableEmployeeDataSoapIn" />
+      <wsdl:output message="tns:AddAvailableEmployeeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAvailableEmployeeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Löschung eines Kandidaten.</wsdl:documentation>
+      <wsdl:input message="tns:RemoveAvailableEmployeeDataSoapIn" />
+      <wsdl:output message="tns:RemoveAvailableEmployeeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAssignedEmployeeWOSDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Sicherung eines Kundendokuments aus der lokalen Datenbank.</wsdl:documentation>
+      <wsdl:input message="tns:AddAssignedEmployeeWOSDocumentSoapIn" />
+      <wsdl:output message="tns:AddAssignedEmployeeWOSDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployeeDocumentToWOS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Sicherung eines Kandidatendokuments aus der lokalen Datenbank.</wsdl:documentation>
+      <wsdl:input message="tns:AddEmployeeDocumentToWOSSoapIn" />
+      <wsdl:output message="tns:AddEmployeeDocumentToWOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedEmployeeDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Löscht das ausgewählte Modul-Document (MA-Doc).</wsdl:documentation>
+      <wsdl:input message="tns:DeleteAssignedEmployeeDocumentSoapIn" />
+      <wsdl:output message="tns:DeleteAssignedEmployeeDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListEmployeeDocuments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists all employee documents which are transfered.</wsdl:documentation>
+      <wsdl:input message="tns:ListEmployeeDocumentsSoapIn" />
+      <wsdl:output message="tns:ListEmployeeDocumentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedEmployeeDocumentsData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get assigned scan data</wsdl:documentation>
+      <wsdl:input message="tns:GetAssignedEmployeeDocumentsDataSoapIn" />
+      <wsdl:output message="tns:GetAssignedEmployeeDocumentsDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPWOSEmployeeUtilitiesSoap" type="tns:SPWOSEmployeeUtilitiesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadAvailableEmployee">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/LoadAvailableEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedAvailableEmployeeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/LoadAssignedAvailableEmployeeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedAvailableEmployeeApplicationData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/LoadAssignedAvailableEmployeeApplicationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAvailableEmployeeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/AddAvailableEmployeeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAvailableEmployeeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/RemoveAvailableEmployeeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAssignedEmployeeWOSDocument">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/AddAssignedEmployeeWOSDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployeeDocumentToWOS">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/AddEmployeeDocumentToWOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedEmployeeDocument">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/DeleteAssignedEmployeeDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListEmployeeDocuments">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/ListEmployeeDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedEmployeeDocumentsData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/GetAssignedEmployeeDocumentsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPWOSEmployeeUtilitiesSoap12" type="tns:SPWOSEmployeeUtilitiesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadAvailableEmployee">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/LoadAvailableEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedAvailableEmployeeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/LoadAssignedAvailableEmployeeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedAvailableEmployeeApplicationData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/LoadAssignedAvailableEmployeeApplicationData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAvailableEmployeeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/AddAvailableEmployeeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAvailableEmployeeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/RemoveAvailableEmployeeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAssignedEmployeeWOSDocument">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/AddAssignedEmployeeWOSDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployeeDocumentToWOS">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/AddEmployeeDocumentToWOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedEmployeeDocument">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/DeleteAssignedEmployeeDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListEmployeeDocuments">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/ListEmployeeDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedEmployeeDocumentsData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPWOSEmployeeUtilities.asmx/GetAssignedEmployeeDocumentsData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPWOSEmployeeUtilities">
+    <wsdl:port name="SPWOSEmployeeUtilitiesSoap" binding="tns:SPWOSEmployeeUtilitiesSoap">
+      <soap:address location="http://localhost/wsSPS_services/SPWOSEmployeeUtilities.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPWOSEmployeeUtilitiesSoap12" binding="tns:SPWOSEmployeeUtilitiesSoap12">
+      <soap12:address location="http://localhost/wsSPS_services/SPWOSEmployeeUtilities.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

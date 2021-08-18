@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://soap.ecall.ch/eCall.asmx?wsdl" docRef="https://soap.ecall.ch/eCall.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://soap.ecall.ch/eCall.asmx" xmlns:q1="eCallWebservice" binding="q1:eCallSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://soap.ecall.ch/eCall.asmx" xmlns:q2="eCallWebservice" binding="q2:eCallSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

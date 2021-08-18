@@ -1,0 +1,2537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApplicationNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApplicationNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApplicationNotificationsResult" type="tns:ArrayOfApplicationDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfApplicationDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ApplicationDataDTO" nillable="true" type="tns:ApplicationDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ApplicationDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FK_ApplicantID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VacancyNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BusinessBranch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Advisor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dismissalperiod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Availability" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChangedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApplicationLifecycle" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetApplicantNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApplicantNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApplicantNotificationsResult" type="tns:ArrayOfApplicantDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfApplicantDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ApplicantDataDTO" nillable="true" type="tns:ApplicantDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ApplicantDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lastname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Firstname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostOfficeBox" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Canton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MobilePhone" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Birthdate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Permission" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Profession" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Auto" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Motorcycle" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Bicycle" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrivingLicence1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrivingLicence2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrivingLicence3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CivilState" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CivilStateLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LanguageLevel" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApplicantLifecycle" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CVLProfileID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="APID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VacancyNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Advisor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BusinessBranch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dismissalperiod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Availability" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="APCreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApplicationLifecycle" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadCVLCustomerData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCVLCustomerDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCVLCustomerDataResult" type="tns:ArrayOfCVLizerCustomerDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCVLizerCustomerDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CVLizerCustomerDataDTO" nillable="true" type="tns:CVLizerCustomerDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CVLizerCustomerDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerGroupNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetApplicantDocumentNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApplicantDocumentNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApplicantDocumentNotificationsResult" type="tns:ArrayOfApplicantDocumentDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfApplicantDocumentDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ApplicantDocumentDataDTO" nillable="true" type="tns:ApplicantDocumentDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ApplicantDocumentDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FK_ApplicantID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Flag" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileExtension" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hashvalue" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAssignedApplicationsForApplicant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="applicantID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignedApplicationsForApplicantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssignedApplicationsForApplicantResult" type="tns:ArrayOfApplicationDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedApplicationAsChecked">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="destApplicationNumber" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="destApplicantNumber" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="checked" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedApplicationAsCheckedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedApplicationAsCheckedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedApplicationData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="applicationData" type="tns:ApplicationDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedApplicationDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedApplicationDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedApplicantAsChecked">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="destApplicantNumber" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="checked" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedApplicantAsCheckedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedApplicantAsCheckedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedApplicantWithExistingEmployeeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="employeeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="existingEmployeeNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedApplicantWithExistingEmployeeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedApplicantWithExistingEmployeeDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedApplicantCVLDataWithEmployeeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="employeeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="applicantID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="applicantData" type="tns:ApplicantDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedApplicantCVLDataWithEmployeeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedApplicantCVLDataWithEmployeeDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAllDataForAssignedApplicantAsChecked">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="applicantID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="destDocumentID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="destApplicationNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="destApplicantNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="checked" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAllDataForAssignedApplicantAsCheckedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAllDataForAssignedApplicantAsCheckedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignedDocumentsForApplicant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="applicantID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignedDocumentsForApplicantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssignedDocumentsForApplicantResult" type="tns:ArrayOfApplicantDocumentDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedDocumentAsChecked">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="destDocumentID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="destApplicationNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="destApplicantNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="checked" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedDocumentAsCheckedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedDocumentAsCheckedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadALLCVLProfileViewData">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadALLCVLProfileViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadALLCVLProfileViewDataResult" type="tns:ArrayOfCVLizerProfileDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCVLizerProfileDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CVLizerProfileDataDTO" nillable="true" type="tns:CVLizerProfileDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CVLizerProfileDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProfileID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PersonalID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApplicationID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApplicantID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GenderLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WorkID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EducationID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AdditionalID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ObjectiveID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateOfBirth" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChangedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadALLAssignedDayCVLProfileViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="assignedDate" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadALLAssignedDayCVLProfileViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadALLAssignedDayCVLProfileViewDataResult" type="tns:ArrayOfCVLizerProfileDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedCVLProfileViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="profileID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedCVLProfileViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedCVLProfileViewDataResult" type="tns:CVLizerProfileDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedCVLPersonalViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cvlPrifleID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cvlPersonalID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedCVLPersonalViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedCVLPersonalViewDataResult" type="tns:CVLPersonalDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CVLPersonalDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PersonalID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GenderLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsCed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsCedLable" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateOfBirth" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateOfBirthPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nationality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NationalityLable" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CivilState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CivilStateLable" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalPhoto" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="ISValid" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalTitle" type="tns:ArrayOfCVLListsDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalEMail" type="tns:ArrayOfCVLListsDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalHomepage" type="tns:ArrayOfCVLListsDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalTelephone" type="tns:ArrayOfCVLListsDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalTelefax" type="tns:ArrayOfCVLListsDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalAddress" type="tns:CVLAddressDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCVLListsDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CVLListsDTO" nillable="true" type="tns:CVLListsDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CVLListsDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PersonalID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lable" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CVLAddressDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryLable" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadCVLWorkPhaseViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cvlPrifleID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="workID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCVLWorkPhaseViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCVLWorkPhaseViewDataResult" type="tns:ArrayOfWorkPhaseViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWorkPhaseViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WorkPhaseViewDataDTO" nillable="true" type="tns:WorkPhaseViewDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WorkPhaseViewDataDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:PhaseViewData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="WorkID" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="WorkPhaseID" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Companies" type="tns:ArrayOfCodeViewData" />
+              <s:element minOccurs="0" maxOccurs="1" name="Functions" type="tns:ArrayOfCodeViewData" />
+              <s:element minOccurs="0" maxOccurs="1" name="Positions" type="tns:ArrayOfCodeNameViewData" />
+              <s:element minOccurs="1" maxOccurs="1" name="Project" nillable="true" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Employments" type="tns:ArrayOfCodeNameViewData" />
+              <s:element minOccurs="0" maxOccurs="1" name="WorkTimes" type="tns:ArrayOfCodeNameViewData" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PhaseViewData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PhaseID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateFrom" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateTo" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateFromFuzzy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateToFuzzy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Duration" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Current" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubPhase" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlainText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locations" type="tns:ArrayOfCVLAddressDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="Skills" type="tns:ArrayOfCodeNameWeightViewData" />
+          <s:element minOccurs="0" maxOccurs="1" name="SoftSkills" type="tns:ArrayOfCodeNameWeightViewData" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperationAreas" type="tns:ArrayOfCodeNameWeightViewData" />
+          <s:element minOccurs="0" maxOccurs="1" name="Industries" type="tns:ArrayOfCodeNameWeightViewData" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomCodes" type="tns:ArrayOfCodeNameWeightViewData" />
+          <s:element minOccurs="0" maxOccurs="1" name="Topic" type="tns:ArrayOfCodeViewData" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternetResources" type="tns:ArrayOfInternetResourceViewData" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="tns:ArrayOfIDiewData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCVLAddressDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CVLAddressDTO" nillable="true" type="tns:CVLAddressDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCodeNameWeightViewData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CodeNameWeightViewData" nillable="true" type="tns:CodeNameWeightViewData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CodeNameWeightViewData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhaseID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Weight" nillable="true" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCodeViewData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CodeViewData" nillable="true" type="tns:CodeViewData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CodeViewData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lable" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInternetResourceViewData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InternetResourceViewData" nillable="true" type="tns:InternetResourceViewData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InternetResourceViewData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhaseID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Source" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Snippet" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfIDiewData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IDiewData" nillable="true" type="tns:IDiewData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IDiewData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodeNumber" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCodeNameViewData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CodeNameViewData" nillable="true" type="tns:CodeNameViewData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CodeNameViewData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhaseID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadCVLEducationPhaseViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cvlPrifleID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="educationID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCVLEducationPhaseViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCVLEducationPhaseViewDataResult" type="tns:ArrayOfEducationPhaseViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEducationPhaseViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EducationPhaseViewDataDTO" nillable="true" type="tns:EducationPhaseViewDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EducationPhaseViewDataDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:PhaseViewData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="EducationID" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="EducationPhaseID" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="SchooolNames" type="tns:ArrayOfCodeViewData" />
+              <s:element minOccurs="0" maxOccurs="1" name="Graduations" type="tns:ArrayOfCodeViewData" />
+              <s:element minOccurs="0" maxOccurs="1" name="EducationTypes" type="tns:ArrayOfCodeNameWeightViewData" />
+              <s:element minOccurs="1" maxOccurs="1" name="Completed" nillable="true" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Score" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsCedCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsCedCodeLable" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="LoadCVLAdditionalInfoViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cvlPrifleID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="addID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCVLAdditionalInfoViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCVLAdditionalInfoViewDataResult" type="tns:AdditionalInfoViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AdditionalInfoViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Languages" type="tns:ArrayOfLanguageData" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrivingLicences" type="tns:ArrayOfCodeViewData" />
+          <s:element minOccurs="1" maxOccurs="1" name="MilitaryService" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Competences" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Interests" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Additionals" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UndatedSkills" type="tns:ArrayOfCodeNameWeightViewData" />
+          <s:element minOccurs="0" maxOccurs="1" name="UndatedOperationArea" type="tns:ArrayOfCodeNameWeightViewData" />
+          <s:element minOccurs="0" maxOccurs="1" name="UndatedIndustries" type="tns:ArrayOfCodeNameWeightViewData" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternetResources" type="tns:ArrayOfInternetResourceViewData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLanguageData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LanguageData" nillable="true" type="tns:LanguageData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LanguageData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CodeNameData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Level" type="tns:CodeNameData" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CodeNameData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CodeNameID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FK_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodeName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadCVLPublicationViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cvlPrifleID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCVLPublicationViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCVLPublicationViewDataResult" type="tns:ArrayOfPublicationViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPublicationViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PublicationViewDataDTO" nillable="true" type="tns:PublicationViewDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PublicationViewDataDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:PhaseViewData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Author" type="tns:ArrayOfCodeViewData" />
+              <s:element minOccurs="0" maxOccurs="1" name="Proceedings" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Institute" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="LoadALLCVLDocumentData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cvlPrifleID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadALLCVLDocumentDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadALLCVLDocumentDataResult" type="tns:ArrayOfDocumentViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDocumentViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentViewDataDTO" nillable="true" type="tns:DocumentViewDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocClass" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Pages" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Plaintext" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocBinary" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocSize" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocLanguage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileHashvalue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocXML" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadAssignedApplicantDocumentFromCVLData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cvlPrifleID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedApplicantDocumentFromCVLDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedApplicantDocumentFromCVLDataResult" type="tns:ArrayOfDocumentViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedApplicantPictureFromCVLData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cvlPrifleID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedApplicantPictureFromCVLDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedApplicantPictureFromCVLDataResult" type="tns:DocumentViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadApplicationEMailData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="applicationNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="withAttachments" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadApplicationEMailDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadApplicationEMailDataResult" type="tns:EMailDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EMailDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApplicationID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EMailUidl" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailFrom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailTo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailSubject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailBody" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailPlainTextBody" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasHtmlBody" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="EMailDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailAttachment" type="tns:ArrayOfEMailAttachment" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailMime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailContent" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEMailAttachment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EMailAttachment" nillable="true" type="tns:EMailAttachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EMailAttachment">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FK_REID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentCategoryNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttachmentSize" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttachmentName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadAssignedCVLDocumentData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cvlPrifleID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedCVLDocumentDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedCVLDocumentDataResult" type="tns:ArrayOfDocumentViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedCVLDocumenViewtData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cvlPrifleID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedCVLDocumenViewtDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedCVLDocumenViewtDataResult" type="tns:ArrayOfDocumentViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedDocumentData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedDocumentDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedDocumentDataResult" type="tns:DocumentViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedDocumentViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedDocumentViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedDocumentViewDataResult" type="tns:DocumentViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGeoCoordinationCountryData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGeoCoordinationCountryDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadGeoCoordinationCountryDataResult" type="tns:ArrayOfLocationGoordinateDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLocationGoordinateDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LocationGoordinateDataDTO" nillable="true" type="tns:LocationGoordinateDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LocationGoordinateDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlaceName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminCode1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminCode2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminCode3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Accuracy" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadGeoCoordinationPostcodeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v_plz1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGeoCoordinationPostcodeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadGeoCoordinationPostcodeDataResult" type="tns:LocationGoordinateDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGeoCoordinationTwoPostcodeData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v_plz1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v_plz2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGeoCoordinationTwoPostcodeDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadGeoCoordinationTwoPostcodeDataResult" type="tns:ArrayOfLocationGoordinateDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGeoDistancesData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v_plz1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v_plz2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="unit" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadGeoDistancesDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoadGeoDistancesDataResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPostcodeCityViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPostcodeCityViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadPostcodeCityViewDataResult" type="tns:ArrayOfPostcodeCityViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPostcodeCityViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PostcodeCityViewDataDTO" nillable="true" type="tns:PostcodeCityViewDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PostcodeCityViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadJobGroupsViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadJobGroupsViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadJobGroupsViewDataResult" type="tns:ArrayOfExperiencesViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfExperiencesViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ExperiencesViewDataDTO" nillable="true" type="tns:ExperiencesViewDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExperiencesViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExperienceLabel" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadExperiencesViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadExperiencesViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadExperiencesViewDataResult" type="tns:ArrayOfExperiencesViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadLanguageViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadLanguageViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadLanguageViewDataResult" type="tns:ArrayOfLanguageViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLanguageViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LanguageViewDataDTO" nillable="true" type="tns:LanguageViewDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LanguageViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageLabel" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadSearchResultViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postfachCityData" type="tns:PostcodeCityViewDataDTO" />
+            <s:element minOccurs="1" maxOccurs="1" name="redius" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="JobTitelsData" type="tns:ArrayOfExperiencesViewDataDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="operationAreasData" type="tns:ArrayOfExperiencesViewDataDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="skillsData" type="tns:ArrayOfExperiencesViewDataDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="languageData" type="tns:ArrayOfLanguageViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSearchResultViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSearchResultViewDataResult" type="tns:ArrayOfCVLSearchResultDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCVLSearchResultDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CVLSearchResultDataDTO" nillable="true" type="tns:CVLSearchResultDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CVLSearchResultDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CVLProfileID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PersonalID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Firstname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lastname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateOfBirth" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeAge" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobTitel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadSearchResultAndSaveCriteriaViewData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postfachCityData" type="tns:PostcodeCityViewDataDTO" />
+            <s:element minOccurs="1" maxOccurs="1" name="redius" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="JobTitelsData" type="tns:ArrayOfExperiencesViewDataDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="operationAreaData" type="tns:ArrayOfExperiencesViewDataDTO" />
+            <s:element minOccurs="1" maxOccurs="1" name="operationAreaJoin" type="tns:JoinENum" />
+            <s:element minOccurs="0" maxOccurs="1" name="skillData" type="tns:ArrayOfExperiencesViewDataDTO" />
+            <s:element minOccurs="1" maxOccurs="1" name="skillJoin" type="tns:JoinENum" />
+            <s:element minOccurs="0" maxOccurs="1" name="languageData" type="tns:ArrayOfLanguageViewDataDTO" />
+            <s:element minOccurs="1" maxOccurs="1" name="languageJoin" type="tns:JoinENum" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchLabel" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="setNotification" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="JoinENum">
+        <s:restriction base="s:string">
+          <s:enumeration value="UND" />
+          <s:enumeration value="ODER" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="LoadSearchResultAndSaveCriteriaViewDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSearchResultAndSaveCriteriaViewDataResult" type="tns:ArrayOfCVLSearchResultDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCVLSearchHistoryData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCVLSearchHistoryDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCVLSearchHistoryDataResult" type="tns:ArrayOfCVLSearchHistoryDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCVLSearchHistoryDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CVLSearchHistoryDataDTO" nillable="true" type="tns:CVLSearchHistoryDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CVLSearchHistoryDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QueryName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QueryContent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QueryResultContent" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Notify" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCount" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadAssignedCVLSearchHistoryResultData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="searchID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedCVLSearchHistoryResultDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedCVLSearchHistoryResultDataResult" type="tns:ArrayOfCVLSearchResultDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedCVLSearchHistoryNotifierStateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="searchID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedCVLSearchHistoryNotifierStateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedCVLSearchHistoryNotifierStateDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAssignedCVLSearchHistoryData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="searchID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAssignedCVLSearchHistoryDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteAssignedCVLSearchHistoryDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApplicationNotifications" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApplicationNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicantNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApplicantNotifications" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicantNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApplicantNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLCustomerDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCVLCustomerData" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLCustomerDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCVLCustomerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicantDocumentNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApplicantDocumentNotifications" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicantDocumentNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApplicantDocumentNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedApplicationsForApplicantSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssignedApplicationsForApplicant" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedApplicationsForApplicantSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssignedApplicationsForApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedApplicationAsCheckedSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedApplicationAsChecked" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedApplicationAsCheckedSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedApplicationAsCheckedResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedApplicationDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedApplicationData" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedApplicationDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedApplicationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedApplicantAsCheckedSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedApplicantAsChecked" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedApplicantAsCheckedSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedApplicantAsCheckedResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedApplicantWithExistingEmployeeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedApplicantWithExistingEmployeeData" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedApplicantWithExistingEmployeeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedApplicantWithExistingEmployeeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedApplicantCVLDataWithEmployeeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedApplicantCVLDataWithEmployeeData" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedApplicantCVLDataWithEmployeeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedApplicantCVLDataWithEmployeeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAllDataForAssignedApplicantAsCheckedSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAllDataForAssignedApplicantAsChecked" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAllDataForAssignedApplicantAsCheckedSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAllDataForAssignedApplicantAsCheckedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedDocumentsForApplicantSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssignedDocumentsForApplicant" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedDocumentsForApplicantSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssignedDocumentsForApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedDocumentAsCheckedSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedDocumentAsChecked" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedDocumentAsCheckedSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedDocumentAsCheckedResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadALLCVLProfileViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadALLCVLProfileViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadALLCVLProfileViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadALLCVLProfileViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadALLAssignedDayCVLProfileViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadALLAssignedDayCVLProfileViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadALLAssignedDayCVLProfileViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadALLAssignedDayCVLProfileViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCVLProfileViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCVLProfileViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCVLProfileViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCVLProfileViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCVLPersonalViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCVLPersonalViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCVLPersonalViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCVLPersonalViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLWorkPhaseViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCVLWorkPhaseViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLWorkPhaseViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCVLWorkPhaseViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLEducationPhaseViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCVLEducationPhaseViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLEducationPhaseViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCVLEducationPhaseViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLAdditionalInfoViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCVLAdditionalInfoViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLAdditionalInfoViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCVLAdditionalInfoViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLPublicationViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCVLPublicationViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLPublicationViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCVLPublicationViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadALLCVLDocumentDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadALLCVLDocumentData" />
+  </wsdl:message>
+  <wsdl:message name="LoadALLCVLDocumentDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadALLCVLDocumentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedApplicantDocumentFromCVLDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedApplicantDocumentFromCVLData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedApplicantDocumentFromCVLDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedApplicantDocumentFromCVLDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedApplicantPictureFromCVLDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedApplicantPictureFromCVLData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedApplicantPictureFromCVLDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedApplicantPictureFromCVLDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadApplicationEMailDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadApplicationEMailData" />
+  </wsdl:message>
+  <wsdl:message name="LoadApplicationEMailDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadApplicationEMailDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCVLDocumentDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCVLDocumentData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCVLDocumentDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCVLDocumentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCVLDocumenViewtDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCVLDocumenViewtData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCVLDocumenViewtDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCVLDocumenViewtDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedDocumentDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedDocumentData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedDocumentDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedDocumentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedDocumentViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedDocumentViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedDocumentViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedDocumentViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoCoordinationCountryDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadGeoCoordinationCountryData" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoCoordinationCountryDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadGeoCoordinationCountryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoCoordinationPostcodeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadGeoCoordinationPostcodeData" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoCoordinationPostcodeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadGeoCoordinationPostcodeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoCoordinationTwoPostcodeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadGeoCoordinationTwoPostcodeData" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoCoordinationTwoPostcodeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadGeoCoordinationTwoPostcodeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoDistancesDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadGeoDistancesData" />
+  </wsdl:message>
+  <wsdl:message name="LoadGeoDistancesDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadGeoDistancesDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadPostcodeCityViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadPostcodeCityViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadPostcodeCityViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadPostcodeCityViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobGroupsViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadJobGroupsViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadJobGroupsViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadJobGroupsViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadExperiencesViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadExperiencesViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadExperiencesViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadExperiencesViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadLanguageViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadLanguageViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadLanguageViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadLanguageViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSearchResultViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSearchResultViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadSearchResultViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSearchResultViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSearchResultAndSaveCriteriaViewDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSearchResultAndSaveCriteriaViewData" />
+  </wsdl:message>
+  <wsdl:message name="LoadSearchResultAndSaveCriteriaViewDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSearchResultAndSaveCriteriaViewDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLSearchHistoryDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCVLSearchHistoryData" />
+  </wsdl:message>
+  <wsdl:message name="LoadCVLSearchHistoryDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCVLSearchHistoryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCVLSearchHistoryResultDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCVLSearchHistoryResultData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedCVLSearchHistoryResultDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedCVLSearchHistoryResultDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedCVLSearchHistoryNotifierStateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedCVLSearchHistoryNotifierStateData" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedCVLSearchHistoryNotifierStateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedCVLSearchHistoryNotifierStateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAssignedCVLSearchHistoryDataSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAssignedCVLSearchHistoryData" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAssignedCVLSearchHistoryDataSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAssignedCVLSearchHistoryDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPApplicationSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationNotifications">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new application data for notification</wsdl:documentation>
+      <wsdl:input message="tns:GetApplicationNotificationsSoapIn" />
+      <wsdl:output message="tns:GetApplicationNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantNotifications">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new applicant-Data for notification</wsdl:documentation>
+      <wsdl:input message="tns:GetApplicantNotificationsSoapIn" />
+      <wsdl:output message="tns:GetApplicantNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLCustomerData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List cvlizer customer data</wsdl:documentation>
+      <wsdl:input message="tns:LoadCVLCustomerDataSoapIn" />
+      <wsdl:output message="tns:LoadCVLCustomerDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantDocumentNotifications">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new applicant document data for notification</wsdl:documentation>
+      <wsdl:input message="tns:GetApplicantDocumentNotificationsSoapIn" />
+      <wsdl:output message="tns:GetApplicantDocumentNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedApplicationsForApplicant">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List application data for assigned applicant</wsdl:documentation>
+      <wsdl:input message="tns:GetAssignedApplicationsForApplicantSoapIn" />
+      <wsdl:output message="tns:GetAssignedApplicationsForApplicantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicationAsChecked">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update application notification record as checked</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedApplicationAsCheckedSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedApplicationAsCheckedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicationData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update application notification record as checked</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedApplicationDataSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedApplicationDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicantAsChecked">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update applicant notification record as checked</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedApplicantAsCheckedSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedApplicantAsCheckedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicantWithExistingEmployeeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update applicant record with employee data</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedApplicantWithExistingEmployeeDataSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedApplicantWithExistingEmployeeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicantCVLDataWithEmployeeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update applicant record data</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedApplicantCVLDataWithEmployeeDataSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedApplicantCVLDataWithEmployeeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllDataForAssignedApplicantAsChecked">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update all application, applicant and document records as checked</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAllDataForAssignedApplicantAsCheckedSoapIn" />
+      <wsdl:output message="tns:UpdateAllDataForAssignedApplicantAsCheckedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedDocumentsForApplicant">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List document data for assigned applicant</wsdl:documentation>
+      <wsdl:input message="tns:GetAssignedDocumentsForApplicantSoapIn" />
+      <wsdl:output message="tns:GetAssignedDocumentsForApplicantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedDocumentAsChecked">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update application document notification record as checked</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedDocumentAsCheckedSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedDocumentAsCheckedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadALLCVLProfileViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer profile data</wsdl:documentation>
+      <wsdl:input message="tns:LoadALLCVLProfileViewDataSoapIn" />
+      <wsdl:output message="tns:LoadALLCVLProfileViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadALLAssignedDayCVLProfileViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer profile data for one day</wsdl:documentation>
+      <wsdl:input message="tns:LoadALLAssignedDayCVLProfileViewDataSoapIn" />
+      <wsdl:output message="tns:LoadALLAssignedDayCVLProfileViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLProfileViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer profile data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedCVLProfileViewDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedCVLProfileViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLPersonalViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer personal data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedCVLPersonalViewDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedCVLPersonalViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLWorkPhaseViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer work phase data</wsdl:documentation>
+      <wsdl:input message="tns:LoadCVLWorkPhaseViewDataSoapIn" />
+      <wsdl:output message="tns:LoadCVLWorkPhaseViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLEducationPhaseViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer education phase data</wsdl:documentation>
+      <wsdl:input message="tns:LoadCVLEducationPhaseViewDataSoapIn" />
+      <wsdl:output message="tns:LoadCVLEducationPhaseViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLAdditionalInfoViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer additional information data</wsdl:documentation>
+      <wsdl:input message="tns:LoadCVLAdditionalInfoViewDataSoapIn" />
+      <wsdl:output message="tns:LoadCVLAdditionalInfoViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLPublicationViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer publication data</wsdl:documentation>
+      <wsdl:input message="tns:LoadCVLPublicationViewDataSoapIn" />
+      <wsdl:output message="tns:LoadCVLPublicationViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadALLCVLDocumentData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer document data</wsdl:documentation>
+      <wsdl:input message="tns:LoadALLCVLDocumentDataSoapIn" />
+      <wsdl:output message="tns:LoadALLCVLDocumentDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedApplicantDocumentFromCVLData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer document data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedApplicantDocumentFromCVLDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedApplicantDocumentFromCVLDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedApplicantPictureFromCVLData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer assigned document data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedApplicantPictureFromCVLDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedApplicantPictureFromCVLDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadApplicationEMailData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get email data for assigned application</wsdl:documentation>
+      <wsdl:input message="tns:LoadApplicationEMailDataSoapIn" />
+      <wsdl:output message="tns:LoadApplicationEMailDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLDocumentData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer document data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedCVLDocumentDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedCVLDocumentDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLDocumenViewtData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer document data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedCVLDocumenViewtDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedCVLDocumenViewtDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedDocumentData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer assigned document data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedDocumentDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedDocumentDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedDocumentViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List new cvlizer assigned document data</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedDocumentViewDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedDocumentViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationCountryData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load geo coordinates data for country</wsdl:documentation>
+      <wsdl:input message="tns:LoadGeoCoordinationCountryDataSoapIn" />
+      <wsdl:output message="tns:LoadGeoCoordinationCountryDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationPostcodeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load geo data for postfach data</wsdl:documentation>
+      <wsdl:input message="tns:LoadGeoCoordinationPostcodeDataSoapIn" />
+      <wsdl:output message="tns:LoadGeoCoordinationPostcodeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationTwoPostcodeData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load distance between two postfach data</wsdl:documentation>
+      <wsdl:input message="tns:LoadGeoCoordinationTwoPostcodeDataSoapIn" />
+      <wsdl:output message="tns:LoadGeoCoordinationTwoPostcodeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoDistancesData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">load distance between two postfach data</wsdl:documentation>
+      <wsdl:input message="tns:LoadGeoDistancesDataSoapIn" />
+      <wsdl:output message="tns:LoadGeoDistancesDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPostcodeCityViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List customer postcode and city</wsdl:documentation>
+      <wsdl:input message="tns:LoadPostcodeCityViewDataSoapIn" />
+      <wsdl:output message="tns:LoadPostcodeCityViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobGroupsViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List customer workphase job groups (operationarea)</wsdl:documentation>
+      <wsdl:input message="tns:LoadJobGroupsViewDataSoapIn" />
+      <wsdl:output message="tns:LoadJobGroupsViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadExperiencesViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List customer experiences</wsdl:documentation>
+      <wsdl:input message="tns:LoadExperiencesViewDataSoapIn" />
+      <wsdl:output message="tns:LoadExperiencesViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadLanguageViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List customer postcode and city</wsdl:documentation>
+      <wsdl:input message="tns:LoadLanguageViewDataSoapIn" />
+      <wsdl:output message="tns:LoadLanguageViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSearchResultViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List cvl search result</wsdl:documentation>
+      <wsdl:input message="tns:LoadSearchResultViewDataSoapIn" />
+      <wsdl:output message="tns:LoadSearchResultViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSearchResultAndSaveCriteriaViewData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List cvl search result with saving search criteria</wsdl:documentation>
+      <wsdl:input message="tns:LoadSearchResultAndSaveCriteriaViewDataSoapIn" />
+      <wsdl:output message="tns:LoadSearchResultAndSaveCriteriaViewDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLSearchHistoryData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List user saved cvl search history</wsdl:documentation>
+      <wsdl:input message="tns:LoadCVLSearchHistoryDataSoapIn" />
+      <wsdl:output message="tns:LoadCVLSearchHistoryDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLSearchHistoryResultData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List user saved cvl search history result</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedCVLSearchHistoryResultDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedCVLSearchHistoryResultDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCVLSearchHistoryNotifierStateData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update saved cvl search history notifier state</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedCVLSearchHistoryNotifierStateDataSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedCVLSearchHistoryNotifierStateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedCVLSearchHistoryData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">delete user saved cvl search history</wsdl:documentation>
+      <wsdl:input message="tns:DeleteAssignedCVLSearchHistoryDataSoapIn" />
+      <wsdl:output message="tns:DeleteAssignedCVLSearchHistoryDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPApplicationSoap" type="tns:SPApplicationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationNotifications">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/GetApplicationNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantNotifications">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/GetApplicantNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLCustomerData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLCustomerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantDocumentNotifications">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/GetApplicantDocumentNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedApplicationsForApplicant">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/GetAssignedApplicationsForApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicationAsChecked">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedApplicationAsChecked" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicationData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedApplicationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicantAsChecked">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedApplicantAsChecked" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicantWithExistingEmployeeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedApplicantWithExistingEmployeeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicantCVLDataWithEmployeeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedApplicantCVLDataWithEmployeeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllDataForAssignedApplicantAsChecked">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAllDataForAssignedApplicantAsChecked" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedDocumentsForApplicant">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/GetAssignedDocumentsForApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedDocumentAsChecked">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedDocumentAsChecked" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadALLCVLProfileViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadALLCVLProfileViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadALLAssignedDayCVLProfileViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadALLAssignedDayCVLProfileViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLProfileViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedCVLProfileViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLPersonalViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedCVLPersonalViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLWorkPhaseViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLWorkPhaseViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLEducationPhaseViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLEducationPhaseViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLAdditionalInfoViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLAdditionalInfoViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLPublicationViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLPublicationViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadALLCVLDocumentData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadALLCVLDocumentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedApplicantDocumentFromCVLData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedApplicantDocumentFromCVLData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedApplicantPictureFromCVLData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedApplicantPictureFromCVLData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadApplicationEMailData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadApplicationEMailData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLDocumentData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedCVLDocumentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLDocumenViewtData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedCVLDocumenViewtData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedDocumentData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedDocumentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedDocumentViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedDocumentViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationCountryData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadGeoCoordinationCountryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationPostcodeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadGeoCoordinationPostcodeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationTwoPostcodeData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadGeoCoordinationTwoPostcodeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoDistancesData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadGeoDistancesData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPostcodeCityViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadPostcodeCityViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobGroupsViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadJobGroupsViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadExperiencesViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadExperiencesViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLanguageViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadLanguageViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSearchResultViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadSearchResultViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSearchResultAndSaveCriteriaViewData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadSearchResultAndSaveCriteriaViewData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLSearchHistoryData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLSearchHistoryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLSearchHistoryResultData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedCVLSearchHistoryResultData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCVLSearchHistoryNotifierStateData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedCVLSearchHistoryNotifierStateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedCVLSearchHistoryData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/DeleteAssignedCVLSearchHistoryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPApplicationSoap12" type="tns:SPApplicationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationNotifications">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/GetApplicationNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantNotifications">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/GetApplicantNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLCustomerData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLCustomerData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantDocumentNotifications">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/GetApplicantDocumentNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedApplicationsForApplicant">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/GetAssignedApplicationsForApplicant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicationAsChecked">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedApplicationAsChecked" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicationData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedApplicationData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicantAsChecked">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedApplicantAsChecked" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicantWithExistingEmployeeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedApplicantWithExistingEmployeeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedApplicantCVLDataWithEmployeeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedApplicantCVLDataWithEmployeeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllDataForAssignedApplicantAsChecked">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAllDataForAssignedApplicantAsChecked" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedDocumentsForApplicant">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/GetAssignedDocumentsForApplicant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedDocumentAsChecked">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedDocumentAsChecked" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadALLCVLProfileViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadALLCVLProfileViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadALLAssignedDayCVLProfileViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadALLAssignedDayCVLProfileViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLProfileViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedCVLProfileViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLPersonalViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedCVLPersonalViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLWorkPhaseViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLWorkPhaseViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLEducationPhaseViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLEducationPhaseViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLAdditionalInfoViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLAdditionalInfoViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLPublicationViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLPublicationViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadALLCVLDocumentData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadALLCVLDocumentData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedApplicantDocumentFromCVLData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedApplicantDocumentFromCVLData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedApplicantPictureFromCVLData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedApplicantPictureFromCVLData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadApplicationEMailData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadApplicationEMailData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLDocumentData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedCVLDocumentData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLDocumenViewtData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedCVLDocumenViewtData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedDocumentData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedDocumentData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedDocumentViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedDocumentViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationCountryData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadGeoCoordinationCountryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationPostcodeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadGeoCoordinationPostcodeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoCoordinationTwoPostcodeData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadGeoCoordinationTwoPostcodeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadGeoDistancesData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadGeoDistancesData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPostcodeCityViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadPostcodeCityViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadJobGroupsViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadJobGroupsViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadExperiencesViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadExperiencesViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadLanguageViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadLanguageViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSearchResultViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadSearchResultViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSearchResultAndSaveCriteriaViewData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadSearchResultAndSaveCriteriaViewData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCVLSearchHistoryData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadCVLSearchHistoryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedCVLSearchHistoryResultData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/LoadAssignedCVLSearchHistoryResultData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedCVLSearchHistoryNotifierStateData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/UpdateAssignedCVLSearchHistoryNotifierStateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedCVLSearchHistoryData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPApplication.asmx/DeleteAssignedCVLSearchHistoryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPApplication">
+    <wsdl:port name="SPApplicationSoap" binding="tns:SPApplicationSoap">
+      <soap:address location="http://localhost/wsSPS_Services/SPApplication.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPApplicationSoap12" binding="tns:SPApplicationSoap12">
+      <soap12:address location="http://localhost/wsSPS_Services/SPApplication.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

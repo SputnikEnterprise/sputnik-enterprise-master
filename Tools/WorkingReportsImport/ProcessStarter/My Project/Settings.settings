@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="FileFilter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">*.pdf</Value>
+    </Setting>
+    <Setting Name="DirectoryToListen" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\temp\ToImport</Value>
+    </Setting>
+    <Setting Name="TemporaryFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\temp\</Value>
+    </Setting>
+    <Setting Name="ProcessedScannedDocuments" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\temp\ProcessedScannedDocuments</Value>
+    </Setting>
+    <Setting Name="NotifyOnFileConversion" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NotifyOnDispose" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NotifyEMailTo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sputnik_info@sputnik-it.com</Value>
+    </Setting>
+    <Setting Name="SmtpPort" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="SmtpServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mail.sputnik-it.com</Value>
+    </Setting>
+    <Setting Name="WorkingForWebService" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ScanJobsConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=VM-12-SQL-2\SQLSERVER2017;Initial Catalog="spScanJobs";Integrated Security=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

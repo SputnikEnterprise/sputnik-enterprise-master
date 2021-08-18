@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerListOfServices">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCustomerListOfServicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerListOfServicesResult" type="tns:ArrayOfCustomerSearchResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomerSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomerSearchResultDTO" nillable="true" type="tns:CustomerSearchResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomerSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="customer_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VakGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="employeeGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="customer_ID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCustomerDeniedListOfServices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerDeniedListOfServicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerDeniedListOfServicesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCustomerUserNameListOfServices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerUserNameListOfServicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerUserNameListOfServicesResult" type="tns:ArrayOfCustomerUserNameSearchResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomerUserNameSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomerUserNameSearchResultDTO" nillable="true" type="tns:CustomerUserNameSearchResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomerUserNameSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCurrentListOfServices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="searchYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="searchMonth" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentListOfServicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentListOfServicesResult" type="tns:ArrayOfPaymentSearchResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPaymentSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PaymentSearchResultDTO" nillable="true" type="tns:PaymentSearchResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RecID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ServiceDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizedItems" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizedCredit" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Validated" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="BookedPayment" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="BookedDate" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPaidListOfServices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="searchYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="searchMonth" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaidListOfServicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPaidListOfServicesResult" type="tns:ArrayOfPaidSearchResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPaidSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PaidSearchResultDTO" nillable="true" type="tns:PaidSearchResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaidSearchResultDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RecID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ServiceDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Recipient" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizedItems" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserData" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BookedPayment" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="BookedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GeteCallDataForSelectedJobID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JobGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeteCallDataForSelectedJobIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GeteCallDataForSelectedJobIDResult" type="tns:ArrayOfPaidSearchResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateeCallResponseDataForSelectedJobID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JobGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AuthorizedCredit" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="AuthorizedItems" nillable="true" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateeCallResponseDataForSelectedJobIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateeCallResponseDataForSelectedJobIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogSolvencyCheckUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="solvencyCheckType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogSolvencyCheckUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogSolvencyCheckUsageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogeCallUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JobID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UsedPoints" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogeCallUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogeCallUsageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogSputnikLoginUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domainUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="machineName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogSputnikLoginUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogSputnikLoginUsageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerListOfServicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerListOfServices" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerListOfServicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerListOfServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDeniedListOfServicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerDeniedListOfServices" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDeniedListOfServicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerDeniedListOfServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserNameListOfServicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerUserNameListOfServices" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserNameListOfServicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerUserNameListOfServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentListOfServicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentListOfServices" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentListOfServicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentListOfServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPaidListOfServicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPaidListOfServices" />
+  </wsdl:message>
+  <wsdl:message name="GetPaidListOfServicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPaidListOfServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GeteCallDataForSelectedJobIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GeteCallDataForSelectedJobID" />
+  </wsdl:message>
+  <wsdl:message name="GeteCallDataForSelectedJobIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GeteCallDataForSelectedJobIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateeCallResponseDataForSelectedJobIDSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateeCallResponseDataForSelectedJobID" />
+  </wsdl:message>
+  <wsdl:message name="UpdateeCallResponseDataForSelectedJobIDSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateeCallResponseDataForSelectedJobIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogSolvencyCheckUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:LogSolvencyCheckUsage" />
+  </wsdl:message>
+  <wsdl:message name="LogSolvencyCheckUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:LogSolvencyCheckUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogeCallUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:LogeCallUsage" />
+  </wsdl:message>
+  <wsdl:message name="LogeCallUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:LogeCallUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogSputnikLoginUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:LogSputnikLoginUsage" />
+  </wsdl:message>
+  <wsdl:message name="LogSputnikLoginUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:LogSputnikLoginUsageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPCustomerPaymentServicesSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerListOfServices">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Kunden-Liste auf der Client für PaymentService</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerListOfServicesSoapIn" />
+      <wsdl:output message="tns:GetCustomerListOfServicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDeniedListOfServices">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">denieded service list of customers</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerDeniedListOfServicesSoapIn" />
+      <wsdl:output message="tns:GetCustomerDeniedListOfServicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserNameListOfServices">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Kunden-UserName-Liste auf der Client für PaymentService</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerUserNameListOfServicesSoapIn" />
+      <wsdl:output message="tns:GetCustomerUserNameListOfServicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentListOfServices">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Aktuellen Liste auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetCurrentListOfServicesSoapIn" />
+      <wsdl:output message="tns:GetCurrentListOfServicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaidListOfServices">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der verrechnete Dienste auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetPaidListOfServicesSoapIn" />
+      <wsdl:output message="tns:GetPaidListOfServicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GeteCallDataForSelectedJobID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der der definitiven Daten von eCall auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GeteCallDataForSelectedJobIDSoapIn" />
+      <wsdl:output message="tns:GeteCallDataForSelectedJobIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateeCallResponseDataForSelectedJobID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Save Data to eCall Db</wsdl:documentation>
+      <wsdl:input message="tns:UpdateeCallResponseDataForSelectedJobIDSoapIn" />
+      <wsdl:output message="tns:UpdateeCallResponseDataForSelectedJobIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogSolvencyCheckUsage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logt die Verwendung von Solvenzprüfungen.</wsdl:documentation>
+      <wsdl:input message="tns:LogSolvencyCheckUsageSoapIn" />
+      <wsdl:output message="tns:LogSolvencyCheckUsageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogeCallUsage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logt die Verwendung von eCall SMS-Nachrichten.</wsdl:documentation>
+      <wsdl:input message="tns:LogeCallUsageSoapIn" />
+      <wsdl:output message="tns:LogeCallUsageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogSputnikLoginUsage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logt die Anmeldungen von Sputnik.</wsdl:documentation>
+      <wsdl:input message="tns:LogSputnikLoginUsageSoapIn" />
+      <wsdl:output message="tns:LogSputnikLoginUsageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPCustomerPaymentServicesSoap" type="tns:SPCustomerPaymentServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerListOfServices">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetCustomerListOfServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDeniedListOfServices">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetCustomerDeniedListOfServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserNameListOfServices">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetCustomerUserNameListOfServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentListOfServices">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetCurrentListOfServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaidListOfServices">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetPaidListOfServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeteCallDataForSelectedJobID">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GeteCallDataForSelectedJobID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateeCallResponseDataForSelectedJobID">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/UpdateeCallResponseDataForSelectedJobID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogSolvencyCheckUsage">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/LogSolvencyCheckUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogeCallUsage">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/LogeCallUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogSputnikLoginUsage">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/LogSputnikLoginUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPCustomerPaymentServicesSoap12" type="tns:SPCustomerPaymentServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerListOfServices">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetCustomerListOfServices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDeniedListOfServices">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetCustomerDeniedListOfServices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserNameListOfServices">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetCustomerUserNameListOfServices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentListOfServices">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetCurrentListOfServices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaidListOfServices">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GetPaidListOfServices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeteCallDataForSelectedJobID">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/GeteCallDataForSelectedJobID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateeCallResponseDataForSelectedJobID">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/UpdateeCallResponseDataForSelectedJobID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogSolvencyCheckUsage">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/LogSolvencyCheckUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogeCallUsage">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/LogeCallUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogSputnikLoginUsage">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx/LogSputnikLoginUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPCustomerPaymentServices">
+    <wsdl:port name="SPCustomerPaymentServicesSoap" binding="tns:SPCustomerPaymentServicesSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPCustomerPaymentServicesSoap12" binding="tns:SPCustomerPaymentServicesSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPCustomerPaymentServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

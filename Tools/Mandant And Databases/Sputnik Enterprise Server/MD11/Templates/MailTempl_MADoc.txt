@@ -1,0 +1,44 @@
+<font face="Trebuchet MS" size="2"> <b>{TMPL_VAR name='MABriefAnrede'} {TMPL_VAR name='MANachname'},</b>
+
+es sind einige Dokumente von der Firma <b>{TMPL_VAR name='USMDName'}</b> für Sie bereit gestellt worden.
+Unter folgendem <a href="">Dokumenten-Link</a> finden Sie Ihre Dokumente.
+
+Wir bedanken uns ganz herzlich und wünschen Ihnen einen schönen Tag.
+
+P.S. Dies ist eine automatisch erstellte Nachricht. Bitte antworten Sie <b>nicht</b> auf dieses Mail.
+Das Mail kann über folgendem <a href="mailto:{TMPL_VAR name='USMDeMail'}?Subject=Online Dokumente">Link</a> beantwortet werden. 
+</p>
+<hr /><font face="Trebuchet MS" size="2">
+Freundliche Grüsse 
+{TMPL_VAR name='USVorname'} 
+
+{TMPL_VAR name='USMDName'}
+{TMPL_VAR name='USMDStrasse'} 
+{TMPL_VAR name='USMDort'} 
+
+Telefon: {TMPL_VAR name='USMDTelefon'} 
+Telefax: {TMPL_VAR name='USMDTelefax'} 
+EMail: {TMPL_VAR name='USMDeMail'}
+www: {TMPL_VAR name='USMDHomepage'}
+<hr />
+
+
+{TMPL_VAR name='MABriefAnrede'}
+
+Wir haben für Sie einige Dokumente bereitgestellt.
+Der folgende Link führt Sie zu Ihren Dokumenten:
+{TMPL_VAR name='MADocLink'}
+
+Bitte behandeln Sie den oberen Link als vertraulich.
+
+Freundliche Grüsse
+{TMPL_VAR name='USVorname'} {TMPL_VAR name='USNachname'}
+<hr />
+{TMPL_VAR name='USMDName'}
+{TMPL_VAR name='USMDStrasse'}
+{TMPL_VAR name='USMDPLZ'} {TMPL_VAR name='USMDOrt'}
+Telefon {TMPL_VAR name='USMDTelefon'}
+Telefax {TMPL_VAR name='USMDTelefax'}
+Email {TMPL_VAR name='USMDeMail'}
+http://{TMPL_VAR name='USMDHomepage'}
+

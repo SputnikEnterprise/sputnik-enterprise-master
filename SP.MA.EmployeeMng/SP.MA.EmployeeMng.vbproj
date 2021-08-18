@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{64A7DA2D-37CA-4147-AF65-DA8C5E21F295}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SP.MA.EmployeeMng</RootNamespace>
+    <AssemblyName>SP.MA.EmployeeMng</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DocumentationFile>SP.MA.EmployeeMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Components.net\</OutputPath>
+    <DocumentationFile>SP.MA.EmployeeMng.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SP.MA.EmployeeMng.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConstantValues.vb" />
+    <Compile Include="Forms\Controls\NewEmployee\INewEmployeeUserControlFormMediator.vb" />
+    <Compile Include="Forms\Controls\NewEmployee\InitData\InitAdditionalEmployeeData1.vb" />
+    <Compile Include="Forms\Controls\NewEmployee\InitData\InitAdditionalEmployeeData2.vb" />
+    <Compile Include="Forms\Controls\NewEmployee\InitData\InitMandantAndAdvisorData.vb" />
+    <Compile Include="Forms\Controls\NewEmployee\InitData\InitBasicEmployeeData.vb" />
+    <Compile Include="Forms\Controls\NewEmployee\InitData\PreselectionData.vb" />
+    <Compile Include="Forms\Controls\NewEmployee\NewEmployeeUserControlFormMediator.vb" />
+    <Compile Include="Forms\Controls\NewEmployee\ucPageCreateEmployee.Designer.vb">
+      <DependentUpon>ucPageCreateEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewEmployee\ucPageCreateEmployee.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewEmployee\ucPageEmployeeAdditionalData2.Designer.vb">
+      <DependentUpon>ucPageEmployeeAdditionalData2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewEmployee\ucPageEmployeeAdditionalData2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewEmployee\ucPageEmployeeAdditionalData1.Designer.vb">
+      <DependentUpon>ucPageEmployeeAdditionalData1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewEmployee\ucPageEmployeeAdditionalData1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewEmployee\ucPageEmployeeBasicData.Designer.vb">
+      <DependentUpon>ucPageEmployeeBasicData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewEmployee\ucPageEmployeeBasicData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewEmployee\ucPageWelcome.Designer.vb">
+      <DependentUpon>ucPageWelcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewEmployee\ucPageWelcome.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\NewEmployee\ucWizardPageBaseControl.Designer.vb">
+      <DependentUpon>ucWizardPageBaseControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\NewEmployee\ucWizardPageBaseControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\SupportCode\SalaryDataHelperFunctions.vb" />
+    <Compile Include="Forms\Controls\SupportCode\TaxDataHelper.vb" />
+    <Compile Include="Forms\Controls\SupportCode\ucSalaryData_BackupData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\SupportCode\ucSalaryData_Partnership.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucApplicationData.Designer.vb">
+      <DependentUpon>ucApplicationData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucApplicationData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucBankData.Designer.vb">
+      <DependentUpon>ucBankData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucBankData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucBaseControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCommonData.Designer.vb">
+      <DependentUpon>ucCommonData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCommonData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucContactData.Designer.vb">
+      <DependentUpon>ucContactData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucContactData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLAdditioinalInformation.Designer.vb">
+      <DependentUpon>ucCVLAdditioinalInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLAdditioinalInformation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLEducation.Designer.vb">
+      <DependentUpon>ucCVLEducation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLEducation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLPublication.Designer.vb">
+      <DependentUpon>ucCVLPublication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLPublication.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLWork.designer.vb">
+      <DependentUpon>ucCVLWork.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucCVLWork.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucDocumentManagement.Designer.vb">
+      <DependentUpon>ucDocumentManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucDocumentManagement.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucLanguagesAndProfessions.Designer.vb">
+      <DependentUpon>ucLanguagesAndProfessions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucLanguagesAndProfessions.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucMediation.Designer.vb">
+      <DependentUpon>ucMediation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucMediation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucMonthlySalaryData.Designer.vb">
+      <DependentUpon>ucMonthlySalaryData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucMonthlySalaryData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucSalaryData.Designer.vb">
+      <DependentUpon>ucSalaryData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucSalaryData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ucSalaryData2.Designer.vb">
+      <DependentUpon>ucSalaryData2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ucSalaryData2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frmApplicationDetail.Designer.vb">
+      <DependentUpon>frmApplicationDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmApplicationDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCVLData.Designer.vb">
+      <DependentUpon>frmCVLData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCVLData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEmployees.Designer.vb">
+      <DependentUpon>frmEmployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEmployeesProperties.Designer.vb">
+      <DependentUpon>frmEmployeesProperties.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEmployeesProperties.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewEmployee.Designer.vb">
+      <DependentUpon>frmNewEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlFromMediator.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings\SettingKeys.vb" />
+    <Compile Include="Settings\SettingsManager.vb" />
+    <Compile Include="Win32Api.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Controls\NewEmployee\ucPageCreateEmployee.resx">
+      <DependentUpon>ucPageCreateEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewEmployee\ucPageEmployeeAdditionalData2.resx">
+      <DependentUpon>ucPageEmployeeAdditionalData2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewEmployee\ucPageEmployeeAdditionalData1.resx">
+      <DependentUpon>ucPageEmployeeAdditionalData1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewEmployee\ucPageEmployeeBasicData.resx">
+      <DependentUpon>ucPageEmployeeBasicData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewEmployee\ucPageWelcome.resx">
+      <DependentUpon>ucPageWelcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\NewEmployee\ucWizardPageBaseControl.resx">
+      <DependentUpon>ucWizardPageBaseControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucApplicationData.resx">
+      <DependentUpon>ucApplicationData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucBankData.resx">
+      <DependentUpon>ucBankData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucBaseControl.resx">
+      <DependentUpon>ucBaseControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCommonData.resx">
+      <DependentUpon>ucCommonData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucContactData.resx">
+      <DependentUpon>ucContactData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCVLAdditioinalInformation.resx">
+      <DependentUpon>ucCVLAdditioinalInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCVLEducation.resx">
+      <DependentUpon>ucCVLEducation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCVLPublication.resx">
+      <DependentUpon>ucCVLPublication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucCVLWork.resx">
+      <DependentUpon>ucCVLWork.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucDocumentManagement.resx">
+      <DependentUpon>ucDocumentManagement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucLanguagesAndProfessions.resx">
+      <DependentUpon>ucLanguagesAndProfessions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucMediation.resx">
+      <DependentUpon>ucMediation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucMonthlySalaryData.resx">
+      <DependentUpon>ucMonthlySalaryData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucSalaryData.resx">
+      <DependentUpon>ucSalaryData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ucSalaryData2.resx">
+      <DependentUpon>ucSalaryData2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmApplicationDetail.resx">
+      <DependentUpon>frmApplicationDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCVLData.resx">
+      <DependentUpon>frmCVLData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEmployees.resx">
+      <DependentUpon>frmEmployees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEmployeesProperties.resx">
+      <DependentUpon>frmEmployeesProperties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewEmployee.resx">
+      <DependentUpon>frmNewEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.AdditionalInfoViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.ApplicantDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.ApplicantDocumentDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.ApplicationDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.CVLizerProfileDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.CVLPersonalDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.CVLSearchHistoryDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.CVLSearchResultDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.DocumentViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.EducationPhaseViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.EMailDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.ExperiencesViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.LanguageViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.LocationGoordinateDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.PostcodeCityViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.PublicationViewDataDTO.datasource" />
+    <None Include="My Project\DataSources\SP.Internal.Automations.SPApplicationWebService.WorkPhaseViewDataDTO.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SP.MA.EmployeeMng.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SP.Employee.SuvaSTDSearch\SP.Employee.SuvaSTDSearch.vbproj">
+      <Project>{2a9b8fbd-4af2-427f-8151-b3660eceb4d2}</Project>
+      <Name>SP.Employee.SuvaSTDSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Infrastructure\SP.Infrastructure.vbproj">
+      <Project>{4b0bb9d6-0fd0-48cf-9256-6b42582d5f9f}</Project>
+      <Name>SP.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Intern.Automations\SP.Internal.Automations.vbproj">
+      <Project>{1bbfd14a-03ac-4a44-8040-fc21ca57cc2e}</Project>
+      <Name>SP.Internal.Automations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.KD.CustomerMng\SP.KD.CustomerMng.vbproj">
+      <Project>{3a7e234c-da9a-45a1-8441-ef151b187d5a}</Project>
+      <Name>SP.KD.CustomerMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.LO.PrintUtility\SP.LO.PrintUtility.vbproj">
+      <Project>{6e5d4c5d-c001-4401-a746-0e507c7526ed}</Project>
+      <Name>SP.LO.PrintUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.DocumentMng\SP.MA.DocumentMng.vbproj">
+      <Project>{10db21fb-b323-4316-af35-bba54afee836}</Project>
+      <Name>SP.MA.DocumentMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.KontaktMng\SP.MA.KontaktMng.vbproj">
+      <Project>{c2ecc54e-8eff-4bec-a261-f5bd4b10ee47}</Project>
+      <Name>SP.MA.KontaktMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.VorstellungMng\SP.MA.VorstellungMng.vbproj">
+      <Project>{25d82c5f-0f52-4ee4-ab75-6763208e0188}</Project>
+      <Name>SP.MA.VorstellungMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.TinyMessengerWrapper\SP.TinyMessengerWrapper.csproj">
+      <Project>{ff4665b7-a876-4b26-92c5-fea3b5088d66}</Project>
+      <Name>SP.TinyMessengerWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.TodoMng\SP.TodoMng.vbproj">
+      <Project>{4655a31f-3c9d-4611-a9f2-65e0caa2e447}</Project>
+      <Name>SP.TodoMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpImageProcess\SpImageProcess.vbproj">
+      <Project>{39e410ea-c91b-4a1b-8178-8d1b517f8192}</Project>
+      <Name>SpImageProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPMA.Massenversand\SP.MA.Massenversand.vbproj">
+      <Project>{7e5f6a5b-cdcd-4ccb-9619-1edbdfd7581c}</Project>
+      <Name>SP.MA.Massenversand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPMAAddress\SPMAAddress.vbproj">
+      <Project>{cc6a088f-8d82-459c-962e-4d61dd0b2b89}</Project>
+      <Name>SPMAAddress</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPMALLUtility\SPMALLUtility.vbproj">
+      <Project>{5f1226b3-82f5-44a7-ad8c-bab1bd3d4235}</Project>
+      <Name>SPMALLUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPProgUtility\SPProgUtility.vbproj">
+      <Project>{78bb37a6-7753-4586-a42f-39e591e1e229}</Project>
+      <Name>SPProgUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPProposeUtility\SPProposeUtility.vbproj">
+      <Project>{3276072b-31ae-44a9-bba1-a09369b3539a}</Project>
+      <Name>SPProposeUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPQualicationUtility\SPQualicationUtility.vbproj">
+      <Project>{0b0133b8-bfbc-4277-90e5-ceaeb4eab2f7}</Project>
+      <Name>SPQualicationUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Export.Listing.Utility\SPS.Export.Listing.Utility.vbproj">
+      <Project>{abc11771-1bbb-4e11-a9c1-841620412f84}</Project>
+      <Name>SPS.Export.Listing.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.Listing.Print.Utility\SPS.Listing.Print.Utility.vbproj">
+      <Project>{ca4ffd19-3751-41be-97c8-b969b76836a5}</Project>
+      <Name>SPS.Listing.Print.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPS.MA.Guthaben\SPS.MA.Guthaben.vbproj">
+      <Project>{f74e93d6-5b73-46b3-ae98-21b25ffd34d4}</Project>
+      <Name>SPS.MA.Guthaben</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPSSendMail\SPSSendMail.vbproj">
+      <Project>{afda057f-94d1-4d68-85fb-31ca8ee131f7}</Project>
+      <Name>SPSSendMail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.DatabaseAccess\SP.DatabaseAccess.vbproj">
+      <Project>{eedcd73d-17b9-4604-a7c5-10667af63e85}</Project>
+      <Name>SP.DatabaseAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.BankMng\SP.MA.BankMng.vbproj">
+      <Project>{1a02276c-98cf-40b9-bab8-76a525688b0a}</Project>
+      <Name>SP.MA.BankMng</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.MA.LMMng\SP.MA.MLohnMng.vbproj">
+      <Project>{02c212fa-08ce-46d5-9332-f1e16105a823}</Project>
+      <Name>SP.MA.MLohnMng</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SPSTapi\SPSTapi.vbproj">
+      <Project>{9e0a6cab-3967-43c3-9e73-778638c1c770}</Project>
+      <Name>SPSTapi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\bullet_gray_small.png" />
+    <Content Include="Assets\bullet_green_small.png" />
+    <Content Include="Assets\bullet_orange_small.png" />
+    <Content Include="Assets\bullet_red_small.png" />
+    <Content Include="Assets\bullet_yellow_small.png" />
+    <Content Include="Assets\BusinessCheck.png" />
+    <Content Include="Assets\Checked.png" />
+    <Content Include="Assets\Completed.png" />
+    <Content Include="Assets\document.png" />
+    <Content Include="Assets\DocumentAttach.png" />
+    <Content Include="Assets\email.png" />
+    <Content Include="Assets\excel.png" />
+    <Content Include="Assets\globe.png" />
+    <Content Include="Assets\Important.png" />
+    <Content Include="Assets\Mail2.png" />
+    <Content Include="Assets\o14_person_placeholder_96.png" />
+    <Content Include="Assets\pdf.png" />
+    <Content Include="Assets\phone.png" />
+    <Content Include="Assets\QuickCheck.png" />
+    <Content Include="Assets\word.png" />
+    <None Include="Resources\phone3_16x163.png" />
+    <None Include="Resources\phone3_16x162.png" />
+    <None Include="Resources\phone3_16x161.png" />
+    <None Include="Resources\phone3_16x16.png" />
+    <None Include="Resources\mobilephone2_16x162.png" />
+    <None Include="Resources\message_16x161.png" />
+    <None Include="Resources\message_16x16.png" />
+    <None Include="Resources\mobilephone2_16x161.png" />
+    <None Include="Resources\mobilephone2_16x16.png" />
+    <None Include="Resources\apply_16x161.png" />
+    <None Include="Resources\mail_16x16.png" />
+    <None Include="Resources\cancel_16x16.png" />
+    <None Include="Resources\apply_16x16.png" />
+    <None Include="Resources\hide_16x16.png" />
+    <None Include="Resources\show_16x16.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

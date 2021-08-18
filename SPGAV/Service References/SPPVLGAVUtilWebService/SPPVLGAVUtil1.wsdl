@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/">
+      <s:element name="GetPVLArchiveDbData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLArchiveDbDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPVLArchiveDbDataResult" type="tns:ArrayOfGAVPVLArchiveDatabaseDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGAVPVLArchiveDatabaseDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GAVPVLArchiveDatabaseDTO" nillable="true" type="tns:GAVPVLArchiveDatabaseDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GAVPVLArchiveDatabaseDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DbName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DbConnstring" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadCurrentMetaInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="contractNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCurrentMetaInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCurrentMetaInfoResult" type="tns:GAVNameResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GAVNameResultDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id_meta" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="gav_number" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ave" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_de" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_fr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_it" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="publication_date" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="schema_version" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="stdweek" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="stdmonth" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="stdyear" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="fan" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="fag" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="resor_fan" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="resor_fag" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="van" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="vag" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="wan" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="wag" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_fag" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_fan" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_wag" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_wan" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_WAG_s" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_WAN_s" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_WAG_J" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_WAN_J" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_vag" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_van" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_VAG_s" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_VAN_s" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_VAG_J" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="old_VAN_J" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PVL_Edition" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ave_validity_start" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ave_validity_end" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="unia_validity_start" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="unia_validity_end" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="validity_start_date" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAVKanton" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Calculator" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="currdbname" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCurrentPVLData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archiveDbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentPVLDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentPVLDataResult" type="tns:ArrayOfGAVNameResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGAVNameResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GAVNameResultDTO" nillable="true" type="tns:GAVNameResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPVLDataforMandant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="archiveDbName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLDataforMandantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPVLDataforMandantResult" type="tns:ArrayOfGAVNameResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLCriteriasData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archiveDbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="metaID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLCriteriasDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPVLCriteriasDataResult" type="tns:ArrayOfGAVCriteriasResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGAVCriteriasResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GAVCriteriasResultDTO" nillable="true" type="tns:GAVCriteriasResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GAVCriteriasResultDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Criterion" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Contract" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Element_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_de" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_fr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_it" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPVLCriteriaValuesByIDData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archiveDbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="criteriaID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLCriteriaValuesByIDDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPVLCriteriaValuesByIDDataResult" type="tns:ArrayOfGAVCriteriaValueResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGAVCriteriaValueResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GAVCriteriaValueResultDTO" nillable="true" type="tns:GAVCriteriaValueResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GAVCriteriaValueResultDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Criterion" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_CriterionValue" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="txtText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="txtTable" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGAVTaxonomyEntryValueData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archiveDbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="metaID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVTaxonomyEntryValueDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVTaxonomyEntryValueDataResult" type="tns:ArrayOfGAVTaxonomyDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGAVTaxonomyDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GAVTaxonomyDTO" nillable="true" type="tns:GAVTaxonomyDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GAVTaxonomyDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Taxonomy_Entry" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Taxonomy" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGAVCalculationValueData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archiveDbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="categoryValues" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCalculationValueDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVCalculationValueDataResult" type="tns:GAVCalculationDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GAVCalculationDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Calculation" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Calculator" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="basic_hourly_wage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="vacation_pay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="holiday_compensation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="compensation_13th_month_salary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="number_of_holidays" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="monthly_wage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="number_of_vacation_days" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="gross_hourly_wage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="percentage_vacation_pay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="percentage_holiday_compensation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="percentage_13th_month_salary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="calculation_vacation_pay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="calculation_holiday_compensation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="calculation_13th_month_salary" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="has_13th_month_salary_compensation" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="sortPosition" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="percentage_far_an" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="percentage_far_ag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="calculation_far" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="far_bvg_relevant" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_AlternativeText" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGAVCategoryValuesWithBaseValueData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archiveDbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="categoryID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="baseCategoryValueID" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryValuesWithBaseValueDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVCategoryValuesWithBaseValueDataResult" type="tns:ArrayOfGAVCategoryValueDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGAVCategoryValueDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GAVCategoryValueDTO" nillable="true" type="tns:GAVCategoryValueDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GAVCategoryValueDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_CategoryValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Category" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_BaseCategory" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text_De" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGAVCategoryLabelData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archiveDbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="metaID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGAVCategoryLabelDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGAVCategoryLabelDataResult" type="tns:ArrayOfGAVCategoryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGAVCategoryDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GAVCategoryDTO" nillable="true" type="tns:GAVCategoryDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GAVCategoryDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Category" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Calculator" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_BaseCategory" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_de" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_fr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_it" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPVLWarningData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archiveDbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iGAVNr" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLWarningDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPVLWarningDataResult" type="tns:GAVNotificationDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GAVNotificationDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_CategoryValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="gav_number" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Info" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPVLAnhang1Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archiveDbName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLAnhang1DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPVLAnhang1DataResult" type="tns:ArrayOfGAVNotificationDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGAVNotificationDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GAVNotificationDTO" nillable="true" type="tns:GAVNotificationDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFLGAVGruppe0Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFLGAVGruppe0DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFLGAVGruppe0DataResult" type="tns:ArrayOfFLGAVGruppe0ResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFLGAVGruppe0ResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FLGAVGruppe0ResultDTO" nillable="true" type="tns:FLGAVGruppe0ResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FLGAVGruppe0ResultDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="GAVNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gruppe0Label" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFLGAVGruppe1Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe0" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFLGAVGruppe1DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFLGAVGruppe1DataResult" type="tns:ArrayOfFLGAVGruppe1ResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFLGAVGruppe1ResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FLGAVGruppe1ResultDTO" nillable="true" type="tns:FLGAVGruppe1ResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FLGAVGruppe1ResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Gruppe1Label" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFLGAVgruppe2Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe0" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFLGAVgruppe2DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFLGAVgruppe2DataResult" type="tns:ArrayOfFLGAVGruppe2ResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFLGAVGruppe2ResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FLGAVGruppe2ResultDTO" nillable="true" type="tns:FLGAVGruppe2ResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FLGAVGruppe2ResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Gruppe2Label" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFLGAVgruppe3Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe0" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFLGAVgruppe3DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFLGAVgruppe3DataResult" type="tns:ArrayOfFLGAVGruppe3ResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFLGAVGruppe3ResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FLGAVGruppe3ResultDTO" nillable="true" type="tns:FLGAVGruppe3ResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FLGAVGruppe3ResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Gruppe3Label" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFLGAVTextData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe0" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFLGAVTextDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFLGAVTextDataResult" type="tns:ArrayOfFLGAVTextResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFLGAVTextResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FLGAVTextResultDTO" nillable="true" type="tns:FLGAVTextResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FLGAVTextResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GAVLabel" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFLGAVSalaryData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe0" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gavtext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFLGAVSalaryDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFLGAVSalaryDataResult" type="tns:FLGAVSalaryResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FLGAVSalaryResultDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GAVNr" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAVLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GavKanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gruppe0" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gruppe1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gruppe2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gruppe3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GavText" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CalcFerien" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Calc13Lohn" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Minlohn" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FeiertagLohn" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feierbtr" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FerienLohn" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ferienbtr" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Lohn13" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Lohn13btr" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="StdLohn" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monatslohn" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mittagszulagen" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAG" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAN" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="WAG" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="WAN" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="VAG" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="VAN" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAG_S" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAN_S" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="WAG_S" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="WAN_S" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="VAG_S" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="VAN_S" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAG_M" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAN_M" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="WAG_M" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="WAN_M" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="VAG_M" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="VAN_M" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAG_J" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAN_J" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="WAG_J" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="WAN_J" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="VAG_J" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="VAN_J" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="GueltigAb" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="GueltigBis" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZusatzFeier" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz13Lohn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ferientext" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lohn13text" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StdWeek" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StdMonth" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StdYear" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="F_Alter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="L_Alter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz6" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz7" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz8" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz9" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz10" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zusatz12" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPVLAddressData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="gavnumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gruppe0" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="organ" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPVLAddressDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPVLAddressDataResult" type="tns:GAVAddressDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GAVAddressDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GAVNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BerufBez" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAV_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAV_ZHD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAV_Postfach" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAV_Strasse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAV_PLZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAV_Ort" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAV_AdressNr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAV_Bank" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAV_BankPLZOrt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAV_Bankkonto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GAV_IBAN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Kanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Organ" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadPublicationInfoData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadPublicationInfoDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadPublicationInfoDataResult" type="tns:ArrayOfPVLPublicationViewDataDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPVLPublicationViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PVLPublicationViewDataDTO" nillable="true" type="tns:PVLPublicationViewDataDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PVLPublicationViewDataDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContractNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VersionNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PublicationDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Viewed" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateViewedPublicationData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="recID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContractNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VersionNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PublicationDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="checked" nillable="true" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateViewedPublicationDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateViewedPublicationDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPVLArchiveDbDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPVLArchiveDbData" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLArchiveDbDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPVLArchiveDbDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCurrentMetaInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCurrentMetaInfo" />
+  </wsdl:message>
+  <wsdl:message name="LoadCurrentMetaInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCurrentMetaInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentPVLDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentPVLData" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentPVLDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentPVLDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLDataforMandantSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPVLDataforMandant" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLDataforMandantSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPVLDataforMandantResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLCriteriasDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPVLCriteriasData" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLCriteriasDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPVLCriteriasDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLCriteriaValuesByIDDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPVLCriteriaValuesByIDData" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLCriteriaValuesByIDDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPVLCriteriaValuesByIDDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVTaxonomyEntryValueDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVTaxonomyEntryValueData" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVTaxonomyEntryValueDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVTaxonomyEntryValueDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCalculationValueDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVCalculationValueData" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCalculationValueDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVCalculationValueDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryValuesWithBaseValueDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryValuesWithBaseValueData" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryValuesWithBaseValueDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryValuesWithBaseValueDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryLabelDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryLabelData" />
+  </wsdl:message>
+  <wsdl:message name="GetGAVCategoryLabelDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGAVCategoryLabelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLWarningDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPVLWarningData" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLWarningDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPVLWarningDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLAnhang1DataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPVLAnhang1Data" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLAnhang1DataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPVLAnhang1DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVGruppe0DataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFLGAVGruppe0Data" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVGruppe0DataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFLGAVGruppe0DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVGruppe1DataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFLGAVGruppe1Data" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVGruppe1DataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFLGAVGruppe1DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVgruppe2DataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFLGAVgruppe2Data" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVgruppe2DataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFLGAVgruppe2DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVgruppe3DataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFLGAVgruppe3Data" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVgruppe3DataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFLGAVgruppe3DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVTextDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFLGAVTextData" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVTextDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFLGAVTextDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVSalaryDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFLGAVSalaryData" />
+  </wsdl:message>
+  <wsdl:message name="GetFLGAVSalaryDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFLGAVSalaryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLAddressDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPVLAddressData" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLAddressDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPVLAddressDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadPublicationInfoDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadPublicationInfoData" />
+  </wsdl:message>
+  <wsdl:message name="LoadPublicationInfoDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadPublicationInfoDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateViewedPublicationDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateViewedPublicationData" />
+  </wsdl:message>
+  <wsdl:message name="UpdateViewedPublicationDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateViewedPublicationDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPPVLGAVUtilSoap">
+    <wsdl:operation name="GetPVLArchiveDbData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der aktuellen PVL GAV-Daten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetPVLArchiveDbDataSoapIn" />
+      <wsdl:output message="tns:GetPVLArchiveDbDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCurrentMetaInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">loads parifond hour data</wsdl:documentation>
+      <wsdl:input message="tns:LoadCurrentMetaInfoSoapIn" />
+      <wsdl:output message="tns:LoadCurrentMetaInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPVLData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der aktuellen PVL GAV-Daten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetCurrentPVLDataSoapIn" />
+      <wsdl:output message="tns:GetCurrentPVLDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLDataforMandant">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der aktuelle PVL GAV-Daten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetPVLDataforMandantSoapIn" />
+      <wsdl:output message="tns:GetPVLDataforMandantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLCriteriasData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Details von Criterion-Db anhand ID_Meta</wsdl:documentation>
+      <wsdl:input message="tns:GetPVLCriteriasDataSoapIn" />
+      <wsdl:output message="tns:GetPVLCriteriasDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLCriteriaValuesByIDData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Details von CriterionValue-Db anhand ID_Criterion</wsdl:documentation>
+      <wsdl:input message="tns:GetPVLCriteriaValuesByIDDataSoapIn" />
+      <wsdl:output message="tns:GetPVLCriteriaValuesByIDDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVTaxonomyEntryValueData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Kantone von TaxonomyEntry-Db anhand ID_Meta</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVTaxonomyEntryValueDataSoapIn" />
+      <wsdl:output message="tns:GetGAVTaxonomyEntryValueDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCalculationValueData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Wert von Calculation-Db anhand Kategorievalues</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVCalculationValueDataSoapIn" />
+      <wsdl:output message="tns:GetGAVCalculationValueDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValuesWithBaseValueData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der Werte aller Kategorievalues einer BaseCategoryValue</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVCategoryValuesWithBaseValueDataSoapIn" />
+      <wsdl:output message="tns:GetGAVCategoryValuesWithBaseValueDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryLabelData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: Zur Auflistung der Name aller Kategorien einer MetaNr</wsdl:documentation>
+      <wsdl:input message="tns:GetGAVCategoryLabelDataSoapIn" />
+      <wsdl:output message="tns:GetGAVCategoryLabelDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLWarningData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gibt die kritischen Infos über eine GAV-Number zurück. Das pflegen wir selbst ein!!!</wsdl:documentation>
+      <wsdl:input message="tns:GetPVLWarningDataSoapIn" />
+      <wsdl:output message="tns:GetPVLWarningDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLAnhang1Data">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der GAV-Berufe im Anhang1</wsdl:documentation>
+      <wsdl:input message="tns:GetPVLAnhang1DataSoapIn" />
+      <wsdl:output message="tns:GetPVLAnhang1DataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVGruppe0Data">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: FL-GAV Gruppe0</wsdl:documentation>
+      <wsdl:input message="tns:GetFLGAVGruppe0DataSoapIn" />
+      <wsdl:output message="tns:GetFLGAVGruppe0DataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVGruppe1Data">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: FL-GAV Gruppe1</wsdl:documentation>
+      <wsdl:input message="tns:GetFLGAVGruppe1DataSoapIn" />
+      <wsdl:output message="tns:GetFLGAVGruppe1DataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVgruppe2Data">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: FL-GAV Gruppe2</wsdl:documentation>
+      <wsdl:input message="tns:GetFLGAVgruppe2DataSoapIn" />
+      <wsdl:output message="tns:GetFLGAVgruppe2DataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVgruppe3Data">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: FL-GAV gruppe3</wsdl:documentation>
+      <wsdl:input message="tns:GetFLGAVgruppe3DataSoapIn" />
+      <wsdl:output message="tns:GetFLGAVgruppe3DataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVTextData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: FL-GAV Text Data</wsdl:documentation>
+      <wsdl:input message="tns:GetFLGAVTextDataSoapIn" />
+      <wsdl:output message="tns:GetFLGAVTextDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVSalaryData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: FL-GAV salary Data</wsdl:documentation>
+      <wsdl:input message="tns:GetFLGAVSalaryDataSoapIn" />
+      <wsdl:output message="tns:GetFLGAVSalaryDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLAddressData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Datasetversion: FL-GAV salary Data</wsdl:documentation>
+      <wsdl:input message="tns:GetPVLAddressDataSoapIn" />
+      <wsdl:output message="tns:GetPVLAddressDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPublicationInfoData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List of viewed publications</wsdl:documentation>
+      <wsdl:input message="tns:LoadPublicationInfoDataSoapIn" />
+      <wsdl:output message="tns:LoadPublicationInfoDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateViewedPublicationData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update publication viewed record as done</wsdl:documentation>
+      <wsdl:input message="tns:UpdateViewedPublicationDataSoapIn" />
+      <wsdl:output message="tns:UpdateViewedPublicationDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPPVLGAVUtilSoap" type="tns:SPPVLGAVUtilSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPVLArchiveDbData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLArchiveDbData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCurrentMetaInfo">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/LoadCurrentMetaInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPVLData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetCurrentPVLData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLDataforMandant">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLDataforMandant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLCriteriasData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLCriteriasData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLCriteriaValuesByIDData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLCriteriaValuesByIDData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVTaxonomyEntryValueData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetGAVTaxonomyEntryValueData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCalculationValueData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetGAVCalculationValueData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValuesWithBaseValueData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetGAVCategoryValuesWithBaseValueData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryLabelData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetGAVCategoryLabelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLWarningData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLWarningData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLAnhang1Data">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLAnhang1Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVGruppe0Data">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVGruppe0Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVGruppe1Data">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVGruppe1Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVgruppe2Data">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVgruppe2Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVgruppe3Data">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVgruppe3Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVTextData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVTextData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVSalaryData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVSalaryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLAddressData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLAddressData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPublicationInfoData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/LoadPublicationInfoData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateViewedPublicationData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/UpdateViewedPublicationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPPVLGAVUtilSoap12" type="tns:SPPVLGAVUtilSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPVLArchiveDbData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLArchiveDbData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCurrentMetaInfo">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/LoadCurrentMetaInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPVLData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetCurrentPVLData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLDataforMandant">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLDataforMandant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLCriteriasData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLCriteriasData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLCriteriaValuesByIDData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLCriteriaValuesByIDData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVTaxonomyEntryValueData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetGAVTaxonomyEntryValueData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCalculationValueData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetGAVCalculationValueData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryValuesWithBaseValueData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetGAVCategoryValuesWithBaseValueData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGAVCategoryLabelData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetGAVCategoryLabelData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLWarningData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLWarningData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLAnhang1Data">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLAnhang1Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVGruppe0Data">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVGruppe0Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVGruppe1Data">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVGruppe1Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVgruppe2Data">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVgruppe2Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVgruppe3Data">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVgruppe3Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVTextData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVTextData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFLGAVSalaryData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetFLGAVSalaryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLAddressData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLAddressData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPublicationInfoData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/LoadPublicationInfoData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateViewedPublicationData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/UpdateViewedPublicationData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPPVLGAVUtil">
+    <wsdl:port name="SPPVLGAVUtilSoap" binding="tns:SPPVLGAVUtilSoap">
+      <soap:address location="http://localhost/wsSPS_services/SPPVLGAVUtil.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPPVLGAVUtilSoap12" binding="tns:SPPVLGAVUtilSoap12">
+      <soap12:address location="http://localhost/wsSPS_services/SPPVLGAVUtil.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignedScanJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="scanID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignedScanJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssignedScanJobResult" type="tns:ScanDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ScanDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FoundedCodeValue" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModulNumber" type="tns:ScannModulEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecordNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentCategoryNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsValid" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportYear" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportMonth" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportWeek" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportFirstDay" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportLastDay" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportLineID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanContent" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImportedFileGuid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ScannModulEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="Employee" />
+          <s:enumeration value="Customer" />
+          <s:enumeration value="Employment" />
+          <s:enumeration value="Report" />
+          <s:enumeration value="Invoice" />
+          <s:enumeration value="Payroll" />
+          <s:enumeration value="NotDefined" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="UpdateAssignedScanJobs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="scanID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssignedScanJobsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAssignedScanJobsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportDropInJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="scanData" type="tns:ScanDropInDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ScanDropInDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BusinessBranch" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModulNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentCategoryNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanContent" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileExtension" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanFileName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetReportDropInJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetReportDropInJobResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCVDropInJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="scanData" type="tns:ScanDropInDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCVDropInJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCVDropInJobResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCVLDropInJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserData" type="tns:SystemUserData" />
+            <s:element minOccurs="0" maxOccurs="1" name="scanData" type="tns:ScanDropInDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SystemUserData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserNr" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginPassword" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSalutation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Birthdate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserKST" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserKST_1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserKST_2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserBranchOffice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFiliale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFTitel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSTitel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserTelefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsereMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLanguage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDDTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDTelefax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDeMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDPostfach" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDStrasse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDPLZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDOrt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDCanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDLand" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMDHomepage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFullNameWithComma" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail_UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail_UserPW" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail_SMTP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Deactivated" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="jch_layoutID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="jch_logoID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OstJob_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ostjob_Kontingent" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JCH_SubID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserPicture" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSign" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChangedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="AsCostCenter" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="LogonMorePlaces" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeWOSID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerWOSID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCVLDropInJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCVLDropInJobResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAllScanJobData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="scanID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="assignedDate" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAllScanJobDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAllScanJobDataResult" type="tns:ArrayOfScanAttachmentDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfScanAttachmentDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ScanAttachmentDTO" nillable="true" type="tns:ScanAttachmentDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ScanAttachmentDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BusinessBranchNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModulNumber" type="tns:AttachmentModulEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentCategoryNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScanContent" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImportedFileGuid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedFrom" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckedOn" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckedFrom" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="AttachmentModulEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="Employee" />
+          <s:enumeration value="Customer" />
+          <s:enumeration value="Employment" />
+          <s:enumeration value="Report" />
+          <s:enumeration value="Invoice" />
+          <s:enumeration value="Payroll" />
+          <s:enumeration value="NotDefined" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="LoadAssignedScanJobData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="scanID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedScanJobDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAssignedScanJobDataResult" type="tns:ScanAttachmentDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedScanJobSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssignedScanJob" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedScanJobSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssignedScanJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedScanJobsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedScanJobs" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssignedScanJobsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssignedScanJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReportDropInJobSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportDropInJob" />
+  </wsdl:message>
+  <wsdl:message name="GetReportDropInJobSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportDropInJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCVDropInJobSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCVDropInJob" />
+  </wsdl:message>
+  <wsdl:message name="GetCVDropInJobSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCVDropInJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCVLDropInJobSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCVLDropInJob" />
+  </wsdl:message>
+  <wsdl:message name="GetCVLDropInJobSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCVLDropInJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAllScanJobDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAllScanJobData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAllScanJobDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAllScanJobDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedScanJobDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedScanJobData" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedScanJobDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedScanJobDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPScanJobUtilitySoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedScanJob">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get assigned scan data</wsdl:documentation>
+      <wsdl:input message="tns:GetAssignedScanJobSoapIn" />
+      <wsdl:output message="tns:GetAssignedScanJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedScanJobs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update scan job record as checked</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAssignedScanJobsSoapIn" />
+      <wsdl:output message="tns:UpdateAssignedScanJobsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportDropInJob">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Report Drop-In</wsdl:documentation>
+      <wsdl:input message="tns:GetReportDropInJobSoapIn" />
+      <wsdl:output message="tns:GetReportDropInJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCVDropInJob">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CV Drop-In</wsdl:documentation>
+      <wsdl:input message="tns:GetCVDropInJobSoapIn" />
+      <wsdl:output message="tns:GetCVDropInJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCVLDropInJob">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CVL Drop-In</wsdl:documentation>
+      <wsdl:input message="tns:GetCVLDropInJobSoapIn" />
+      <wsdl:output message="tns:GetCVLDropInJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllScanJobData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get all scan data from attachment</wsdl:documentation>
+      <wsdl:input message="tns:LoadAllScanJobDataSoapIn" />
+      <wsdl:output message="tns:LoadAllScanJobDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedScanJobData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get assigned scan data from attachment</wsdl:documentation>
+      <wsdl:input message="tns:LoadAssignedScanJobDataSoapIn" />
+      <wsdl:output message="tns:LoadAssignedScanJobDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPScanJobUtilitySoap" type="tns:SPScanJobUtilitySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedScanJob">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/GetAssignedScanJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedScanJobs">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/UpdateAssignedScanJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportDropInJob">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/GetReportDropInJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCVDropInJob">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/GetCVDropInJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCVLDropInJob">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/GetCVLDropInJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllScanJobData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/LoadAllScanJobData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedScanJobData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/LoadAssignedScanJobData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPScanJobUtilitySoap12" type="tns:SPScanJobUtilitySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedScanJob">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/GetAssignedScanJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssignedScanJobs">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/UpdateAssignedScanJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportDropInJob">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/GetReportDropInJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCVDropInJob">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/GetCVDropInJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCVLDropInJob">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/GetCVLDropInJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllScanJobData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/LoadAllScanJobData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedScanJobData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPScanJobUtility.asmx/LoadAssignedScanJobData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPScanJobUtility">
+    <wsdl:port name="SPScanJobUtilitySoap" binding="tns:SPScanJobUtilitySoap">
+      <soap:address location="http://localhost/wsSPS_services/SPScanJobUtility.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPScanJobUtilitySoap12" binding="tns:SPScanJobUtilitySoap12">
+      <soap12:address location="http://localhost/wsSPS_services/SPScanJobUtility.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

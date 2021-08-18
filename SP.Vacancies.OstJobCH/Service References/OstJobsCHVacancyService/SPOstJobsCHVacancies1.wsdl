@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPOstJobsCHVacancies.asmx/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPOstJobsCHVacancies.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPOstJobsCHVacancies.asmx/">
+      <s:element name="SaveOstJobCHVacancy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vacancyData">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveOstJobCHVacancyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveOstJobCHVacancyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveOstJobCHVacancySoapIn">
+    <wsdl:part name="parameters" element="tns:SaveOstJobCHVacancy" />
+  </wsdl:message>
+  <wsdl:message name="SaveOstJobCHVacancySoapOut">
+    <wsdl:part name="parameters" element="tns:SaveOstJobCHVacancyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPOstJobsCHVacanciesSoap">
+    <wsdl:operation name="SaveOstJobCHVacancy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Speichert OstJobs.ch Daten in die interne Datenbanken.</wsdl:documentation>
+      <wsdl:input message="tns:SaveOstJobCHVacancySoapIn" />
+      <wsdl:output message="tns:SaveOstJobCHVacancySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPOstJobsCHVacanciesSoap" type="tns:SPOstJobsCHVacanciesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveOstJobCHVacancy">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPOstJobsCHVacancies.asmx/SaveOstJobCHVacancy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPOstJobsCHVacanciesSoap12" type="tns:SPOstJobsCHVacanciesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveOstJobCHVacancy">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPOstJobsCHVacancies.asmx/SaveOstJobCHVacancy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPOstJobsCHVacancies">
+    <wsdl:port name="SPOstJobsCHVacanciesSoap" binding="tns:SPOstJobsCHVacanciesSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPOstJobsCHVacancies.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPOstJobsCHVacanciesSoap12" binding="tns:SPOstJobsCHVacanciesSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPOstJobsCHVacancies.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

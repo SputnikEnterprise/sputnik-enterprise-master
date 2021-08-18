@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/">
+      <s:element name="GetCurrentPVLData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentPVLDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentPVLDataResult" type="tns:ArrayOfGAVNameResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGAVNameResultDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GAVNameResultDTO" nillable="true" type="tns:GAVNameResultDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GAVNameResultDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="gav_number" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_de" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_fr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name_it" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="publication_date" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="schema_version" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="stdweek" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="stdmonth" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="stdyear" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="fan" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="fag" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="resor_fan" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="resor_fag" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="van" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="vag" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="currdbname" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPVLDataforMandant">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPVLDataforMandantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPVLDataforMandantResult" type="tns:ArrayOfGAVNameResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCurrentPVLDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentPVLData" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentPVLDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentPVLDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLDataforMandantSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPVLDataforMandant" />
+  </wsdl:message>
+  <wsdl:message name="GetPVLDataforMandantSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPVLDataforMandantResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPPVLGAVUtilSoap">
+    <wsdl:operation name="GetCurrentPVLData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der aktuellen PVL GAV-Daten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetCurrentPVLDataSoapIn" />
+      <wsdl:output message="tns:GetCurrentPVLDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLDataforMandant">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zur Auflistung der aktuelle PVL GAV-Daten auf der Client</wsdl:documentation>
+      <wsdl:input message="tns:GetPVLDataforMandantSoapIn" />
+      <wsdl:output message="tns:GetPVLDataforMandantSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SPPVLGAVUtilSoap" type="tns:SPPVLGAVUtilSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCurrentPVLData">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetCurrentPVLData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLDataforMandant">
+      <soap:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLDataforMandant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SPPVLGAVUtilSoap12" type="tns:SPPVLGAVUtilSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCurrentPVLData">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetCurrentPVLData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPVLDataforMandant">
+      <soap12:operation soapAction="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx/GetPVLDataforMandant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SPPVLGAVUtil">
+    <wsdl:port name="SPPVLGAVUtilSoap" binding="tns:SPPVLGAVUtilSoap">
+      <soap:address location="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SPPVLGAVUtilSoap12" binding="tns:SPPVLGAVUtilSoap12">
+      <soap12:address location="http://asmx.domain.com/wsSPS_services/SPPVLGAVUtil.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
